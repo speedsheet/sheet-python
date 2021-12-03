@@ -24,9 +24,21 @@ Tell us what you liked, didn't like, and suggested improvements.
 
 
 
-## New Speedsheet for October
+## New For Movember 
 
-The Numpy SpeedSheet is finally out! Check it out and let us know what you think:
+<cb><table><col><l "/s/python?search=match-only">match Statement<><><col><l "/s/python?search=match-only">(Structural Pattern Matching)<><>
+<col><l "/s/python?search=deque">deque<><><col><l "/s/python?search=deque">(Double Ended Queues)<><>
+<col><l "/s/python?search=type+hint">Type Hints<><><><>
+
+
+
+## New For October
+
+New SpeedSheets!
+
+Numpy:
+
+The Numpy SpeedSheet is finally out! Check it out and let us know what you think.
 
 <cb><l>/s/numpy<><>
 
@@ -199,7 +211,7 @@ File Contents:
 <cb><v>name<> = input("Enter Name: ")
 
 if not <v>name<>:
-    <v>name<> = "World"
+	<v>name<> = "World"
 
 print("<v>hello <>" + <v>name<> + "<v>!<>")<>
 
@@ -223,9 +235,9 @@ File Contents:
 <cb>from sys import argv		<#>#1<>
 
 if len(argv) > 1:			<#>#2<>
-    <v>name<> = argv[1]			<#>#3<>
+	<v>name<> = argv[1]			<#>#3<>
 else:
-    <v>name<> = "World"			<#>#4<>
+	<v>name<> = "World"			<#>#4<>
 
 print("<v>hello <>" + <v>name<> + "<v>!<>")<>
 
@@ -282,9 +294,9 @@ See also: __doc__
 Examples:
 
 <cb>def <v>documented_function<>():
-    <#>"""This docstring
-    documents the function of this function
-    """<><>
+	<#>"""This docstring
+	documents the function of this function
+	"""<><>
 @
 @ code, documentation, docstring-only, docstr-only, doc-string-only, doc-str-only, """, double quotes, __doc__
  
@@ -331,8 +343,8 @@ print('Outer Block')
 
 if True:
 
-    <#># Inner Block<>
-    print('    Inner Block')<>
+	<#># Inner Block<>
+	print('    Inner Block')<>
 @
 @ Tabs, indenting
 
@@ -430,12 +442,12 @@ Call Passing as dict:
 Receive as list:
 
 <cb>def <v>func_3<>(*args):			<#>#3<>
-    <v>...<><>
+	<v>...<><>
 
 Receive as dict:
 
 <cb>def <v>func_4<>(**kwargs):		<#>#4<>
-    <v>...<><>
+	<v>...<><>
 
 
 \#1  <s>-<>   <c>list_1<> will be unpacked to function arguments in list order.
@@ -454,12 +466,12 @@ Receive as dict:
 
 Scope Levels
 
-    Module
-    Class
-    Function
-    Closure
-    Generator Expression
-    Comprehension
+	Module
+	Class
+	Function
+	Closure
+	Generator Expression
+	Comprehension
 
 There is no block level scope
 
@@ -470,22 +482,22 @@ Example:
 
 
 class <v>SomeClass<>:
-    def __init__(self):
-        self.<v>class_level_variable<> = "Class Level"
+	def __init__(self):
+		self.<v>class_level_variable<> = "Class Level"
 
 
 def <v>SomeFunction<>():
-    <v>function_level_variable<> = "Function Level"
+	<v>function_level_variable<> = "Function Level"
 
 
 <v>generator<> = (<v>generator_level_variable<>
-        for <v>generator_level_variable<> in
-        ["Generator Level", "Generator Level"])
+		for <v>generator_level_variable<> in
+		["Generator Level", "Generator Level"])
 
 
 <v>comprehension<> = [<v>comprehension_level_variable<>
-        for <v>comprehension_level_variable<> in
-        ["Comprehension Level", "Comprehension Level"]]<>
+		for <v>comprehension_level_variable<> in
+		["Comprehension Level", "Comprehension Level"]]<>
 @
 @ variables
 
@@ -507,8 +519,8 @@ Prefer using parenthesis '<c>( )<>', brackets '<c>[ ]<>', braces '<c>{ }<>' for 
 Example:
 
 <cb>string_1 = "Part 1 and " + \\
-        "part 2 and " + \\
-        "part 3"<>
+		"part 2 and " + \\
+		"part 3"<>
 @
 @ Split, Separate, Separator, Wrap, multiline statement, \\
 
@@ -814,10 +826,10 @@ Example File:
 <cb>from setuptools import setup, find_packages
 
 setup(
-    name='<v>package_name<>',  						<#># Required<>
-    version='<v>2<>.<v>0<>.<v>1<>',  							<#># Required<>
-    description='<v>package description here<>.',	<#># Required<>
-    packages=find_packages(exclude=['contrib', 'docs', 'tests']),	<#># Required<>
+	name='<v>package_name<>',  						<#># Required<>
+	version='<v>2<>.<v>0<>.<v>1<>',  							<#># Required<>
+	description='<v>package description here<>.',	<#># Required<>
+	packages=find_packages(exclude=['contrib', 'docs', 'tests']),	<#># Required<>
 )<>
 @
 @ setup.py, setuptools, find_packages, setup(), .whl
@@ -1023,14 +1035,14 @@ Installs all the packages in the requirements file.
 
 ### Arithmetic Operators
 
-    <c><v>a<> + <v>b<><> 
-    <c><v>a<> - <v>b<><> 
-    <c><v>a<> * <v>b<><> 
-    <c><v>a<> / <v>b<><>					Always Returns a Float
-    <c><v>a<> // <v>b<><>				Floor Divide ( 9 // 4 = 2)
+	<c><v>a<> + <v>b<><> 
+	<c><v>a<> - <v>b<><> 
+	<c><v>a<> * <v>b<><> 
+	<c><v>a<> / <v>b<><>					Always Returns a Float
+	<c><v>a<> // <v>b<><>				Floor Divide ( 9 // 4 = 2)
 
-    <c><v>a<> % <v>b<><>					Modulo ( 7 % 3 = 1)
-    <c><v>a<> ** <v>b<><>				To The Power Of
+	<c><v>a<> % <v>b<><>					Modulo ( 7 % 3 = 1)
+	<c><v>a<> ** <v>b<><>				To The Power Of
 @
 @ power, modulo, modulus, plus, minus, divide, multiply, %, **, +, -, /, //
 
@@ -1073,10 +1085,10 @@ Ternary conditional operator.
 <cb><v>value_1<> := <v>value_2<><>
 
 <cb>if <v>value_1<> := <v>value_2<>:
-    <v>...<><>
+	<v>...<><>
 
 <cb>while (<v>item<> := <v>next_item<>()):
-    <v>...<><>
+	<v>...<><>
 
 Does 2 Things:
 
@@ -1091,7 +1103,7 @@ Example:
 <cb><v>count<> = 0
 
 while (<v>count<> := count + 1) < 5:
-    print(<v>count<>)
+	print(<v>count<>)
 
 <#># Prints 1 to 4, Then Exits<><>
 @
@@ -1153,13 +1165,17 @@ Versus <c>&&<>, <c>||<>, <c>!<> used in other languages.
 
 
 
-#### Complement
+#### Bitwise Complement
 
 <cb>= ~<v>a<><>
 
 Same As:
 
 <cb>= -<v>a<> - 1<>
+
+
+Performs a bitwise complement on the value.
+Because Python's integers are signed, this is not a straight inversion of the bits.
 
 
 Example:
@@ -1170,7 +1186,7 @@ Example:
 
 <#># Returns -0b111<><>
 @
-@ ~
+@ ~, NOT
 
 
 
@@ -1279,7 +1295,7 @@ Same Memory Location?:
 <cb>= id(<v>x<>) is not id(<v>y<>)<>
 
 
-<c>is<> and <c>is not<> compare an items' identities to see if they are the same.
+<c>is<> and <c>is not<> compare items' identities to see if they are the same.
 <c>id<><> compares memory locations.
 @
 @ id, is not, memory location, pointer, compare, same, equals
@@ -1292,7 +1308,7 @@ Same Memory Location?:
 <cb>= not <v>var_1<><>
 
 <cb>if not <v>var_1<>:
-    <v>...<><><>
+	<v>...<><><>
 
 Use on sequences, strings, lists, sets, dicts, tuples.
 
@@ -1300,9 +1316,9 @@ Use on sequences, strings, lists, sets, dicts, tuples.
 Example:
 
 <cb>if not <v>dict_1<>:
-    print("<v>dict_1<> is empty.")
+	print("<v>dict_1<> is empty.")
 else:
-    print("<v>dict_1<> not empty.")<>
+	print("<v>dict_1<> not empty.")<>
 @
 @ Non-empty, None, sequences, strings, lists, sets, dicts, tuples, equals, not
 
@@ -1311,7 +1327,7 @@ else:
 ### Operators - Not Empty?
 
 <cb>if <v>var_1<>:
-    <v>...<><>
+	<v>...<><>
 
 Use on sequences, strings, lists, sets, dicts, tuples.
 
@@ -1319,9 +1335,9 @@ Use on sequences, strings, lists, sets, dicts, tuples.
 Example:
 
 <cb>if <v>dict_1<>:
-    print("<v>dict_1<> not empty.")
+	print("<v>dict_1<> not empty.")
 else:
-    print("<v>dict_1<> is empty.")<>
+	print("<v>dict_1<> is empty.")<>
 @
 @ Non-empty, None, sequences, strings, lists, sets, dicts, tuples, equals, not
 
@@ -1334,10 +1350,10 @@ else:
 = <v>min<> \<= <v>value<> \<= <v>max<><>
 
 <cb>if <v>min<> \< <v>value<> \< <v>max<>:
-    <v>...<>
+	<v>...<>
 
 if <v>min<> \<= <v>value<> \<= <v>max<>:
-    <v>...<><>
+	<v>...<><>
 
 
 Examples:
@@ -1363,41 +1379,41 @@ print (1 \<= <v>value<> \< 2)<>
 From Highest To Lowest:
 
 
-<c>(<v>...<>)<>, <c>[<v>...<>]<>, <c>{<v>key<>: <v>value<>}<>, <c>{<v>...<>}<>			<#># Parenthesis, List, Dictionary or Set Display<>
-
-<c><v>x<>[<v>index<>]<>, <c><v>func_1<>()<>, <c><v>x<>.<v>attrib<><>				<#># Subscripts, Slicing, Calls, Attributes<>
-
-<c>await <v>x<><>								<#># Await Expression<>
-
-<c>**<>									<#># Exponent<>
-
-<c>+<v>x<><>, <c>-<v>x<><>, <c>~<v>x<><>								<#># Positive, Negative, Bitwise NOT<>
-
-<c>*<>, <c>/<>, <c>//<>, <c>%<>, <c>@<>							<#># Multiply, Divide, Floor Divide, Remainder (Modulo), Matrix Multiply<>
-
-<c>+<>, <c>-<>									<#># Add, Subtract<>
-
-<c>\<\<<>, <c>>><>								<#># Bitwise Shift<>
-
-<c>&<>									<#># Bitwise AND<>
-
-<c>^<>									<#># Bitwise XOR<>
-
-<c>|<>									<#># Bitwise OR<>
-
-<c>in<>, <c>not in<>, <c>is<>, <c>is not<>, <c>\<<>, <c>\<=<>, <c>><>, <c>>=<>, <c>!=<>, <c>==<>	<#># Comparisons<>
-
-<c>not<>									<#># Boolean NOT<>
-
-<c>and<>									<#># Boolean AND<>
-
-<c>or <>									<#># Boolean OR<>
-
-<c>if else<>								<#># Conditional Operator<>
-
-<c>lambda<>								<#># Lambda Expression<>
-
-<c>:=<>									<#># Assignment Operator<>
+<table><col><c>(<v>...<>)<>, <c>[<v>...<>]<>, <c>{<v>key<>: <v>value<>}<>, <c>{<v>...<>}<><><col><#># Parenthesis, List, Dictionary or Set<><>
+<col> <>
+<col><c><v>x<>[<v>index<>]<>, <c><v>func_1<>()<>, <c><v>x<>.<v>attrib<><><><col><#># Subscripts, Slicing, Calls, Attributes<><>
+<col> <>
+<col><c>await <v>x<><><><col><#># Await Expression<><>
+<col> <>
+<col><c>**<><><col><#># Exponent<><>
+<col> <>
+<col><c>+<v>x<><>, <c>-<v>x<><>, <c>~<v>x<><><><col><#># Positive, Negative, Bitwise NOT<><>
+<col> <>
+<col><c>*<>, <c>/<>, <c>//<>, <c>%<>, <c>@<><><col><#># Multiply, Divide, Floor Divide, Remainder (Modulo), Matrix Multiply<><>
+<col> <>
+<col><c>+<>, <c>-<><><col><#># Add, Subtract<><>
+<col> <>
+<col><c>\<\<<>, <c>>><><><col><#># Bitwise Shift<><>
+<col> <>
+<col><c>&<><><col><#># Bitwise AND<><>
+<col> <>
+<col><c>^<><><col><#># Bitwise XOR<><>
+<col> <>
+<col><c>|<><><col><#># Bitwise OR<><>
+<col> <>
+<col><c>in<>, <c>not in<>, <c>is<>, <c>is not<>, <c>\<<>, <c>\<=<>, <c>><>, <c>>=<>, <c>!=<>, <c>==<><><col><#># Comparators<><>
+<col> <>
+<col><c>not<><><col><#># Boolean NOT<><>
+<col> <>
+<col><c>and<><><col><#># Boolean AND<><>
+<col> <>
+<col><c>or <><><col><#># Boolean OR<><>
+<col> <>
+<col><c>if else<><><col><#># Conditional Operator<><>
+<col> <>
+<col><c>lambda<><><col><#># Lambda Expression<><>
+<col> <>
+<col><c>:=<><><col><#># Assignment Operator<><><>
 
 
 
@@ -1411,11 +1427,11 @@ From Highest To Lowest:
 ### If Else
 
 <cb>if <v>condition_1<>:
-    <v>...<>
+	<v>...<>
 elif <v>condition_2<>:
-    <v>...<>
+	<v>...<>
 else:
-    <v>...<><>
+	<v>...<><>
 @
 @ basics, conditional
 @ if-only, then, else, elif, elseif
@@ -1430,21 +1446,21 @@ else:
 #### For - Basics
 
 <cb>for <v>item<> in <v>sequence_1<>:
-    <v>...<><>
+	<v>...<><>
 
 <cb>for <v>i<> in range(<v>max_plus_1<>):
-    <v>...<><>
+	<v>...<><>
 
 <cb>for <v>item_1<>, <v>item_2<>, <v>...<> in <v>sequence_1<>:      <#># Unpack<>
-    <v>...<><>
+	<v>...<><>
 
 <cb>for <v>item<> in <v>sequence_1<>:
-    <v>...<>
-    break
-    <v>...<>
-    continue
+	<v>...<>
+	break
+	<v>...<>
+	continue
 else:
-    <v>...<><>
+	<v>...<><>
 @
 @ loop through, iterate, iterating, continue, break, else, skip
 
@@ -1453,9 +1469,9 @@ else:
 #### For - Else
 
 <cb>for <v>i<> in range(<v>range_options<>):
-    <v>...<>
+	<v>...<>
 else:
-    <v>...<><>
+	<v>...<><>
 
 
 The <c>else<> block executes after the <c>for<> block completes.
@@ -1464,9 +1480,9 @@ The <c>else<> block executes after the <c>for<> block completes.
 Examples:
 
 <cb>for <v>i<> in range(3):
-    print(i)
+	print(i)
 else:
-    print("done")<>
+	print("done")<>
 @
 @ range, forelse, for-else
 
@@ -1475,7 +1491,7 @@ else:
 #### For - In Dict
 
 <cb>for <v>key<>, <v>element<> in <v>dict_1<>.items():
-    <v>...<><>
+	<v>...<><>
 @
 @ each, foreach, over
 @ dict, dictionary, .items(), iterating, iterate
@@ -1485,16 +1501,16 @@ else:
 #### For - In Range
 
 <cb>for <v>i<> in range(<v>range_options<>):
-    <v>...<><>
+	<v>...<><>
 
 
 Examples:
 
 <cb>for <v>i<> in range(5):                        <#># Loops through 0, 1, 2, 3, 4.<>
-    <v>...<><>
+	<v>...<><>
 
 <cb>for <v>i<> in range(1,5):                  <#># Loops through 1, 2, 3, 4.<>
-    <v>...<><>
+	<v>...<><>
 @
 @ range()
 
@@ -1503,13 +1519,13 @@ Examples:
 #### For - In Range With Step
 
 <cb>for <v>i<> in range(<v>first<>, <v>last_plus_one<>, <v>step<>):
-    <v>...<><>
+	<v>...<><>
 
 
 Example:
 
 <cb>for <v>i<> in range(2, 9, 2):                  <#># Loops through 2, 4, 6, 8.<>
-    print(<v>i<>)<>
+	print(<v>i<>)<>
 @
 @ over, step, range()
 
@@ -1518,13 +1534,13 @@ Example:
 #### For - In Sequence
 
 <cb>for <v>element<> in <v>sequence<>:
-    <v>...<><>
+	<v>...<><>
 
 <cb>for <v>element<> in <v>sequence<>:
-    <v>...<>
-    break                               <#># Exit for loop.<>
-    <v>...<>
-    continue                            <#># Jump to next iteration.<><>
+	<v>...<>
+	break                               <#># Exit for loop.<>
+	<v>...<>
+	continue                            <#># Jump to next iteration.<><>
 
 A sequence can be a list, array, etc.
 
@@ -1534,7 +1550,7 @@ Example:
 <cb><v>list_1<> = [<v>'a'<>, <v>'b'<>, <v>'c'<>]
 
 for <v>item<> in <v>list_1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ each, foreach, over, iterate, iterating
 
@@ -1542,11 +1558,25 @@ for <v>item<> in <v>list_1<>:
 
 #### For - In Sequence of Tuples, Unpacked
 
-<cb>for <v>item_1<>, <v>item_2<>, <v>...<> in <v>sequence_of_tuples_1<>:
-    <v>...<><>
+<cb>for <v>item_1<>, <v>item_2<>, <v>...<> in <v>tuple_sequence<>:
+	<v>...<><>
 
-Separates inside each element inside <c><v>sequence_of_tuples_1<><>.
+Separates inside each element inside <c><v>tuple_sequence<><>.
 Works for lists too.
+
+
+Example:
+
+<cb><v>tuples<> = [(<v>"tuple 1"<>, <v>1<>), (<v>"tuple 2"<>, <v>2<>), (<v>"tuple 3"<>, <v>3<>)]
+
+for <v>name<>, <v>value<> in <v>tuples<>:
+	print(<v>name<>, ":", <v>value<>)
+
+<#># Prints:
+\#
+\# tuple 1 : 1
+\# tuple 2 : 2
+\# tuple 3 : 3<><>
 @
 @ each, foreach, destructure, destructuring, In
 
@@ -1555,40 +1585,404 @@ Works for lists too.
 #### For - Nested For
 
 <cb>for <v>i<> in range(<v>count_1<>):
-    for <v>j<> in range(<v>count_2<>):
-        <v>...<><>
+	for <v>j<> in range(<v>count_2<>):
+		<v>...<><>
+
+Example:
+
+<cb>for <v>tens<> in range(2):
+    for <v>units<> in range(5):
+    	print(str(<v>tens<>) + str(<v>units<>))<><>
 @
 @ nesting
 
 
 
-### Switch / Case
+### Match
 
-<!>Note:<> There is no Switch / Case in Python.
+Python Version: 3.10+
+@
+@ Structural Pattern Matching
+@ switch, case, match-only
 
-Use <c>if<>, <c>elif<> instead.
-Or use a fancy dictionary object.
+
+
+#### Match - Match Basics
+
+<cb>match <v>variable_1<>:
+
+    case <v>value_1<>:
+        <v>...<>
+
+    case <v>value_2<> | <v>value_3<>:			<#>Matches Either Value<>
+        <v>...<>
+
+    case (<v>value_4_1<>, <v>value_4_2<>):	<#>Tuple<>
+        <v>...<>
+
+    case [<v>value_5_1<>, <v>value_5_2<>]:	<#>List<>
+        <v>...<>
+
+    case {<v>key_6<>: <v>value_6<>}:			<#>Dict (Contains)<>
+        <v>...<>
+
+    case <v>Class1<>(<v>param_1<>, <v>param_2<>):	<#>Class<>
+        <v>...<>
+
+    case <v>Enum1<>.<v>ENUM_1<>:				<#>Enum<>
+        <v>...<>
+
+    case (<v>value_8<>, <v>x<>):				<#>Varible<>
+        <v>...<>
+	
+    case (<v>value_8<>, <v>x<>) if <v>condition<>:
+        <v>...<>   
+	
+    case _:							<#>Unmatched<>
+        <v>...<><>
+
+
+
+#### Match - Capture To Variable
+
+<cb>match <v>item_1<>:
+    case <v>variable_1<>:
+        <v>...<>
+    case (<v>value<>, <v>variable_1<>):
+        <v>...<>
+    case (<v>variable_1<>, <v>variable_2<>, <v>variable_3<>):
+        <v>...<>
+    case _:
+        <v>...<><>
+
+
+Captures one or more values and binds them to variables.
+
+
+Example:
+
+<cb><v>item_1<> = (<v>1<>, <v>2<>)
+
+match <v>item_1<>:
+    case (1, <v>a<>):
+        print (f'(1, a = {<v>a<>})')
+    case (2, <v>b<>):
+        print (f'(2, b = {<v>b<>})')
+    case _:
+        print('Unmatched Value')
+
+<#># Prints: (1, a = 2)<><>
+@
+@ capture pattern, value
+
+
+#### Match - Match Specific Values
+
+<cb>match <v>item_1<>:
+    case <v>value_1<>:
+        <v>...<>
+    case <v>value_2<> | <v>value_3<>:
+        <v>...<>
+    case _:
+        <v>...<><>
+
+
+Matches the value of the variable with the value of the case statements.
+If matched, the case statement will execute.
+
+
+Examples:
+
+<cb><v>int_1<> = 2
+
+match <v>int_1<>:
+    case <v>1<>:
+        print ('Value 1')
+    case <v>2<> | <v>3<>:
+        print ('Value 2 or 3')
+    case _:
+        print ('Unmatched Value')
+
+<#># Prints: 'Value 2 or 3'<><>
+
+
+<cb><v>month<> = '<v>feb<>'
+
+match <v>int_1<>:
+    case '<v>jan<>':
+        print ('January')
+    case '<v>feb<>':
+        print ('February')
+    case _:
+        print ('Unmatched Month')
+
+<#># Prints: 'It's February'<><>
+
+
+
+#### Match - Match 'Constants'
+
+<cb>class <v>Constants<>:
+    <v>CONSTANT_1<> = <v>value_1<>
+    <v>CONSTANT_2<> = <v>value_2<>
+
+match <v>item_1<>:
+    case <v>Constants<>.<v>CONSTANT_1<>:
+        <v>...<>
+    case <v>Constants<>.<v>CONSTANT_2<>:
+        <v>...<>
+    case _:
+        <v>...<><>
+
+
+Define constants in a class and reference them statically.
+
+Note: If you do not include the class name, <c>match<> will think these are structural pattern variables and will assign values to them.
+
+
+<cb>class <v>Status<>:
+	<v>OK<> = '<v>ok<>'
+	<v>ERROR<> = '<v>error<>'
+
+<v>status<> = '<v>ok<>'
+
+match <v>status<>:
+    case <v>Status<>.<v>OK<>:
+        print ("Status OK")
+    case <v>Status<>.<v>ERROR<>:
+        print ("Status Error")
+    case _:
+        print ("Status Unknown")
+
+<#># Prints: "Status OK"<><>
+
+
+
+#### Match - Match Dict
+
+<cb>match <v>dict_1<>:
+    case {<v>key_1<>: <v>value_1<>}:
+        <v>...<>
+    case {<v>key_2<>: <v>value_2<>, <v>key_3<>: <v>value_3<>}:
+        <v>...<>
+    case _:
+        <v>...<><>
+
+
+Matches key, value pairs in a dictionary.
+If the pair exists, the case block will execute.
+This is independent of any other values in the dict.
+
+
+Examples:
+
+<cb><v>dict_1<> = {'<v>b<>': '<v>b1<>', '<v>z<>': '<v>z1<>'}
+
+match <v>dict_1<>:
+    case {'<v>a<>': '<v>a1<>'}:
+        print('Value a:a1')
+    case {'<v>b<>': '<v>b0<>'}:
+        print('Value b:b0')
+    case {'<v>b<>': '<v>b1<>'}:
+        print('Value b:b1')
+    case _:
+        print('Unmatched value.')
+
+<#># Prints: 'Value b:b1'<><>
+
+
+
+#### Match - Match Enums
+@
+@ enumerations
+
+<cb>class <v>Enum1<>(Enum):
+    <v>ENUM_1<> = <v>value_1<>
+    <v>ENUM_2<> = <v>value_2<>
+
+match <v>item_1<>:
+    case <v>Enum1<>.<v>ENUM_1<>:
+        <v>...<>
+    case <v>Enum1<>.<v>ENUM_2<>:
+        <v>...<>
+    case _:
+        <v>...<><>
+
+
+Matches the values of an enumerated type.
+
+
+<cb>from enum import Enum, auto
+
+class <v>Status<>(Enum):
+    <v>OK<> = '<v>ok<>'
+    <v>ERROR<> = '<v>error<>'
+
+<v>status<> = <v>Status<>.<v>OK<>
+
+match <v>status<>:
+    case <v>Status<>.<v>OK<>:
+        print ("Status OK")
+    case <v>Status<>.<v>ERROR<>:
+        print ("Status Error")
+    case _:
+        print ("Status Unknown")
+
+<#># Prints: "Status OK"<><>
+
+
+
+#### Match - Match Lists
+
+<cb>match <v>list_1<>:
+    case [<v>value_1<>]:
+        <v>...<>
+    case [<v>value_2<>]:
+        <v>...<>
+    case [<v>value_3_1<>, <v>value_3_2<>]:
+        <v>...<>
+    case _:
+        <v>...<><>
+
+
+Matches the internal values of the variable with the value of the case statements.
+If matched, the case statement will execute.
+
+
+Example:
+
+<cb><v>list_1<> =[<v>1<>, <v>3<>]
+
+match <v>list_1<>:
+    case [<v>1<>]:
+        print ('Value [1]')
+    case [<v>1<>, <v>2<>]:
+        print ('Value [1, 2]')
+    case [<v>1<>, <v>3<>]:
+        print ('Value [1, 3]')
+    case _:
+        print ('Unmatched Value')
+
+<#># Prints: Value (1, 3)'<><>
+
+
+
+#### Match - Match Tuples
+
+<cb>match <v>tuple_1<>:
+    case (<v>value_1<>):
+        <v>...<>
+    case (<v>value_2<>):
+        <v>...<>
+    case (<v>value_3_1<>, <v>value_3_2<>):
+        <v>...<>
+    case _:
+        <v>...<><>
+
+
+Matches the internal values of the variable with the value of the case statements.
+If matched, the case statement will execute.
+
+
+Example:
+
+<cb><v>tuple_1<> =(<v>1<>, <v>3<>)
+
+match <v>tuple_1<>:
+    case (<v>1<>):
+        print ('Value (1)')
+    case (<v>1<>, <v>2<>):
+        print ('Value (1, 2)')
+    case (<v>1<>, <v>3<>):
+        print ('Value (1, 3)')
+    case _:
+        print ('Unmatched Value')
+
+<#># Prints: Value (1, 3)'<><>
+
+
+
+#### Match - Match Conditionally / If
+
+<cb>match <v>item_1<>:
+    case <v>...<> if <v>condition<>:
+        <v>...<><>
+
+
+Will match the case only when <v>condition<> is met.
+
+
+<cb><v>item_1<> = (<v>1<>, <v>2<>)
+
+match <v>item_1<>:
+    case (<v>1<>, <v>x<>) if <v>x<> % 2 == 0:
+        print('Value (1,x), x Is Even')
+    case (<v>1<>, <v>x<>):
+        print('Value (1,x), x Is Odd')
+    case _:
+        print('Unmatched value')
+
+<#>Prints: 'Value (1,x), x Is Even'<><>
+@
+@ with condition
+
+
+
+#### Match - Fall Through
+
+Not Supported.
+
+Unlike other languages, <c>match<> does not fall through from one case block into the next. There is no need for a <c>break<> statement within a case block to exit the block.
+@
+@ case block
+
+
+
+#### Match - Unmatched / Wildcard
+
+<cb>match <v>item_1<>:
+
+    case _:
+        <v>...<><>
+
+
+<c>_<> catches all values that were not matched in any other case statements.
+
+
+<cb><v>item_1<> = <v>-1<>
+
+match <v>item_1<>:
+    case <v>1<>:
+        print('Value 1')
+    case <v>2<>:
+        print('Value 2')
+    case _:
+        print('Unmatched Value')
+
+<#>Prints: 'Unmatched Value'<><>
+@
+@ underscore, _, default case
 
 
 
 ### While
 
 <cb>while <v>condition<>:
-    <v>...<><>
+	<v>...<><>
 
 <cb>while <v>condition<>:
-    <v>...<>
+	<v>...<>
 else:
-    <v>...<>                                   <#># When <c>condition<> = <c>False<><><>
+	<v>...<>                                   <#># When <c>condition<> = <c>False<><><>
 
 <cb>while <v>condition<>:
-    <v>...<>
-    break                               <#># Exit for loop.<>
-    <v>...<>
-    continue                            <#># Jump to next iteration.<>
-    <v>...<>
+	<v>...<>
+	break                               <#># Exit for loop.<>
+	<v>...<>
+	continue                            <#># Jump to next iteration.<>
+	<v>...<>
 else:
-    <v>...<>                                   <#># When <c>condition<> = <c>False<><><>
+	<v>...<>                                   <#># When <c>condition<> = <c>False<><><>
 
 <c>else<> block reached when <c>condition<> = false only. Not called for break, exception, etc.
 @
@@ -1623,10 +2017,10 @@ Use as a placeholder in places where a code block should exist but you don't hav
 Examples:
 
 <cb>for <v>i<> in range(<v>5<>):
-    pass<>
+	pass<>
 
 <cb>def <v>new_function<>():
-    pass<>
+	pass<>
 @
 @ For, While
 
@@ -1673,8 +2067,8 @@ Usage:
 
 <cb>def <v>some_function<>():
 
-    global <v>name<>
-    <v>name<> = <v>value<><>
+	global <v>name<>
+	<v>name<> = <v>value<><>
 
 
 Example:
@@ -1684,8 +2078,8 @@ Example:
 
 def <v>update_global<>():
 
-    global <v>global_1<>
-    <v>global_1<> = <v>global_1<> + ' + Update'
+	global <v>global_1<>
+	<v>global_1<> = <v>global_1<> + ' + Update'
 
 
 <v>update_global<>()
@@ -1707,12 +2101,12 @@ Usage:
 
 <cb>def <v>parent_function<>():
 
-    <v>value_1<> = <v>...<>
+	<v>value_1<> = <v>...<>
 
-    def <v>inner_function<>():
+	def <v>inner_function<>():
 
-        nonlocal <v>value_1<>
-        <v>value_1<> = <v>new_value<><>
+		nonlocal <v>value_1<>
+		<v>value_1<> = <v>new_value<><>
 
 Without the keyword <c>nonlocal<>, Python will create a local variable.
 The non-local variable must be in scope of the nested function declaration.
@@ -1730,16 +2124,16 @@ Example:
 
 <cb>def <v>parent_function<>:
 
-    <v>count<> = 0
+	<v>count<> = 0
 
-    def <v>update_count<>():
+	def <v>update_count<>():
 
-        nonlocal <v>count<>
-        <v>count<> += 1
+		nonlocal <v>count<>
+		<v>count<> += 1
 
-    <v>update_count<>()
+	<v>update_count<>()
 
-    <#># count is now 1<><>
+	<#># count is now 1<><>
 @
 @ Scope
 
@@ -1819,7 +2213,7 @@ Example:
 <cb><v>a<> = 10
 
 if '<v>a<>' in locals():
-    print('a exists')
+	print('a exists')
 
 <#># Prints: a exists<><>
 @
@@ -1856,7 +2250,7 @@ Example:
 <cb>item_1 = [1, 2, 3]
 
 if type(<v>item_1<>) is list:
-    <v>...<>                                   <#># Executes if arg_1 is of type <c>list<>.<><>
+	<v>...<>                                   <#># Executes if arg_1 is of type <c>list<>.<><>
 @
 @ Variable, equals, is, compare, isclass, type(), type of, is instance of
 
@@ -1879,12 +2273,12 @@ Examples:
 <cb>item_1 = []
 
 if isinstance(<v>item_1<>, list):
-    <v>...<><>
+	<v>...<><>
 
 <cb>item_2 = 10
 
 if isinstance(<v>item_1<>, (int, complex, float)):
-    <v>...<><>
+	<v>...<><>
 @
 @ equals, is type?, subclass, isclass, isinstance()
 @ check, compare, is instance of
@@ -1928,7 +2322,7 @@ Returns true if <c><v>item_1<><> is the same type as <c><v>type_1<><>.
 Example:
 
 <cb>if type(<v>arg_1<>) is list:
-    <v>...<>                                   <#># Executes if arg_1 is of type <c>list<>.<><>
+	<v>...<>                                   <#># Executes if arg_1 is of type <c>list<>.<><>
 @
 @ Variable, equals, is, compare, isclass, type()
 
@@ -2176,7 +2570,7 @@ Examples:
 <cb><v>var_1<> = None<>
 
 <cb>if <v>var_1<> is None:
-    <v>...<><>
+	<v>...<><>
 @
 @ character, none-only
 
@@ -2187,7 +2581,7 @@ Examples:
 <cb>= <v>item_1<> is None<>
 
 <cb>if not <v>item_1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ equals?, equal to?, Compare
 
@@ -2198,7 +2592,7 @@ Examples:
 <cb>= <v>item_1<> is not None<>
 
 <cb>if <v>item_1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ equals?, equal to?, Compare
 
@@ -2609,7 +3003,7 @@ Underscores between numbers are ignored. Use them to make the number more readab
 <cb>= not <v>int_1<><>
 
 <cb>if not <v>int_1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ Not
 
@@ -2620,7 +3014,7 @@ Underscores between numbers are ignored. Use them to make the number more readab
 <cb>= bool(<v>int_1<>)<>
 
 <cb>if <v>int_1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ Non, bool()
 
@@ -3007,6 +3401,8 @@ Example:
 <v>formatted<> = f"{<v>string_1<>!r}."
 
 <#># Returns "'norminal'"<><>
+@
+@ !r, {!r}
 
 
 
@@ -3027,7 +3423,7 @@ Example:
 
 <#># Returns "string_1 = 'norminal'"<><>
 @
-@ debugging
+@ debugging, =, {=}
 
 
 
@@ -3047,6 +3443,8 @@ Example:
 <v>comma_separated<> = f"{<v>int_1<>:<v>,d<>}"
 
 <#># Returns "12,345"<><>
+@
+@ {:}, :
 
 
 
@@ -3067,7 +3465,7 @@ Ugly Way:
 
 \#2  -  Returns '}'<>
 @
-@ {}, }
+@ {}, } {{, }}
 
 
 
@@ -3107,7 +3505,7 @@ Combines 2 or more strings into one string.
 <cb>= <v>string_1<> in <v>string_2<><>
 
 <cb>if <v>string_1<> in <v>string_2<>:
-    <v>...<><>
+	<v>...<><>
 
 Returns <c>True<> when <c><v>string_1<><> is a substring of <c><v>string_2<><>.
 @
@@ -3120,7 +3518,7 @@ Returns <c>True<> when <c><v>string_1<><> is a substring of <c><v>string_2<><>.
 <cb>= <v>string_1<> not in <v>string_2<><>
 
 <cb>if <v>string_1<> not in <v>string_2<>:
-    <v>...<><>
+	<v>...<><>
 
 Returns <c>True<> when <c><v>string_1<><> is not a substring of <c><v>string_2<><>.
 @
@@ -3170,6 +3568,10 @@ Returns <c>True<> if <c><v>string_1<><> ends with or equals <c><v>test_value<><>
 
 <cb>= <v>string_1<>.find(<v>search_value<>)<>
 
+<cb>= <v>string_1<>.find(<v>search_value<>, <v>start<>)<>
+
+<cb>= <v>string_1<>.find(<v>search_value<>, <v>start<>, <v>end<>)<>
+
 Returns: <c>integer<>
 
 If -1 is returned then no match was found.
@@ -3207,7 +3609,7 @@ Example:
 <cb>= not <v>string_1<> or <v>string_1<>.isspace()<>
 
 <cb>if not <v>string_1<> or <v>string_1<>.isspace():
-    <v>...<><>
+	<v>...<><>
 
 
 Returns <c>True<> for <c>None<> or <c>""<> or is all whitespace.
@@ -3221,7 +3623,7 @@ Returns <c>True<> for <c>None<> or <c>""<> or is all whitespace.
 <cb>= not <v>string_1<><>
 
 <cb>if not <v>string_1<>:
-    <v>...<><>
+	<v>...<><>
 
 
 Returns <c>True<> for <c>None<> or <c>""<>.
@@ -3235,7 +3637,7 @@ Returns <c>True<> for <c>None<> or <c>""<>.
 <cb>= (<v>string_1<> != None and <v>string_1<> != "")<>
 
 <cb>if <v>string_1<> != None and <v>string_1<> != "":
-    <v>...<><>
+	<v>...<><>
 
 
 Returns <c>False<> for <c>None<> or <c>""<>.
@@ -3246,12 +3648,12 @@ There isn't a clean Pythonic way to do this.
 I recommend making a function like this:
 
 <cb>def not_empty(<v>value<>):
-    return <v>value<> != None and <v>value<> != ""<>
+	return <v>value<> != None and <v>value<> != ""<>
 
 Then call like this:
 
 <cb>if not_empty(<v>string_1<>):
-    <v>...<><>
+	<v>...<><>
 @
 @ Size, None
 
@@ -3262,15 +3664,15 @@ Then call like this:
 <cb>= <v>string_1<> == <v>string_2<><>
 
 <cb>if <v>string_1<> == <v>string_2<>:
-    <v>...<><>
+	<v>...<><>
 
 
 Example:
 
 <cb>if <v>"a"<> == <v>"b"<>:
-    print("Equal")
+	print("Equal")
 else:
-    print("Not Equal")<>
+	print("Not Equal")<>
 @
 @ Equals, Compares, Not, ==, identical
 
@@ -3281,15 +3683,15 @@ else:
 <cb>= <v>string_1<> != <v>string_2<><>
 
 <cb>if <v>string_1<> != <v>string_2<>:
-    <v>...<><>
+	<v>...<><>
 
 
 Example:
 
 <cb>if <v>"a"<> != <v>"b"<>:
-    print("Not Equal")
+	print("Not Equal")
 else:
-    print("Equal")<>
+	print("Equal")<>
 @
 @ Equals, Compares, Not, !=
 
@@ -3300,7 +3702,7 @@ else:
 <cb>= <v>string_1<>.casefold() == <v>string_2<>.casefold()<>
 
 <cb>if <v>string_1<>.casefold() == <v>string_2<>.casefold():
-    <v>...<><>
+	<v>...<><>
 
 
 <c>casefold()<> is the correct way to compare strings caselessly.
@@ -3311,9 +3713,9 @@ This is especially true for unicode strings.
 Example:
 
 <cb>if <v>"stoß"<>.casefold() == <v>"STOSS"<>.casefold():
-    print("Equal")
+	print("Equal")
 else:
-    print("Not Equal")
+	print("Not Equal")
 
 <#># These Are Equal<><>
 @
@@ -3326,7 +3728,7 @@ else:
 <cb>= <v>string_1<>.casefold() != <v>string_2<>.casefold()<>
 
 <cb>if <v>string_1<>.casefold() != <v>string_2<>.casefold():
-    <v>...<><>
+	<v>...<><>
 
 
 <c>casefold()<> is the correct way to compare strings caselessly.
@@ -3336,9 +3738,9 @@ This is especially true for unicode strings.
 Example:
 
 <cb>if <v>"stoß"<>.casefold() != <v>"STOSS"<>.casefold():
-    print("Not Equal")
+	print("Not Equal")
 else:
-    print("Equal")
+	print("Equal")
 
 <#># These Are Equal<><>
 @
@@ -3351,7 +3753,7 @@ else:
 <cb>from re import match
 
 def is_int(<v>value<>):
-    return match(r"^[+-]?\d+$", <v>value<>) is not None<>
+	return match(r"^[+-]?\d+$", <v>value<>) is not None<>
 
 <cb>= is_int(<v>string_1<>)<>
 
@@ -3365,7 +3767,7 @@ Works for any integer including those with plus or minus.
 #### String - Iterate Over Characters
 
 <cb>for <v>character<> in <v>string_1<>:
-    <v>...<><>
+	<v>...<><>
 
 Iterates over <c><v>string_1<><> one character at a time.
 @
@@ -3387,9 +3789,9 @@ Is Greater Than?:
 Example:
 
 <cb>if <v>"a"<> < <v>"b"<>:
-    print("Less Than")
+	print("Less Than")
 else:
-    print("Not Less Than")<>
+	print("Not Less Than")<>
 @
 @ Is Less Than, Is Greater Than, <, <=, >, >=
 
@@ -3567,6 +3969,8 @@ Examples:
 
 <cb>= <v>string_2<>.splitlines()<>
 
+Returs: <c>list<>
+
 
 Returns a list of strings split by newline.
 
@@ -3577,7 +3981,7 @@ Example:
 
 <#># Returns ['one', 'two', 'three']<><>
 @
-@ .splitlines(), new line, line break.
+@ .splitlines(), new line, line break., lines, by
 
 
 
@@ -3600,7 +4004,7 @@ Returns <c>True<> if <c><v>string_1<><> begins with or equals <c><v>test_value<>
 
 Removes all whitespace characters from the beginning and end of the string.
 @
-@ trim, remove, whitespaces, white spaces, .strip()
+@ trim, remove, delete, whitespaces, white spaces, .strip()
 
 
 
@@ -3610,7 +4014,7 @@ Removes all whitespace characters from the beginning and end of the string.
 
 Removes all whitespace characters at the start of the string.
 @
-@ trim, remove, whitespaces, white spaces, start, .lstrip(), spaces
+@ trim, remove, whitespaces, white spaces, start, .lstrip(), spaces, delete
 
 
 
@@ -3620,7 +4024,7 @@ Removes all whitespace characters at the start of the string.
 
 Removes all whitespace characters at the end of the string.
 @
-@ trim, remove, whitespaces, white spaces, end, .rstrip(), spaces
+@ trim, remove, whitespaces, white spaces, end, .rstrip(), spaces, delete
 
 
 
@@ -3710,6 +4114,7 @@ Example:
 <#># Returns 'speedsheet.io'<><>
 @
 @ partial, .removeprefix()
+@ delete, start, beginning
 
 
 
@@ -3733,6 +4138,7 @@ Example:
 <#># Returns 'file_name'<><>
 @
 @ Postfix, .removesuffix()
+@ end, delete
 
 
 
@@ -3858,10 +4264,10 @@ In Depth:
 <cb><#># Helper Function:<>
 
 def print_cases(text):
-    print("Original:   ", text)
-    print("Upper:      ", text.upper())
-    print("Lower:      ", text.lower())
-    print("Folded:     ", text.casefold())<>
+	print("Original:   ", text)
+	print("Upper:      ", text.upper())
+	print("Lower:      ", text.lower())
+	print("Folded:     ", text.casefold())<>
 
 <cb><#># German Letter SS/ß<>
 
@@ -3900,7 +4306,51 @@ Splits the string along whitespaces.
 
 
 
-#### String - From ASCII Code
+#### String - From List
+
+<cb>= ''.join(<v>list1<>)<>
+
+Joins all elements of <c><v>list1<><> into 1 string.
+
+
+Example:
+
+<cb><v>list_1<> = ['<v>1<>', '<v>2<>', '<v>3<>', '<v>4<>']
+
+<v>string_1<> = ''.join(<v>list_1<>)
+
+<#># Returns: '1234'<><>
+@
+@ convert to, conversion, characters, .join()
+@ from-list, to-string
+
+
+
+#### String - To List
+
+<cb>= [<v>character<> for <v>character<> in <v>string_1<>]<>
+
+
+Returns: <c>list<> of <c>str<>
+
+
+Converts a string to a list of characters.
+
+
+Example:
+
+<cb><v>string_1<> = '<v>abc<>'
+
+<v>list_1<> = [<v>character<> for <v>character<> in <v>string_1<>]
+
+<#># Returns: ['a', 'b', 'c']<><>
+@
+@ convert from, conversion, characters, from, chars
+@ from-string, to-list
+
+
+
+#### String Character - From ASCII Code
 
 <cb>= chr(<v>ascii_code<>)<>
 
@@ -3912,7 +4362,7 @@ Example:
 
 
 
-#### String - To ASCII Code
+#### String Character - To ASCII Code
 
 <cb>= ord(<v>string_char<>)<>
 
@@ -3921,42 +4371,12 @@ Example:
 
 Example:
 
-<cb><v>ascii_code<> = ord("<v>C<>")                   <#># Returns 67<><>
+<cb><v>ascii_code<> = ord("<v>C<>")
+
+<#># Returns 67<><>
 @
 @ convert, conversion, from, character, ord(), value
 @ from-string, to-ascii
-
-
-
-#### String - From List
-
-<cb>= ''.join(<v>list1<>)<>
-
-Joins all elements of <c><v>list1<><> into 1 string.
-
-
-Example:
-
-<cb><v>list_1<> = ['<v>1<>', '<v>2<>', '<v>3<>', '<v>4<>']
-<v>string_1<> = ''.join(<v>list_1<>)          <#># Returns '1234'<><>
-@
-@ convert to, conversion, characters, .join()
-@ from-list, to-string
-
-
-
-#### String - To List
-
-<cb>= [<v>character<> for <v>character<> in <v>string1<>]<>
-
-
-Returns: <c>list<> of <c>str<>
-
-
-Converts a string to a list of characters:
-@
-@ convert from, conversion, characters, from, chars
-@ from-string, to-list
 
 
 
@@ -4006,10 +4426,10 @@ Example:
 #### Date - Compare
 
 <cb>if <v>date_1<> == <v>date_2<>:
-    <v>...<><>
+	<v>...<><>
 
 <cb>if <v>date_1<> \< <v>date_2<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ less than, greater than, equals, ==, \<, \</, >, >=, !=
 
@@ -4270,10 +4690,10 @@ Example:
 #### DateTime - Compare
 
 <cb>if <v>datetime_1<> == <v>datetime_2<>:
-    <v>...<><>
+	<v>...<><>
 
 <cb>if <v>datetime_1<> \< <v>datetime_2<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ Less Than, Greater Than, Equals, ==, \<, \</, >, >=, !=
 
@@ -4658,13 +5078,13 @@ from time import localtime
 <cb>= timedelta(<v>unit<> = <v>value<>, <v>unit<>=<v>value<> <v>...<>)<>
 
 <cb>= timedelta(
-        weeks=<v>weeks_value<>,
-        days=<v>days_value<>,
-        hours=<v>hours_value<>,
-        minutes=<v>minutes_value<>,
-        seconds=<v>seconds_value<>,
-        microseconds=<v>microseconds_value<>,
-        milliseconds=<v>milliseconds_value<>)<>
+		weeks=<v>weeks_value<>,
+		days=<v>days_value<>,
+		hours=<v>hours_value<>,
+		minutes=<v>minutes_value<>,
+		seconds=<v>seconds_value<>,
+		microseconds=<v>microseconds_value<>,
+		milliseconds=<v>milliseconds_value<>)<>
 
 <cb><v>timedelta_3<> = <v>datetime_1<> - <v>datetime_2<><>
 
@@ -4915,18 +5335,18 @@ Function:
 
 <cb>def <v>format_timedelta<>(<v>timedelta_1<>):
 
-    <v>remainder<> = <v>timedelta_1<>.seconds
+	<v>remainder<> = <v>timedelta_1<>.seconds
 
-    <v>hours<> = int(<v>remainder<> // 3600)
-    <v>remainder<> = <v>remainder<> % 3600
+	<v>hours<> = int(<v>remainder<> // 3600)
+	<v>remainder<> = <v>remainder<> % 3600
 
-    <v>minutes<> = int(<v>remainder<> // 60)
-    <v>seconds<> = int(<v>remainder<> % 60)
+	<v>minutes<> = int(<v>remainder<> // 60)
+	<v>seconds<> = int(<v>remainder<> % 60)
 
-    if <v>timedelta_1<>.days > 0:
-        return f"{<v>timedelta_1<>.days} days {<v>hours<>}:{<v>minutes<>:02}:{<v>seconds<>:02}"
+	if <v>timedelta_1<>.days > 0:
+		return f"{<v>timedelta_1<>.days} days {<v>hours<>}:{<v>minutes<>:02}:{<v>seconds<>:02}"
 
-    return f"{<v>hours<>}:{<v>minutes<>:02}:{<v>seconds<>:02}"<>
+	return f"{<v>hours<>}:{<v>minutes<>:02}:{<v>seconds<>:02}"<>
 
 Call:
 
@@ -4939,17 +5359,17 @@ Call:
 <cb>from enum import Enum, auto
 
 class <v>EnumName<>(Enum):
-    <v>ENUM_1<> = auto()
-    <v>ENUM_2<> = auto()
-    <v>...<><>
+	<v>ENUM_1<> = auto()
+	<v>ENUM_2<> = auto()
+	<v>...<><>
 
 
 <cb>from enum import Enum, auto
 
 class <v>EnumName<>(Enum):
-    <v>ENUM_1<> = <v>value_1<>
-    <v>ENUM_2<> = <v>value_2<>
-    <v>...<><>
+	<v>ENUM_1<> = <v>value_1<>
+	<v>ENUM_2<> = <v>value_2<>
+	<v>...<><>
 
 <c>auto()<> is required if the Enum items don't have a value.
 @
@@ -5004,19 +5424,19 @@ Define:
 <cb>from enum import Enum, auto
 
 class <v>EnumName<>(Enum):
-    <v>ENUM_1<> = auto()
-    <v>ENUM_2<> = auto()
-    <v>...<>
+	<v>ENUM_1<> = auto()
+	<v>ENUM_2<> = auto()
+	<v>...<>
 
-    @classmethod
-    def from_string(cls, <v>value<>):          <#>#1<>
-        return cls.<v>_lookup<>[<v>value<>]           <#>#2<>
+	@classmethod
+	def from_string(cls, <v>value<>):          <#>#1<>
+		return cls.<v>_lookup<>[<v>value<>]           <#>#2<>
 
 <v>EnumName<>.<v>_lookup<> = {                        <#>#3<>
-        <v>"Enum 1a"<>: <v>EnumName<>.<v>ENUM_1<>,
-        <v>"Enum 1b"<>: <v>EnumName<>.<v>ENUM_1<>,
-        <v>"Enum 2a"<>: <v>EnumName<>.<v>ENUM_2<>,
-        <v>"Enum 2b"<>: <v>EnumName<>.<v>ENUM_2<>}
+		<v>"Enum 1a"<>: <v>EnumName<>.<v>ENUM_1<>,
+		<v>"Enum 1b"<>: <v>EnumName<>.<v>ENUM_1<>,
+		<v>"Enum 2a"<>: <v>EnumName<>.<v>ENUM_2<>,
+		<v>"Enum 2b"<>: <v>EnumName<>.<v>ENUM_2<>}
 <>
 
 Use:
@@ -5067,12 +5487,53 @@ Internally stored as a hash table.
 
 #### Dict - Add / Update
 
-<cb><v>dict_1<>[<v>key_1<>] = <v>value<><>
+<cb><v>dict_1<>[<v>key<>] = <v>value<><>
 
-Will replace <v>key_1<> value if key exists.
-Will add <v>key_1<> if it does not exist.
+Will replace <v>key<> value if key exists.
+Will add <v>key<> if it does not exist.
+
+
+Examples:
+
+Add Value:
+
+<cb><v>dict_1<> = {<v>1<>: "<v>a<>", <v>2<>: "<v>b<>"}
+
+<v>dict_1<>[<v>3<>] = "<v>c<>"
+
+<#># Updates To: {1: 'a', 2: 'b', 3: 'c'}<><>
+
+Update Value:
+
+<cb><v>dict_1<> = {<v>1<>: "<v>a<>", <v>2<>: "<v>b<>"}
+
+<v>dict_1<>[<v>2<>] = "<v>x<>"
+
+<#># Updates To: {1: 'a', 2: 'x'}<><>
 @
-@ add, put, insert, update, modify, change, item, element, value
+@ add, put, insert, update, modify, change, item, element, value, append to
+
+
+
+
+#### Dict - Add / Update From Dict
+
+<cb><v>dict_1<>.update(<v>dict_2<>)<>
+
+
+Adds or updates items from <c>dict_2<> into <c>dict_1<>.
+
+
+Example:
+
+<cb><v>dict_1<> = {<v>1<>: "<v>a<>", <v>2<>: "<v>b<>"}
+<v>dict_2<> = {<v>2<>: "<v>b2<>", <v>3<>: "<v>c<>"}
+
+<v>dict_1<>.update(<v>dict_2<>)
+
+<#># Updates To: {1: 'a', 2: 'b2', 3: 'c'}<><>
+@
+@ .update(), extend, extends, join, concatenate, addall, append to
 
 
 
@@ -5179,7 +5640,7 @@ Creates a deep copy.
 <cb>= not <v>dict_1<><>
 
 <cb>if not <v>dict_1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ not
 
@@ -5190,7 +5651,7 @@ Creates a deep copy.
 <cb>= bool(<v>dict_1<>)<>
 
 <cb>if <v>dict_1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ bool()
 
@@ -5286,7 +5747,7 @@ As List:
 #### Dict - Iterate Over Keys
 
 <cb>for <v>key<> in <v>dict_1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ for, loop, foreach, each, in, iterating, names
 
@@ -5295,7 +5756,7 @@ As List:
 #### Dict - Iterate Over Key, Value Pairs
 
 <cb>for <v>key<>, <v>value<> in <v>dict_1<>.items():
-    <v>...<><>
+	<v>...<><>
 @
 @ for, loop, foreach, each, in
 @ items, elements, .items(), iterating, names, values
@@ -5305,7 +5766,7 @@ As List:
 #### Dict - Iterate Over Values
 
 <cb>for <v>value<> in <v>dict_1<>.values():
-    <v>...<><>
+	<v>...<><>
 @
 @ for, loop, foreach, each, in
 @ items, elements, .values(), iterating
@@ -5368,7 +5829,7 @@ Removes and returns the value for <c><v>key<><>.
 <cb>= sorted(<v>dict_1<>.keys())<>
 
 <cb>for <v>key<> in sorted(<v>dict_1<>.keys()):
-    <v>...<><>
+	<v>...<><>
 
 Returns: <c>list<>
 @
@@ -5381,7 +5842,7 @@ Returns: <c>list<>
 <cb>= sorted(<v>dict_1<>.values())<>
 
 <cb>for <v>key<> in sorted(<v>dict_1<>.values()):
-    <v>...<><>
+	<v>...<><>
 
 Returns: <c>list<>
 @
@@ -5437,20 +5898,36 @@ Example:
 
 #### List - Nested Lists
 
-<cb>= [[<v>values<>], [<v>values<>], <v>...<>]<>
+<cb>= [[<v>0<>, <v>1<>, <v>2<>], [<v>10<>, <v>11<>, <v>12<>], <v>...<>]<>
 
 <cb>= [<v>sublist_1<>, <v>sublist_2<>, <v>...<>]<>
 
 
-Example:
+Examples:
+
+2D List:
 
 <cb><v>list_1<> = [
-        [1, 2, 3, 4],
-        [5, 6, 7, 8]]
+		[1, 2, 3, 4],
+		[5, 6, 7, 8]]
 
-<v>value<> = <v>list_1<>[1][3]           <#># Returns 8<><>
+<v>value<> = <v>list_1<>[1][3]
+
+<#># Returns 8<><>
+
+3D List:
+
+<cb><v>list_1<> = [
+		[[1, 2, 3],
+		 [4, 5, 6]],
+		[[11, 12, 13],
+		 [14, 15, 16]]]
+
+<v>value<> = <v>list_1<>[0][1][2]
+
+<#># Returns 6<><>
 @
-@ 2d, sublists, nesting
+@ 2d, sublists, nesting, of lists
 
 
 
@@ -5478,6 +5955,18 @@ Example:
 #### List - Append
 
 <cb><v>list_1<>.append(<v>value<>)<>
+
+
+Appends a value to the end of a list.
+
+
+Example:
+
+<cb><v>list_1<> = [<v>1<>, <v>2<>]
+
+<v>list_1<>.append(<v>3<>)
+
+<#># Sets list_1 to [1, 2, 3]<><>
 @
 @ put, add, item, value, append to, .append()
 
@@ -5486,21 +5975,60 @@ Example:
 #### List - Append List
 
 <cb><v>list_1<>.extend(<v>list_2<>)<>
+
+
+Appends a list of items to the end of another list.
+
+
+Example:
+
+<cb><v>list_1<> = [<v>1<>, <v>2<>]
+<v>list_2<> = [<v>3<>, <v>4<>]
+
+<v>list_1<>.extend(<v>list_2<>)
+
+<#># Sets list_1 to [1, 2, 3, 4]<><>
 @
 @ put, add, addall, concatenate, extend(), combine, append to, .extend()
 
 
 
-#### List - List Comprehension
+#### List - Apply Function
 
-<cb>= [<v>expression<> for <v>item<> in <v>sequence_1<>]<>
-
-<cb>= [<v>expression<> for <v>item<> in <v>sequence_1<> if <v>condition<>]<>
+<cb>= list(map(<v>function_1<>, <v>list_1<>)<>
 
 Returns: <c>list<>
 
 
-Iterates over a sequence, performing an operation on every item.
+Applies the function to each value in <v>list_1<> returning the results in a new list.
+
+
+Example:
+
+<cb>def <v>add_10<>(<v>value<>):
+	return <v>value + 10<>
+
+<v>list_1<> = [<v>1<>, <v>2<>, <v>3<>]
+
+<v>applied_list<> = list(map(<v>add_10<>, <v>list_1<>))
+
+<#># Returns: [11, 12, 13]<><>
+@
+@ map(), list()
+@ to elements, items, values
+
+
+
+#### List - List Comprehension
+
+<cb>= [<v>expression<> for <v>value<> in <v>list_1<>]<>
+
+<cb>= [<v>expression<> for <v>value<> in <v>list_1<> if <v>condition<>]<>
+
+Returns: <c>list<>
+
+
+Iterates over a list or sequence, performing an operation on every item.
 Returns the result as a <c>list<>.
 
 
@@ -5514,7 +6042,26 @@ Examples:
 
 <v>list_2<> = [ <v>i<> * 2 for <v>i<> in <v>list_1<> if <v>i<> \<= 3]      <#># Returns [2, 4, 6]<><>
 @
-@ for in if [], conditional, iterating
+@ for in if [], conditional, iterating, sequences
+
+
+
+#### List - List Comprehension, Nested
+
+<cb>= [[<v>expression<> for <v>value<> in <v>sublist<>] for <v>sublist<> in <v>list_1<>]<>
+
+Iterates over a list of lists or sequece of sequences, performing operations on every value in each sublist.
+
+
+Example:
+
+<cb><v>list_1<> = [[<v>1<>, <v>2<>], [<v>3<>, <v>4<>]]
+
+<v>plus_10<> = [[<v>value<> + 10 for <v>value<> in <v>sublist<>] for <v>sublist<> in <v>list_1<>]
+
+<#># Returns: [[11, 12], [13, 14]]<><>
+@
+@ for in if [], conditional, iterating, sequences
 
 
 
@@ -5523,9 +6070,32 @@ Examples:
 <cb>= <v>value<> in <v>list_1<><>
 
 <cb>if <v>value<> in <v>list_1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ has, check, exists, item, element, includes, in
+
+
+
+#### List - Contains Any From Second List?
+
+<cb>= any(<v>value<> in <v>list_1<> for <v>value<> in <v>compare_list<>)<>
+
+Returns: <c>bool<>
+
+
+Returns <c>True<> if any item from <c>item_list<> is in <v>list_1<>.
+
+
+Example:
+
+<cb><v>list_1<> = [<v>1<>, <v>2<>, <v>3<>]
+<v>compare_list<> = [<v>3<>, <v>5<>]
+
+<v>match<> = any(<v>value<> in <v>list_1<> for <v>value<> in <v>compare_list<>)
+
+<#># Returns: True<><>
+@
+@ has, check, exists, item, element, includes, in, matches, 2nd, other
 
 
 
@@ -5652,7 +6222,7 @@ Creates a deep copy.
 <cb>= not <v>list_1<><>
 
 <cb>if not <v>list_1<>:
-    <v>...<><>
+	<v>...<><>
 
 
 
@@ -5661,7 +6231,10 @@ Creates a deep copy.
 <cb>= bool(<v>list_1<>)<>
 
 <cb>if <v>list_1<>:
-    <v>...<><>
+	<v>...<><>
+
+Use <b>bool()<> if you need to get a True/False value.
+There is no need for <b>bool()<> when using <b>if...<>.
 @
 @ bool()
 
@@ -5672,7 +6245,7 @@ Creates a deep copy.
 <cb>= <v>list_1<> == <v>list_2<><>
 
 <cb>if <v>list_1<> == <v>list_2<>:
-    <v>...<><>
+	<v>...<><>
 
 
 Returns True if both lists are of same size and contain the same values.
@@ -5702,13 +6275,13 @@ Use Function:
 
 <cb>def is_sublist(<v>list_1<>, <v>list_2<>):
 
-    list_1_len = len(<v>list_1<>)
+	list_1_len = len(<v>list_1<>)
 
-    for i in range(len(<v>list_2<>) - list_1_len + 1):
-        if <v>list_1<> == <v>list_2<>[i : i + list_1_len]:
-            return True
+	for i in range(len(<v>list_2<>) - list_1_len + 1):
+		if <v>list_1<> == <v>list_2<>[i : i + list_1_len]:
+			return True
 
-    return False<>
+	return False<>
 
 Call:
 
@@ -5775,12 +6348,12 @@ Define:
 
 <cb>def flatten(<v>value<>):
 
-    if type(<v>value<>) is not list:
-        yield <v>value<>
-        return
+	if type(<v>value<>) is not list:
+		yield <v>value<>
+		return
 
-    for <v>subvalue<> in <v>value<>:
-        yield from flatten(<v>subvalue<>)<>
+	for <v>subvalue<> in <v>value<>:
+		yield from flatten(<v>subvalue<>)<>
 
 Use:
 
@@ -5795,12 +6368,12 @@ Example:
 
 <cb>def flatten(<v>value<>):
 
-    if type(<v>value<>) is not list:
-        yield <v>value<>
-        return
+	if type(<v>value<>) is not list:
+		yield <v>value<>
+		return
 
-    for <v>subvalue<> in <v>value<>:
-        yield from flatten(<v>subvalue<>)
+	for <v>subvalue<> in <v>value<>:
+		yield from flatten(<v>subvalue<>)
 
 
 <v>list_1<> = [1, 2, [[3, 4, [5, 6]], 7], [8, 9]]
@@ -5859,7 +6432,15 @@ Return everything but the first item.
 
 <cb><v>list_1<>.insert(<v>index<>, <v>value<>)<>
 
-Inserts before position <c><v>index<><>.
+Inserts at position <c><v>index<><>.
+
+
+Example:
+
+<cb><v>list_1<> = [<v>1<>, <v>2<>, <v>3<>]
+<v>list_1<>.insert(1, 10)
+
+<#># Sets: [1, 10, 2, 3]<><>
 @
 @ put, set, item, .insert()
 
@@ -5870,6 +6451,14 @@ Inserts before position <c><v>index<><>.
 <cb><v>list_1<>.insert(0, <v>value<>)<>
 
 Adds to the start of the list.
+
+
+Example:
+
+<cb><v>list_1<> = [<v>1<>, <v>2<>, <v>3<>]
+<v>list_1<>.insert(0, 10)
+
+<#># Sets: [10, 1, 2, 3]<><>
 @
 @ put, item, prepend, .insert()
 
@@ -5878,7 +6467,7 @@ Adds to the start of the list.
 #### List - Iterate
 
 <cb>for <v>value<> in <v>list_1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ for in, loop, items, elements, values, foreach, for each, iterating
 
@@ -5898,7 +6487,7 @@ Adds to the start of the list.
 
 Removes the first item from the list and returns it.
 @
-@ .pop()
+@ .pop(), left
 
 
 
@@ -5908,7 +6497,7 @@ Removes the first item from the list and returns it.
 
 Removes the last item from the list and returns it.
 @
-@ .pop()
+@ .pop(), right, end
 
 
 
@@ -5931,9 +6520,31 @@ Example:
 
 #### List - Reverse
 
+<cb>= <v>list_1<>[::-1]<>
+
+Reverse in Place:
+
 <cb><v>list_1<>.reverse()<>
 
-Reverses in place.
+
+Reverses a list.
+
+
+Examples:
+
+<cb><v>list_1<> = [<v>1<>, <v>2<>, <v>3<>]
+
+<v>reversed<> = <v>list_1<>[::-1]
+
+<#># Returns: [3, 2, 1]<><>
+
+Reverse in Place:
+
+<cb><v>list_1<> = [<v>1<>, <v>2<>, <v>3<>]
+
+<v>list_1<>.reverse()
+
+<#># Sets To: [3, 2, 1]<><>
 @
 @ .reverse()
 
@@ -6096,6 +6707,25 @@ Returns a set with all duplicates removed.
 
 
 
+#### List - To Any Type
+
+<cb>= list(map(<v>conversion<>, <v>list_1<>))<>
+
+
+Converts elements in <c><v>list_1<><> to a different type.
+
+
+Examples:
+
+Convert Strings to Integers:
+
+<cb><v>list_1<> = ['<v>1<>', '<v>2<>', '<v>3<>']
+<v>list_as_ints<> = list(map(<v>int<>, <v>list_1<>))<>
+@
+@ map, convert, conversion, from, from-list, to-any
+
+
+
 # Set
 
 <cb>= {<v>value_1<>, <v>value_2<>, <v>...<>}
@@ -6211,7 +6841,7 @@ Returns a set containing only those values in both <c><v>set_1<><> and <c><v>set
 <cb>= <v>set_1<> == <v>set_2<><>
 
 <cb>if <v>set_1<> == <v>set_2<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ Equals, compare, ==
 
@@ -6314,7 +6944,8 @@ Returns a set of the elements in <c><v>set_1<><> not in <c><v>set_2<><> and the 
 
 # Tuple
 
-<cb>= ()                                    <#># Empty Tuple<>
+<cb>= ()        <#># Empty Tuple<>
+
 = (<v>value_1<>, <v>value_2<>, <v>...<>)<>
 
 
@@ -6348,7 +6979,7 @@ Tuples are immutable arrays.
 <cb>= not <v>tuple_1<><>
 
 <cb>if not <v>tuple_1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ not
 
@@ -6807,7 +7438,7 @@ Creates a deep copy.
 <cb>= not <v>sequence_1<><>
 
 <cb>if not <v>sequence_1<>:
-    <v>...<><>
+	<v>...<><>
 
 
 
@@ -6816,7 +7447,7 @@ Creates a deep copy.
 <cb>= bool(<v>sequence_1<>)<>
 
 <cb>if <v>sequence_1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ bool()
 
@@ -6840,7 +7471,7 @@ Returns the index of the first match.
 #### Sequence - Iterate
 
 <cb>for <v>value<> in <v>sequence_1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ for in, foreach, iterating
 
@@ -6945,15 +7576,34 @@ Use <c><v>test_function<><> to return the <c>True<> / <c>False<> value for <c><v
 
 
 
+#### Sequence - Average
+
+<cb>= sum(<v>sequence_1<>) / len(<v>sequence_1<>)<>
+
+
+Returns the average of the values in a list.
+
+
+Example:
+
+<cb><v>list_1<> = [3, 4, 7, 10]
+
+<v>average<> = sum(<v>list_1<>) / len(<v>list_1<>)
+
+<#># Returns: 6.0<><>
+@
+@ average()
+
+
 #### Sequence - Enumerate
 
 <cb>= enumerate(<v>sequence_1<>)<>
 
 <cb>for <v>index<>, <v>value<> in enumerate(<v>sequence_1<>):
-    <v>...<><>
+	<v>...<><>
 
 Returns:    <c>enumerate<>
-        (generator of index, value tuples)
+		(generator of index, value tuples)
 
 
 The <c>enumerate<> function returns a generator.
@@ -6967,7 +7617,7 @@ Example:
 <cb><v>list_1<> = ["zero", "one", "two"]
 
 for <v>index<>, <v>value<> in enumerate(<v>list_1<>):
-    print (<v>index<>, <v>value<>)<>
+	print (<v>index<>, <v>value<>)<>
 
 Prints:
 
@@ -6975,7 +7625,7 @@ Prints:
 1 one
 2 two<><>
 @
-@ enumerate()
+@ enumerate(), index, indexed
 
 
 
@@ -7015,7 +7665,7 @@ Using a Filter Function:
 <cb><#># Define Test:<>
 
 def <v>is_even<>(<v>value<>):
-    return <v>value % 2 == 0<>
+	return <v>value % 2 == 0<>
 
 <#># Filter:<>
 
@@ -7030,8 +7680,8 @@ Using a Lambda Filter:
 <cb><v>sequence_1<> = [<v>1<>, <v>2<>, <v>3<>, <v>4<>, <v>5<>]
 
 <v>filtered_1<> = filter(
-        lambda <v>value<> : <v>value % 2 == 0<>,
-        <v>sequence_1<>)
+		lambda <v>value<> : <v>value % 2 == 0<>,
+		<v>sequence_1<>)
 
 <#># Returns values 2, 4.<><>
 @
@@ -7042,7 +7692,7 @@ Using a Lambda Filter:
 ##### Filter - Test Function
 
 <cb>def <v>test_function<>(<v>value<>):
-    return <v>true_or_false_value<><>
+	return <v>true_or_false_value<><>
 
 
 Used by <c>filter()<> to determine which values to return.
@@ -7061,11 +7711,12 @@ Must return <c>True<> or <c>False<>.
 
 
 
-#### Sequence - To Map
+#### Sequence - Map
 
 <cb>= map(<v>mapping_function<>, <v>sequence_1<>)<>
 
-Returned Type: <c>map<>
+Returns: <c>map<>
+
 
 Returns a map of <c><v>sequence_1<><> values passed through <c><v>mapping_function<><>.
 
@@ -7073,11 +7724,13 @@ Returns a map of <c><v>sequence_1<><> values passed through <c><v>mapping_functi
 Example:
 
 <cb>def <v>add_10<>(<v>value<>):
-    return <v>value + 10<>
+	return <v>value + 10<>
 
-<v>sequence_1<> = [<v>1<>, <v>2<>, <v>3<>, <v>4<>, <v>5<>]
+<v>list_1<> = [<v>1<>, <v>2<>, <v>3<>]
 
-<v>mapped_1<> = map(<v>add_10<>, <v>sequence_1<>)        <#># Returns 11, 12, 13, 14, 15.<><>
+<v>mapped_1<> = map(<v>add_10<>, <v>list_1<>)
+
+<#># Returns: Map of 11, 12, 13.<><>
 @
 @ map()
 @ from-sequence, to-map, convert, conversion
@@ -7087,7 +7740,7 @@ Example:
 ##### Map - Mapping Function
 
 <cb>def <v>mapping_function<>(<v>value<>):
-    return <v>some_transformation<><>
+	return <v>some_transformation<><>
 
 Returns a new value based on the original value.
 
@@ -7096,8 +7749,8 @@ Returns a new value based on the original value.
 ##### Map - To List
 
 <cb>= list(<v>mapped_1<>)<>
-@
-@ Convert, Conversion, From, list()
+
+<cb>= list(map(<v>mapping_function<>, <v>list_1<>))<>
 
 
 
@@ -7115,15 +7768,15 @@ Returns a single value calculated by passing every value in <c><v>sequence_1<><>
 Examples:
 
 <cb>def <v>add<>(<v>previous_result<>, <v>value<>):
-    return <v>previous_result + value<>
+	return <v>previous_result + value<>
 
 <v>sequence_1<> = [<v>1<>, <v>2<>, <v>3<>, <v>4<>, <v>5<>]
 <v>total<> = reduce(<v>add<>, <v>sequence_1<>)                       <#># Returns 15.<><>
 
 <cb><v>sequence_1<> = [<v>1<>, <v>2<>, <v>3<>, <v>4<>, <v>5<>]
 <v>total<> = reduce(
-        lambda <v>previous<>, <v>value<> : <v>previous + value<>,
-        <v>sequence_1<>)                                   <#># Returns 15.<><>
+		lambda <v>previous<>, <v>value<> : <v>previous + value<>,
+		<v>sequence_1<>)                                   <#># Returns 15.<><>
 @
 @ functools.reduce(), .reduce()
 
@@ -7132,13 +7785,13 @@ Examples:
 ##### Reducing Function
 
 <cb>def <v>reducing_function<>(<v>previous_result<>, <v>next_value<>):
-    return <v>some_calculation<><>                                    
+	return <v>some_calculation<><>                                    
 
 Calculates a value base on <c><v>previous_result<><> and <c><v>next_value<><>.
 
 For the first calculation, <c><v>previous_result<><> will either be:
-    <c><v>initial_value<><> if provide, or
-    <c><v>first_value<><> the first value in the sequence.
+	<c><v>initial_value<><> if provide, or
+	<c><v>first_value<><> the first value in the sequence.
 
 
 
@@ -7348,11 +8001,11 @@ No <c>close<>() method needs to be called, even if an exception is thrown.
 
 <cb>class <v>ManagedResource1<>:
 
-    def __enter__ (self):                           <#># Called At Creation<>
-        <v>...<>
+	def __enter__ (self):                           <#># Called At Creation<>
+		<v>...<>
 
-    def __exit__ (self, type, value, traceback):    <#># Called At Completion<>
-        <v>...<><>
+	def __exit__ (self, type, value, traceback):    <#># Called At Completion<>
+		<v>...<><>
 
 
 Allows a class to be used as a managed resource.
@@ -7367,7 +8020,7 @@ Allows a class to be used as a managed resource.
 ### Context Manager - Use / With
 
 <cb>with <v>ManagedResource1<>() as <v>resource_item_1<>:
-    <v>...<><>
+	<v>...<><>
 
 Reference the resource using <c><v>resource_item_1<><>.
 <c><v>resource_item_1<><> is automatically closed at the end of the block.
@@ -7391,28 +8044,29 @@ Reference the resource using <c><v>resource_item_1<><>.
 ### Exception Basics
 
 <cb>class <v>Exception1<>(Exception):
-    <v>...<><>
+	<v>...<><>
 
 <cb>raise <v>Exception1<>()<>
 
 <cb>try:
-    <v>...<>
+	<v>...<>
 except <v>Exception1<> as exception:
-    <v>...<>
+	<v>...<>
 finally:
-    <v>...<><>
-
+	<v>...<><>
+@
+@ try, except, finally, raise
 
 
 ### Define
 
 <cb>class <v>Exception1<>(Exception):
-    <v>...<><>
+	<v>...<><>
 
 Defines a new exception type.
 Inherit from <c>Exception<>.
 @
-@ create, new
+@ create, new, exception
 
 
 
@@ -7431,36 +8085,36 @@ Inherit from <c>Exception<>.
 ### Try Except
 
 <cb>try:
-    <v>...<>
+	<v>...<>
 except <v>Exception1<> as exception:
-    <v>...<>
+	<v>...<>
 else:
-    <v>...<>
+	<v>...<>
 finally:
-    <v>...<><>
+	<v>...<><>
 
 <cb>try:
-    <v>...<>
+	<v>...<>
 
 except <v>Exception1<>:
-    <#># Catches <c>Exception1<> (#1)<>
-    <v>...<>
+	<#># Catches <c>Exception1<> (#1)<>
+	<v>...<>
 
 except <v>Exception2<> as <v>exception_2<>
-    <#># Catches <c>Exception2<>, Reference with <c>exception_2<><>
-    <v>...<>
+	<#># Catches <c>Exception2<>, Reference with <c>exception_2<><>
+	<v>...<>
 
 except Exception as <v>exception_3<>
-    <#># Catches Any Exception<>
-    <v>...<>
+	<#># Catches Any Exception<>
+	<v>...<>
 
 else:
-    <#># Called if no exception thrown.<>
-    <v>...<>
+	<#># Called if no exception thrown.<>
+	<v>...<>
 
 finally:
-    <#># Always Executed (#2)<>
-    <v>...<><>
+	<#># Always Executed (#2)<>
+	<v>...<><>
 
 Catches an exception raised in the try part of the block.
 All subclasses of a exception are caught in the same block as the exception.
@@ -7469,13 +8123,15 @@ All subclasses of a exception are caught in the same block as the exception.
 
 \#2 -  Always executes even if an exception is thrown.
 @
-@ exception
+@ exception, else, finally
 
 
 
 ### Exception - Get Message
 
 <cb>= <v>exception_1<>.args[0]<>
+@
+@ .args[0]
 
 
 
@@ -7491,9 +8147,10 @@ Returns: <c>str<>
 Example:
 
 <cb>except Exception as <v>exception_1<>:
-    print(traceback.format_exc())<>
+	print(traceback.format_exc())<>
 @
 @ traceback.format_exc(), .format_exc()
+@ print, show
 
 
 
@@ -7580,11 +8237,11 @@ Use this for request validations.
 ### Function Basics
 
 <cb>def <v>function_1<>(<v>arg_1<>, <v>arg_2<> <v>...<>):
-    <#>"""Function docstring."""<>
+	<#>"""Function docstring."""<>
 
-    <v>...<>
+	<v>...<>
 
-    return <v>response<><>
+	return <v>response<><>
 
 <cb><v>response_1<> = <v>function_1<>(<v>arg_1<>, <v>arg_2<>, <v>...<>)<>
 
@@ -7601,10 +8258,10 @@ Functions are first class objects and can be passed as values.
 ### Function - Define
 
 <cb>def <v>function_1<>(<v>arg_1<>, <v>arg_2<> <v>...<>): 
-    <v>...<><>
+	<v>...<><>
 
 <cb>def <v>function_1<>(<v>arg_1<>, <v>arg_2<> <v>...<>):		<#># With Return<>
-    return <v>response<><>
+	return <v>response<><>
 @
 @ new, create, arguments, args, parameters, params, return, def
 
@@ -7613,7 +8270,7 @@ Functions are first class objects and can be passed as values.
 ### Function - Define - Empty Function
 
 <cb>def <v>empty_function_1<>():					<#># Empty Function, Does Nothing Yet<>
-    pass<>
+	pass<>
 
 Use <c>pass<> to define an empty function.
 @
@@ -7624,8 +8281,8 @@ Use <c>pass<> to define an empty function.
 ### Function - DocString - Define
 
 <cb>def <v>function_1<>():
-    <#>"""Place docstring here."""<>
-    <v>...<><>
+	<#>"""Place docstring here."""<>
+	<v>...<><>
 @
 @ Doc String, Add, Create, """
 
@@ -7634,7 +8291,7 @@ Use <c>pass<> to define an empty function.
 ### Function - Arguments - Optional
 
 <cb>def <v>function_1<>(<v>optional_arg_1<> = <v>default_value<>, <v>...<>):
-    <v>...<><>
+	<v>...<><>
 
 The arguments with default values are optional.
 Optional arguments must come after standard non-optional arguments.
@@ -7643,7 +8300,7 @@ Optional arguments must come after standard non-optional arguments.
 Example:
 
 <cb>def <v>say_hello<>(<v>name<>, <v>greeting<> = "<v>Hello<>"):
-    print(<v>greeting<>, <v>name<>)
+	print(<v>greeting<>, <v>name<>)
 
 <v>say_hello<>("<v>John<>")
 <v>say_hello<>("<v>John<>", "<v>Hi<>")<>
@@ -7655,9 +8312,9 @@ Example:
 ### Function - Arguments - As Key Word Dict
 
 <cb>def <v>function_1<>(**<v>kwargs<>):
-    <v>...<>
-    <v>value_1<> = <v>kwargs<>[<v>key_1<>]				<#># References Argument <v>key_1<><>
-    <v>...<><>
+	<v>...<>
+	<v>value_1<> = <v>kwargs<>[<v>key_1<>]				<#># References Argument <v>key_1<><>
+	<v>...<><>
 
 <c>kwargs<> Type: dict
 
@@ -7671,7 +8328,7 @@ kwargs = key word arguments
 Example:
 
 <cb>def <v>say<>(**kwargs):
-    print(kwargs[<v>'greeting'<>], kwargs[<v>'name'<>])
+	print(kwargs[<v>'greeting'<>], kwargs[<v>'name'<>])
 
 <v>say<>(greeting = "<v>Hi<>", name = "<v>John<>")<>
 @
@@ -7683,9 +8340,9 @@ Example:
 ### Function - Arguments - As Tuple
 
 <cb>def function1(*args):
-    <v>...<>
-    <v>value_1<> = <v>args<>[<v>index_1<>]				<#># Reference an Argument<>
-    <v>...<><>
+	<v>...<>
+	<v>value_1<> = <v>args<>[<v>index_1<>]				<#># Reference an Argument<>
+	<v>...<><>
 
 <c>args<> Type: tuple
 
@@ -7695,7 +8352,7 @@ The caller arguments are placed in a tuple.
 Example:
 
 <cb>def <v>say<>(*args):
-    print(args[<v>0<>], args[<v>1<>])
+	print(args[<v>0<>], args[<v>1<>])
 
 <v>say<>("<v>Hi<>", "<v>John<>")<>
 @
@@ -7707,7 +8364,7 @@ Example:
 ### Function - Return
 
 <cb>def <v>function_1<>():
-    return <v>value_1<><>
+	return <v>value_1<><>
 
 
 Returns a value.
@@ -7716,7 +8373,7 @@ Returns a value.
 Example:
 
 <cb>def <v>return_a_1<>():
-    return 1
+	return 1
 
 <v>results<> = <v>return_a_1<>()<>
 @
@@ -7727,7 +8384,7 @@ Example:
 ### Function - Return - Multiple Values
 
 <cb>def <v>function_1<>():
-    return <v>value_1<>, <v>value_2<>, <v>...<><>
+	return <v>value_1<>, <v>value_2<>, <v>...<><>
 
 
 Returns: <c>Tuple<>
@@ -7739,7 +8396,7 @@ Returns values as a tuple.
 Example:
 
 <cb>def <v>return_three_values<>():
-    return "one", "two", "three"
+	return "one", "two", "three"
 
 <v>results<> = <v>return_three_values<>()<>
 @
@@ -7773,7 +8430,7 @@ Order is not important.
 Example:
 
 <cb>def <v>greet<>(<v>greeting<>, <v>name<>):
-    print(<v>greeting<>, <v>name<>)
+	print(<v>greeting<>, <v>name<>)
 
 <#># Call:<>
 
@@ -7795,7 +8452,7 @@ Unpacks the dictionary into keyword arguments inside the function.
 Example:
 
 <cb>def <v>say<>(<v>greeting<>, <v>name<>):
-    print(<v>greeting<>, <v>name<>)
+	print(<v>greeting<>, <v>name<>)
 
 <v>dict_1<> = {<v>'greeting'<> : <v>'Hi'<>, <v>'name'<> : <v>'John'<>}
 
@@ -7818,7 +8475,7 @@ Unpacks the sequence into arguments in order they are declared in the function s
 Example:
 
 <cb>def <v>say<>(<v>greeting<>, <v>name<>):
-    print(<v>greeting<>, <v>name<>)
+	print(<v>greeting<>, <v>name<>)
 
 <v>list_1<> = [<v>'Hi'<>, <v>'John'<>]
 
@@ -7862,7 +8519,7 @@ Can be passed as a value.
 Example:
 
 <cb>def <v>function_1<>():
-    return "This is a function."
+	return "This is a function."
 
 <v>function_name<> = <v>function_1<>.__name__<>
 @
@@ -7876,16 +8533,16 @@ Define:
 
 <cb>def <v>parent_function<>(<v>...<>):
 
-    def <v>inner_function<>(<v>...<>):			<#>#1<>
-        <v>...<><>
+	def <v>inner_function<>(<v>...<>):			<#>#1<>
+		<v>...<><>
 
 Call:
 
 <cb>def <v>parent_function<>(<v>...<>):
 
-    <v>...<>
+	<v>...<>
 
-    <v>response_1<> = <v>inner_function<>()<>
+	<v>response_1<> = <v>inner_function<>()<>
 
 
 \#1  -  Scope - <c><v>inner_function<><> is visible to <c><v>parent_function<><> only.
@@ -7904,11 +8561,11 @@ Example:
 
 <cb>def <v>parent<>():
 
-    def <v>inner<>():
-        print ('value =', <u>value<>)
+	def <v>inner<>():
+		print ('value =', <u>value<>)
 
-    <v>value<> = <v>10<>
-    <v>inner<>()
+	<v>value<> = <v>10<>
+	<v>inner<>()
 
 <v>parent<>()
 
@@ -7932,19 +8589,19 @@ Here <c><v>value<><> is a non-local variable to <c><v>inner<><>.
 Define:
 
 <cb>def <v>decorator_1<>(<v>function<>):
-    
-    def wrapper(*args, **kwargs):
-        <v>...<>                              <#># Pre-function Code<>
-        <v>function<>(*args, **kwargs)        <#># Function Call<>
-        <v>...<>                              <#># Post-function Code<>
-        
-    return wrapper<>
+	
+	def wrapper(*args, **kwargs):
+		<v>...<>                              <#># Pre-function Code<>
+		<v>function<>(*args, **kwargs)        <#># Function Call<>
+		<v>...<>                              <#># Post-function Code<>
+		
+	return wrapper<>
 
 Use (Decorate):
 
 <cb>@<v>decorator_1<>
 def <v>decorated_2<>(<v>arg_1<>, <v>...<>):
-    <v>...<><>
+	<v>...<><>
 
 Uses:
 
@@ -7956,20 +8613,20 @@ Example:
 <cb><#># Define Decorator:<>
 
 def <v>decorate_before_and_after<>(<v>function<>):
-    
-    def wrapper(*args, **kwargs):
+	
+	def wrapper(*args, **kwargs):
 
-        print("Before:  " + function.__name__)
-        <v>function<>(*args, **kwargs)
-        print("After:   " + function.__name__)
-        
-    return wrapper
+		print("Before:  " + function.__name__)
+		<v>function<>(*args, **kwargs)
+		print("After:   " + function.__name__)
+		
+	return wrapper
 
 <#># Decorate Function:<>
 
 \@<v>decorate_before_and_after<>
 def <v>print_message<>(message):
-    print("Message:", message)
+	print("Message:", message)
 
 <#># Call:<>
 
@@ -7983,12 +8640,12 @@ def <v>print_message<>(message):
 
 <cb>def <v>decorator_1<>(<v>decorated_function<>):
 
-    def <v>wrapper<>():
-        <v>...<>                           <#>#1<>
-        <v>decorated_function<>()          <#>#2<>
-        <v>...<>                           <#>#3<>
+	def <v>wrapper<>():
+		<v>...<>                           <#>#1<>
+		<v>decorated_function<>()          <#>#2<>
+		<v>...<>                           <#>#3<>
 
-    return <v>wrapper<>()<>
+	return <v>wrapper<>()<>
 
 When a function is decorated and then called, <c><v>decorated_function<><> will be called thorugh <c><v>wrapper<>()<>.
 
@@ -8004,12 +8661,12 @@ When a function is decorated and then called, <c><v>decorated_function<><> will 
 
 <cb>def <v>decorator_1<>(<v>decorated_function<>):
 
-    def <v>wrapper<>(*args, **kwargs):             <#>#1<>
-        <v>...<>
-        <v>decorated_function<>(*args, **kwargs)       <#>#2<>
-        <v>...<>
+	def <v>wrapper<>(*args, **kwargs):             <#>#1<>
+		<v>...<>
+		<v>decorated_function<>(*args, **kwargs)       <#>#2<>
+		<v>...<>
 
-    return <v>wrapper<>()<>
+	return <v>wrapper<>()<>
 
 
 When a function is decorated and then called, <c><v>decorated_function<><> will be called thorugh <c><v>wrapper<>()<>.
@@ -8027,13 +8684,13 @@ When a function is decorated and then called, <c><v>decorated_function<><> will 
 
 <cb>def <v>decorator_1<>(<v>decorated_function<>):
 
-    def <v>wrapper<>(*args, **kwargs):
-        <v>...<>
-        result = <v>decorated_function<>(*args, **kwargs)
-        <v>...<>
-        return result
+	def <v>wrapper<>(*args, **kwargs):
+		<v>...<>
+		result = <v>decorated_function<>(*args, **kwargs)
+		<v>...<>
+		return result
 
-    return <v>wrapper<>()<>
+	return <v>wrapper<>()<>
 @
 @ new, create, response, returning, value
 
@@ -8043,7 +8700,7 @@ When a function is decorated and then called, <c><v>decorated_function<><> will 
 
 <cb>@<v>decorator_1<>
 def <v>decorated_function<>(<v>...<>):
-    <v>...<><>
+	<v>...<><>
 
 Calls <c><v>decorated_function<><> through <c><v>decorator_1<><>.
 @
@@ -8056,7 +8713,7 @@ Calls <c><v>decorated_function<><> through <c><v>decorator_1<><>.
 An anonymous function.
 All lambdas return a value. Returns are implied.
 @
-@ lambdas, ->, =>
+@ lambdas, ->, =>, lambda-only,lambdas-only
 
 
 
@@ -8090,11 +8747,11 @@ Example:
 
 <cb>def <v>test<>():
 
-    <v>value<> = <v>10<>        <#># Closed Variable<> 
+	<v>value<> = <v>10<>        <#># Closed Variable<> 
 
-    <v>multiply_by<> = lambda <v>x<> : <v>x<> * <v>value<>
+	<v>multiply_by<> = lambda <v>x<> : <v>x<> * <v>value<>
 
-    print(<v>multiply_by<>(<v>3<>))
+	print(<v>multiply_by<>(<v>3<>))
 
 <v>test<>()
 
@@ -8118,7 +8775,7 @@ Also Called: Currying
 Example:
 
 <cb>def <v>say<>(<v>greeting<>, <v>name<>):
-    print(<v>greeting<>, <v>name<>)
+	print(<v>greeting<>, <v>name<>)
 
 <v>say_hi<> = partial(<v>say<>, <v>"Hi"<>)
 <v>say_hi<>(<v>"John"<>)<>
@@ -8142,28 +8799,28 @@ Example:
 Define:
 
 <cb>class <v>Class1<>:
-    <#>"""Class docstring."""<>
+	<#>"""Class docstring."""<>
 
-    <v>class_variable<> = <v>value<>				<#># Static Variable<>
+	<v>class_variable<> = <v>value<>				<#># Static Variable<>
 
-    def __init__(self, <v>arg_1<>, <v>...<>):		<#># Constructor<>
-        self.<v>variable_1<> = <v>arg_1<>
-        self._<v>private_variable_2<> = <v>arg_2<>
+	def __init__(self, <v>arg_1<>, <v>...<>):		<#># Constructor<>
+		self.<v>variable_1<> = <v>arg_1<>
+		self._<v>private_variable_2<> = <v>arg_2<>
 
-    def <v>method_1<>(self, <v>arg_1<>, <v>...<>):
-        <#>"""Method docstring."""<>
-        <v>...<>
+	def <v>method_1<>(self, <v>arg_1<>, <v>...<>):
+		<#>"""Method docstring."""<>
+		<v>...<>
 
-    def _<v>private_method_2<>(self, <v>arg_1<>, <v>...<>):
-        <v>...<>
+	def _<v>private_method_2<>(self, <v>arg_1<>, <v>...<>):
+		<v>...<>
 
-    @classmethod						<#># Class Method<>
-    def <v>class_method_3<>(cls, <v>arg_1<>, <v>...<>):
-        <v>...<>
+	@classmethod						<#># Class Method<>
+	def <v>class_method_3<>(cls, <v>arg_1<>, <v>...<>):
+		<v>...<>
 
-    @staticmethod						<#># Static Method<>
-    def <v>static_method_3<>(<v>arg_1<>, <v>...<>):
-        <v>...<><>
+	@staticmethod						<#># Static Method<>
+	def <v>static_method_3<>(<v>arg_1<>, <v>...<>):
+		<v>...<><>
 
 Call Class Method:
 
@@ -8219,37 +8876,37 @@ The <c>self<> argument is required for all class functions.
 ### Class - Define
 
 <cb>class <v>Class1<>:
-    <v>...<><>
+	<v>...<><>
 
 With Constructor:
 
 <cb>class <v>Class1<>:
 
-     def __init__(self, <v>arg_1<>, <v>...<>):
+	 def __init__(self, <v>arg_1<>, <v>...<>):
 
-        self.<v>property_1<> = <v>...<><>
+		self.<v>property_1<> = <v>...<><>
 
 All Options:
 
 <cb>class <v>Class1<>:
-    <#>"""Class docstring."""<>
+	<#>"""Class docstring."""<>
 
-    <v>variable_1<> = <v>value<>					<#># Class Variable / Static Variable<>
-    <v>_private_variable_2<> = <v>value<>
+	<v>variable_1<> = <v>value<>					<#># Class Variable / Static Variable<>
+	<v>_private_variable_2<> = <v>value<>
 
-    def __init__(self, <v>arg_1<>, <v>...<>):		<#># Constructor<>
+	def __init__(self, <v>arg_1<>, <v>...<>):		<#># Constructor<>
 
-        super().__init__()
+		super().__init__()
 
-        self.<v>variable_3<> = <v>arg_1<>			<#># Instance Variable<>
-        self._<v>private_variable_2<> = <v>arg_2<>
+		self.<v>variable_3<> = <v>arg_1<>			<#># Instance Variable<>
+		self._<v>private_variable_2<> = <v>arg_2<>
 
-    def <v>method_1<>(self, <v>arg_1<>, <v>...<>):
-        <#>"""Method docstring."""<>
-        <v>...<>
+	def <v>method_1<>(self, <v>arg_1<>, <v>...<>):
+		<#>"""Method docstring."""<>
+		<v>...<>
 
-    def <v>_private_method_1<>(self, <v>arg_1<>, <v>...<>):
-        <v>...<><>
+	def <v>_private_method_1<>(self, <v>arg_1<>, <v>...<>):
+		<v>...<><>
 @
 @ New, Definition, Create, __init__(), init
 
@@ -8258,8 +8915,8 @@ All Options:
 ### Class - Define - Constructor
 
 <cb>class <v>Class1<>:
-    def __init__(self, <v>arg_1<>, <v>...<>):
-        <v>...<><>
+	def __init__(self, <v>arg_1<>, <v>...<>):
+		<v>...<><>
 
 Define the constructor with the <c>__init__<> method.
 
@@ -8273,23 +8930,23 @@ Define instance arguments in the constructor.
 ### Class - Define - With Inheritance
 
 <cb>class <v>Subclass1<>(<v>Superclass1<>):
-    <v>...<><>
+	<v>...<><>
 
 Initializing Parent:
 
 <cb>class <v>Subclass1<>(<v>Superclass1<>):
 
-    def __init__(self, <v>...<>):
-        super().__init__()
-        <v>...<><>
+	def __init__(self, <v>...<>):
+		super().__init__()
+		<v>...<><>
 
 Initializing Parent With Arguments:
 
 <cb>class <v>Subclass1<>(<v>Superclass1<>):
 
-    def __init__(self, <v>...<>):
-        super().__init__(<v>arg_1<>, <v>...<>)
-        <v>...<><>
+	def __init__(self, <v>...<>):
+		super().__init__(<v>arg_1<>, <v>...<>)
+		<v>...<><>
 @
 @ subclass, superclass, super(), __init__()
 @ extend
@@ -8298,7 +8955,7 @@ Initializing Parent With Arguments:
 ### Class - Define - With Multiple Inheritance
 
 <cb>class <v>Subclass1<>(<v>Superclass1<>, <v>Superclass2<>, <v>...<>):
-    <v>...<><>
+	<v>...<><>
 
 Priority is from left to right.
 <c><v>Superclass1<><>'s members take precedence over other super classes.
@@ -8313,8 +8970,8 @@ Priority is from left to right.
 
 <cb>class <v>class1<>(<v>Superclass1<>):
 
-    def __init__(self, <v>...<>):
-        super().__init__(<v>arg_1<>, <v>...<>)
+	def __init__(self, <v>...<>):
+		super().__init__(<v>arg_1<>, <v>...<>)
 <>
 @
 @ parent, __init__(), super().__init__()
@@ -8333,11 +8990,11 @@ Priority is from left to right.
 
 <cb>class <v>Class1<>:
 
-    def <v>some_method<>(self):
+	def <v>some_method<>(self):
 
-        self.<v>variable_1<> = <v>value<>			<#># Create / Set<>
+		self.<v>variable_1<> = <v>value<>			<#># Create / Set<>
 
-        = self.<v>variable_1<>				<#># Get<><>
+		= self.<v>variable_1<>				<#># Get<><>
 
 Get:
 
@@ -8361,16 +9018,16 @@ Define:
 
 <cb>class <v>Class1<>:
 
-    def <v>method_1<>(self, <v>arg_1<>, <v>...<>):
-        <v>...<><>
+	def <v>method_1<>(self, <v>arg_1<>, <v>...<>):
+		<v>...<><>
 
 Call Inside Class:
 
 <cb>class <v>Class1<>:
 
-    def <v>...<>(self):
+	def <v>...<>(self):
 
-        self.<v>method_1<>(<v>arg_1<>, <v>...<>)<>
+		self.<v>method_1<>(<v>arg_1<>, <v>...<>)<>
 
 Call Outside Class:
 
@@ -8388,7 +9045,7 @@ Reference instance methods externally through the instance name (u>class_1<> in 
 Define:
 
 <cb>class <v>Class1<>:
-    <v>variable_1<> = <v>value<>					<#># Static Variable<><>
+	<v>variable_1<> = <v>value<>					<#># Static Variable<><>
 
 Get:
 
@@ -8410,10 +9067,10 @@ Define:
 
 <cb>class <v>Class1<>:
 
-    @classmethod					<#>#1<>
-    <v>method_1<>(cls, <v>arg_1<>, <v>...<>):		<#>#2<>
-        cls.<v>class_variable<> = <v>value<>
-        <v>...<><>
+	@classmethod					<#>#1<>
+	<v>method_1<>(cls, <v>arg_1<>, <v>...<>):		<#>#2<>
+		cls.<v>class_variable<> = <v>value<>
+		<v>...<><>
 
 Call:
 
@@ -8440,9 +9097,9 @@ Define:
 
 <cb>class <v>Class1<>:
 
-    @staticmethod						<#># Defines Static Method<>
-    <v>method_1<>(<v>arg_1<>, <v>...<>):
-        <v>...<><>
+	@staticmethod						<#># Defines Static Method<>
+	<v>method_1<>(<v>arg_1<>, <v>...<>):
+		<v>...<><>
 
 Call:
 
@@ -8515,18 +9172,18 @@ Example:
 
 class <v>SampleClass<>:
 
-    def __init__(self, <v>value_1<> = None, <v>value_2<> = None):
+	def __init__(self, <v>value_1<> = None, <v>value_2<> = None):
 
-        self.<v>value_1<> = <v>value_1<>
-        self.<v>value_2<> = <v>value_2<>
+		self.<v>value_1<> = <v>value_1<>
+		self.<v>value_2<> = <v>value_2<>
 
-    def __eq__ (self, <v>other<>):
+	def __eq__ (self, <v>other<>):
 
-        if not isinstance(<v>other<>, <v>SampleClass<>):
-            return False
+		if not isinstance(<v>other<>, <v>SampleClass<>):
+			return False
 
-        return (self.<v>value_1<> == <v>other<>.<v>value_1<> and
-                self.<v>value_2<> == <v>other<>.<v>value_2<>)
+		return (self.<v>value_1<> == <v>other<>.<v>value_1<> and
+				self.<v>value_2<> == <v>other<>.<v>value_2<>)
 
 <#># Instantiate:<>
 
@@ -8536,9 +9193,9 @@ class <v>SampleClass<>:
 <#># Compare:<>
 
 if <v>item1<> == <v>item2<>:
-    print("The same.")
+	print("The same.")
 else:
-    print("Different.")<>
+	print("Different.")<>
 @
 @ Instance, __eq__(), ==
 
@@ -8547,9 +9204,9 @@ else:
 ### Class - DocString
 
 <cb>class <v>Class1<>:
-    <#>"""Class docstring."""<>
+	<#>"""Class docstring."""<>
 
-    <v>...<><>
+	<v>...<><>
 @
 @ Create, Add, Document, """
 
@@ -8569,12 +9226,12 @@ else:
 
 <cb>class <v>Class1<>:
 
-    def <v>function_1<>(self):
+	def <v>function_1<>(self):
 
-        self.<v>_variable_1<> = <v>...<>
-        <v>...<> = self.<v>_variable_1<>
+		self.<v>_variable_1<> = <v>...<>
+		<v>...<> = self.<v>_variable_1<>
 
-        self.<v>function_1<>()<>
+		self.<v>function_1<>()<>
 
 
 <c>self<> is the current instance of the class.
@@ -8590,9 +9247,9 @@ Do not pass <c>self<> to a non static function. It will be passed automatically.
 ### Class - To String
 
 <cb>class <v>Class1<>:
-    <v>...<>
-    def __repr__(self):
-        return <v>string_representing_class<><>
+	<v>...<>
+	def __repr__(self):
+		return <v>string_representing_class<><>
 
 <cb>= <v>class_1<>__repr__())<>
 
@@ -8616,9 +9273,9 @@ Override <c>__repr__<> to create class string.
 
 class <v>AbstractClass1<>(ABC):
 
-    @abstractmethod
-    def <v>abstract_method_1<>(self):
-        pass<>
+	@abstractmethod
+	def <v>abstract_method_1<>(self):
+		pass<>
 @
 @ abc, @abstractmethod, interface, (ABC), abc.abc, abc.abstractmethod
 
@@ -8628,8 +9285,8 @@ class <v>AbstractClass1<>(ABC):
 
 <cb>class <v>Subclass1<>(<v>AbstractClass1<>):
 
-    def <v>abstract_method_1<>(self):		<#># Implement Abstract Method<>
-        <v>...<><>
+	def <v>abstract_method_1<>(self):		<#># Implement Abstract Method<>
+		<v>...<><>
 
 
 
@@ -8638,7 +9295,7 @@ class <v>AbstractClass1<>(ABC):
 Defines class functions as if they were class variables.
 Use to encapsulate mutation of internal variables.
 @
-@ getter, setter, @property, as
+@ getter, setter, @property, method as, property, to, into
 
 
 
@@ -8646,19 +9303,19 @@ Use to encapsulate mutation of internal variables.
 
 <cb>class <v>Class1<>:
 
-    def __init__(self):
+	def __init__(self):
 
-        self.<v>_variable_1<> = <v>value<>
+		self.<v>_variable_1<> = <v>value<>
 
-    @property
-    def <v>variable_1<>(self):
+	@property
+	def <v>variable_1<>(self):
 
-        return self.<v>_variable_1<>
+		return self.<v>_variable_1<>
 
-    @<v>variable_1<>.setter
-    def <v>variable_1<>(self, <v>arg_1<>):
+	@<v>variable_1<>.setter
+	def <v>variable_1<>(self, <v>arg_1<>):
 
-        self.<v>_variable_1<> = <v>arg_1<><>
+		self.<v>_variable_1<> = <v>arg_1<><>
 @
 @ @property, .setter
 
@@ -8740,6 +9397,56 @@ Access using <c><v>class_1<>.<v>attribute_name<><>
 
 
 
+### Class - Monkey Patch
+
+<cb><v>Class1<>.<v>method_to_patch<> = <v>patch_1<><>
+
+<cb><#># Class to Patch:<>
+
+class <v>Class1<>:
+    def <v>method_to_patch<>(self):
+        <v>...<>
+
+<v>class_1<> = <v>Class1<>()
+
+
+<#># Assign Patch:<>
+
+def <v>patch_1<>(self):
+    <v>...<>
+
+<v>Class1<>.<v>method_to_patch<> = <v>patch_1<>
+
+<v>class_1<>.<v>method_to_patch<>()<>
+
+
+Changes the behaviour of a method at runtime.
+Apply the patch to the class, not the instance.
+This will change all instances of the class.
+
+
+Example:
+
+<cb>class <v>Class1<>:
+    def <v>print_message<>(self):
+        print("Original Message")
+
+def <v>patch_1<>(self):
+    print("Patched Message")
+
+<v>class_1<> = <v>Class1<>()
+<v>class_1<>.print_message()
+
+<v>Class1<>.print_message = patch_1
+<v>class_1<>.print_message()
+
+<#># Prints:
+\#
+\# Original Message
+\# Patched Message<><>
+
+
+
 ### Class - View Help, Structure
 
 <cb>help(<v>Class1<>)<>
@@ -8754,11 +9461,11 @@ Prints docstrings, methods, everything about the class.
 
 <cb>def <v>Class1<>:
 
-    def __contains__(self, <v>key<>)
-        <v>...<><>
+	def __contains__(self, <v>key<>)
+		<v>...<><>
 
 <cb>if <v>item_1<> in <c>class_1<>:					<#># Using with <c>in<><>
-    <v>...<><>
+	<v>...<><>
 
 Override <c>__contains__<> to use class with <c>in<> operator.
 Return true if <c><v>key<><> is in the class.
@@ -8777,8 +9484,8 @@ Return true if <c><v>key<><> is in the class.
 
 <cb>def <v>IterableClass1<>:
 
-    def __iter__(self):					<#>#1<>
-        return <v>iterator<>					<#>#2<><>
+	def __iter__(self):					<#>#1<>
+		return <v>iterator<>					<#>#2<><>
 
 
 Defines a class as iterable.
@@ -8795,11 +9502,11 @@ Example:
 
 class <v>Integers<>:
 
-    def __init__(self, max):
-        self.integers = range(1,max + 1)
+	def __init__(self, max):
+		self.integers = range(1,max + 1)
 
-    def __iter__(self):
-        return iter(self.integers)
+	def __iter__(self):
+		return iter(self.integers)
 
 
 <#># Use:<>
@@ -8807,7 +9514,7 @@ class <v>Integers<>:
 <v>integers_1<> = <v>Integers<>(<v>5<>)
 
 for <v>integer<> in <v>integers_1<>:
-    print(<v>integer<>)<>
+	print(<v>integer<>)<>
 @
 @ create, define, __iter__(), 
 
@@ -8817,15 +9524,15 @@ for <v>integer<> in <v>integers_1<>:
 
 <cb>def <v>IterableIteratorClass1<>:
 
-    def __iter__(self):					<#>#1<>
-        return self
+	def __iter__(self):					<#>#1<>
+		return self
 
-    def __next__(self):					<#>#2<>
+	def __next__(self):					<#>#2<>
 
-        If <v>at_the_end<>:
-            raise StopIteration			<#>#3<>
-        else:
-            return <v>next_item<>			<#>#4<><>
+		If <v>at_the_end<>:
+			raise StopIteration			<#>#3<>
+		else:
+			return <v>next_item<>			<#>#4<><>
 
 
 This class is both an iterator and an iterable.
@@ -8845,12 +9552,12 @@ This class is both an iterator and an iterable.
 
 <cb>class <v>Iterator1<>:
 
-    def __next__(self):					<#>#1<>
+	def __next__(self):					<#>#1<>
 
-        If <v>at_the_end<>:
-            raise StopIteration			<#>#2<>
-        else:
-            return <v>next_item<>			<#>#3<><>
+		If <v>at_the_end<>:
+			raise StopIteration			<#>#2<>
+		else:
+			return <v>next_item<>			<#>#3<><>
 
 
 Defines an iterator class.
@@ -8869,19 +9576,19 @@ Example:
 
 class <v>ListIterator<>:
 
-    def __init__(self, <v>list<>):
+	def __init__(self, <v>list<>):
 
-        self.<v>list<> = <v>list<>
-        self.<v>index<> = -1
+		self.<v>list<> = <v>list<>
+		self.<v>index<> = -1
 
-    def __next__(self):
+	def __next__(self):
 
-        self.<v>index<> += 1
+		self.<v>index<> += 1
 
-        if self.<v>index<> == len(self.<v>list<>):
-            raise StopIteration()
+		if self.<v>index<> == len(self.<v>list<>):
+			raise StopIteration()
 
-        return self.<v>list<>[self.<v>index<>]
+		return self.<v>list<>[self.<v>index<>]
 
 
 <#># Use:<>
@@ -8889,10 +9596,10 @@ class <v>ListIterator<>:
 <v>iterator<> = <v>ListIterator<>([1, 2, 3])
 
 try:
-    while (<v>value<> := next(<v>iterator<>)):
-        print(<v>value<>)
+	while (<v>value<> := next(<v>iterator<>)):
+		print(<v>value<>)
 except StopIteration:
-    print("Done.")<>
+	print("Done.")<>
 @
 @ create, define, __next__()
 
@@ -8921,7 +9628,7 @@ Example:
 <cb><v>values<> = iter([1, 2, 3])
 
 while <v>value<> := next(<v>values<>):
-    print(<v>value<>)<>
+	print(<v>value<>)<>
 @
 @ Element, Item, Value, next()
 
@@ -8987,12 +9694,12 @@ print(list(generator))							<#># Prints [2, 4, 6]<><>
 
 <cb>def <v>some_function<>():					<#>#1<>
 
-    for <v>list_value<> in <v>list_1<>:
-        yield <v>list_value<>				<#>#2<>
+	for <v>list_value<> in <v>list_1<>:
+		yield <v>list_value<>				<#>#2<>
 
 
 for <v>value<> in <v>some_function()<>:			<#>#3<>
-    <v>...<><>
+	<v>...<><>
 
 Returns: <c>generator<>
 
@@ -9015,14 +9722,14 @@ Example:
 from math import factorial
 
 def <v>factorial_series<>(<v>n<>):
-    for <v>i<> in range (<v>n<> + 1):
-        yield factorial(<v>i<>)
+	for <v>i<> in range (<v>n<> + 1):
+		yield factorial(<v>i<>)
 
 
 <#>Use:<>
 
 for <v>value<> in <v>factorial_series<>(4):
-    print(<v>value<>)<>
+	print(<v>value<>)<>
 
 
 
@@ -9031,7 +9738,7 @@ for <v>value<> in <v>factorial_series<>(4):
 <cb>yield from <v>generator_1<><>
 
 <cb>def <v>some_function<>():
-    yield from <v>generator_1<><>
+	yield from <v>generator_1<><>
 
 
 Short For:
@@ -10239,7 +10946,7 @@ from os.path import join
 
 <v>files<> = glob (join (<v>directory_path<>, '<v>*<>'))
 for <v>file<> in <v>files<>:
-    remove (<v>file<>)<>
+	remove (<v>file<>)<>
 
 
 Deletes all the files in the directory.
@@ -10285,14 +10992,30 @@ Returns the file names only, not the full path.
 from os.path import isdir
 from os.path import join
 
-<v>directory_names<> = filter(
-        lambda file: isdir(join(<v>directory_path<>, file)),
-        listdir(<v>directory_path<>))<>
+<v>directories<> = filter(
+		lambda file: isdir(join(<v>directory_path<>, file)),
+		listdir(<v>directory_path<>))<>
 
-Returns: <c>list<> of <c>str<>
+Returns: <c>filter<> of <c>str<>
 
 Returns list of all directory names in <c><v>directory_path<><>.
 Returns the file names only, not the path.
+
+Examples:
+
+Directories in Current Directory:
+
+<cb>from os import listdir
+from os.path import isdir
+from os.path import join
+
+<v>path<> = '.'
+
+<v>directories<> = filter(
+		lambda file: isdir(join(<v>path<>, file)),
+		listdir(<v>path<>))
+
+print(list(directories))<>
 @
 @ os.path.isdir(), .path.isdir(), .isdir(), os.listdir(), .listdir()
 @ retrieve, ls
@@ -10305,14 +11028,30 @@ Returns the file names only, not the path.
 from os.path import isfile
 from os.path import join
 
-<v>file_names_only<> = filter(
-        lambda file: isfile(join(<v>directory_path<>, file)),
-        listdir(<v>directory_path<>))<>
+<v>file_names<> = filter(
+		lambda file: isfile(join(<v>directory_path<>, file)),
+		listdir(<v>directory_path<>))<>
 
-Returns: <c>list<> of <c>str<>
+Returns: <c>filter<> of <c>str<>
 
 Returns list of file names.
 Only returns the name, not the path.
+
+Examples:
+
+Directories in Current Directory:
+
+<cb>from os import listdir
+from os.path import isfile
+from os.path import join
+
+<v>path<> = '.'
+
+<v>files<> = filter(
+		lambda file: isfile(join(<v>path<>, file)),
+		listdir(<v>path<>))
+
+print(list(files))<>
 @
 @ os.path.isfile(), .path.isfile(), .isfile(), os.listdir(), .listdir()
 @ retrieve, ls
@@ -10324,7 +11063,7 @@ Only returns the name, not the path.
 <cb>from os import listdir
 from fnmatch import filter
 
-<v>file_names<> = filter(listdir(<v>directory_path<>), <v>filter<>)<>
+<v>file_names<> = filter(listdir(<v>directory_path<>), <v>file_filter<>)<>
 
 Returns: <c>list<> of <c>str<>
 
@@ -10430,6 +11169,42 @@ from os.path import join
 
 
 
+### Directory - Read Recursively / Walk
+
+<cb>from os import walk
+
+for <v>root<>, <v>directories<>, <v>files<> in walk(<v>directory_path<>):
+	<v>...<><>
+
+Returns:
+
+<indent><table><col><c>root<><><col><c>str<><>
+<col><c>directories<><><col><c>list[str]<><>
+<col><c>files<><><col><c>list[str]<><><><>
+
+
+Returns the list of directories and files in each directory under and including <c><v>directory_path<><>).
+The current directory is returned in <c><v>root<><>.
+When no files or directories are found, returns an empty list (<c>[]<>).
+
+
+Example:
+
+Walk The Current Directory:
+
+<cb>from os import walk
+
+for <v>root<>, <v>directories<>, <v>files<> in walk(<v>'.'<>):
+
+	print("Current Path:", <v>root<>)
+	print("Directories:", <v>directories<>)
+	print("Files:", <v>files<>)
+	print()<>
+@
+@ os.walk(), .walk(), files, path
+
+
+
 ## File Operations
 @
 @ ops, file-ops, file-ops-only, file-operations
@@ -10450,7 +11225,7 @@ Returns: <c>datetime<>
 Returns the file creation time as a datetime.
 @
 @ os.path.getctime(), path.getctime(), .getctime(), .fromtimestamp()
-@ creation, retrieve, read
+@ creation, retrieve, read, date time
 
 
 
@@ -10467,7 +11242,7 @@ Returns: <c>float<>
 Returns the file creation time as a unix timestamp (epoch).
 @
 @ os.path.getctime(), .path.getctime(), .getctime()
-@ creation, retrieve, read
+@ creation, retrieve, read, date time
 
 
 
@@ -10485,7 +11260,7 @@ Returns: <c>datetime<>
 Returns the file modification time as a datetime.
 @
 @ os.path.getmtime(), .path.getmtime(), .getmtime(), .fromtimestamp()
-@ modification, retrieve, read
+@ modification, retrieve, read, modify, date time
 
 
 
@@ -10500,7 +11275,7 @@ Returns: <c>float<>
 Returns the file modified time as a unix timestamp (epoch).
 @
 @ os.path.getmtime(), .path.getmtime(), .getmtime()
-@ modification, retrieve, read
+@ modification, retrieve, read, modify, date time
 
 
 
@@ -10620,7 +11395,7 @@ rename(<v>source_path<>, <v>destination_path<>)<>
 ### Binary File - Read
 
 <cb>with open(<v>file_name<>,'rb') as file:
-    <v>contents<> = file.read()<>
+	<v>contents<> = file.read()<>
 
 Returns: <c>bytes<>
 @
@@ -10631,8 +11406,8 @@ Returns: <c>bytes<>
 ### Binary File - Read By Byte
 
 <cb>with open(<v>file_name<>, "rb") as file:
-    while (<v>next_byte<> := file.read(1)):
-        <v>...<><>
+	while (<v>next_byte<> := file.read(1)):
+		<v>...<><>
 
 Reads the file one byte at a time.
 @
@@ -10643,7 +11418,7 @@ Reads the file one byte at a time.
 ### Binary File - Write
 
 <cb>with open(<v>file_name<>, 'wb') as file:
-    file.write(<v>contents<>)<>
+	file.write(<v>contents<>)<>
 
 Deletes the file if it exists before writing to it.
 @
@@ -10655,7 +11430,7 @@ Deletes the file if it exists before writing to it.
 ### Binary File - Append
 
 <cb>with open(<v>file_name<>, 'ab') as file:
-    file.write(<v>contents<>)<>
+	file.write(<v>contents<>)<>
 
 Creates a new file or appends to an existing one.
 @
@@ -10667,7 +11442,7 @@ Creates a new file or appends to an existing one.
 ### Text File - Read
 
 <cb>with open(<v>file_name<>,'r') as file:
-    <v>contents<> = file.read()<>
+	<v>contents<> = file.read()<>
 
 Returns: <c>str<>
 @
@@ -10679,9 +11454,9 @@ Returns: <c>str<>
 
 <cb>with open(<v>file_name<>, 'r') as file:
 
-    <v>characters<> = []
-    while (<v>next_character<> := file.read(1)):
-        <v>characters<>.append(<v>next_character<>)<>
+	<v>characters<> = []
+	while (<v>next_character<> := file.read(1)):
+		<v>characters<>.append(<v>next_character<>)<>
 
 Returns: <c>list<> of <c>str<>
 
@@ -10695,9 +11470,9 @@ Returns the contents of the file as a list in <c><v>lines<><>.
 
 <cb>with open(<v>file_name<>, 'r') as file:
 
-    <v>lines<> = []
-    while (line := file.readline()):
-        <v>lines<>.append(line.rstrip('\\n'))<>
+	<v>lines<> = []
+	while (line := file.readline()):
+		<v>lines<>.append(line.rstrip('\\n'))<>
 
 Returns: <c>list<> of <c>str<>
 
@@ -10712,7 +11487,7 @@ Returns the contents of the file as a list in <c><v>lines<><>.
 ### Text File - Read All Lines
 
 <cb>with open(<v>file_name<>, 'r') as file:
-    <v>lines<> = [line.rstrip('\\n') for line in file]<>
+	<v>lines<> = [line.rstrip('\\n') for line in file]<>
 
 Returns: <c>list<> of <c>str<>
 
@@ -10728,7 +11503,7 @@ The line's newline character is returned by default. rstrip, removes it.
 ### Text File - Write
 
 <cb>with open(<v>file_name<>, 'w') as file:
-    file.write(<v>contents<>)<>
+	file.write(<v>contents<>)<>
 
 Deletes the file if it exists before writing to it.
 @
@@ -10742,7 +11517,7 @@ Deletes the file if it exists before writing to it.
 ### Text File - Append
 
 <cb>with open(<v>file_name<>, 'a') as file:
-    file.write(<v>contents<>)<>
+	file.write(<v>contents<>)<>
 
 Creates a new file or appends to an existing one.
 @
@@ -10769,9 +11544,9 @@ Example:
 
 <cb>with open(<v>file_name<>, 'r+') as file:
 	file.seek(10)
-    <v>content<> = file.read(10)
-    file.seek(10)
-    file.write("**********")<>
+	<v>content<> = file.read(10)
+	file.seek(10)
+	file.write("**********")<>
 
 
 
@@ -11031,12 +11806,12 @@ Function:
 
 def <v>read_sectionless<>(<v>file_name<>):
 
-    with open(<v>file_name<>,'r') as file:
-        contents = file.read()
+	with open(<v>file_name<>,'r') as file:
+		contents = file.read()
 
-    <v>config<> = ConfigParser()
-    <v>config<>.read_string(f'[default]\n{contents}')
-    return <v>config<>['default']<>
+	<v>config<> = ConfigParser()
+	<v>config<>.read_string(f'[default]\n{contents}')
+	return <v>config<>['default']<>
 
 Read File:
 
@@ -11073,7 +11848,7 @@ Useful for unit testing.
 #### ConfigParser - Write File
 
 <cb>with open(<v>file_name<>, 'w') as file:
-    <v>config_parser<>.write(file)<>
+	<v>config_parser<>.write(file)<>
 @
 @ .write()
 
@@ -11216,9 +11991,9 @@ or
 or
 
 <cb><v>config_parser<>['<v>section_name<>'] = {
-    '<v>property-1<>': '<v>value-1<>',
-    '<v>property-2<>': '<v>value-2<>',
-    <v>...<>
+	'<v>property-1<>': '<v>value-1<>',
+	'<v>property-2<>': '<v>value-2<>',
+	<v>...<>
 }<>
 @
 @ add_section(), new, create
@@ -11380,10 +12155,10 @@ Returns a list of all the property names for that section.
 
 <cb>for <v>section_name<> in <v>config_1<>.sections():
 
-    <v>section<> = <v>config_1<>[<v>section_name<>]
+	<v>section<> = <v>config_1<>[<v>section_name<>]
 
-    for <v>property_name<>, <v>value<> in <v>section<>.items():
-        print(<v>section_name<>, <v>property_name<>, ":", <v>value<>)<>
+	for <v>property_name<>, <v>value<> in <v>section<>.items():
+		print(<v>section_name<>, <v>property_name<>, ":", <v>value<>)<>
 
 
 Iterates over each section and displays all the properties and their values.
@@ -11425,7 +12200,7 @@ Iterates over each section and displays all the properties and their values.
 <cb>from urllib.request import urlopen
 
 with urlopen(<v>url<>) as response:
-    <v>content<> = response.read()<>
+	<v>content<> = response.read()<>
 
 
 Returns: <c>bytes<>
@@ -11436,7 +12211,7 @@ Example:
 <cb>from urllib.request import urlopen
 
 with urlopen(<v>"https://www.google.com"<>) as response:
-    <v>content<> = response.read()
+	<v>content<> = response.read()
 
 <v>text<> = <v>content<>.decode("utf-8", "ignore")<>
 @
@@ -11452,23 +12227,23 @@ from urllib.error import URLError
 
 try:
 
-    with urlopen(<v>url<>) as response:
-        <v>content<> = response.read()
-    <v>...<>
+	with urlopen(<v>url<>) as response:
+		<v>content<> = response.read()
+	<v>...<>
 
 except URLError as <v>error<>:
 
-    <#># Unable to make request...<>
+	<#># Unable to make request...<>
 
-    <v>message<> = <v>error<>.reason
+	<v>message<> = <v>error<>.reason
 
 except HTTPError as <v>error<>:
 
-    <#># Server returned error...<>
+	<#># Server returned error...<>
 
-    <v>status_code<> = <v>error<>.code
-    <v>message<> = <v>error<>.reason
-    <v>headers<> = <v>error<>.headers<>
+	<v>status_code<> = <v>error<>.code
+	<v>message<> = <v>error<>.reason
+	<v>headers<> = <v>error<>.headers<>
 @
 @ status code
 @ urllib.request.urlopen, .request.urlopen(), .urlopen(), .read()
@@ -11693,14 +12468,14 @@ print(<v>output<>.decode("utf-8"))
 
 class <v>TestMyStuff<>(TestCase):
 
-    def setUp(self):					<#># Run Before Every Test<>
-        <v>...<>
+	def setUp(self):					<#># Run Before Every Test<>
+		<v>...<>
 
-    def tearDown(self):					<#># Run After Every Test<>
-        <v>...<>
+	def tearDown(self):					<#># Run After Every Test<>
+		<v>...<>
 
-    def test<v>_this_function<>(self)		<#># Name Must Start With <c>test<><>
-        <v>...<><>
+	def test<v>_this_function<>(self)		<#># Name Must Start With <c>test<><>
+		<v>...<><>
 @
 @ unittest.testcase, testcase, setup(), teardown(), test_
 @ examples
@@ -11713,17 +12488,17 @@ class <v>TestMyStuff<>(TestCase):
 
 class <v>BasicTest<>(TestCase):
 
-    def setUp(self):
-        self.<v>field1<> = True
+	def setUp(self):
+		self.<v>field1<> = True
 
-    def tearDown(self):
-        self.<v>field1<> = None
+	def tearDown(self):
+		self.<v>field1<> = None
 
-    def test<v>_IsTrue<>(self):
-        self.assertTrue(self.<v>field1<>, "<v>failed_assertion_message<>")
+	def test<v>_IsTrue<>(self):
+		self.assertTrue(self.<v>field1<>, "<v>failed_assertion_message<>")
 
-    def test<v>_IsFalse<>(self):
-        self.assertFalse(self.<v>field1<>, "<v>failed_assertion_message<>")<>
+	def test<v>_IsFalse<>(self):
+		self.assertFalse(self.<v>field1<>, "<v>failed_assertion_message<>")<>
 @
 @ unittest.testcase, testcase, setup(), teardown(), test_
 
@@ -11741,8 +12516,8 @@ class <v>BasicTest<>(TestCase):
 
 class <v>TestClass1<>(TestCase):
 
-    def test<v>_function_1<>(self)			<#># Must Start With '<c>test<>'<>
-        <v>...<><>
+	def test<v>_function_1<>(self)			<#># Must Start With '<c>test<>'<>
+		<v>...<><>
 @
 @ new, create, definition
 @ unittest.testcase, testcase, test_
@@ -11753,8 +12528,8 @@ class <v>TestClass1<>(TestCase):
 
 <cb>class <v>TestClass1<>(TestCase):
 
-    def setUp(self):
-        <v>...<><>
+	def setUp(self):
+		<v>...<><>
 
 Runs before every test.
 @
@@ -11766,8 +12541,8 @@ Runs before every test.
 
 <cb>class <v>TestClass1<>(TestCase):
 
-    def tearDown(self):
-        <v>...<><>
+	def tearDown(self):
+		<v>...<><>
 
 Runs after every test.
 Runs even if test fails.
@@ -11780,8 +12555,8 @@ Runs even if test fails.
 
 <cb>class <v>TestClass1<>(TestCase):
 
-    def test_<v>unit_test_name<>(self):
-        <v>...<><>
+	def test_<v>unit_test_name<>(self):
+		<v>...<><>
 
 Method names must start with '<c>test<>'.
 @
@@ -11896,10 +12671,86 @@ Fails test immediately.
 ### Test Assertion - Attribute Exists
 
 <cb>self.assertTrue(
-    hasattr(obj, intendedAttr),
-    msg=f'obj lacking an attribute. {obj=}, {intendedAttr=}')
+	hasattr(obj, intendedAttr),
+	msg=f'obj lacking an attribute. {obj=}, {intendedAttr=}')
 @
 @ assertTrue(), hasattr()
+
+
+
+# Type Hints
+@
+@ Static Typing, :
+
+
+
+### Type Hints - Function
+
+<cb>def <v>function_1<>(<v>param_1<>: <v>type<>) -> <v>return_type<>:
+	<v>...<><>
+
+
+Defines the function parameter types and the return type.
+
+
+Example:
+
+<cb>def <v>area<>(<v>height<>: <v>float<>, <v>width<>: <v>float<>) -> float:
+	return <v>height<> * <v>width<><>
+@
+@ ->, def
+
+
+
+### Type Hints - Variable Type
+
+<cb><v>name<>: <v>type<><>
+
+
+Defines the type of a variable.
+The type is not compiler enforced.
+
+
+Basic Types:
+
+<cb>bool, int, complex, float, str<>
+
+
+Examples:
+
+<cb><v>id<>: int<>
+
+<cb><v>descrption<>: str<>
+
+<cb><v>home_address<>: Address<>
+
+
+
+### Type Hints - Variable Type, Subtype /  Generics
+
+<cb><v>name<>: <v>type<>[<v>subtype<>]<>
+
+<cb><v>name<>: <v>type<>[<v>subtype_1<>, <v>subtype_2<>]<>
+
+
+Defines the type and subtype of a variable.
+The type is not compiler enforced.
+
+
+Basic Types:
+
+<cb>tuple, list, dict<>
+
+
+Examples:
+
+<cb><v>names<>: list[str]<>
+
+<cb><v>name_and_id<>: tuple[str, int]<>
+
+<cb><v>addresses<>: dict[int, Address]<>
+@
+@ dict, list, tuple
 
 
 
@@ -11962,14 +12813,17 @@ Bash:
 
 <cb>. <v>project_venv_dir<>/bin/python <v>path/module.py<><>
 
-DOS <m>(Untested. Can someone confirm this works or not?)<>:
+DOS:
+<m>(Untested. Can someone confirm this works?)<>
 
 <cb>bin\\python <v>path/module.py<><>
+
+Starts the venv and then runs the module in that environment.
 
 Run from the project root directory.
 Run this bash script from the command line.
 @
-@ start, run, activate
+@ start, run, activate, execute
 @ /bin/activate
 
 
@@ -12002,9 +12856,9 @@ Example:
 <cb>from os import environ
 
 if 'PYTHONPATH' in environ:
-    print ('PYTHONPATH exists.')
+	print ('PYTHONPATH exists.')
 else:
-    print ('PYTHONPATH does not exist.')<>
+	print ('PYTHONPATH does not exist.')<>
 @
 @ os.environ
 
@@ -12091,25 +12945,26 @@ Do not use for CPU bound operations.
 
 Each Thread Has:
 
-    Registers
-    Stack
+	Registers
+	Stack
 
 Threads Share:
 
-    Common Memory
-    Resources
+	Common Memory
+	Resources
 
 Local Variables
 
-    Stored on thread's stack
+	Stored on thread's stack
 
 Thread Synchronization
 
-    Use Lock
-    Use Semaphore
-    Use Queue
+	Use Lock
+	Use Semaphore
+	Use Queue
 @
 @ thread-only, threads-only, threading-only, .thread(), therading.thread()
+@ multitasking
 
 
 
@@ -12124,8 +12979,8 @@ Thread Synchronization
 Create:
 
 <cb><v>thread_1<> = Thread(
-        target = <v>worker_function<>,
-        args = (<v>worker_argument_1<>,)<>
+		target = <v>worker_function<>,
+		args = (<v>worker_argument_1<>,)<>
 
 Start:
 
@@ -12145,8 +13000,8 @@ Define:
 
 <cb>class <v>ThreadClass<>(Thread):
 
-    def run(self):
-        <v>...<><>
+	def run(self):
+		<v>...<><>
 
 Create:
 
@@ -12173,14 +13028,14 @@ Wait for Completion:
 Create:
 
 <cb><v>thread_1<> = Thread(
-        target = <v>worker_function<>,
-        args = (<v>worker_argument_1<>,)<>
+		target = <v>worker_function<>,
+		args = (<v>worker_argument_1<>,)<>
 
 Create With Name:
 
 <cb><v>thread_1<> = Thread(
-        name = "<v>thread name<>",
-        <v>...<>)<>
+		name = "<v>thread name<>",
+		<v>...<>)<>
 
 
 
@@ -12192,8 +13047,8 @@ Define:
 
 <cb>class <v>ThreadClass<>(Thread):		<#>#1<>
 
-    def run(self):				<#>#2<>
-        <v>...<><>
+	def run(self):				<#>#2<>
+		<v>...<><>
 
 Create:
 
@@ -12214,9 +13069,9 @@ Define:
 
 <cb>class <v>WorkerClass<>(Thread):
 
-    def __init__(self, <v>argument_1<>, <v>...<>):
-        Thread.__init__(self)		<#>#1<>
-        <v>...<><>
+	def __init__(self, <v>argument_1<>, <v>...<>):
+		Thread.__init__(self)		<#>#1<>
+		<v>...<><>
 
 Start:
 
@@ -12294,22 +13149,24 @@ A running instance of a program.
 
 It has:
 
-    System Resources
-    Assigned Memory Space
-    Security Attributes
-    Process State
+	System Resources
+	Assigned Memory Space
+	Security Attributes
+	Process State
 
 Each Process Has:
 
-    It's Own GIL
-    Self Contained Memory
+	It's Own GIL
+	Self Contained Memory
 
 Processes can be paused or terminated.
 
 Processes have a big memory footprint.
 Context switch between processes is expensive.
 @
-@ processes, processing, process-only, processes-only, processing-only, multiprocessing.process(), .process()
+@ processes, processing, process-only, processes-only, processing-only
+@ multiprocessing.process(), .process()
+@ multitasking
 
 
 ### Process - Basics
@@ -12323,8 +13180,8 @@ Context switch between processes is expensive.
 Create:
 
 <cb><v>process_1<> = Process(
-        target = <v>worker_function<>,
-        args = (<v>worker_argument_1<>,)<>
+		target = <v>worker_function<>,
+		args = (<v>worker_argument_1<>,)<>
 
 Start:
 
@@ -12344,8 +13201,8 @@ Define:
 
 <cb>class <v>ProcessClass<>(Process):
 
-    def run(self):
-        <v>...<><>
+	def run(self):
+		<v>...<><>
 
 Create:
 
@@ -12371,14 +13228,14 @@ Wait for Completion:
 Create:
 
 <cb><v>process_1<> = Process(
-        target = <v>worker_function<>,
-        args = (<v>worker_argument_1<>,)<>
+		target = <v>worker_function<>,
+		args = (<v>worker_argument_1<>,)<>
 
 Create With Name:
 
 <cb><v>process_1<> = Process(
-        name = "<v>process name<>",
-        <v>...<>)<>
+		name = "<v>process name<>",
+		<v>...<>)<>
 
 
 
@@ -12390,8 +13247,8 @@ Define:
 
 <cb>class <v>ProcessClass<>(Process):	<#>#1<>
 
-    def run(self):				<#>#2<>
-        <v>...<><>
+	def run(self):				<#>#2<>
+		<v>...<><>
 
 Create:
 
@@ -12412,9 +13269,9 @@ Define:
 
 <cb>class <v>WorkerClass<>(Process):
 
-    def __init__(self, <v>argument_1<>, <v>...<>):
-        Process.__init__(self)			<#>#1<>
-        <v>...<><>
+	def __init__(self, <v>argument_1<>, <v>...<>):
+		Process.__init__(self)			<#>#1<>
+		<v>...<><>
 
 Start:
 
@@ -12483,10 +13340,10 @@ Blocks the current process until <c><v>process_1<><> completes.
 
 Values:
 
-    0 -     No Error
-    1 -     Error
-    < 0 -       Terminated.
-            Terminating Signal code = .exitcode * -1
+	0 -     No Error
+	1 -     Error
+	< 0 -       Terminated.
+			Terminating Signal code = .exitcode * -1
 @
 @ process.exitcode, .exitcode
 
@@ -12571,10 +13428,10 @@ Create:
 Create All Options:
 
 <cb><v>pool_1<> = Pool(
-        processes = <v>process_count<>,
-        initializen = <v>initializing_function<>,
-        initargs = <v>initial_arguments<>,
-        maxtasksperchild = <v>number_of_tasks<>)<>
+		processes = <v>process_count<>,
+		initializen = <v>initializing_function<>,
+		initargs = <v>initial_arguments<>,
+		maxtasksperchild = <v>number_of_tasks<>)<>
 
 
 By default processes live as long as the pool is alive.
@@ -12604,9 +13461,9 @@ Prevents any new tasks being added to the pool.
 <cb>= <v>pool_1<>.apply(<v>worker_function<>, <v>args<>)<>
 
 <cb>= <v>pool_1<>.apply(
-        func = <v>worker_function<>,
-        args = <v>args<>,
-        kwargs = <v>kwargs<>)<>
+		func = <v>worker_function<>,
+		args = <v>args<>,
+		kwargs = <v>kwargs<>)<>
 
 
 Returns: Result
@@ -12622,15 +13479,15 @@ Performs <v>worker_function<> on <v>args<>.
 #### Pool - Perform Single Operation Asynchronously
 
 <cb>= <v>pool_1<>.apply_async(
-        <v>worker_function<>,
-        <v>list_of_inputs<>)<>
+		<v>worker_function<>,
+		<v>list_of_inputs<>)<>
 
 <cb>= <v>pool_1<>.apply_async(
-        func = <v>worker_function<>,
-        args = <v>args<>,
-        kwargs = <v>kwargs<>,
-        callback = <v>callback_function<>
-        error_callback = <v>error_handler<>)<>
+		func = <v>worker_function<>,
+		args = <v>args<>,
+		kwargs = <v>kwargs<>,
+		callback = <v>callback_function<>
+		error_callback = <v>error_handler<>)<>
 
 
 Returns: <c>AsyncResult<>
@@ -12675,14 +13532,14 @@ This call blocks until all results are in.
 #### Pool - Perform Multiple Operations Asynchronously
 
 <cb>= <v>pool_1<>.map_async(
-        <v>worker_function<>,
-        <v>list_of_inputs<>)<>
+		<v>worker_function<>,
+		<v>list_of_inputs<>)<>
 
 <cb>= <v>pool_1<>.map_async(
-        <v>worker_function<>,
-        <v>list_of_inputs<>,
-        callback = <v>callback_function<>,
-        error_callback = <v>error_callback_function<>)<>
+		<v>worker_function<>,
+		<v>list_of_inputs<>,
+		callback = <v>callback_function<>,
+		error_callback = <v>error_callback_function<>)<>
 
 
 Returns: <c>AsyncResult<>
@@ -12757,7 +13614,7 @@ Concrete Classes:
 <cb>= ProcessPoolExecutor()<>
 
 <cb>= ProcessPoolExecutor (
-    max_workers = <v>worker_count<>)<>
+	max_workers = <v>worker_count<>)<>
 
 
 max_workers default = # computer cores * 5
@@ -12771,7 +13628,7 @@ max_workers default = # computer cores * 5
 <cb>from concurrent.futures import ProcessPoolExecutor<>
 
 <cb>with ProcessPoolExecutor() as <v>executor_1<>
-    <v>...<><>
+	<v>...<><>
 @
 @ concurrent.futures.ProcessPoolExecutor, Process Pool Executor
 
@@ -12784,8 +13641,8 @@ max_workers default = # computer cores * 5
 <cb>= ThreadPoolExecutor()<>
 
 <cb>= ThreadPoolExecutor (
-    max_workers = <v>worker_count<>,
-    thread_name_prefix = '<v>prefix_name<>')<>
+	max_workers = <v>worker_count<>,
+	thread_name_prefix = '<v>prefix_name<>')<>
 
 
 max_workers default = # computer cores * 5
@@ -12799,7 +13656,7 @@ max_workers default = # computer cores * 5
 <cb>from concurrent.futures import ThreadPoolExecutor<>
 
 <cb>with ThreadPoolExecutor() as <v>executor_1<>
-    <v>...<><>
+	<v>...<><>
 @
 @ Thread Pool Executor, concurrent.futures.ThreadPoolExecutor
 
@@ -12833,10 +13690,10 @@ For ProcessPoolExecutor, make sure the worker function and arguments are picklea
 <cb><v>list_of_results<> = <v>executor_1<>.map(<v>worker_function<>, <v>list_of_arguments<>)<>
 
 <cb><v>list_of_results<> = <v>executor_1<>.map (
-        func = <v>worker_function<>,
-        iterables = <v>list_of_arguments<>,
-        timeout = <v>timeout_seconds<>,
-        chunksize = 1)<>
+		func = <v>worker_function<>,
+		iterables = <v>list_of_arguments<>,
+		timeout = <v>timeout_seconds<>,
+		chunksize = 1)<>
 
 
 Returns: <c>result_iterator<> (an iterator)
@@ -12915,9 +13772,9 @@ Returns <c>True<> if successful.
 #### Future - Get With Exception Handling
 
 <cb>try:
-    <v>result<> = <v>future_1<>.result()
+	<v>result<> = <v>future_1<>.result()
 except Exception as <v>exception<>:
-    <v>...<><>
+	<v>...<><>
 
 
 Exceptions are returned through the future itself.
@@ -13020,8 +13877,8 @@ Ensure each process should send on one connection and receive on the other.
 
 Example:
 
-    Process 1 should send on  <c><v>connection_1<><>, and receive on <c><v>connection_2<><>.
-    Process 2 should send on  <c><v>connection_2<><>, and receive on <c><v>connection_1<><>.
+	Process 1 should send on  <c><v>connection_1<><>, and receive on <c><v>connection_2<><>.
+	Process 2 should send on  <c><v>connection_2<><>, and receive on <c><v>connection_1<><>.
 
 
 
@@ -13104,9 +13961,9 @@ The preferred way to communicate between threads or processes.
 <cb><v>queue_1<>.put(<v>value_1<>)<>
 
 <cb><v>queue_1<>.put(
-        obj = <v>value<>
-        block = <v>true_or_false<>,
-        timeout = <v>timeout_seconds<>)<>
+		obj = <v>value<>
+		block = <v>true_or_false<>,
+		timeout = <v>timeout_seconds<>)<>
 @
 @ put, append, insert, append to, .put()
 @ multiprocessing.queue(), processes
@@ -13118,8 +13975,8 @@ The preferred way to communicate between threads or processes.
 <cb>= <v>queue_1<>.get()                           <#>#1<><>
 
 <cb>= <v>queue_1<>.get(
-        block = <v>true_or_false<>,
-        timeout = <v>timeout_seconds<>)<>
+		block = <v>true_or_false<>,
+		timeout = <v>timeout_seconds<>)<>
 
 or
 
@@ -13342,8 +14199,8 @@ Blocks until the event happens.
 
 ### Lock - Lock States
 
-    Locked
-    Unlocked
+	Locked
+	Unlocked
 
 
 
@@ -13351,9 +14208,9 @@ Blocks until the event happens.
 
 For atomic operations...
 
-    Assigning a simple value
-    Getting a dictionary or list item.
-    Adding an item to a dictionary or list.
+	Assigning a simple value
+	Getting a dictionary or list item.
+	Adding an item to a dictionary or list.
 
 
 
@@ -13389,7 +14246,7 @@ Create and Use:
 
 <cb>with Lock() as <v>lock_1<>:
 
-    <v>...<><>
+	<v>...<><>
 
 Automatically acquires and releases the lock.
 @
@@ -13425,7 +14282,7 @@ Create and Use:
 
 <cb>with Lock() as <v>lock_1<>:
 
-    <v>...<><>
+	<v>...<><>
 
 Automatically acquires and releases the lock.
 @
@@ -13503,11 +14360,11 @@ Acquire - Non-blocking:
 <cb><v>lock_1<>.acquire(False)<>
 
 <cb>if <v>lock_1<>.acquire(False):
-    <#># Lock acquired.<>
-    <v>...<>
+	<#># Lock acquired.<>
+	<v>...<>
 else:
-    <#># Did not acquire lock<>
-    <v>...<><>
+	<#># Did not acquire lock<>
+	<v>...<><>
 
 
 
@@ -13530,7 +14387,7 @@ Only the locking thread or process can unlock a lock.
 
 <cb>with Lock() as <v>lock_1<>:
 
-    <v>...<><>
+	<v>...<><>
 
 Automatically acquires and releases the lock.
 
@@ -13586,7 +14443,7 @@ Create:
 Use:
 
 <cb>with <v>semarphore_1<>:
-    <v>...<><>
+	<v>...<><>
 
 Automatically acquires and releases the semaphore.
 @
@@ -13633,7 +14490,7 @@ Create:
 Use:
 
 <cb>with <v>semarphore_1<>:
-    <v>...<><>
+	<v>...<><>
 
 Automatically acquires and releases the semaphore.
 @
@@ -13694,11 +14551,11 @@ Acquire - Non-blocking:
 <cb><v>semaphore_1<>.acquire(False)<>
 
 <cb>if <v>semaphore_1<>.acquire(False):
-    <#># Semaphore acquired.<>
-    <v>...<>
+	<#># Semaphore acquired.<>
+	<v>...<>
 else:
-    <#># Did not acquire semaphore<>
-    <v>...<><>
+	<#># Did not acquire semaphore<>
+	<v>...<><>
 
 
 
@@ -13715,7 +14572,7 @@ Only the acquiring thread or process can release a semaphore.
 
 <cb>with Semaphore() as <v>semaphore_1<>:
 
-    <v>...<><>
+	<v>...<><>
 
 Automatically acquires and releases the semaphore.
 
@@ -13758,9 +14615,9 @@ Update:
 <cb>= Value(<v>type<>, (<v>arguments<>))<>
 
 <cb>= Value(
-        typecode_or_type = <v>type<>,
-        args = (<v>arguments<>),
-        lock = <v>lock<>)<>
+		typecode_or_type = <v>type<>,
+		args = (<v>arguments<>),
+		lock = <v>lock<>)<>
 
 
 Examples:
@@ -13807,20 +14664,20 @@ For:
 <cb>= Value(<v>type<>, <v>...<>)<>
 
 <c><v>type<><>        <c>ctypes.c_bool<>
-        <c>ctypes.c_char<>
-        <c>ctypes.c_wthar<>
-        <c>ctypes.c_int<>
-        <c>ctypes.c_long<>
-        <c>ctypes.c_float<>
-        <c>ctypes.c_char_p<>
-        <c>ctypes.c_wchar_p<>
-        <c>ctypes.c_void_p<>
+		<c>ctypes.c_char<>
+		<c>ctypes.c_wthar<>
+		<c>ctypes.c_int<>
+		<c>ctypes.c_long<>
+		<c>ctypes.c_float<>
+		<c>ctypes.c_char_p<>
+		<c>ctypes.c_wchar_p<>
+		<c>ctypes.c_void_p<>
 
-        'c'             <#>Same as ctype.c_char, 1-character bytes object<>
-        'u'             <#>Same as ctype.c_wchar, 1-character string<>
-        'i'             <#>Same as ctypes.c_int, int<>
-        'l'             <#>Same as ctypes.c_long, int<>
-        'f'             <#>Same as ctypes.c_float, float<>
+		'c'             <#>Same as ctype.c_char, 1-character bytes object<>
+		'u'             <#>Same as ctype.c_wchar, 1-character string<>
+		'i'             <#>Same as ctypes.c_int, int<>
+		'l'             <#>Same as ctypes.c_long, int<>
+		'f'             <#>Same as ctypes.c_float, float<>
 
 
 <c><v>type<><> is a C-Type value.
@@ -13898,7 +14755,7 @@ Example:
 ## Async Def
 
 <cb>async def <v>coroutine_1<>():
-    <v>...<><>
+	<v>...<><>
 
 Defines a coroutine that can be scheduled to run on an event loop.
 @ async-only
@@ -13908,7 +14765,7 @@ Defines a coroutine that can be scheduled to run on an event loop.
 ## Async For
 
 <cb>async for <v>item<> in <v>async_iterable<>:
-    <v>...<><>
+	<v>...<><>
 
 
 Use with asyncronous iterables.
@@ -13917,16 +14774,16 @@ Use with asyncronous iterables.
 Example:
 
 <cb>class <v>AsyncIterable1<>:
-    def __aiter__(self):
-        return self
+	def __aiter__(self):
+		return self
 
-    async def __anext__(self):
-        <v>next<> = await <v>get_next()<>
-        return <v>next<>
+	async def __anext__(self):
+		<v>next<> = await <v>get_next()<>
+		return <v>next<>
 
 
 async for <v>item<> in <v>AsyncIterable1<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ as, __aiter__, __anext__
 @ async-only
@@ -13936,8 +14793,8 @@ async for <v>item<> in <v>AsyncIterable1<>:
 ## Async With
 
 <cb>async with <v>AsyncClass1<>() as <v>async_1<>:
-    <v>...<>
-    await <v>async_1<>.<v>action<>()<>
+	<v>...<>
+	await <v>async_1<>.<v>action<>()<>
 
 
 Use with classes that use the asynchronous context manager.
@@ -13947,15 +14804,15 @@ Example:
 
 <cb>class <v>AsyncClass1<>:
 
-    async def __aenter__(self):
-        <v>...<>
+	async def __aenter__(self):
+		<v>...<>
 
-    async def __aexit__(self, exc_type, exc, tb):
-        <v>...<>
+	async def __aexit__(self, exc_type, exc, tb):
+		<v>...<>
 
 
 async with <v>AsyncClass1<>() as async_1:
-    <v>...<><>
+	<v>...<><>
 @
 @ as, __aenter__, __aexit__
 @ async-only
@@ -14015,7 +14872,7 @@ Function:
 from asyncio import sleep
 
 async def <v>sleep_until<>(<v>datetime_1<>):
-    await sleep ((<v>datetime_1<> - datetime.now()).total_seconds())<>
+	await sleep ((<v>datetime_1<> - datetime.now()).total_seconds())<>
 
 Call:
 
@@ -14032,23 +14889,27 @@ Call:
 
 
 ### Coroutine - Basics
+@
+@ async functions
 
 
 
 #### Coroutine - Start Main Coroutine
 
-<cb>from asyncio import get_event_loop<>
+<cb>run(<v>main<>())<>
 
-<cb>async def <v>main<>():
-    <v>...<><>
+<cb>from asyncio import run
 
-<cb><v>loop<> = get_event_loop()
-<v>loop<>.run_until_complete(<v>main<>())
-<v>loop<>.close()<>
+async def <v>main<>():
+	<v>...<>
+
+run(<v>main<>())<>
 
 
 This is a typical way to start your threads running.
 It runs <c>main()<> on the main event loop.
+@
+@ run(), function
 
 
 
@@ -14057,7 +14918,7 @@ It runs <c>main()<> on the main event loop.
 Define Coroutine Function:
 
 <cb>async def <v>coroutine_function_1<>():
-    <v>...<><>
+	<v>...<><>
 
 Call:
 
@@ -14078,7 +14939,7 @@ Define the coroutine with <c>async def<>.
 Define:
 
 <cb>async def <v>coroutine_function<>():
-    <v>...<><>
+	<v>...<><>
 
 Schedule Execution:
 
@@ -14118,8 +14979,8 @@ They become coroutines (sometimes called coroutine object) when the function is 
 
 There are at least 2 options to run it:
 
-    Call with <c>await<>
-    Create a <c>Task<>
+	Call with <c>await<>
+	Create a <c>Task<>
 
 Call with <c>await<> will run the coroutine immediately and wait for a result. <c>await<> must be called inside another coroutine.
 
@@ -14134,7 +14995,7 @@ Create a <c>Task<> with <c>create_task()<>. This will schedule the coroutine on 
 #### Coroutine - Define / async def
 
 <cb>async def <v>coroutine_function_1<>():
-    <v>...<><>
+	<v>...<><>
 
 
 Defines a coroutine function that can be scheduled on the event loop.
@@ -14224,9 +15085,9 @@ Use <c>await<> to run coroutines sequentially.
 
 <cb>async def <v>chaining_function<>():
 
-    await <v>subfunction_1<>()
-    await <v>subfunction_2<>()
-    <v>...<><>
+	await <v>subfunction_1<>()
+	await <v>subfunction_2<>()
+	<v>...<><>
 
 
 <c>chaining_function<> chains subroutines together and runs them sequentially.
@@ -14281,7 +15142,7 @@ The event loop calls the first/next task in that queue.
 The task runs until it suspends itself, releasing control back to the event loop.
 
 The event loop resumes the task
-    once the io/external operation completes.
+	once the io/external operation completes.
 
 
 
@@ -14309,7 +15170,7 @@ This event loop runs in the current thread by default.
 <cb>from asyncio import run<>
 
 <cb>async def <v>main<>():
-    <v>...<><>
+	<v>...<><>
 
 <cb>run(<v>main<>())<>
 
@@ -14326,7 +15187,7 @@ It runs <c>main()<> on the main event loop.
 <cb>from asyncio import get_event_loop<>
 
 <cb>async def <v>main<>():
-    <v>...<><>
+	<v>...<><>
 
 <cb><v>loop<> = get_event_loop()
 <v>loop<>.run_until_complete(<v>main<>())
@@ -14445,9 +15306,9 @@ Returns <c>True<> if successful.
 ### Future - Get With Exception Handling
 
 <cb>try:
-    <v>result<> = <v>future_1<>.result()
+	<v>result<> = <v>future_1<>.result()
 except Exception as <v>exception<>:
-    <v>...<><>
+	<v>...<><>
 
 
 Exceptions are returned through the future itself.
@@ -14562,9 +15423,9 @@ Returns <c>True<> if successful.
 #### Task - Get With Exception Handling
 
 <cb>try:
-    <v>result<> = <v>task_1<>.result()
+	<v>result<> = <v>task_1<>.result()
 except Exception as <v>exception<>:
-    <v>...<><>
+	<v>...<><>
 
 
 Exceptions are returned through the task itself.
@@ -14626,9 +15487,9 @@ Exceptions are not returned the the callback function.
 <cb>wait_for(<v>task_1<>)<>
 
 <cb>wait_for(<v>future_1<>,
-        timeout = <v>timeout_seconds<>,
-        *,
-        loop = <v>event_loop_1<>)<>
+		timeout = <v>timeout_seconds<>,
+		*,
+		loop = <v>event_loop_1<>)<>
 
 <cb>await wait_for(<v>future_1<>)<>
 @
@@ -14640,9 +15501,9 @@ Exceptions are not returned the the callback function.
 
 <cb>async def <c>chaining_function<>():
 
-    await <v>task_1<>()
-    await <v>task_2<>()
-    <v>...<>
+	await <v>task_1<>()
+	await <v>task_2<>()
+	<v>...<>
 @
 @ chaining, serially
 
@@ -14657,10 +15518,10 @@ Exceptions are not returned the the callback function.
 <cb>wait(<v>tasks<>)<>
 
 <cb>wait(<v>futures<>,
-        *,
-        loop = <v>event_loop_1<>,
-        timeout = <v>timeout_seconds<>,
-        return_when = <v>when<>)<>
+		*,
+		loop = <v>event_loop_1<>,
+		timeout = <v>timeout_seconds<>,
+		return_when = <v>when<>)<>
 
 With Results:
 
@@ -14679,7 +15540,7 @@ Timeout does not cancel futures.
 <cb>from asyncio import as_completed<>
 
 <cb>for <v>task<> in as_completed(<v>futures<>):
-    <v>result<> = await <v>task<><>
+	<v>result<> = await <v>task<><>
 
 
 Returns tasks as they are completed.
@@ -14731,12 +15592,16 @@ Other Libraries:
 
 ### CSV File - Read To Dict - With Header
 
-<cb>from csv import DictReader<>
+<cb>= DictReader(<v>file<>)<>
 
-<cb><v>reader<> = DictReader(<v>file<>)
+<cb>from csv import DictReader
 
-for <v>row<> in <v>reader<>:
-    <v>...<><>
+with open(<v>file_name<>) as file:
+
+	<v>reader<> = DictReader(<v>file<>)
+
+	for <v>row<> in <v>reader<>:
+		<v>...<><>
 
 
 Each <c><v>row<><> returns the row of values as a dict.
@@ -14746,10 +15611,11 @@ Requires a header row.
 
 Example:
 
-<cb>with open("<v>path/data_file.csv<>") as <v>file<>:
+<cb><v>file_name<> = '<v>path/data_file.csv<>'
+with open(<v>file_name<>) as <v>file<>:
 
-    <v>reader<> = DictReader(<v>file<>)
-    <v>data<> = [<v>row<> for <v>row<> in <v>reader<>]<>
+	<v>reader<> = DictReader(<v>file<>)
+	<v>data<> = [<v>row<> for <v>row<> in <v>reader<>]<>
 @
 @ csv.dictreader(), .dictreader(), row
 
@@ -14757,12 +15623,16 @@ Example:
 
 ### CSV File - Read To Dict - Without Header
 
-<cb>from csv import DictReader<>
+<cb>= DictReader(<v>file<>, fieldnames = <v>field_names<>)<>
 
-<cb><v>reader<> = DictReader(<v>file<>, fieldnames = <v>field_names<>)
+<cb>from csv import DictReader
 
-for <v>row<> in <v>reader<>:
-    <v>...<><>
+with open(<v>file_name<>) as file:
+
+	<v>reader<> = DictReader(<v>file<>, fieldnames = <v>field_names<>)
+
+	for <v>row<> in <v>reader<>:
+		<v>...<><>
 
 
 Set the field names using the <c>fieldnames<> option.
@@ -14772,10 +15642,11 @@ Each <c><v>row<><> returns the row of values as a dict.
 
 Example:
 
-<cb>with open("<v>path/data_file.csv<>") as <v>file<>:
+<cb><v>file_name<> = '<v>path/data_file.csv<>'
+with open(<v>file_name<>) as <v>file<>:
 
-    <v>reader<> = DictReader(<v>file<>, ["name", "date", "value"])
-    <v>data<> = [<v>row<> for <v>row<> in <v>reader<>]<>
+	<v>reader<> = DictReader(<v>file<>, ["name", "date", "value"])
+	<v>data<> = [<v>row<> for <v>row<> in <v>reader<>]<>
 @
 @ csv.dictreader(), .dictreader(), fieldnames=, row
 
@@ -14783,14 +15654,17 @@ Example:
 
 ### CSV File - Read To List - With Header
 
-<cb>import csv<>
+<cb>= csv.reader(<v>file<>)<>
 
-<cb><v>reader<> = csv.reader(<v>file<>)
+<cb>import csv
 
-<v>header<> = next(<v>reader<>)
+with open(<v>file_name<>) as file:
 
-for <v>row<> in <v>reader<>:
-    <v>...<><>
+	<v>reader<> = csv.reader(<v>file<>)
+
+	<v>header<> = next(<v>reader<>)
+	for <v>row<> in <v>reader<>:
+		<v>...<><>
 
 
 <c><v>header<><> contains the fields returned from the first row as a list of strings.
@@ -14799,11 +15673,12 @@ Each <c><v>row<><> returns the row of values as a list.
 
 Example:
 
-<cb>with open("<v>path/data_file.csv<>") as <v>file<>:
+<cb><v>file_name<> = '<v>path/data_file.csv<>'
+with open(<v>file_name<>) as <v>file<>:
 
-    <v>reader<> = csv.reader(<v>file<>)
-    <v>header<> = next(<v>reader<>)
-    <v>data<> = [<v>row<> for <v>row<> in <v>reader<>]<>
+	<v>reader<> = csv.reader(<v>file<>)
+	<v>header<> = next(<v>reader<>)
+	<v>data<> = [<v>row<> for <v>row<> in <v>reader<>]<>
 @
 @ csv.reader(), .reader(), row
 
@@ -14811,47 +15686,57 @@ Example:
 
 ### CSV File - Read To List - Without Header
 
-<cb>import csv<>
+<cb>= csv.reader(<v>file<>)<>
 
-<cb><v>reader<> = csv.reader(<v>file<>)
+<cb>import csv
 
-for <v>row<> in <v>reader<>:
-    <v>...<><>
+with open(<v>file_name<>) as file:
+
+	<v>reader<> = csv.reader(<v>file<>)
+
+	for <v>row<> in <v>reader<>:
+		<v>...<><>
 
 
 Example:
 
-<cb>with open("<v>path/data_file.csv<>") as <v>file<>:
+<cb><v>file_name<> = '<v>path/data_file.csv<>'
+with open(<v>file_name<>) as <v>file<>:
 
-    <v>reader<> = csv.reader(<v>file<>)
-    <v>data<> = [<v>row<> for <v>row<> in <v>reader<>]<>
+	<v>reader<> = csv.reader(<v>file<>)
+	<v>data<> = [<v>row<> for <v>row<> in <v>reader<>]<>
 @
 @ csv.reader(), .reader(), row
 
 
 
-### CSV File - Reading Blank Lines
+### CSV File - When Reading Blank Lines
 
-<b><c>csv.reader()<>:<>
+Using <b><c>csv.reader()<>:<>
 
-Returns a blank line as an empty list <c>[]<>.
-The last line is ignored if blank.
+<indent-half>Returns a blank line as an empty list <c>[]<>.
+The last line is ignored if blank.<>
 
+Using <b><c>DictReader<>:<>
 
-<b><c>DictReader<>:<>
-
-Ignores all blank lines.
+<indent-half>Ignores all blank lines.<>
 
 
 
 ### CSV File - Write From Dict
 
-<cb>from csv import DictWriter<>
-
 <cb><v>writer<> = DictWriter(<v>file<>, fieldnames = <v>fields<>)
 
-for <v>item_dict<> in <v>list_of_dicts<>:
-    <v>writer<>.writerow(<v>item_dict<>)<>
+<v>writer<>.writerow(<v>row_dict<>)<>
+
+<cb>from csv import DictWriter
+
+with open(<v>file_name<>, 'w') as <v>file<>:
+
+	<v>writer<> = DictWriter(<v>file<>, fieldnames = <v>fields<>)
+
+	for <v>row_dict<> in <v>list_of_dicts<>:
+		<v>writer<>.writerow(<v>row_dict<>)<>
 @
 @ csv.DictWriter.writerow(), .writerow(), row, dictionary, dictionaries
 
@@ -14859,11 +15744,17 @@ for <v>item_dict<> in <v>list_of_dicts<>:
 
 ### CSV File - Write List of Dicts
 
-<cb>from csv import DictWriter<>
-
 <cb><v>writer<> = DictWriter(<v>file<>, fieldnames = <v>fields<>)
 
 <v>writer<>.writerows(<v>list_of_dicts<>)<>
+
+<cb>from csv import DictWriter
+
+with open(<v>file_name<>, 'w') as <v>file<>:
+
+	<v>writer<> = DictWriter(<v>file<>, fieldnames = <v>fields<>)
+
+	<v>writer<>.writerows(<v>list_of_dicts<>)<>
 @
 @ csv.DictWriter.writerows(), .writerows(), rows, dictionary, dictionaries
 
@@ -14871,11 +15762,18 @@ for <v>item_dict<> in <v>list_of_dicts<>:
 
 ### CSV File - Write Dict Header
 
-<cb>from csv import DictWriter<>
-
 <cb><v>writer<> = DictWriter(<v>file<>, fieldnames = <v>fields<>)
 
 <v>writer<>.writeheader()<>
+
+<cb>from csv import DictWriter
+
+with open(<v>file_name<>, 'w') as <v>file<>:
+
+	<v>writer<> = DictWriter(<v>file<>, fieldnames = <v>fields<>)
+
+	<v>writer<>.writeheader()
+	<v>...<><>
 @
 @ csv.DictWriter.writeheader(), .writeheader(), dictionary, dictionaries
 
@@ -14883,12 +15781,18 @@ for <v>item_dict<> in <v>list_of_dicts<>:
 
 ### CSV File - Write From List
 
-<cb>import csv<>
-
 <cb><v>writer<> = csv.writer(<v>file<>)
 
-for <v>item_list<> in <v>list_of_lists<>:
-    <v>writer<>.writerow(<v>item_list<>)<>
+<v>writer<>.writerow(<v>item_list<>)<>
+
+<cb>import csv
+
+with open(<v>file_name<>, 'w') as <v>file<>:
+
+	<v>writer<> = csv.writer(<v>file<>)
+
+	for <v>item_list<> in <v>list_of_lists<>:
+		<v>writer<>.writerow(<v>item_list<>)<>
 @
 @ writer.writerow(), .writerow(), row
 
@@ -14896,11 +15800,17 @@ for <v>item_list<> in <v>list_of_lists<>:
 
 ### CSV File - Write List of Lists
 
-<cb>import csv<>
-
 <cb><v>writer<> = csv.writer(<v>file<>)
 
 <v>writer<>.writerows(<v>list_of_lists<>)<>
+
+<cb>import csv
+
+with open(<v>file_name<>, 'w') as <v>file<>:
+
+	<v>writer<> = csv.writer(<v>file<>)
+
+	<v>writer<>.writerows(<v>list_of_lists<>)<>
 @
 @ writer.writerows(), .writerows(), rows
 
@@ -14938,9 +15848,9 @@ Examples:
 
 <cb><v>...<>(dialect = "<v>dialect<>")<>
 
-    <c>'excel'<>           Excel formatting, Comma Delimited, '\\n\\r' Newlines
-    <c>'excel-tab'<>       Excel formatting, Tab Delimited, '\\n\\r' Newlines
-    <c>'unix'<>            Unix formatting, Comma Delimited, All Values in Quotes, '\\n' Newlines
+<indent><table><col><c>'excel'<><><col>Excel formatting, Comma Delimited, '\\n\\r' Newlines<>
+<col><c>'excel-tab'<><><col>Excel formatting, Tab Delimited, '\\n\\r' Newlines<>
+<col><c>'unix'<><><col>Unix formatting, Comma Delimited, All Values in Quotes, '\\n' Newlines<><><>
 
 
 Examples:
@@ -14957,12 +15867,12 @@ Examples:
 
 <cb><v>...<>(quoting = <v>quote_setting<>)<>
 
-<c><v>quote_setting<><>:
+<c>quote_setting<>:
 
-    <c>csv.QUOTE_NONE<>                Quote Nothing
-    <c>csv.QUOTE_MINIMAL<>             Add Quotes Only To Values That Need It (Default)
-    <c>csv.QUOTE_NONNUMERIC<>          Add Quotes To Non Numeric Values
-    <c>csv.QUOTE_ALL<>                 Add Quotes To All Values
+<indent><table><col><c>csv.QUOTE_NONE<><><col>Quote Nothing<>
+<col><c>csv.QUOTE_MINIMAL<><><col>Add Quotes Only To Values That Need It (Default)<>
+<col><c>csv.QUOTE_NONNUMERIC<><><col>Add Quotes To Non Numeric Values<>
+<col><c>csv.QUOTE_ALL<><><col>Add Quotes To All Values<><><>
 
 
 Examples:
@@ -14986,9 +15896,9 @@ Define:
 
 <cb>@dataclass
 class <v>NewClass1<>:
-    <v>field_1<>: <v>type<>
-    <v>field_2<>: <v>type<>
-    <v>...<><>
+	<v>field_1<>: <v>type<>
+	<v>field_2<>: <v>type<>
+	<v>...<><>
 
 Create:
 
@@ -15003,8 +15913,8 @@ Example:
 
 <cb>@dataclass
 class Size:
-    width: int
-    height: int
+	width: int
+	height: int
 
 size_1 = Size(10, 20)
 size_2 = Size(width = 10, height = 20)<>
@@ -15019,9 +15929,9 @@ Define:
 
 <cb>@dataclass
 class <v>NewClass1<>:
-    <v>field_1<>: <v>type<> = <v>default_value<>
-    <v>field_2<>: <v>type<> = <v>default_value<>
-    <v>...<><>
+	<v>field_1<>: <v>type<> = <v>default_value<>
+	<v>field_2<>: <v>type<> = <v>default_value<>
+	<v>...<><>
 
 Create:
 
@@ -15032,8 +15942,8 @@ Example:
 
 <cb>@dataclass
 class Size:
-    width: int = 0
-    height: int = 0
+	width: int = 0
+	height: int = 0
 
 size_1 = Size()<>
 @
@@ -15047,7 +15957,7 @@ Define:
 
 <cb>@dataclass(frozen = True)
 class <v>NewClass1<>:
-    <v>...<><>
+	<v>...<><>
 
 
 The class properties can not be changed.
@@ -15061,11 +15971,11 @@ The class properties can not be changed.
 <cb>@dataclass
 class <v>NewClass1<>:
 
-    <v>field_1<>: <v>type<>
-    <v>...<>
+	<v>field_1<>: <v>type<>
+	<v>...<>
 
-    def __init__(self, <v>...<>):
-        <v>...<><>
+	def __init__(self, <v>...<>):
+		<v>...<><>
 
 
 You can override the constructor if you need.
@@ -15080,20 +15990,20 @@ Post Init Method:
 
 <cb>@dataclass
 class <v>NewClass1<>:
-    <v>...<>
+	<v>...<>
 
-    def __post_init__(self):
-        <v>...<><>
+	def __post_init__(self):
+		<v>...<><>
 
 Call Parent Class:
 
 <cb>@dataclass
 class <v>NewClass1<>(<v>ParentClass<>):
-    <v>...<>
+	<v>...<>
 
-    def __post_init__(self):
-        super().__init__()
-        <v>...<><>
+	def __post_init__(self):
+		super().__init__()
+		<v>...<><>
 
 
 <c>__post_init__<> is called after the class is created.
@@ -15131,9 +16041,9 @@ Define:
 
 <cb>@dataclass
 class <v>NewClass1<>:
-    
-    def <v>method_1<>(self):
-        <v>...<><>
+	
+	def <v>method_1<>(self):
+		<v>...<><>
 
 Use:
 
@@ -15143,13 +16053,330 @@ Use:
 
 
 
-# namedtuple
+# Deque
 @
-@ collections.namedtuple, Named Tuples, nametuple
+@ collections.deque, deque(), double ended queue, deque-only
 
 
 
-### namedtuple - Define
+## Deque - Basics
+
+<cb>from collections import deque
+
+<v>queue_1<> = deque()
+
+<v>queue_1<>.append(<v>value<>)			<#># Append End / Right<>
+<v>queue_1<>.appendleft(<v>value<>)		<#># Append Start / Left<>
+
+<v>last<> = <v>queue_1<>.pop()			<#># Pop End / Right<>
+<v>first<> = <v>queue_1<>.popleft()		<#># Pop Start / Left<>
+
+<v>size<> = len(<v>queue_1<>)
+<v>item<> = <v>queue_1<>[<v>1<>]
+
+del <v>queue_1<>[<v>1<>]
+<v>queue_1<>.clear()<>
+@
+@ summary
+
+
+
+## Deque - Create
+@
+@ new, instantiate, define
+
+
+### Deque - Create Empty
+
+<cb>from collections import deque
+
+= deque()<>
+
+
+
+### Deque - Create From List
+
+<cb>from collections import deque
+
+= deque(<v>list_1<>)<>
+
+<cb>= deque([<v>value_1<>, <v>value_2<>, <v>...<>])<>
+
+
+
+## Deque - Operations
+
+
+
+### Deque - Append
+
+<cb><v>queue_1<>.append(<v>value<>)<>
+
+
+Appends an item to the end / right of the queue.
+
+
+Example:
+
+<cb>from collections import deque
+
+<v>queue_1<> = deque([<v>1<>, <v>2<>, <v>3<>])
+
+<v>queue_1<>.append(10)
+
+<#># Sets queue_1 To: [1, 2, 3, 10]<><>
+@
+@ .append(), end, right
+
+
+
+### Deque - Append List
+
+<cb><v>queue_1<>.extend(<v>list_1<>)<>
+
+
+Appends a list of items to the end / right of the queue.
+
+
+Example:
+
+<cb>from collections import deque
+
+<v>queue_1<> = deque([<v>1<>, <v>2<>, <v>3<>])
+
+<v>queue_1<>.extend([10, 20])
+
+<#># Sets queue_1 To: [1, 2, 3, 10, 20]<><>
+@
+@ .extend(), extend, end, right
+
+
+
+### Deque - Count Value Occurences
+
+<cb>= <v>queue_1<>.count(<v>value<>)<>
+
+
+Returns the number of times <c><v>value<><> appears in <c><v>queue_1<><>.
+@
+@ item, occurrences, .count(), times
+
+
+
+### Deque - Delete
+
+<cb><v>del<> <v>queue_1<>[<v>index<>]<>
+
+
+Example:
+
+<cb>from collections import deque
+
+<v>queue_1<> = deque([<v>1<>, <v>2<>, <v>3<>])
+
+<v>del queue_1<>[1]
+
+<#># Sets queue_1 To: [1, 3]<><>
+@
+@ remove from, one, single, del
+
+
+
+### Deque - Delete All
+
+<cb><v>queue_1<>.clear()<>
+@
+@ remove from, clear, del, .clear()
+
+
+
+### Deque - Is Empty?
+
+<cb>= not <v>queue_1<><>
+
+<cb>if not <v>queue_1<>:
+	<v>...<><>
+
+
+
+### Deque - Not Empty?
+
+<cb>= bool(<v>queue_1<>)<>
+
+<cb>if <v>queue_1<>:
+	<v>...<><>
+
+Use <b>bool()<> if you need to get a True/False value.
+There is no need for <b>bool()<> when using <b>if...<>.
+@
+@ bool()
+
+
+
+### Deque - Get
+
+<cb>= <v>queue_1<>[<v>index<>]<>
+
+<cb>from collections import deque
+
+<v>queue_1<> = deque([<v>1<>, <v>2<>, <v>3<>])
+
+<v><v>item_1<> = queue_1<>[1]
+
+<#># Returns: 2<><>
+@
+@ item, value
+
+
+
+### Deque - Insert
+
+<cb><v>queue_1<>.insert(<v>index<>, <v>value<>)<>
+
+Inserts at position <c><v>index<><>.
+
+
+Example:
+
+<cb>from collections import deque
+
+<v>queue_1<> = deque([<v>1<>, <v>2<>, <v>3<>])
+
+<v>queue_1<>.insert(1, 10)
+
+<#># Sets queue_1 To: [1, 10, 2, 3]<><>
+@
+@ put, set, item, .insert()
+
+
+
+### Deque - Pop First
+
+<cb>= <v>queue_1<>.popleft()<>
+
+Removes the first / left item from the queue and returns it.
+@
+@ .pop(), left
+
+
+
+### Deque - Pop Last
+
+<cb>= <v>queue_1<>.pop()<>
+
+Removes the last / right item from the queue and returns it.
+@
+@ .pop(), right, end
+
+
+
+### Deque - Prepend
+
+<cb><v>queue_1<>.appendleft(<v>value<>)<>
+
+
+Prepends an item to the start / left of the queue.
+
+
+Example:
+
+<cb>from collections import deque
+
+<v>queue_1<> = deque([<v>1<>, <v>2<>, <v>3<>])
+
+<v>queue_1<>.appendleft(10)
+
+<#># Sets queue_1 To: [10, 1, 2, 3]<><>
+@
+@ .appendleft(), append, start, left
+
+
+
+### Deque - Prepend List
+
+<cb><v>queue_1<>.extendleft(<v>list_1<>)<>
+
+
+Appends a list of items to the start / left of the queue.
+
+⚠️ Adds items in reverse order!
+
+
+Example:
+
+<cb>from collections import deque
+
+<v>queue_1<> = deque([<v>1<>, <v>2<>, <v>3<>])
+
+<v>queue_1<>.extendleft([<v>10<>, <v>20<>])
+
+<#># Sets queue_1 To: [20, 10, 1, 2, 3]<><>
+@
+@ .extendleft(), extend, append left, start
+
+
+
+### Deque - Reverse
+
+<cb><v>queue_1<>.reverse()<>
+
+
+Reverses the order of items in the queue.
+Reverses in place.
+
+
+Example:
+
+<cb>from collections import deque
+
+<v>queue_1<> = deque([<v>1<>, <v>2<>, <v>3<>])
+
+<v>queue_1<>.reverse()
+
+<#># Sets queue_1 To: [3, 2, 1]<><>
+@
+@ .reverse(), order
+
+
+
+### Deque - Shift / Rotate
+
+<cb><v>queue_1<>.rotate(<v>count<>)<>
+
+
+Rotates (shifts) the queue to the right <c><v>count<><> times by taking the last items and placing them at the start of the queue.
+Rotates in place.
+
+
+Example:
+
+<cb>from collections import deque
+
+<v>queue_1<> = deque([<v>1<>, <v>2<>, <v>3<>])
+
+<v>queue_1<>.rotate(2)
+
+<#># Sets queue_1 To: [2, 3, 1]<><>
+@
+@ deque.rotate(), .rotate()
+
+
+
+### Deque - Size
+
+<cb>= len(<v>queue_1<>)<>
+@
+@ len(), length, count
+
+
+
+# Named Tuple
+@
+@ collections.namedtuple, Named Tuples, nametuple, namedtuple()
+
+
+
+### Named Tuple - Define
 
 <cb>from collections import namedtuple<>
 
@@ -15179,7 +16406,7 @@ height = size_1.height<>
 
 
 
-### namedtuple - Instantiate
+### Named Tuple - Instantiate
 
 <cb>= <v>NamedTuple1<> (<v>value_1<>, <v>value_2<>, <v>...<>)<>
 
@@ -15191,14 +16418,14 @@ or
 
 
 
-### namedtuple - Access Property
+### Named Tuple - Access Property
 
 <cb>= <v>item_1<>.<v>field_1<><>
 
 <cb>= <v>item_1<>[0]<>
 
 
-### namedtuple - Update Property
+### Named Tuple - Update Property
 
 Not possible.
 This is an immutable tuple.
@@ -15266,13 +16493,14 @@ Makes the file executable.
 
 <cb>= (1 \<\< <v>bit_count<>) - 1 - <v>value<><>
 
-Bitwise Not Function:
+Bitwise NOT Function:
 
 <cb>def bitwise_not(<v>value<>, <v>bits<> = 8):
-    return (1 \<\< <v>bits<>) - 1 - <v>value<><>
+	return (1 \<\< <v>bits<>) - 1 - <v>value<><>
 
 
-There is no built in bitwise not so you have to do this calculation.
+There is no built in bitwise NOT that simply flips the bits.
+Use this formula instead.
 
 
 Examples:
@@ -15288,7 +16516,7 @@ Using Formula:
 Using Function:
 
 <cb>def bitwise_not(<v>value<>, <v>bits<> = 8):
-    return (1 \<\< <v>bits<>) - 1 - <v>value<>
+	return (1 \<\< <v>bits<>) - 1 - <v>value<>
 
 <v>value<> = 0b11
 
@@ -15299,6 +16527,8 @@ Using Function:
 <v>not_value<> = bitwise_not(<v>value<>, 4)
 
 <#># Returns: 0b1100<><>
+@
+@ inverse, invert, inversion
 
 
 
@@ -15319,6 +16549,31 @@ Prints the byte code operations for the given function or class.
 @
 @ dis.dis(), .dis()
 @ operations, op codes
+
+
+
+### Console Screen - Clear
+
+Use This Function:
+
+<cb>from os import system, name
+
+def <v>clear_screen<>():
+	if name == 'nt':
+		<#># Windows:<>
+		system('cls')
+	else:
+		<#># Mac, Linux:<>
+		system('clear')<>
+
+Call:
+
+<cb><v>clear_screen<>()<>
+
+
+Clears the console screen.
+@
+@ clear_screen()
 
 
 
@@ -15691,9 +16946,9 @@ Example:
 <cb>import sys
 
 print(
-        sys.version_info.major, '-',
-        sys.version_info.minor, '-',
-        sys.version_info.micro)<>
+		sys.version_info.major, '-',
+		sys.version_info.minor, '-',
+		sys.version_info.micro)<>
 @
 @ sys.version, sys.version_info
 @ language, number, get
@@ -15753,7 +17008,7 @@ Function:
 from time import sleep
 
 def <v>slee_until<>(<v>datetime_1<>):
-    sleep((<v>datetime_1<> - datetime.now()).total_seconds())<>
+	sleep((<v>datetime_1<> - datetime.now()).total_seconds())<>
 
 Call:
 
@@ -15778,7 +17033,7 @@ Recommended Exit Codes:
 	1	General Error
 	2	Command Line Validation
 @
-@ error code, status, number, end program, stop, quit, sys.exit(), .exit(), .quit()
+@ error code, status, number, end program, stop, quit, sys.exit(), .exit(), .quit(), python, script, application
 
 
 
@@ -15791,7 +17046,7 @@ sys.exit(<v>exit_message<>)<>
 Returns from execution with error code 1.
 Prints <c><v>exit_message<><>.
 @
-@ error, status, end program, stop, quit, sys.exit(), .exit(), .quit()
+@ error, status, end program, stop, quit, sys.exit(), .exit(), .quit(), python, script, application
 
 
 
@@ -16409,11 +17664,11 @@ Example:
 
 <cb>class <v>GetBoolean<>:
 
-    def __init__(self, <v>bool_value<>):
-        self.<v>bool_value<> = <v>bool_value<>
+	def __init__(self, <v>bool_value<>):
+		self.<v>bool_value<> = <v>bool_value<>
 
-    def __bool__(self):
-        return self.<v>bool_value<><>
+	def __bool__(self):
+		return self.<v>bool_value<><>
 
 <cb><v>is_true<> = <v>GetBoolean<>(<v>True<>)				<#># Set To True<>
 
@@ -16422,7 +17677,7 @@ Example:
 <cb><v>is_true<> = <v>GetBoolean<>(<v>True<>)				<#># Set To True<>
 
 if <v>is_true<>:
-    <v>...<><>
+	<v>...<><>
 @
 @ bool, __bool__()
 
@@ -16431,10 +17686,10 @@ if <v>is_true<>:
 ### __contains__
 
 <cb>def __contains__(self, <v>value<>):
-    <v>...<><>
+	<v>...<><>
 
 <cb>if <v>item<> in <v>class_1<>:
-    <v>...<><>
+	<v>...<><>
 
 Overloads 'in' operator.
 @
@@ -16470,8 +17725,8 @@ Returns the file name of the current module.
 
 <cb>class <v>Class1<>:
 
-    def __init__(self, <v>...<>):
-        <v>...<><>
+	def __init__(self, <v>...<>):
+		<v>...<><>
 
 Class initializer / constructor.
 
@@ -16497,11 +17752,11 @@ Example:
 
 <cb>class <v>GetLength<>:
 
-    def __init__(self, length):
-        self.length = length
+	def __init__(self, length):
+		self.length = length
 
-    def __len__(self):
-        return self.length
+	def __len__(self):
+		return self.length
 
 
 <v>of_length_10<> = <v>GetLength<>(<v>10<>)
@@ -16521,7 +17776,7 @@ If <c>__name__ == '__main__'<>, this is the main module, the entry point into th
 Example:
 
 <cb>if __name__ == '__main__':
-    <v>startup_code_here...<><>
+	<v>startup_code_here...<><>
 @
 @ Startup
 
@@ -16564,13 +17819,13 @@ Will call <c>__repr__<> if no <c>__str__()<> method found.
 
 <c>__repr__<>
 
-    Use to show an unambiguous version of the class.
-    You should always implement this.
+	Use to show an unambiguous version of the class.
+	You should always implement this.
 
 <c>__str__<>
 
-    Use to show a human readable version of the class.
-    If not present, Python will call <c>__repr__<>.
+	Use to show a human readable version of the class.
+	If not present, Python will call <c>__repr__<>.
 
 
 
@@ -16607,7 +17862,7 @@ Zip Class, Functions
 
 ### Arrays
 
-Use <c>list<>.
+Use <c><l "/s/python?search=list-only">list<><>.
 
 Python does not have built in arrays.
 Use lists instead.
@@ -16619,19 +17874,19 @@ You can also use the Array library.
 
 ### Arrow Functions, ->, =>
 
-Use <c>lambda<>.
+Use <c><l "/s/python?search=lambda-only">lambdas<><>.
 
 
 
 ### istype, instanceof
 
-Use <c>type()<> or <c>isinstance()<>.
+Use <c><l "/s/python?search=type()">type()<><> or <c><l "/s/python?search=isinstance()">isinstance()<><>.
 
 
 
 ### Long
 
-Use <c>int<>.
+Use <c><l "/s/python?search=int-only">int<><>.
 
 Python has only one integer type and that is <c>int<>.
 @
@@ -16657,7 +17912,7 @@ Example:
 
 ### Nil, Null
 
-Use <c>None<>.
+Use <c><l "/s/python?search=none-only">None<><>.
 
 Python's version of <c>nil<> or <c>null<> is <c>None<>.
 
@@ -16670,7 +17925,7 @@ For char(0), use <c>"\\00"<>.
 
 ### Stack
 
-Use <c>list<>.
+There is no stack. Use <c><l "/s/python?search=list-only">list<><> instead.
 
 
 Example:
@@ -16690,6 +17945,8 @@ Example:
 Use:
 
 <cb>raise <v>Exception1<>()<>
+
+See: <l "/s/python?search=exceptions-only">Exceptions<>.
 @
 @ throws, thrown
 
@@ -16702,6 +17959,8 @@ Use:
 <cb>try:
 
 except Exception as <v>exception_1<>:<>
+
+See: <l "/s/python?search=exceptions-only">Exceptions<>.
 @
 @ thrown
 
@@ -16765,7 +18024,7 @@ Awaitable subroutine.
 File Pointer
 
 <cb>with open(<v>file_name<>, "w") as <v>fp<>:
-    <v>fp<>.write()<>
+	<v>fp<>.write()<>
 
 See: <l "/s/python?search=open()+write">Write File<>
 
@@ -17054,10 +18313,10 @@ Guido created Python in 1991.
 
 Use any of these:
 
-    Pipe
-    Queue
-    Shared Memory
-    Shared Manager
+	Pipe
+	Queue
+	Shared Memory
+	Shared Manager
 
 
 
@@ -17160,9 +18419,9 @@ A file that contains related Python definitions and statements. Should be short 
 
 
 ### Monkey Patch
-Python's mechanism change the behaviour of a piece of code after being defined or instantiated.
+Python's mechanism for changing the behaviour of a piece of code at runtime.
 
-Functions or a class methods can be changed for some other piece of code at runtime.
+Functions or class methods can be changed dynamically while the application is running.
 Usually done for testing purposes (unit tests).
 
 
@@ -17479,9 +18738,9 @@ A greate library for manipulating large amounts of data:
 
 
 
-# Prototype Website
+# More Speedsheets?
 
-This is a prototype, in early beta. But want to see more here? Or for other libraries? Please let us know.
-
+This sheet covers core python only. But want to see more here? Or for other libraries? Please let us know.
+@
 @ delta, terminal, process, dataframe, frame
 @ Anacond, Arrowm, BeautifulSoup, Bokeh, Cirq, Conda, Databases, Delorean, Django, Eli5, Fire, FlashText, Flask, Gensim, HTTP, Image, Images, Imaging, Keras, LightGBM, Luminoth, Mahotas, Matplotlib, MoviePy, Networkx, NLTK, Pandas, Pendulum, Picture, Pillow, Pixel, Poetry, PyGame, PyQt, PyPi, PyTorch, Requests, Scikit Learn, Scikit-Learn, SciPy, SqlAlchemy, TensorFlow, Theano, Tkinter, wxPython, ai, a.i., artifical intelligence, Zip
