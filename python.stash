@@ -2484,8 +2484,6 @@ print(type(<v>float_1<>).__name__)         <#># Prints <c>'float'<>.<><>
 <col> <>
 <col><c>= f'<v>...<>'<><><col>F-String Literal<>
 <col><c>= f"<v>...<>"<><><col>F-String Literal<><>
-@
-@ summary
 
 
 
@@ -7102,7 +7100,7 @@ Examples:
 <col><v>even<><><col>= <v>list_1<>[::<v>2<>]<><col><#># Returns [0, 2, 4]<><>
 <col><v>odd_from_1<><><col>= <v>list_1<>[<v>1<>::<v>2<>]<><col><#># Returns [1, 3]<><><><>
 @
-@ examples, [0], [-1], [:], [::], [:-1], summary
+@ examples, [0], [-1], [:], [::], [:-1]
 
 
 
@@ -7883,7 +7881,7 @@ Example:
 
 
 
-# Collections Library
+# Collections
 @
 @ Structures
 
@@ -16053,13 +16051,18 @@ Use:
 
 
 
-# Deque
+# Collections Library
+@
+@ from collections, collections.
+
+
+## Deque
 @
 @ collections.deque, deque(), double ended queue, deque-only
 
 
 
-## Deque - Basics
+### Deque - Basics
 
 <cb>from collections import deque
 
@@ -16076,17 +16079,15 @@ Use:
 
 del <v>queue_1<>[<v>1<>]
 <v>queue_1<>.clear()<>
-@
-@ summary
 
 
 
-## Deque - Create
+### Deque - Create
 @
 @ new, instantiate, define
 
 
-### Deque - Create Empty
+#### Deque - Create Empty
 
 <cb>from collections import deque
 
@@ -16094,7 +16095,7 @@ del <v>queue_1<>[<v>1<>]
 
 
 
-### Deque - Create From List
+#### Deque - Create From List
 
 <cb>from collections import deque
 
@@ -16104,11 +16105,11 @@ del <v>queue_1<>[<v>1<>]
 
 
 
-## Deque - Operations
+### Deque - Operations
 
 
 
-### Deque - Append
+#### Deque - Append
 
 <cb><v>queue_1<>.append(<v>value<>)<>
 
@@ -16130,7 +16131,7 @@ Example:
 
 
 
-### Deque - Append List
+#### Deque - Append List
 
 <cb><v>queue_1<>.extend(<v>list_1<>)<>
 
@@ -16152,7 +16153,7 @@ Example:
 
 
 
-### Deque - Count Value Occurences
+#### Deque - Count Value Occurences
 
 <cb>= <v>queue_1<>.count(<v>value<>)<>
 
@@ -16163,7 +16164,7 @@ Returns the number of times <c><v>value<><> appears in <c><v>queue_1<><>.
 
 
 
-### Deque - Delete
+#### Deque - Delete
 
 <cb><v>del<> <v>queue_1<>[<v>index<>]<>
 
@@ -16182,7 +16183,7 @@ Example:
 
 
 
-### Deque - Delete All
+#### Deque - Delete All
 
 <cb><v>queue_1<>.clear()<>
 @
@@ -16199,7 +16200,7 @@ Example:
 
 
 
-### Deque - Not Empty?
+#### Deque - Not Empty?
 
 <cb>= bool(<v>queue_1<>)<>
 
@@ -16213,7 +16214,7 @@ There is no need for <b>bool()<> when using <b>if...<>.
 
 
 
-### Deque - Get
+#### Deque - Get
 
 <cb>= <v>queue_1<>[<v>index<>]<>
 
@@ -16229,7 +16230,7 @@ There is no need for <b>bool()<> when using <b>if...<>.
 
 
 
-### Deque - Insert
+#### Deque - Insert
 
 <cb><v>queue_1<>.insert(<v>index<>, <v>value<>)<>
 
@@ -16250,7 +16251,7 @@ Example:
 
 
 
-### Deque - Pop First
+#### Deque - Pop First
 
 <cb>= <v>queue_1<>.popleft()<>
 
@@ -16260,7 +16261,7 @@ Removes the first / left item from the queue and returns it.
 
 
 
-### Deque - Pop Last
+#### Deque - Pop Last
 
 <cb>= <v>queue_1<>.pop()<>
 
@@ -16292,7 +16293,7 @@ Example:
 
 
 
-### Deque - Prepend List
+#### Deque - Prepend List
 
 <cb><v>queue_1<>.extendleft(<v>list_1<>)<>
 
@@ -16316,7 +16317,7 @@ Example:
 
 
 
-### Deque - Reverse
+#### Deque - Reverse
 
 <cb><v>queue_1<>.reverse()<>
 
@@ -16339,7 +16340,7 @@ Example:
 
 
 
-### Deque - Shift / Rotate
+#### Deque - Shift / Rotate
 
 <cb><v>queue_1<>.rotate(<v>count<>)<>
 
@@ -16362,7 +16363,7 @@ Example:
 
 
 
-### Deque - Size
+#### Deque - Size
 
 <cb>= len(<v>queue_1<>)<>
 @
@@ -16370,7 +16371,7 @@ Example:
 
 
 
-# Named Tuple
+## Named Tuple
 @
 @ collections.namedtuple, Named Tuples, nametuple, namedtuple()
 
@@ -16429,6 +16430,111 @@ or
 
 Not possible.
 This is an immutable tuple.
+
+
+
+## Ordered Dict
+
+<cb>from collections import OrderedDict
+
+= OrderedDict()<>
+
+<cb>= OrderedDict({<v>key<>: <v>value<>, <v>key<>: <v>value<>, <v>...<>})<>
+
+
+Returns a dict where the keys are stored in insertion order.
+Subclasses the dict type.
+
+All dict operations work on ordered dict.
+
+
+Example:
+
+<cb>from collections import OrderedDict
+
+<v>dict_1<> = OrderedDict()
+
+<v>dict_1<>['<v>c<>'] = '<v>First<>'
+<v>dict_1<>['<v>b<>'] = '<v>Second<>'
+<v>dict_1<>['<v>a<>'] = '<v>Third<>'
+
+for <v>key<> in <v>dict_1<>.keys():
+	print (<v>key<>, <v>dict_1<>[<v>key<>])
+
+<#># Prints:
+\#
+\# c First
+\# b Second
+\# a Third<><>
+@
+@ collections.ordereddict, .ordereddict, ordereddict()
+
+
+
+
+### Ordered Dict - Operations
+
+
+#### Ordered Dict - Get Keys
+
+<cb>= <v>dict_1<>.keys()<>
+
+Returns: <c>odict_keys<>
+
+
+Returns the keys in insertion order.
+@
+@ .keys()
+
+
+#### Ordered Dict - Get First
+
+<cb>= <v>dict_1<>.popitem(last = False)<>
+
+Returns: <c>tuple = (<v>key<>, <v>value<>)<>
+
+
+Removes and returns the first item placed in the dictionary.
+
+Example:
+
+<cb>from collections import OrderedDict
+
+<v>dict_1<> = OrderedDict({
+        '<v>c<>': '<v>First<>',
+        '<v>b<>': '<v>Second<>',
+        '<v>a<>': '<v>Third<>'})
+
+<v>first<> = <v>dict_1<>.popitem(last = False)
+
+<#># Returns ('c', 'First')<><>
+@
+@ .popitem()
+
+
+#### Ordered Dict - Get Last
+
+<cb>= <v>dict_1<>.popitem()<>
+
+Returns: <c>tuple = (<v>key<>, <v>value<>)<>
+
+
+Removes and returns the last item placed in the dictionary.
+
+Example:
+
+<cb>from collections import OrderedDict
+
+<v>dict_1<> = OrderedDict({
+        '<v>c<>': '<v>First<>',
+        '<v>b<>': '<v>Second<>',
+        '<v>a<>': '<v>Third<>'})
+
+<v>last<> = <v>dict_1<>.popitem()
+
+<#># Returns ('a', 'Third')<><>
+@
+@ .popitem(), last
 
 
 
