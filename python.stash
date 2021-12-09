@@ -592,9 +592,9 @@ String<>'''<>		 	A Multiline String
 
 
 
-# Conventions Guidelines
+# Convention Guidelines
 @
-@ Naming
+@ Naming, conventions
 
 
 
@@ -2468,7 +2468,8 @@ print(type(<v>float_1<>).__name__)         <#># Prints <c>'float'<>.<><>
 <table><col><c>= True | False<><><col>Boolean Literal<>
 <col> <>
 <col><c>= 11<><><col>Integer Literal<>
-<col><c>= -12<><><col>Integer Literal<>
+<col><c>= -11<><><col>Integer Literal<>
+<col><c>= 12_345<><><col>Integer Literal<>
 <col> <>
 <col><c>= 0b<v>1011<><><><col>Binary Literal<>
 <col><c>= 0o<v>13<><><><col>Octal Literal<>
@@ -2513,13 +2514,28 @@ print(type(<v>float_1<>).__name__)         <#># Prints <c>'float'<>.<><>
 
 <cb>= <v>11<><>
 
+<cb>= -<v>11<><>
+
+<cb>= <v>12_345<><>
+
+
+Underscores are ignored in integer literals.
+@
+@ _, underscore, number
+
 
 
 ### Integer Literal - Binary
 
 <cb>= 0b<v>1011<><>
+
+<cb>= 0b<v>1011_1010<><>
+
+
+Underscores are ignored in integer literals.
 @
 @ 0b
+@ _, underscore
 
 
 
@@ -2541,7 +2557,17 @@ print(type(<v>float_1<>).__name__)         <#># Prints <c>'float'<>.<><>
 
 ### Float Literal
 
-<cb>= 42.42<>
+<cb>= <v>42<>.<v>42<><>
+
+<cb>= -<v>42<>.<v>42<><>
+
+<cb>= <v>12_345<>.<v>67_89<><>
+
+
+Underscores are ignored in float literals.
+@
+@ 0b
+@ _, underscore, number
 
 
 
@@ -16483,6 +16509,24 @@ Returns: <c>odict_keys<>
 
 
 Returns the keys in insertion order.
+
+
+<cb>from collections import OrderedDict
+
+<v>dict_1<> = OrderedDict()
+
+<v>dict_1<>['<v>c<>'] = '<v>First<>'
+<v>dict_1<>['<v>b<>'] = '<v>Second<>'
+<v>dict_1<>['<v>a<>'] = '<v>Third<>'
+
+for <v>key<> in <v>dict_1<>.keys():
+	print (<v>key<>, <v>dict_1<>[<v>key<>])
+
+<#># Prints:
+\#
+\# c First
+\# b Second
+\# a Third<><>
 @
 @ .keys()
 
