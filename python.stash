@@ -15914,12 +15914,12 @@ Examples:
 
 ### Dataclass - Define
 
-<cb>from dataclasses import dataclass<>
-
 Define:
 
-<cb>@dataclass
-class <v>NewClass1<>:
+<cb>from dataclasses import dataclass
+
+\@dataclass
+class <v>Dataclass1<>:
 	<v>field_1<>: <v>type<>
 	<v>field_2<>: <v>type<>
 	<v>...<><>
@@ -15952,7 +15952,7 @@ size_2 = Size(width = 10, height = 20)<>
 Define:
 
 <cb>@dataclass
-class <v>NewClass1<>:
+class <v>Dataclass1<>:
 	<v>field_1<>: <v>type<> = <v>default_value<>
 	<v>field_2<>: <v>type<> = <v>default_value<>
 	<v>...<><>
@@ -15972,6 +15972,32 @@ class Size:
 size_1 = Size()<>
 @
 @ create, definition, new
+
+
+
+### Dataclass - Define With Default List
+
+<cb>from dataclasses import dataclass
+from dataclasses import field
+
+\@dataclass
+class <v>Dataclass1<>:
+	<v>list_1<>: list = field(default_factory=lambda: [])<>
+@
+@ create, definition, new, field
+
+
+
+### Dataclass - Define With Default Dict
+
+<cb>from dataclasses import dataclass
+from dataclasses import field
+
+\@dataclass
+class <v>Dataclass1<>:
+	<v>dict_1<>: list = field(default_factory=lambda: {})<>
+@
+@ create, definition, new, field
 
 
 
