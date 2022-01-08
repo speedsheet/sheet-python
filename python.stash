@@ -304,16 +304,16 @@ Examples:
 
 ### Escape Character
 
-Escape Syntax		<c>\\<v>x<><>
-
-Backslash ( \\ )		      <c>\\\\<>
-Single Quote ( ' )		<c>\\'<>
-Double Quote ( " )		<c>\\"<>
-
-Newline				<c>\\n<>
-Tab					<c>\\t<>
-
-Null					<c>\\00<>
+<table><col>Escape Syntax<><col><c>\\<v>x<><><>
+<col> <>
+<col>Backslash ( \\ )<><col><c>\\\\<><>
+<col>Single Quote ( ' )<><col><c>\\'<><>
+<col>Double Quote ( " )<><col><c>\\"<><>
+<col> <>
+<col>Newline<><col><c>\\n<><>
+<col>Tab<><col><c>\\t<><>
+<col> <>
+<col>Null<><col><c>\\00<><><>
 
 
 Example:
@@ -458,7 +458,7 @@ Receive as dict:
 
 \#4  <s>-<>   Converts named arguments to a dict.
 @
-@ args, arguments, list, dict, Single Asterisk, Double Asterisks, parameters, params, *args, *kwargs
+@ args, arguments, list, dict, kwargs, Single Asterisk, Double Asterisks, parameters, params, *args, **kwargs
 
 
 
@@ -518,9 +518,9 @@ Prefer using parenthesis '<c>( )<>', brackets '<c>[ ]<>', braces '<c>{ }<>' for 
 
 Example:
 
-<cb>string_1 = "Part 1 and " + \\
-		"part 2 and " + \\
-		"part 3"<>
+<cb>string_1 = "<v>Part 1 and <v>" + \\
+		"<v>part 2 and <v>" + \\
+		"<v>part 3<v>"<>
 @
 @ Split, Separate, Separator, Wrap, multiline statement, \\
 
@@ -546,64 +546,34 @@ print("one"); print("two"); print("three");<>
 
 
 
-### Symbol Lookup
-
-<c><#># A comment.<><>		    Programmer Comment
-
-<c><v>command_1<>;<>			 Semicolon Statement Separator
-
-<c>@<v>function_1<>()<>		   Decorated Function						<#># Ampersand '@'<>
-
-<c>*args<>				  Arguments Passed as a Tuple (Array)			<#># Single Asterisk '*'<>
-<c>**kwargs<>		 	Arguments Passed as a Key Value Dictionary	<#># Double Asterisks '**'<>
-
-<c>*<v>value_1<><>		    	A Sublist Extracted from Some Sequence
-<c>*_<>					    A Sublist Extracted from Some Sequence But Ignored
-<c>_<>				  	A Value Extracted from a Sequence But Ignored
-
-<c>self.<v>some_member<><>		    Class instance reference to internal member.	<#># <c>self.<><>
-
-<c>'<v>A string<>'<>			 String
-<c>"<v>A string<>"<>			 Also A String
-
-<c><#>"""Doc comment."""<><>	   DocString
-
-<c>"""<v>Multiline
-String<>"""<><>			  A Multiline String
-
-<c>'''<v>Multiline
-String<>'''<>		 	A Multiline String
-
-
-<c>_<v>name_1<><>				   Private Function or Variable					<#># Single Underscore '_'<>
-<c>__<v>method_name<>__<>		 Magic Method / System Method				<#># Double Underscore, Both Ends '__'<>
-
-<c>{}<>				 	Empty Dictionary
-<c>{<v>key1<> : <v>value1<>, <v>...<>}<>	   Dictionary
-<c>{<v>value1<>, <v>...<>}<>		  Set										<#># No Colon ':'<>
-
-<c>[]<>					Empty List
-<c>[<v>value1<>, <v>value2<>, <v>...<>]<>	List
-<c>(<v>value1<>, <v>value2<>, <v>...<>)<>	Tuple
-
-<c><v>a<> := <v>b<><>			    	Walrus Operator / Assignment Expression
+# Naming Conventions
 @
-@ Double Underscore, :=, underscore.
+@ Names
 
 
 
-# Convention Guidelines
-@
-@ Naming, conventions
+## Naming Conventions - Basics
+
+<table><col>Class<><col><v>TitleCase<><>
+<col> <>
+<col>Constant<><col><v>UPPER_SNAKE_CASE<><>
+<col> <>
+<col>Magic Method<><col>__<v>snake_case<>__
+(leading and trailing double underscore)<>
+<col> <>
+<col>Module<><col><v>snake_case<>
+(short name)<>
+<col> <>
+<col>Private Name<><col>_<v>name<>
+(use leading underscore)<>
+<col> <>
+<col>Variable<><col><v>snake_case<><>
+<col> <>
+<col>Variable - Constant<><col><v>UPPER_SNAKE_CASE<><>
+<col> <><>
 
 
-
-### Convention - Module Names
-
-<cb><v>short_name<><>
-
-Use a short name for module file names. Use snake case if necessary.
-
+## Naming Conventions - Details
 
 
 ### Convention - Class Names
@@ -622,44 +592,67 @@ Use snake case, all lower case letters, underscores between words.
 
 
 
+### Convention - Magic Methods
+
+<cb>__<v>magic_method_name<>__<>
+
+Lead and end with a double underscore. All letters are lower case. Words are separated by underscores.
+
+
+
+### Convention - Module Names
+
+<cb><v>short_name<><>
+
+Use a short name for module file names. Use snake case if necessary.
+
+
+
 ### Convention - Private Names
 
-<cb>_<v>private_name_1<> <v>...<><>
+<cb>_<v>private_name_1<><>
 
-Lead with an underscore.
+Identify variables and functions as private by leading with an underscore.
 
 
 Examples:
 
-<cb>def _<v>private_function_name_1<> <v>...<><>
+<cb>def _<v>private_func_1<>():
+    <v>...<><>
 @
-@ _, underscores
+@ _, leading underscores
 
 
 
-### Convention - Variable Names
+### Convention - Variables
 
-<cb><v>variable_name_1<>=<v>...<><>
+<cb><v>variable_name_1<><>
 
 Use snake case, all lower case letters, underscore separator between words.
 
 
+Example:
 
-### Convention - Constants
+<cb><v>ok_status_code<> = <v>200<><>
 
-<cb><v>CONSTANT_NAME_1<>=<v>...<><>
+
+
+### Convention - Variable Constants
+
+<cb><v>CONSTANT_NAME_1<><>
 
 Use upper snake case, all upper case letters, underscore separator between words.
 
 Note: There is no mechanism in Python to enforce constants. They are normal variables.
 
 
+Example:
 
-### Convention - Magic Methods
+<cb><v>OK_STATUS<> = <v>200<><>
 
-<cb>__<v>magic_method_name<>__<>
 
-Lead and end with a double underscore. All letters are lower case. Words are separated by underscores.
+
+# Command Line
 
 
 
@@ -1035,14 +1028,14 @@ Installs all the packages in the requirements file.
 
 ### Arithmetic Operators
 
-	<c><v>a<> + <v>b<><> 
-	<c><v>a<> - <v>b<><> 
-	<c><v>a<> * <v>b<><> 
-	<c><v>a<> / <v>b<><>					Always Returns a Float
-	<c><v>a<> // <v>b<><>				Floor Divide ( 9 // 4 = 2)
-
-	<c><v>a<> % <v>b<><>					Modulo ( 7 % 3 = 1)
-	<c><v>a<> ** <v>b<><>				To The Power Of
+<in-2><table><col><c><v>a<> + <v>b<>		<><>
+<col><c><v>a<> - <v>b<><><>
+<col><c><v>a<> * <v>b<><><>
+<col><c><v>a<> / <v>b<><><><col>Always Returns a Float<>
+<col><c><v>a<> // <v>b<><><><col>Floor Divide ( 9 // 4 = 2)<>
+<col> <>
+<col><c><v>a<> % <v>b<><><><col>Modulo ( 7 % 3 = 1)<>
+<col><c><v>a<> ** <v>b<><><><col>To The Power Of<><><>
 @
 @ power, modulo, modulus, plus, minus, divide, multiply, %, **, +, -, /, //
 
@@ -1052,17 +1045,17 @@ Installs all the packages in the requirements file.
 
 Assign:
 
-	<c><v>a<> = <v>value<><>
+<in-2><table><col><c><v>a<> = <v>value<><><><><>
 
 Calculate and update variable:
 
-	<c><v>a<> += <v>value<><>
-	<c><v>a<> -= <v>value<><>
-	<c><v>a<> *= <v>value<><>
-	<c><v>a<> /= <v>value<><>
-	<c><v>a<> //= <v>value<><>			Floor Divide
-	<c><v>a<> %= <v>value<><>			Modulo
-	<c><v>a<> **= <v>value<><>			To The Power of
+<in-2><table><col><c><v>a<> += <v>value<>	<><>
+<col><c><v>a<> -= <v>value<><><>
+<col><c><v>a<> *= <v>value<><><>
+<col><c><v>a<> /= <v>value<><><>
+<col><c><v>a<> //= <v>value<><><><col>Floor Divide<>
+<col><c><v>a<> %= <v>value<><><><col>Modulo<>
+<col><c><v>a<> **= <v>value<><><><col>To The Power of<><><>
 @
 @ =, +=, -=, *=, /=, //=, %=, **=, =+, =-, =*, =/, =//, =%, =**
 
@@ -1111,32 +1104,29 @@ while (<v>count<> := count + 1) < 5:
 
 
 
-### Logical Operators
+### Comparison Operators
 
-	<c><v>a<> == <v>b<><>				Equal In Value
-	<c><v>a<> != <v>b<><>
-	<c><v>a<> > <v>b<><>
-	<c><v>a<> \< <v>b<><>
-	<c><v>a<> >= <v>b<><>
-	<c><v>a<> \<= <v>b<><>
-
-	<c><v>a<> and <v>b<><>
-	<c><v>a<> or <v>b<><>
-	<c>not <v>b<><>
-
-	<c><v>a<> is <v>b<><>
-	<c><v>a<> is not <v>b<><>
+<in-2><table><col><c><v>a<> == <v>b<>	<><><col>Equal In Value<>
+<col><c><v>a<> != <v>b<><><>
+<col><c><v>a<> > <v>b<><><>
+<col><c><v>a<> \< <v>b<><><>
+<col><c><v>a<> >= <v>b<><><>
+<col><c><v>a<> \<= <v>b<><><>
+<col> <>
+<col><c><v>a<> is <v>b<><><>
+<col><c><v>a<> is not <v>b<><><><><>
 @
 @ Boolean, ==, !=, \<>, \<, \<=, >, >/, is, not
 @ less than, greater than, less that or equal, greater than or equal
+@ compare, camparator
 
 
 
-### Logical Operators - And, Or Not
+### Logical Operators
 
-	<c><v>a<> and <v>b<><>
-	<c><v>a<> or <v>b<><>
-	<c>not <v>b<><>
+<in-2><c><v>a<> and <v>b<><>
+<c><v>a<> or <v>b<><>
+<c>not <v>b<><><>
 
 Versus <c>&&<>, <c>||<>, <c>!<> used in other languages.
 @
@@ -1146,20 +1136,20 @@ Versus <c>&&<>, <c>||<>, <c>!<> used in other languages.
 
 ### Bitwise Operators
 @
-@ boolean, bitwise-only
+@ bitwise-only, binary
 
 
 
 #### Bitwise Operators - Basics
 
-<c>~<v>a<><>						Complement / Inverse
-
-<c><v>a<> & <v>b<><>					Bitwise AND
-<c><v>a<> | <v>b<><>					Bitwise OR
-<c><v>a<> ^ <v>b<><>					Bitwise XOR
-
-<c><v>a<> \<\< <v>shift_count<><>			Bitwise Shift Left
-<c><v>a<> >> <v>shift_count<><>			Bitwise Shift Right
+<in-2><table><col><c>~<v>a<><><><col>Complement / Inverse<>
+<col> <>
+<col><c><v>a<> & <v>b<><><><col>Bitwise AND<>
+<col><c><v>a<> | <v>b<><><><col>Bitwise OR<>
+<col><c><v>a<> ^ <v>b<><><><col>Bitwise XOR<>
+<col> <>
+<col><c><v>a<> \<\< <v>shift_count<><><><col>Bitwise Shift Left<>
+<col><c><v>a<> >> <v>shift_count<><><><col>Bitwise Shift Right<><>
 @
 @ &, |, ^, \<\<, >>
 
@@ -1632,7 +1622,7 @@ Python Version: 3.10+
     case <v>Enum1<>.<v>ENUM_1<>:				<#>Enum<>
         <v>...<>
 
-    case (<v>value_8<>, <v>x<>):				<#>Varible<>
+    case (<v>value_8<>, <v>x<>):				<#>Bind To Variable<>
         <v>...<>
 	
     case (<v>value_8<>, <v>x<>) if <v>condition<>:
@@ -1643,7 +1633,7 @@ Python Version: 3.10+
 
 
 
-#### Match - Capture To Variable
+#### Match - Bind To Variable
 
 <cb>match <v>item_1<>:
     case <v>variable_1<>:
@@ -1966,6 +1956,12 @@ match <v>item_1<>:
 
 
 ### While
+@
+@ loop, loops
+@ while-only, continue, break, skip
+
+
+#### While - Basics
 
 <cb>while <v>condition<>:
 	<v>...<><>
@@ -1973,29 +1969,62 @@ match <v>item_1<>:
 <cb>while <v>condition<>:
 	<v>...<>
 else:
-	<v>...<>                                   <#># When <c>condition<> = <c>False<><><>
+	<v>...<>                     <#># When <c>condition<> = <c>False<><><>
 
 <cb>while <v>condition<>:
 	<v>...<>
-	break                               <#># Exit for loop.<>
+	break                   <#># Exit for loop.<>
 	<v>...<>
-	continue                            <#># Jump to next iteration.<>
+	continue                <#># Jump to next iteration.<>
 	<v>...<>
 else:
-	<v>...<>                                   <#># When <c>condition<> = <c>False<><><>
+	<v>...<>                     <#># When <c>condition<> = <c>False<><><>
 
 <c>else<> block reached when <c>condition<> = false only. Not called for break, exception, etc.
-@
-@ loop, loops, basics
-@ while-only, continue, break, skip
 
 
 
-### Break, Continue
+#### While
+
+<cb>while <v>condition<>:
+	<v>...<><>
+
+
+
+#### While - While Else
+
+<cb>while <v>condition<>:
+	<v>...<>
+else:
+	<v>...<><>
+
+Executes else clause when <c>condition<> is <c>False<>.
+
+
+
+#### While - Break Continue
+<cb>while <v>condition<>:
+	<v>...<>
+	break             <#># Exit for loop.<>
+	<v>...<>
+	continue          <#># Jump to next iteration.<>
+	<v>...<><>
+
+
+
+### Break
 
 Exit Loop:
 
 <cb>break<>
+
+Applies to <c>for<> and <c>while<> loops.
+@
+@ For, While, skip
+
+
+
+### Continue
 
 Continue on Next Iteration:
 
@@ -2048,7 +2077,7 @@ Examples:
 
 <cb>string_1 = 1Life, the universe, and everything1<>
 @
-@ create new, assignment
+@ create new, assignment, set
 
 
 
@@ -2395,14 +2424,15 @@ print(type(<v>float_1<>).__name__)         <#># Prints <c>'float'<>.<><>
 @ data structures
 
 
+
 #### Mutable Types
 
-	<c>bytearray
-	classes
-	class instances
-	dict
-	list
-	set<>
+	<c>bytearray<>
+	<c>classes<>
+	<c>class instances<>
+	<c>dict<>
+	<c>list<>
+	<c>set<>
 
 
 
@@ -2519,7 +2549,7 @@ print(type(<v>float_1<>).__name__)         <#># Prints <c>'float'<>.<><>
 <cb>= <v>12_345<><>
 
 
-Underscores are ignored in integer literals.
+Underscores are for readability and are ignored by Python.
 @
 @ _, underscore, number
 
@@ -2532,7 +2562,7 @@ Underscores are ignored in integer literals.
 <cb>= 0b<v>1011_1010<><>
 
 
-Underscores are ignored in integer literals.
+Underscores are for readability and are ignored by Python.
 @
 @ 0b
 @ _, underscore
@@ -2564,7 +2594,7 @@ Underscores are ignored in integer literals.
 <cb>= <v>12_345<>.<v>67_89<><>
 
 
-Underscores are ignored in float literals.
+Underscores are for readability and are ignored by Python.
 @
 @ 0b
 @ _, underscore, number
@@ -2840,7 +2870,7 @@ Use <c>"little"<> for bytes with the most significant byte first.
 
 <cb>= <v>string_1<>.encode('utf-8')<>
 @
-@ Convert, Conversion, To, .encode(), utf-8
+@ Convert, Conversion, To, .encode(), utf-8, utf8
 @ to-bytes, from-string
 
 
@@ -2849,7 +2879,7 @@ Use <c>"little"<> for bytes with the most significant byte first.
 
 <cb>= <v>bytes_1<>.decode("utf-8")<>
 @
-@ Convert, Conversion, From, decode, utf-8, .decode()
+@ Convert, Conversion, From, decode, utf-8, utf8, .decode()
 @ from-bytes, to-string
 
 
@@ -2919,6 +2949,208 @@ Example:
 @
 @ Convert, Conversion, From, str()
 @ from-comple, to-string
+
+
+
+# Decimal
+
+From String (Preferred):
+
+<cb>from decimal import Decimal
+
+= Decimal('<v>10.99<>')<>
+
+<cb>= Decimal('<v>NaN<>')<>
+
+From Float:
+
+<cb> = Decimal(<v>10.99<>)<>
+
+
+Creates an immutable decimal value.
+Keeps the precision the decimal was created to.
+Use for currency values where accuracy is important.
+
+
+<*>Prefer creating from strings over floats.
+Floats are stored at binary level precision.<>
+
+
+Example:
+
+From String:
+
+<cb>from decimal import Decimal
+
+<v>decimal_1<> = Decimal('<v>12.34<>')
+
+print(<v>decimal_1<>)
+
+<#># Prints 12.34<><>
+
+From Float:
+
+<cb>from decimal import Decimal
+
+<v>decimal_1<> = Decimal(<v>12.34<>)
+
+print(<v>decimal_1<>)
+
+<#># Prints 12.339999999999999857891452847979962825775146484375<><>
+@
+@ money, currency
+@ dec-only, decs-only, decimal-only, decimals-only
+
+
+
+# Decimal Operations
+@
+@ dec-only, decs-only, decimal-only, decimals-only
+
+
+### Decimal - Arithmetic Operators
+
+Supports:
+
+<cb><table><col>decimal<><col><v>operator<><><col>decimal<>
+<col>decimal<><col><v>operator<><><col>int<><><><>
+
+<cb><table><col><v>operators <><><col><c>+ - * ** / // % \< \<= == != >= ><><><><>
+
+Not Supported:
+
+<cb><table><col>decimal<><col><v>operator<><><col>float<><><>
+
+
+Examples:
+
+Decimal To Decimal:
+
+<cb>from decimal import Decimal
+
+<v>decimal_1<> = Decimal('<v>42<>')
+<v>decimal_2<> = Decimal('<v>0.42<>')
+
+<v>result<> = <v>decimal_1<> + <v>decimal_2<>
+
+<#># Returns Decimal('42.42')<><>
+
+Integer To Decimal:
+
+<cb>from decimal import Decimal
+
+<v>decimal_1<> = Decimal('<v>0.42<>')
+<v>int_2<> = 42
+
+<v>result<> = <v>decimal_1<> + <v>int_2<>
+
+<#># Returns Decimal('42.42')<><>
+
+
+
+### Decimal - Rounding - Get
+
+<cb>from decimal import getcontext<>
+
+= getcontext().rounding<>
+
+
+Gets the rounding performed on decimal operations (*, /, etc.).
+The default rounding is <c>ROUND_HALF_EVEN<>.
+@
+@ decimal.getcontext().prec, getcontext().prec, .prec
+
+
+
+### Decimal - Rounding - Set
+
+<cb>from decimal import getcontext
+
+getcontext().rounding = <v>rounding<><>
+
+
+Sets the rounding performed on decimal operations (*, /, etc.).
+The default rounding is <c>ROUND_HALF_EVEN<>.
+
+
+Rounding Values:
+
+<card><table><col><c>decimal.ROUND_CEILING<><><col>Round Up To + Infinity<><col><c> 0.5 ->  1
+-0.5 ->  0
+ <><>
+<col><c>decimal.ROUND_DOWN<><><col>Round To 0<><col><c> 0.5 ->  0
+-0.5 ->  0
+ <><>
+<col><c>decimal.ROUND_FLOOR<><><col>Round Down To - Infinitiy<><col><c> 0.5 ->  0
+-0.5 -> -1
+ <><>
+<col><c>decimal.ROUND_HALF_DOWN<><><col>Round To Nearest Integer
+Ties Round to 0<><col><c> 0.6 ->  1
+ 0.5 ->  0
+-0.5 ->  0
+-0.6 -> -1
+ <><>
+<col><c>decimal.ROUND_HALF_EVEN<><><col>Round To Nearest Integer
+Ties To Nearest Even Integer<><col><c>
+
+ <><>
+<col><c>decimal.ROUND_HALF_UP<><><col>Round To Nearest Integer
+Ties Round to <><col><c> 0.5 ->  2
+ 0.4 ->  0
+-0.4 ->  0
+-0.5 ->  2
+ <><>
+<col><c>decimal.ROUND_UP<><><col>Round To ± Infinity<><col><c> 0.5 ->  1
+-0.5 -> -1
+ <><>
+<col><c>decimal.ROUND_05UP<><><col>Round To 0
+Except When Last Rounded Digit = 0 or 5
+- Then Round To ± Infinity<><><>
+@
+@ decimal.getcontext().prec, getcontext().prec, .prec
+
+
+
+### Decimal - Precision - Get
+
+<cb>from decimal import getcontext<>
+
+= getcontext().prec<>
+
+
+Gets the precision for decimal operations (*, /, etc.).
+The default precision is 28 digits including digits before and after the decimal place.
+
+
+
+### Decimal - Precision - Set
+
+<cb>from decimal import getcontext
+
+getcontext().prec = <v>digits<><>
+
+
+Sets the precision for decimal operations (*, /, etc.).
+The default precision is 28 digits including digits before and after the decimal place.
+
+
+Example:
+
+<cb>from decimal import Decimal
+from decimal import getcontext
+
+<v>a<> = Decimal('1')
+<v>b<> = Decimal('0.3')
+
+print(<v>a<> / <v>b<>)
+
+<#># Prints 3.333333333333333333333333333<>
+
+getcontext().prec = <v>4<>
+
+print(<v>a<> / <v>b<>)
+
+<#># Prints 3.333<><>
 
 
 
@@ -3057,7 +3289,9 @@ Returns number of digits.
 Example:
 
 <cb><v>int_1<> = 256
-<v>length<> = (1 + floor(log10(abs(<v>int_1<>)))) if <v>int_1<> else 0       <#># Returns 3<><>
+<v>length<> = (1 + floor(log10(abs(<v>int_1<>)))) if <v>int_1<> else 0
+
+<#># Returns 3<><>
 @
 @ Count, Digits, Size
 @ math.floor(), .floor(), Size, bath.log10(), .log10()
@@ -3091,6 +3325,7 @@ Returns: <c>str<>
 Example:
 
 <cb><v>binary_1<> = bin(<v>11<>)
+
 <#># Returns '0b1001'<><>
 @
 @ bin(), convert
@@ -3108,9 +3343,11 @@ Example:
 Example:
 
 <cb><v>hex_1<> = int("<v>A9<>", 16)
+
 <#># Returns 169<><>
 
 <cb><v>hex_2<> = int("0x<v>A9<>", 0)
+
 <#># Returns 169<><>
 @
 @ Convert, Conversion, To, int(), hexadecimal
@@ -3128,6 +3365,7 @@ Returns: <c>str<>
 Example:
 
 <cb><v>hex_1<> = hex(<v>169<>)
+
 <#># Returns '0xa9'<><>
 @
 @ Convert, Conversion, From, hex(), hexadecimal
@@ -3145,6 +3383,7 @@ Returns: <c>str<>
 Example:
 
 <cb><v>octal_1<> = oct(<v>57<>)
+
 <#># Returns '0o71'<><>
 @
 @ Convert, Conversion, From, oct()
@@ -3239,7 +3478,7 @@ Escape characters are just regular characters.
 # String Format - Format()
 @
 @ Strings, string-only, strings-only, str-only, text, text-only, .format(), {}
-@ formatting, formats
+@ formatting, formats, new, create
 
 
 
@@ -3521,7 +3760,7 @@ Concatenate Raw Strings:
 
 Combines 2 or more strings into one string.
 @
-@ add, +, Combine
+@ add, +, Combine, join
 
 
 #### String - Contains?
@@ -3845,19 +4084,6 @@ Example:
 
 
 
-#### String - Pad Right
-
-<cb>= <v>string_1<>.ljust(<v>width<>)                 <#># Pad With Spaces<><>
-
-<cb>= <v>string_1<>.ljust(<v>width<>, <v>fill_char<>)<>
-
-Pads <c><v>string_1<><> to the given width.
-Pads with <c><v>fill_char<><>, or spaces if not given.
-@
-@ Left Justify, .ljust(), end
-
-
-
 #### String - Pad Left
 
 <cb>= <v>string_1<>.rjust(<v>width<>)                 <#># Pad With Spaces<><>
@@ -3868,6 +4094,19 @@ Pads <c><v>string_1<><> on the left to the given width.
 Pads with <c><v>fill_char<><>, or spaces if not given.
 @
 @ Right Justify, .rjust(), start
+
+
+
+#### String - Pad Right
+
+<cb>= <v>string_1<>.ljust(<v>width<>)                 <#># Pad With Spaces<><>
+
+<cb>= <v>string_1<>.ljust(<v>width<>, <v>fill_char<>)<>
+
+Pads <c><v>string_1<><> to the given width.
+Pads with <c><v>fill_char<><>, or spaces if not given.
+@
+@ Left Justify, .ljust(), end
 
 
 
@@ -4038,7 +4277,7 @@ Removes all whitespace characters from the beginning and end of the string.
 
 Removes all whitespace characters at the start of the string.
 @
-@ trim, remove, whitespaces, white spaces, start, .lstrip(), spaces, delete
+@ trim, remove, whitespaces, white spaces, start, starting, leading, .lstrip(), spaces, delete
 
 
 
@@ -4048,7 +4287,7 @@ Removes all whitespace characters at the start of the string.
 
 Removes all whitespace characters at the end of the string.
 @
-@ trim, remove, whitespaces, white spaces, end, .rstrip(), spaces, delete
+@ trim, remove, whitespaces, white spaces, end, ending, .rstrip(), spaces, delete
 
 
 
@@ -4138,7 +4377,7 @@ Example:
 <#># Returns 'speedsheet.io'<><>
 @
 @ partial, .removeprefix()
-@ delete, start, beginning
+@ delete, start, leading, beginning, starting
 
 
 
@@ -4162,7 +4401,7 @@ Example:
 <#># Returns 'file_name'<><>
 @
 @ Postfix, .removesuffix()
-@ end, delete
+@ end, delete, ending
 
 
 
@@ -4374,7 +4613,7 @@ Example:
 
 
 
-#### String Character - From ASCII Code
+#### String Character - From ASCII Code / chr()
 
 <cb>= chr(<v>ascii_code<>)<>
 
@@ -4386,7 +4625,7 @@ Example:
 
 
 
-#### String Character - To ASCII Code
+#### String Character - To ASCII Code / ord()
 
 <cb>= ord(<v>string_char<>)<>
 
@@ -4426,6 +4665,11 @@ Example:
 
 = date.today()
 = date(<v>year<>, <v>month<>, <v>day<>)<>
+
+Returns: <c>date<>
+
+
+Returns an instance of Date representing the year, month and day.
 
 
 Example:
@@ -4682,13 +4926,20 @@ Example:
 = datetime(<v>year<>, <v>month<>, <v>day<>, <v>hour<>, <v>minute<>, <v>second<>)
 = datetime(<v>year<>, <v>month<>, <v>day<>, <v>hour<>, <v>minute<>, <v>second<>, <v>microsecond<>)<>
 
+Returns: <c>datetime<>
 
-Month           1 - 12
-Day             1 - Last-Day-Of-Month
-Hour            1 - 23
-Minute          1 - 59
-Second          1 - 59
-Microseconds        0 - 999,999
+
+Returns an instance of datetime representing the date and time.
+
+
+Parameter Ranges:
+
+<table><col>Month<><col>1 - 12<>
+<col>Day<><col>1 - Last-Day-Of-Month<>
+<col>Hour<><col>1 - 23<>
+<col>Minute<><col>1 - 59<>
+<col>Second<><col>1 - 59<>
+<col>Microseconds<><col>0 - 999,999<><>
 
 
 Example:
@@ -5019,80 +5270,6 @@ Example:
 
 
 
-# Timestamp
-
-<cb>= <u>seconds_since_epoch<><>
-
-<cb>from time import time()
-
-= time()<>
-
-
-Returns: <c>float<>
-
-
-Returns the number of seconds in Unix Time or Epoch Time.
-Measures from the Epoch, January 1, 1970, at 00:00:00 UTC.
-
-
-Example:
-
-<cb>Set to 2001-01-01 00:00:00:
-
-<v>timestamp_1<> = <v>978325200<><>
-@
-@ epoch time, unix time
-@ time-only, timestamp-only, timestamp., timestamp(), time.time(), .time()
-
-
-
-# Timestamp - Operations
-@
-@ epoch time, unix time
-@ time-only, timestamp-only, timestamp., timestamp(), time.time(), .time()
-
-
-
-### Timestamp - From Datetime
-
-<cb>= <v>datetime_1<>.timestamp()<>
-@
-@ convert, datetime.timestamp(), .timestamp()
-
-
-
-### Timestamp - To Datetime
-
-<cb>= datetime.datetime.fromtimestamp(<v>timestamp_1<>)<>
-@
-@ convert, datetime.fromtimestamp(), .fromtimestamp()
-
-
-
-### Timestamp - To String
-
-<cb>from time import strftime
-from time import localtime
-
-= strftime("<v>format<>", localtime(<v>timestamp_1<>))<>
-
-or
-
-<card>Convert to a <c>datetime<> and then format.<>
-
-
-Example:
-
-<cb>from time import strftime
-from time import localtime
-
-<v>timestamp_2001<> = <v>978325200<>
-<v>formatted<> = = strftime("<v>%Y-%m-%d %H:%M:%S<>", localtime(<v>timestamp_2001<>))<>
-@
-@ convert, time.strftime(), .strftime(), time.localtime(), .localtime()
-
-
-
 # TimeDelta
 
 <cb>from datetime import timedelta
@@ -5378,6 +5555,95 @@ Call:
 
 
 
+# Timestamp
+
+<cb>= <v>seconds_since_epoch<><>
+
+<cb>from time import time()
+
+= time()<>
+
+
+Returns: <c>float<>
+
+
+Returns the number of seconds in Unix Time or Epoch Time.
+Measures from the Epoch, January 1, 1970, at 00:00:00 UTC.
+
+
+Example:
+
+<cb>Set to 2001-01-01 00:00:00:
+
+<v>timestamp_1<> = <v>978325200<><>
+@
+@ epoch time, unix time
+@ time-only, timestamp-only, timestamp., timestamp(), time.time(), .time()
+
+
+
+# Timestamp - Operations
+@
+@ epoch time, unix time
+@ time-only, timestamp-only, timestamp., timestamp(), time.time(), .time()
+
+
+
+### Timestamp - From Datetime
+
+<cb>= <v>datetime_1<>.timestamp()<>
+@
+@ convert, datetime.timestamp(), .timestamp()
+
+
+
+### Timestamp - To Datetime
+
+<cb>= datetime.datetime.fromtimestamp(<v>timestamp_1<>)<>
+@
+@ convert, datetime.fromtimestamp(), .fromtimestamp()
+
+
+
+### Timestamp - To String
+
+<cb>from time import strftime
+from time import localtime
+
+= strftime("<v>format<>", localtime(<v>timestamp_1<>))<>
+
+or
+
+<card>Convert to a <c>datetime<> and then format.<>
+
+
+Example:
+
+<cb>from time import strftime
+from time import localtime
+
+<v>timestamp_2001<> = <v>978325200<>
+<v>formatted<> = = strftime("<v>%Y-%m-%d %H:%M:%S<>", localtime(<v>timestamp_2001<>))<>
+@
+@ convert, time.strftime(), .strftime(), time.localtime(), .localtime()
+
+
+
+# Datetime vs Timestamp
+
+DateTime:
+
+<in-2><*>Stores Date and Time in a Class
+Has Many Date Time Manipulation Methods<><>
+
+Timestamp:
+
+<in-2><*>Stores Number of Seconds
+Since January 1st, 1970
+Returned as a Float<><>
+
+
+
 # Enum
 
 <cb>from enum import Enum, auto
@@ -5388,7 +5654,7 @@ class <v>EnumName<>(Enum):
 	<v>...<><>
 
 
-<cb>from enum import Enum, auto
+<cb>from enum import Enum
 
 class <v>EnumName<>(Enum):
 	<v>ENUM_1<> = <v>value_1<>
@@ -6709,7 +6975,7 @@ Returns: <c>dict<>
 Returns a set with all duplicates removed.
 @
 @ convert, conversion, from, set(), duplicates, deduplicate, unique
-@ from-list, to-set
+@ from-list, to-set, remove duplicates
 
 
 
@@ -6932,6 +7198,17 @@ Will have no duplicates.
 
 
 
+#### Set - Size
+
+<cb>= len(<v>set_1<>)<>
+
+
+Returns the number of elements in the set.
+@
+@ count, length, len()
+
+
+
 #### Set - Sort
 
 <cb>= sorted(<v>set_1<>)<>
@@ -7082,7 +7359,7 @@ Sequence operations can be performed on any sequence type including lists, and t
 
 
 
-#### Index and Slicing Basics
+#### Index and Slicing - Basics
 
 Syntax:
 
@@ -7272,17 +7549,17 @@ Example:
 
 ### Sequence Destructuring
 @
-@ destructure, unpack, unpacking
+@ destructure, unpack, unpacking, destructure-only, destructuring-only
 
 
 
-#### Sequence Destructuring Basics
+#### Sequence Destructuring - Basics
 
-<cb><v>first<>, *<v>remainder<> = <v>sequence_1<>
-<v>first<>, <v>second<>, *<v>remainder<> = <v>sequence_1<>
-<v>first<>, <v>second<>, *_ = <v>sequence_1<>            <#># Remainder is Ignored<>
-<v>first<>, _, <v>third<>, *_ = <v>sequence_1<>      <#># Second, Remainder are Ignored<>
-<v>first<>, *_, <v>last<> = <v>sequence_1<>          <#># Returns First, Last Only<><>
+<cb><table><col><v>first<>, *<v>remainder<><><col>= <v>sequence_1  <><>
+<col><v>first<>, <v>second<>, *<v>remainder<><><col>= <v>sequence_1<><>
+<col><v>first<>, <v>second<>, *_<><col>= <v>sequence_1<><><col><#># Remainder is Ignored<><>
+<col><v>first<>, _, <v>third<>, *_<><col>= <v>sequence_1<><><col><#># Second, Remainder are Ignored<><>
+<col><v>first<>, *_, <v>last<><><col>= <v>sequence_1<><><col><#># Returns First, Last Only<><><><>
 
 <c>*<> is returned as a list.
 <c>_<> is an element that is ignored.
@@ -7649,7 +7926,7 @@ Prints:
 1 one
 2 two<><>
 @
-@ enumerate(), index, indexed
+@ enumerate(), index, indexed, enumeration, enumerated
 
 
 
@@ -8065,7 +8342,7 @@ Reference the resource using <c><v>resource_item_1<><>.
 
 
 
-### Exception Basics
+### Exceptions - Basics
 
 <cb>class <v>Exception1<>(Exception):
 	<v>...<><>
@@ -8246,19 +8523,8 @@ Use this for request validations.
 @ function-only, functions-only, func-only
 
 
-## Python Functions Page:
 
-<l>https://docs.python.org/3/library/functions.html<>
-
-
-
-## Functions
-@
-@ functions-only, func-only, def-onlyl
-
-
-
-### Function Basics
+## Functions - Basics
 
 <cb>def <v>function_1<>(<v>arg_1<>, <v>arg_2<> <v>...<>):
 	<#>"""Function docstring."""<>
@@ -8276,6 +8542,10 @@ Function definitions can be monkey patched by changing the global definition.
 Functions are first class objects and can be passed as values.
 @
 @ examples, def
+
+
+
+## Function - Details
 
 
 
@@ -8551,7 +8821,10 @@ Example:
 
 
 
-## Inner Functions
+## Function - Inner Functions
+
+
+### Function - Inner Function - Define
 
 Define:
 
@@ -8586,7 +8859,7 @@ Example:
 <cb>def <v>parent<>():
 
 	def <v>inner<>():
-		print ('value =', <u>value<>)
+		print ('value =', <v>value<>)
 
 	<v>value<> = <v>10<>
 	<v>inner<>()
@@ -8608,7 +8881,7 @@ Here <c><v>value<><> is a non-local variable to <c><v>inner<><>.
 
 
 
-### Decorator Basics
+### Decorators - Basics
 
 Define:
 
@@ -8677,7 +8950,7 @@ When a function is decorated and then called, <c><v>decorated_function<><> will 
 \#2  <s>-<>  Calls <c><v>decorated_function<><>.
 \#3  <s>-<>  Place post-function call code here.
 @
-@ new, create, @
+@ new, create, @, no return
 
 
 
@@ -8716,7 +8989,7 @@ When a function is decorated and then called, <c><v>decorated_function<><> will 
 
 	return <v>wrapper<>()<>
 @
-@ new, create, response, returning, value
+@ new, create, response, returning, with return, value
 
 
 
@@ -8818,7 +9091,7 @@ Example:
 
 
 
-### Class Basics
+### Class - Basics
 
 Define:
 
@@ -9150,6 +9423,7 @@ Static Method:
 Use for utility methods that are related to the class but do not interact with the class.
 @
 @ @classmethod, @staticmethod
+@ versus
 
 
 
@@ -9445,8 +9719,8 @@ def <v>patch_1<>(self):
 
 
 Changes the behaviour of a method at runtime.
-Apply the patch to the class, not the instance.
-This will change all instances of the class.
+Applies the patch to the class, not the instance.
+This will affect all instances of the class, current and future.
 
 
 Example:
@@ -10749,7 +11023,7 @@ Returns: <c>bytes<>
 
 Converts a string to an utf-8 encoded byte array.
 @
-@ string, str, .encode()
+@ string, str, .encode(), utf8
 
 
 
@@ -10761,7 +11035,7 @@ Retuns: <c>str<>
 
 Converts a utf-8 encoded byte array to a string.
 @
-@ bytes, string, .decode()
+@ bytes, string, .decode(), utf8
 
 
 
@@ -10895,9 +11169,16 @@ Converts a byte array into an SHA2 digest in hex.
 
 ### Directory - Copy
 
+<cb>copytree(<v>source<>, <v>target<>)<>
+
+With Import:
+
 <cb>from shutil import copytree
 
 copytree(<v>source<>, <v>target<>)<>
+
+
+Creates a copy of a directory..
 @
 @ shutil.copytree(), .copytree()
 
@@ -10905,37 +11186,49 @@ copytree(<v>source<>, <v>target<>)<>
 
 ### Directory - Create
 
-<cb>from os import mkdir<>
+<cb>mkdir(<v>directory_name<>)<>
 
-<cb>mkdir(<v>directory_path<>)<>
+With Import:
+
+<cb>from os import mkdir
+
+mkdir(<v>directory_path<>)<>
 
 
+Creates a directory
 Raises <c>FileExistsError<> if the directory exists.
 @
 @ make, os.mkdir, .mkdir()
 
 
 
-### Directory - Create All
+### Directory - Create Full Path
 
-<cb>from os import makedirs<>
+<cb>makedirs(<v>directory_name<>)<>
 
-Create:
+With Import:
 
-<cb>makedirs(<v>directory_path<>)<>
+<cb>from os import makedirs
 
-Ignore If Created:
+makedirs(<v>directory_path<>)<>
+
+Create, Ignore If Full Path Exists:
 
 <cb>makedirs(<v>directory_path<>, exist_ok = True)<>
 
 
 Creates all the directories needed to form <c><v>directory_path<><>.
+By default, will throw an error if full path already exists unless <c>exist_ok = True<>.
 @
-@ make directories, os.makedirs, .makedirs(), 
+@ make directories, os.makedirs, .makedirs(), all
 
 
 
 ### Directory - Delete - Empty
+
+<cb>rmdir(<v>directory_name<>)<>
+
+With Import:
 
 <cb>from os import rmdir
 
@@ -10951,6 +11244,10 @@ Raises <c>OSError<> if the directory is not empty.
 
 ### Directory - Delete - Non Empty
 
+<cb>rmtree(<v>directory_name<>)<><>
+
+With Import:
+
 <cb>from shutil import rmtree
 
 rmtree(<v>directory_path<>)<>
@@ -10964,11 +11261,16 @@ Deletes the directory and all its contents.
 
 ### Directory - Delete All Files
 
+<cb>for <v>file<> in glob(join(<v>directory_name<>, '<v>*<>')):
+	remove (<v>file<>)<>
+
+With Imports:
+
 <cb>from glob import glob
 from os import remove
 from os.path import join
 
-<v>files<> = glob (join (<v>directory_path<>, '<v>*<>'))
+<v>files<> = glob(join(<v>directory_path<>, '<v>*<>'))
 for <v>file<> in <v>files<>:
 	remove (<v>file<>)<>
 
@@ -10981,11 +11283,16 @@ To delete particular files, change <c>'*'<> to match (e.g. <c>'*.txt'<>).
 
 ### Directory - Exists? Is Directory?
 
+<cb>= isdir(<v>directory_name<>)<>
+
+With Import:
+
 <cb>from os.path import isdir
 
 <v>is_directory<> = isdir(<v>directory_path<>)<>
 
 Returns: <c>bool<>
+
 
 Returns <c>True<> if <c><v>directory_path<><> exists and is a directory.
 Otherwise, returns <c>False<>.
@@ -10996,11 +11303,16 @@ Otherwise, returns <c>False<>.
 
 ### Directory - Read
 
+<cb>= listdir(<v>directory_name<>)<>
+
+With Import:
+
 <cb>from os import listdir
 
 <v>file_names<> = listdir(<v>directory_path<>)<>
 
 Returns: <c>list<> of <c>str<>
+
 
 Returns all files and directories for <c><v>directory_path<><>.
 Returns the file names only, not the full path.
@@ -11012,6 +11324,12 @@ Returns the file names only, not the full path.
 
 ### Directory - Read, Directories Only
 
+<cb>= filter(
+		lambda file: isdir(join(<v>directory_name<>, file)),
+		listdir(<v>directory_name<>))<>
+
+With Imports:
+
 <cb>from os import listdir
 from os.path import isdir
 from os.path import join
@@ -11022,8 +11340,10 @@ from os.path import join
 
 Returns: <c>filter<> of <c>str<>
 
+
 Returns list of all directory names in <c><v>directory_path<><>.
 Returns the file names only, not the path.
+
 
 Examples:
 
@@ -11048,6 +11368,12 @@ print(list(directories))<>
 
 ### Directory - Read, Files Only
 
+<cb>= filter(
+		lambda file: isfile(join(<v>directory_name<>, file)),
+		listdir(<v>directory_name<>))<>
+
+With Imports:
+
 <cb>from os import listdir
 from os.path import isfile
 from os.path import join
@@ -11058,8 +11384,10 @@ from os.path import join
 
 Returns: <c>filter<> of <c>str<>
 
+
 Returns list of file names.
 Only returns the name, not the path.
+
 
 Examples:
 
@@ -11084,12 +11412,17 @@ print(list(files))<>
 
 ### Directory - Read, Filtered
 
+<cb> = filter(listdir(<v>directory_name<>), <v>file_filter<>)<>
+
+With Imports:
+
 <cb>from os import listdir
 from fnmatch import filter
 
 <v>file_names<> = filter(listdir(<v>directory_path<>), <v>file_filter<>)<>
 
 Returns: <c>list<> of <c>str<>
+
 
 Returns list of matching file names only.
 Returns the file names only, not the path.
@@ -11109,12 +11442,17 @@ from fnmatch import filter
 
 ### Directory - Read, Full Path
 
+<cb>= glob(join(<v>directory_path<>, "*"))<>
+
+With Imports:
+
 <cb>from glob import glob
 from os.path import join
 
 <v>file_paths<> = glob(join(<v>directory_path<>, "*"))<>
 
 Returns: <c>list<> of <c>str<>
+
 
 Returns all files and sbdirectories in <c><v>directory_path<><>.
 Returns the full path to the files.
@@ -11126,12 +11464,17 @@ Returns the full path to the files.
 
 ### Directory - Read, Full Path, Filtered
 
+<cb>= glob(join(<v>directory_name<>, "<v>filter<>"))<>
+
+With Imports:
+
 <cb>from glob import glob
 from os.path import join
 
 <v>file_paths<> = glob(join(<v>directory_path<>, "<v>filter<>"))<>
 
 Returns: <c>list<> of <c>str<>
+
 
 Returns all files and sbdirectories in <v>directory_path<>.
 Returns the full path to the files.
@@ -11151,6 +11494,10 @@ from os.path import join
 
 
 ### Directory - Read, Full Path, Recursive
+
+<cb>= glob(join(<v>directory_path<>, "**", "*"), recursive=True)<>
+
+With Imports:
  
 <cb>from glob import glob
 from os.path import join
@@ -11158,6 +11505,7 @@ from os.path import join
 <v>file_paths<> = glob(join(<v>directory_path<>, "**", "*"), recursive=True)<>
 
 Returns: <c>list<> of <c>str<>
+
 
 Recursively
 Returns full path to all files.
@@ -11169,6 +11517,10 @@ Returns full path to all files.
 
 
 ### Directory - Read, Full Path, Recursive, Filtered
+
+<cb>= glob(join(<v>directory_path<>, "**", <v>filter<>), recursive=True)<>
+
+With Imports:
  
 <cb>from glob import glob
 from os.path import join
@@ -11176,6 +11528,7 @@ from os.path import join
 <v>file_paths<> = glob(join(<v>directory_path<>, "**", <v>filter<>), recursive=True)<>
 
 Returns: <c>list<> of <c>str<>
+
 
 Returns full path to all files.
 
@@ -11237,14 +11590,17 @@ for <v>root<>, <v>directories<>, <v>files<> in walk(<v>'.'<>):
 
 ### File - Get Created Datetime
 
+<cb>= datetime.fromtimestamp(getctime(<v>file_name<>))<>
+
+With Import:
+
 <cb>from datetime import datetime
 from os.path import getctime
 
-<v>created_datetime_1<> = datetime.fromtimestamp(getctime(<v>file_name<>))<>
-
-<cb>= datetime.fromtimestamp(getctime(<v>full_path<>))<>
+<v>created_datetime_1<> = datetime.fromtimestamp(getctime(<v>full_path<>))<>
 
 Returns: <c>datetime<>
+
 
 Returns the file creation time as a datetime.
 @
@@ -11255,13 +11611,16 @@ Returns the file creation time as a datetime.
 
 ### File - Get Created Timestamp
 
+<cb>= getctime(<v>file_name<>)<>
+
+With Import:
+
 <cb>from os.path import getctime
 
-<v>created_timestamp_1<> = getctime(<v>file_name<>))<>
-
-<cb>= getctime(<v>full_path<>)<>
+<v>created_timestamp_1<> = getctime(<v>full_path<>))<>
 
 Returns: <c>float<>
+
 
 Returns the file creation time as a unix timestamp (epoch).
 @
@@ -11272,14 +11631,17 @@ Returns the file creation time as a unix timestamp (epoch).
 
 ### File - Get Modified Datetime
 
+<cb>= datetime.fromtimestamp(getmtime(<v>file_name<>))<>
+
+With Imports:
+
 <cb>from os.path import getmtime
 from datetime import datetime
 
-<v>modified_datetime_1<> = datetime.fromtimestamp(getmtime(<v>file_name<>))<>
-
-<cb>= datetime.fromtimestamp(getmtime(<v>full_path<>))<>
+<v>modified_datetime_1<> = datetime.fromtimestamp(getmtime(<v>full_path<>))<>
 
 Returns: <c>datetime<>
+
 
 Returns the file modification time as a datetime.
 @
@@ -11290,11 +11652,16 @@ Returns the file modification time as a datetime.
 
 ### File - Get Modified Timestamp
 
+<cb>= getmtime(<v>file_name<>)<>
+
+With Import:
+
 <cb>from os.path import getmtime
 
 <v>modified_timestamp_1<> = getmtime(<v>full_path<>)<>
 
 Returns: <c>float<>
+
 
 Returns the file modified time as a unix timestamp (epoch).
 @
@@ -11305,9 +11672,16 @@ Returns the file modified time as a unix timestamp (epoch).
 
 ### File - Get Size
 
+<cb>= getsize(<v>file_path<>)<><>
+
+With Import:
+
 <cb>from os.path import getsize
 
-= getsize(<v>file_path<>)<>
+<v>file_size<> = getsize(<v>file_path<>)<>
+
+
+Returns the size of a file.
 @
 @ length
 @ os.path.getsize(), .path.getsize(), .getsize()
@@ -11316,9 +11690,16 @@ Returns the file modified time as a unix timestamp (epoch).
 
 ### File - Copy
 
+<cb>copyfile(<v>source_path<>, <v>destination_path<>)<>
+
+With Import:
+
 <cb>from shutil import copyfile
 
 copyfile(<v>source_path<>, <v>destination_path<>)<>
+
+
+Creates a copy of a file.
 @
 @ shutil.copyfile(), .copyfile(), cp
 
@@ -11326,9 +11707,16 @@ copyfile(<v>source_path<>, <v>destination_path<>)<>
 
 ### File - Delete
 
+<cb>remove(<v>file_path<>)<>
+
+With Import:
+
 <cb>from os import remove
 
 remove(<v>file_path<>)<>
+
+
+Deletes a file.
 @
 @ .remove(), os.remove()
 
@@ -11336,11 +11724,18 @@ remove(<v>file_path<>)<>
 
 ### File - Exists?
 
+<cb>= exists(<v>file_name<>)<>
+
+With Import:
+
 <cb>from os.path import exists
 
 <v>file_exists<> = exists(<v>file_path<>)<>
 
 Returns <c>bool<l>
+
+
+Returns <c>True<> if a file exists.
 @
 @ os.path.exists(), path.exists(), .exists()
 
@@ -11348,11 +11743,16 @@ Returns <c>bool<l>
 
 ### File - Is File?
 
+<cb>= isfile(<v>file_path<>)<>
+
+With Import:
+
 <cb>from os.path import isfile
 
 <v>is_file<> = isfile(<v>file_path<>)<>
 
 Returns <c>bool<>
+
 
 Returns <c>True<> if <c><v>file_path<><> exists and is a file (not a directory).
 Otherwise, returns <c>False<>.
@@ -11362,6 +11762,10 @@ Otherwise, returns <c>False<>.
 
 
 ### File - Join Paths
+
+<cb>= join(<v>path_1<>, <v>path_2<><v>...<>)<>
+
+With Import:
 
 <cb>from os.path import join
 
@@ -11377,6 +11781,10 @@ Returns the paths joined together with the correct OS specific file separator.
 
 ### File - Move
 
+<cb>rename(<v>source_path<>, <v>destination_path<>)<>
+
+With Import:
+
 <cb>from os import rename
 
 rename(<v>source_path<>, <v>destination_path<>)<>
@@ -11390,23 +11798,36 @@ Moves a file to a location within the current drive only.
 
 ### File - Move - Across Drives
 
+<cb>move(<v>source_path<>, <v>destination_path<>)<>
+
+With Import:
+
 <cb>from shutil import move
 
 move(<v>source_path<>, <v>destination_path<>)<>
 
-Move within drive or copy from one to another (original not deleted with copy)
+
+Moves a file within drive or copies it from one dirve to another.
+When copying across drives, he original is not deleted.
 @
-@ shutil.move(), .move()
+@ shutil.move(), .move(), copy
 
 
 
 ### File - Rename
 
+<cb>rename(<v>source_path<>, <v>destination_path<>)<>
+
+With Import:
+
 <cb>from os import rename
 
 rename(<v>source_path<>, <v>destination_path<>)<>
+
+
+Renames a filename.
 @
-@ os.rename(), .rename()
+@ os.rename(), .rename(), filename, name
 
 
 
@@ -11509,6 +11930,22 @@ Returns the contents of the file as a list in <c><v>lines<><>.
 
 
 ### Text File - Read All Lines
+
+<cb>with open(<v>file_name<>, 'r') as file:
+	<v>lines<> = file.readlines()<>
+
+Returns: <c>list<> of <c>str<>
+
+Returns the contents of the file as a list in <c><v>lines<><>.
+The lines include the newline characters.
+@
+@ list, by
+@ open(), with open, from, .readlines()
+@ 'r', "r", 'rt', "rt"
+
+
+
+### Text File - Read All Lines, Stripped Newlines
 
 <cb>with open(<v>file_name<>, 'r') as file:
 	<v>lines<> = [line.rstrip('\\n') for line in file]<>
@@ -12230,16 +12667,62 @@ with urlopen(<v>url<>) as response:
 Returns: <c>bytes<>
 
 
+Makes a HTTP GET call to the url.
+
+
 Example:
 
 <cb>from urllib.request import urlopen
 
-with urlopen(<v>"https://www.google.com"<>) as response:
+<v>url<> = "https://httpbin.org/get"
+
+with urlopen(<v>url<>) as response:
 	<v>content<> = response.read()
 
-<v>text<> = <v>content<>.decode("utf-8", "ignore")<>
+<v>text<> = <v>content<>.decode("utf-8", "ignore")
+
+print("Response:", text)<>
 @
 @ urllib.request.urlopen, .request.urlopen(), .urlopen(), .read(), web page
+
+
+
+### HTTP - Post
+
+<cb>from urllib.request import urlopen
+
+with urlopen(<v>url<>, data = <v>post_data<>) as response:
+	<v>content<> = response.read()<>
+
+
+Returns: <c>bytes<>
+
+
+Makes a HTTP POST call when <c>data != None<>.
+
+
+Example:
+
+<cb>from urllib.request import urlopen
+from urllib.parse import urlencode
+
+<v>url<> = "https://httpbin.org/post"
+
+<v>params<> = {
+        "<v>param_1<>": "value 1",
+        "<v>param_2<>": "value 2"}
+
+<v>post_data<> = urlencode(<v>params<>).encode()
+
+with urlopen(<v>url<>, data = <v>post_data<>) as response:
+	<v>content<> = response.read()
+
+<v>text<> = <v>content<>.decode("utf-8", "ignore")
+
+print("Response:", text)<>
+@
+@ urllib.request.urlopen(), .request.urlopen(), .urlopen(), .read(), web page
+@ urllib.parse.urlencode(), parse.urlencode(), .urlencode()
 
 
 
@@ -14423,7 +14906,7 @@ Automatically acquires and releases the lock.
 
 
 
-### Semaphore Basics
+### Semaphore - Basics
 
 
 
@@ -17290,6 +17773,7 @@ Not guaranteed to be accurate as it can be changed.
 @ time.perf_counter(), .per_counter()
 @ time.process_time(), .process_time()
 @ time.time(), .time()
+@ versus
 
 
 
@@ -17419,41 +17903,42 @@ Example:
 
 #### Format Date - Date Format Codes
 
-Literal %			<c>%<>			<c>%%<>
-
-Day 			<c>1-31<>		<c>%-d<>
-				<c>01-31<>		<c>%d<>
-
-Day of Week		<c>0-6<>			<c>%w<>
-				<c>1-7<>			<c>%u<>		<#>(ISO 8601)<>
-				<c>Mon<>			<c>%a<>
-				<c>Monday<>		<c>%A<>
-
-Day of Year		<c>1-365<>		<c>%-j<>
-				<c>001-365<>		<c>%j<>
-
-Month			<c>1-12<>		<c>%-m<>
-				<c>01-12<>		<c>%m<>
-				<c>Jan<>			<c>%b<>
-				<c>January<>		<c>%B<>
-
-Week			<c>0-53<>		<c>%-U<>		<#>(Starts Sunday)<>
-				<c>00-53<>		<c>%U<>		<#>(Starts Sunday)<>
-				<c>0-53<>		<c>%-W<>		<#>(Starts Monday)<>
-				<c>00-53<>		<c>%W<>		<#>(Starts Monday)<>
-				<c>0-53<>		<c>%-V<>		<#>(Starts Monday) (ISO 8601)<>
-				<c>00-53<>		<c>%V<>		<#>(Starts Monday) (ISO 8601)<>
-
-Year			<c>00-99<>		<c>%y<>
-				<c>2001<>		<c>%Y<>
-
-
-Time Zone					<c>%Z<>
-UTC Offset					<c>%z<>
-
-Local Date					<c>%x<>
-
-Local Date Time				<c>%c<>
+<table><col><b>Item<><><col><b>Output<><><col><b>Symbol<><>
+<col> <>
+<col>Literal %		<><col><c>%		<><><col><c>%%	<><>
+<col>	<>
+<col>Day<><col><c>1-31<><><col><c>%-d<><>
+<col>	<><col><c>01-31<><><col><c>%d<><>
+<col>	<>
+<col>Day of Week<><col><c>0-6<><><col><c>%w<><>
+<col>	<><col><c>1-7<><><col><c>%u<><><col><#>(ISO 8601)<><>
+<col>	<><col><c>Mon<><><col><c>%a<><>
+<col>	<><col><c>Monday<><><col><c>%A<><>
+<col>	<>
+<col>Day of Year<><col><c>1-365<><><col><c>%-j<><>
+<col>	<><col><c>001-365<><><col><c>%j<><>
+<col>	<>
+<col>Month<><col><c>1-12<><><col><c>%-m<><>
+<col>	<><col><c>01-12<><><col><c>%m<><>
+<col>	<><col><c>Jan<><><col><c>%b<><>
+<col>	<><col><c>January<><><col><c>%B<><>
+<col>	<>
+<col>Week<><col><c>0-53<><><col><c>%-U<><><col><#>(Starts Sunday)<><>
+<col>	<><col><c>00-53<><><col><c>%U<><><col><#>(Starts Sunday)<><>
+<col>	<><col><c>0-53<><><col><c>%-W<><><col><#>(Starts Monday)<><>
+<col>	<><col><c>00-53<><><col><c>%W<><><col><#>(Starts Monday)<><>
+<col>	<><col><c>0-53<><><col><c>%-V<><><col><#>(Starts Monday) (ISO 8601)<><>
+<col>	<><col><c>00-53<><><col><c>%V<><><col><#>(Starts Monday) (ISO 8601)<><>
+<col>	<>
+<col>Year<><col><c>00-99<><><col><c>%y<><>
+<col>	<><col><c>2001<><><col><c>%Y<><>
+<col>	<>
+<col>Time Zone<><col><c>%Z<><>
+<col>UTC Offset<><col><c>%z<><>
+<col>	<>
+<col>Local Date<><col><c>%x<><>
+<col>	<>
+<col>Local Date Time<><col><c>%c<><><>
 @
 @ pattern, formats
 @ %%, %a, %b, %c, %d, %j, %m, %u, %v, %w, %x, %y
@@ -17463,28 +17948,29 @@ Local Date Time				<c>%c<>
 
 #### Format Date - Time Format Codes
 
-Literal %			<c>%<>			<c>%%<>
-
-Milliseconds	<c>000000-999999<>	<c>%f<>
-
-Second			<c>00-59<>		<c>%S<>
-				<c>0-59<>		<c>%-S<>
-
-Minute			<c>00-59<>		<c>%M<>
-				<c>0-59<>		<c>%-M<>
-
-Hour			<c>00-12<>		<c>%I<>
-				<c>0-12<>		<c>%-I<>
-				<c>00-23<>		<c>%H<>
-				<c>0-23<>		<c>%-H<>
-
-AM/PM			<c>AM <s>|<> PM<>		<c>%p<>
-
-Time Zone		<c>UTC<>			<c>%Z<>
-
-UTC Offset		<#># -0500<>		<c>%z<>
-
-Local Time					<c>%X<>
+<table><col><b>Item<><><col><b>Output<><><col><b>Symbol<><>
+<col>	<>
+<col>Literal %		<><col><c>%		<><><col><c>%%	<><>
+<col>	<>
+<col>Milliseconds<><col><c>000000-999999<><><col><c>%f<><>
+<col>	<>
+<col>Second<><col><c>00-59<><><col><c>%S<><>
+<col>	<><col><c>0-59<><><col><c>%-S<><>
+<col>Minute<><col><c>00-59<><><col><c>%M<><>
+<col>	<><col><c>0-59<><><col><c>%-M<><>
+<col>	<>
+<col>Hour<><col><c>00-12<><><col><c>%I<><>
+<col>	<><col><c>0-12<><><col><c>%-I<><>
+<col>	<><col><c>00-23<><><col><c>%H<><>
+<col>	<><col><c>0-23<><><col><c>%-H<><>
+<col>	<>
+<col>AM/PM<><col><c>AM <s>|<> PM<><><col><c>%p<><>
+<col>	<>
+<col>Time Zone<><col><c>UTC<><><col><c>%Z<><>
+<col>	<>
+<col>UTC Offset<><col><#># -0500<><><col><c>%z<><>
+<col>	<>
+<col>Local Time<><col><><col><c>%X<><><>
 @
 @ formats, timezones, pattern
 @ %%, %f, %s, %m, %i, %h, %p, %z, %x
@@ -17531,7 +18017,7 @@ Works with dates and datetimes.
 
 Using F-String:
 
-<cb>= '{<v>datetime_1:%Y-%m-%d %H:%M:%S}'<>
+<cb>= '{<v>datetime_1<>:%Y-%m-%d %H:%M:%S}'<>
 
 Using format():
 
@@ -18002,6 +18488,8 @@ Will call <c>__repr__<> if no <c>__str__()<> method found.
 
 	Use to show a human readable version of the class.
 	If not present, Python will call <c>__repr__<>.
+@
+@ versus
 
 
 
@@ -18068,6 +18556,14 @@ Python has only one integer type and that is <c>int<>.
 @
 @ long-only
 @ Create, Define, Instantiate, New
+
+
+
+### Money, Currency
+
+Use <c><l "/s/python?search=decimal-only">Decimal<><>.
+@
+@ $, ¢, €, £, ¥, ¤, usd, euro, yen, yuan, dollars, cents
 
 
 
@@ -18141,15 +18637,151 @@ See: <l "/s/python?search=exceptions-only">Exceptions<>.
 @ thrown
 
 
-# Terms
+
+# Symbols
 @
-@ Glossary
-@ terms-only, glossary-only
+@ lookup
+@ symbol-only, symbols-only
+
+
+## Symbols - Basics
+
+<table><col><c><#># A comment.<><><><col>Programmer Comment<>
+<col> <>
+<col><c><v>statement<>;<><><col>Semicolon Statement Separator<>
+<col> <>
+<col><c>@<v>function_1<>()<><><col>Decorated Function<><col><#># At Sign '@'<><>
+<col> <>
+<col><c>*args<><><col>Arguments Passed as a Tuple (Array<><col><#># Single Asterisk '*'<><>
+<col><c>**kwargs<><><col>Arguments Passed as a Key Value Dictionary<><col><#># Double Asterisks '**'<><>
+<col> <>
+<col><c>*<v>value_1<><><><col>A Sublist Extracted from Some Sequence<>
+<col><c>*_<><><col>A Sublist Extracted from Some Sequence But Ignored<>
+<col><c>_<><><col>A Value Extracted from a Sequence But Ignored<>
+<col> <>
+<col><c>self.<v>some_member<><><><col>Class instance reference to internal member<><col><#># <c>self.<><><>
+<col> <>
+<col><c>'<v>A string<>'<><><col>String<>
+<col><c>"<v>A string<>"<><><col>Also A String<>
+<col> <>
+<col><c><#>"""Doc comment."""<><><><col>DocString<>
+<col> <>
+<col><c>"""<v>Multiline
+String<>"""<><><col>A Multiline String<>
+<col> <>
+<col><c>'''<v>Multiline
+String<>'''<><><col>A Multiline String<>
+<col> <>
+<col><c>_<v>name_1<><><><col>Private Function or Variable<><col><#># Single Underscore '_'<><>
+<col><c>__<v>method_name<>__<><><col>Magic Method / System Method<><col><#># Double Underscore, Both Ends '__'<><>
+<col> <>
+<col><c>{}<><><col>Empty Dictionary<>
+<col><c>{<v>key1<> : <v>value1<>, <v>...<>}<><><col>Dictionary<>
+<col><c>{<v>value1<>, <v>...<>}<><><col>Set<><col><#># No Colon ':'<><>
+<col> <>
+<col><c>[]<><><col>Empty List<>
+<col><c>[<v>value1<>, <v>value2<>, <v>...<>]<><><col>List<>
+<col><c>(<v>value1<>, <v>value2<>, <v>...<>)<><><col>Tuple<>
+<col> <>
+<col><c><v>a<> := <v>b<><><><col>Walrus Operator / Assignment Expression<><>
+@
+@ Double Underscore, :=, underscore.
 
 
 
-### *args
-Arguments passed to a function as a tuple.
+## Symbols - Details
+
+
+### Symbol ''
+
+String
+
+<cb>'<v>This is a string.<>'<>
+
+Empty String
+
+<cb>''<>
+
+
+
+
+### Symbol '''
+
+Multiline String
+
+<cb>multiline_string = '''<v>This is
+a multiline
+string.<>'''<>
+
+
+### Symbol ""
+
+String
+
+<cb>"<v>This is a string.<>"<>
+
+Empty String
+
+<cb>""<>
+
+
+
+### Symbol """
+
+DocString
+
+<cb>def <v>function_1<>():
+	<#>""" DocString describing function_1. """<><>
+
+Multiline String
+
+<cb>multiline_string = """<v>This is
+a multiline
+string.<>"""<>
+
+
+### Symbol @
+Denotes a decorated function.
+
+<cb>@<v>decorator<>()
+def <v>decorated_function<>():
+    <v>...<><>
+
+A function name leading with an at sign is a decorator
+@
+@ at sign
+
+
+
+### Symbol #
+Comment
+
+<cb><#># This is a comment<><>
+
+The hash denotes a comment section at the end of a line.
+@
+@ hash, pound
+
+
+
+### Symbol ;
+Statement Separator
+
+<cb><v>statement_1<>;<>
+
+The semicolon identifies the division between one statement and another.
+It is not required in Python but is accepted.
+@
+2 semicolon, statement separator
+
+
+
+### Symbol *args
+
+Arguments received as a tuple.
+
+<cb>def <v>function_1<>(*args):
+	<v>...<><>
 
 When calling the function, the sequence or list is converted to the function arguments in order.
 When the arguments as defined as <c>*args<> in the function, arguments are converted to a tuple and then passed in.
@@ -18159,15 +18791,352 @@ When the arguments as defined as <c>*args<> in the function, arguments are conve
 
 
 
-### **kwargs
-Arguments passed to a function as a key value dict.
+### Symbol **kwargs
+Key Word Arguments
+
+Denotes arguments received by a function as a key value dict.
+
+<cb>def <v>function_1<>(**kwargs):
+	<v>...<><>
 
 When calling the function, the keys are mapped to the function's internal arguments by name.
 When the arguments are defined as <c>**kwargs<> in the function, named arguments are converted to a dict and then passed in.
 @
 @ kwargs
-@ parameter, params, args, arguments
+@ parameter, params, arguments
 @ double asterisks, stars, keyword arguments, key word
+
+
+
+### Symbol *list
+A sequence or list to be unpacked when calling a function.
+
+When calling a function, the sequence or list will be unpacked into parameter order before passing to the function.
+
+<cb><v>function_1<>(*<v>parameters<>)<>
+
+<cb><v>parameters<> = (1, "name", "description")
+<v>create<>(*<v>parameters<>)<>
+
+
+
+### Symbol *sublist
+Sublist destructured (extracted) from a sequence or other list.
+
+<cb><v>first<>, *<v>remainder<> = <v>sequence_1<><>
+
+See: <l "/s/python?search=destructur&select=2jr2">Destructuring<>
+
+
+
+### Symbol *_
+An ignored sublist during destructuring of a sequence.
+
+<cb><cb><v>first<>, *_, <v>last<> = <v>sequence_1<><><>
+
+See: <l "/s/python?search=destructur&select=2jr2">Destructuring<>
+@
+@ asterisk, star, underscore
+
+
+### Symbol _
+
+Private Method or Variable (Name with Leading _)
+
+<cb>def _<v>private_method_1<>():
+	<v>...<><>
+
+Number Literal (For Readability)
+
+<cb><v>12<v>_<>345.00<v>_<>00<><>
+
+Destructuring - Ignored Value
+
+<cb>_, *<v>remainder<> = <v>list_1<><>
+
+Default Match Clause
+
+<cb>match <v>value<>:
+    case _:
+        <v>...<><>
+@
+@ underscore
+
+
+### Symbol __
+
+A Dunder Method, A System Reserved Method
+
+<cb><v>instance_1<>.__name__<><>
+@
+@ double underscore, dunder, magic method
+
+
+
+### Symbol .
+
+Method or Property Accessor
+
+<cb><v>instance_1<>.<v>method_1<>()<>
+
+<cb>= <v>instance_1<>.<v>property_1<><>
+
+
+
+### Symbol self
+
+References the current class instance.
+
+<cb> = self.<v>property_1<><>
+
+
+
+### Symbol []
+
+List
+
+<cb><v>list_1<> = [1, 2, 3]<>
+
+
+Empty List
+
+<cb><v>empty_list<> = []<>
+
+
+
+### Symbol {}
+
+Dict
+
+<cb><v>dict_1<> = {1 : "one", 2 : "two", 3 : "three"}<>
+
+Empty Dict
+
+<cb><v>empty_dict<> = {}<>
+
+Set
+
+<cb><v>set_1<> = {1, 2, 3}<>
+
+
+
+### Symbol ()
+
+Tuple
+
+<cb><v>tuple_1<> = (1, 2, 3)<>
+
+
+Empty Tuple
+
+<cb><v>empty_tuple<> = ()<>
+
+
+
+## Symbols - Operator Symbols
+
+
+### Symbol +
+
+Addition (Arithmetic Operator)
+String Concatenation (Arithmetic Operator)
+
+<cb><v>a<> + <v>b<><>
+
+
+### Symbol -
+
+Subtraction (Arithmetic Operator)
+
+<cb><v>a<> - <v>b<><>
+
+
+### Symbol *
+
+Multiplication (Arithmetic Operator)
+
+<cb><v>a<> * <v>b<><>
+
+
+### Symbol /
+
+Division (Arithmetic Operator)
+
+<cb><v>a<> / <v>b<><>
+
+
+### Symbol //
+
+Floor Division (Arithmetic Operator)
+
+<cb>/<v>a<> // <v>b<><>
+
+
+### Symbol %
+
+Modulus (Arithmetic Operator)
+
+<cb><v>a<> % <v>b<><>
+
+
+### Symbol **
+
+Power (Arithmetic Operator)
+
+<cb><v>a<> ** <v>b<><>
+
+
+### Symbol +=
+
+Add And Assign (Arithmetic Operator)
+
+<cb><v>a<> += <v>b<><>
+
+String Concatenation (Arithmetic Operator)
+
+<cb><v>string_1<> += <v>string_2<><>
+
+
+### Symbol -=
+
+Subtract And Assign (Arithmetic Operator)
+
+<cb><v>a<> -= <v>b<><>
+
+
+### Symbol *=
+
+Multiply And Assign (Arithmetic Operator)
+
+<cb><v>a<> *= <v>b<><>
+
+
+### Symbol /=
+
+Divide And Assign (Arithmetic Operator)
+
+<cb><v>a<> /= <v>b<><>
+
+
+### Symbol //=
+
+Floor Divide And Assign (Arithmetic Operator)
+
+<cb>/<v>a<> //= <v>b<><>
+
+
+### Symbol %=
+
+Calculate Modulus And Assign (Arithmetic Operator)
+
+<cb><v>a<> %= <v>b<><>
+
+
+### Symbol **=
+
+Calculate Power And Assign (Arithmetic Operator)
+
+<cb><v>a<> **= <v>b<><>
+
+
+### Symbol \<
+
+Less Than (Comparison Operator)
+
+<cb><v>a<> \< <v>b<><>
+
+
+### Symbol \<=
+
+Less Than Or Equal To (Comparison Operator)
+
+<cb><v>a<> \<= <v>b<><>
+
+
+### Symbol >
+
+Greater Than (Comparison Operator)
+
+<cb><v>a<> > <v>b<><>
+
+
+### Symbol >=
+
+Greater Than Or Equal To (Comparison Operator)
+
+<cb><v>a<> >= <v>b<><>
+
+
+### Symbol ==
+
+Equal To (Comparison Operator)
+
+<cb><v>a<> == <v>b<><>
+
+
+### Symbol !=
+
+Not Equal To (Comparison Operator)
+
+<cb><v>a<> != <v>b<><>
+
+
+### Symbol :=
+Walrus Operator / Assignment Expression
+
+<cb><v>variable<> := <v>expression<><>
+
+Evaluates an expression, assigns it to the variable and returns the result to the calling function.
+@
+@ walrus operator
+
+
+### Symbol ~
+
+Complement / Inverse
+
+<cb>~<v>a<><>
+
+
+### Symbol &
+
+Bitwise AND (Bitwise Operator)
+
+<cb><v>a<> & <v>b<><>
+
+
+### Symbol |
+
+Bitwise OR (Bitwise Operator)
+
+<cb><v>a<> | <v>b<><>
+
+
+### Symbol ^
+
+Bitwise XOR (Bitwise Operator)
+
+<cb><v>a<> ^ <v>b<><>
+
+
+### Symbol \<\<
+
+Bitwise Shift Left (Bitwise Operator)
+
+<cb><v>a<> \<\< <v>shift_count<><>
+
+
+### Symbol >>
+
+Bitwise Shift Right (Bitwise Operator)
+
+<cb><v>a<> >> <v>shift_count<><>
+
+
+# Terms
+@
+@ Glossary
+@ terms-only, glossary-only
 
 
 
@@ -18354,6 +19323,8 @@ Creates duplicates of the parent object and all related child objects.
 Can break if there are circular references.
 @
 @ deepcopy
+@ versus
+
 
 
 ### Dictionary
@@ -18737,18 +19708,42 @@ Python’s interactive command line environment.
 
 ### Reserved Words
 
-A reserved word is a key word that has special meaning or purpose to Python.
-It can not be used as the name of a user created object, variable or function.
+A reserved word is a keyword that has special meaning or purpose to Python.
+It can not be used as the name of an object, variable or function.
 
-<c>and<>, <c>as<>, <c>assert<>, <c>break<>
-<c>class<>, <c>continue<>, <c>def<>, <c>del<>
-<c>elif<>, <c>else<>, <c>except<>, <c>False<>
-<c>finally<>, <c>for<>, <c>from<>, <c>global<>
-<c>if<>, <c>import<>, <c>in<>, <c>is<>
-<c>lambda<>, <c>None<>, <c>nonlocal<>, <c>not<>
-<c>or<>, <c>pass<>, <c>raise<>, <c>return<>
-<c>True<>, <c>try<>, <c>while<>, <c>with<>
-<c>yield<>
+<*><c>and<>
+<c>as<>
+<c>assert<>
+<c>break<>
+<c>class<>
+<c>continue<>
+<c>def<>
+<c>del<>
+<c>elif<>
+<c>else<>
+<c>except<>
+<c>False<>
+<c>finally<>
+<c>for<>
+<c>from<>
+<c>global<>
+<c>if<>
+<c>import<>
+<c>in<>
+<c>is<>
+<c>lambda<>
+<c>None<>
+<c>nonlocal<>
+<c>not<>
+<c>or<>
+<c>pass<>
+<c>raise<>
+<c>return<>
+<c>True<>
+<c>try<>
+<c>while<>
+<c>with<>
+<c>yield<><>
 @
 @ Keywords
 @ and, as, assert, break, class, continue, def, del, elif, else, except
@@ -18885,7 +19880,6 @@ vs: Egg
 
 
 ### aiohttp SpeedSheet
-
 The aiohttp library for making asynchronous http calls:
 
 <l>/s/aiohttp<>
@@ -18895,7 +19889,6 @@ The aiohttp library for making asynchronous http calls:
 
 
 ### requests SpeedSheet
-
 The requests library for making http calls:
 
 <l>/s/requests<>
@@ -18905,7 +19898,6 @@ The requests library for making http calls:
 
 
 ### Numpy SpeedSheet
-
 A greate library for manipulating large amounts of data:
 
 <l>/s/numpy<>
@@ -18917,6 +19909,8 @@ A greate library for manipulating large amounts of data:
 # More Speedsheets?
 
 This sheet covers core python only. But want to see more here? Or for other libraries? Please let us know.
+
+
 @
 @ delta, terminal, process, dataframe, frame
 @ Anacond, Arrowm, BeautifulSoup, Bokeh, Cirq, Conda, Databases, Delorean, Django, Eli5, Fire, FlashText, Flask, Gensim, HTTP, Image, Images, Imaging, Keras, LightGBM, Luminoth, Mahotas, Matplotlib, MoviePy, Networkx, NLTK, Pandas, Pendulum, Picture, Pillow, Pixel, Poetry, PyGame, PyQt, PyPi, PyTorch, Requests, Scikit Learn, Scikit-Learn, SciPy, SqlAlchemy, TensorFlow, Theano, Tkinter, wxPython, ai, a.i., artifical intelligence, Zip
