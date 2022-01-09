@@ -1,142 +1,33 @@
 # <#>Python<> SpeedSheet
-<b>What you need, faster.<>
+<b>Find what you need, faster.<>
 
 Get answers to your Python questions fast.
 
-<*>Use <b>Search<> (above) For Realtime Answers
-Answers Get Right To The Point
+<*>Use <b>Search<> (above) For Instant Answers
+Answers Are To The Point
 Covers <b>Core Python 3<><>
 
-
-<b>Follow us on Twitter:<>
+Follow us on Twitter:
 
 <card><l https://twitter.com/_speedsheet>@_speedsheet<><>
 
-
-<b>Feedback:<>
+Feedback:
 
 <card>Type '<c><b>feedback:<><>' into the search and then ENTER.<>
-
-This is a work in progress. Feedback welcome.
-Tell us what you liked, didn't like, and suggested improvements.
 @
 @ feedback:, twitter
-
-
-
-## New For Movember 
-
-<cb><table><col><l "/s/python?search=match-only">match Statement<><><col><l "/s/python?search=match-only">(Structural Pattern Matching)<><>
-<col><l "/s/python?search=deque">deque<><><col><l "/s/python?search=deque">(Double Ended Queues)<><>
-<col><l "/s/python?search=type+hint">Type Hints<><><><>
-
-
-
-## New For October
-
-New SpeedSheets!
-
-Numpy:
-
-The Numpy SpeedSheet is finally out! Check it out and let us know what you think.
-
-<cb><l>/s/numpy<><>
-
-
-
-## New for September
-
-Got some small updates for September:
-
-<cb><l "/s/python?search=bitwise">Bitwise Operators<>
-<l "/s/python?search=literals-only">Python Literals<><>
-
-
-
-## New for July
-
-Got 2 brand new speedsheets for this month to help tame your http requests:
-
-requests HTTP Library:
-
-<cb><l>/s/requests<><>
-
-aiohttp Asynchronous HTTP Library:
-
-<cb><l>/s/aiohttp<><>
-
-
-Python SpeedSheet Updates:
-
-<cb><l "/s/python?search=timedelta">TimeDelta<>
-<l "/s/python?search=reverse+format">Format Codes - Reverse Lookup<><>
-
-Video Tutorials:
-
-<cb><l "https://www.youtube.com/watch?v=JLMd7AJnzrc">ConfigParser Tutorial<><>
-
-
-
-## New for June
-
-Parallel Processing:
-
-<cb><l "/s/python?search=ProcessPoolExecutor">ProcessPoolExecutor<>
-<l "/s/python?search=ThreadPoolExecutor">ThreadPoolExecutor<>
-<l "/s/python?search=concurrent.future&select=2gHW">Concurrent Futures<>
-<l "/s/python?search=shared+value">Shared Value<><>
-
-Asyncio / Event Loops
-
-<cb><l "/s/python?search=asyncio&select=vQmp">async def / await<>
-<l "/s/python?search=coroutine">Coroutines<>
-<l "/s/python?search=event+loop">Event Loops<>
-<l "/s/python?search=asyncio+futures">Futures<> / <l "/s/python?search=asyncio+task&select=HVy1">Tasks<><>
-
-
-## New for May
-
-Parallel Processing:
-
-<cb><l "/s/python?search=thread()">Threads<>
-<l "/s/python?search=process()">Processes<>
-<l "/s/python?search=pipe()">Pipes<>
-<l "/s/python?search=parallel+queue">Parallel Queues<>
-<l "/s/python?search=lock()">Locks<>
-<l "/s/python?search=Semaphore()">Semaphores<><>
-
-Core Python:
-
-<cb><l "/s/python?search=configparser">ConfigParser<>
-<l "/s/python?search=csv">CSV<>
-<l "/s/python?search=dataclass">Dataclasses<>
-<l "/s/python?search=f-string">F-Strings<><>
-
-
-
-## Search Tips
-
-Find Something:
-Enter terms for what you're looking for into <b>search<> above. Results will update in real time.
-
-Identify Something:
-Need to identify what a symbol is or does?
-Try the '<b>Symbol Lookup<>' section, or search '<b>sym look<>'.
 
 
 
 # Online Links
 
 
-
 ### Python Documents
 <l>https://docs.python.org/3/<>
 
 
-
 ### Python Language Reference
 <l>https://docs.python.org/3/reference/index.html<>
-
 
 
 ### Python Libraries
@@ -4661,12 +4552,18 @@ Example:
 
 # Date
 
+<cb>= date(<v>year<>, <v>month<>, <v>day<>)<>
+
+Usage:
+
 <cb>from datetime import date
 
 = date.today()
 = date(<v>year<>, <v>month<>, <v>day<>)<>
 
-Returns: <c>date<>
+Returns:
+
+<cb>date<>
 
 
 Returns an instance of Date representing the year, month and day.
@@ -4677,10 +4574,19 @@ Example:
 <cb>from datetime import date
 
 <v>date_1<> = date.today()
-<v>date_2<> = date(<v>2000<>, <v>1<>, <v>2<>)<>
+<v>date_2<> = date(<v>2000<>, <v>1<>, <v>2<>)
+
+print("Today", <v>date_1<>)
+print("Date 2", <v>date_2<>)
+
+<#># Prints:
+\#
+\#    Today  2020-01-01
+\#    Date-2 2000-01-02<><>
 @
 @ date-only, dates-only, .today(), .date(), datetime.date, date.
 @ create, define, instantiate, new, now, current, data type
+@ _model_
 
 
 
@@ -16914,11 +16820,13 @@ Example:
 
 ### Named Tuple - Define
 
-<cb>from collections import namedtuple<>
+<cb>= namedtuple("<v>NamedTuple1<>", ["<v>field_1<>", "<v>field_2<>"])<>
 
-Define:
+Full Form:
 
-<cb>= namedtuple("<v>NamedTuple1<>", ["<v>field_1<>", "<v>field_2<>", <v>...<>])<>
+<cb>from collections import namedtuple
+
+= namedtuple("<v>NamedTuple1<>", ["<v>field_1<>", "<v>field_2<>", <v>...<>])<>
 
 or
 
@@ -16931,12 +16839,13 @@ Creates a subclass of <c>tuple<>.
 
 Example:
 
-<cb>Size = namedtuple("Size", ["width", "height"])
+<cb>from collections import namedtuple
+<v>Size<> = namedtuple("Size", ["width", "height"])
 
-size_1 = Size(160, 100)
+<v>size_1<> = Size(<v>160<>, <v>100<>)
 
-width = size_1.width
-height = size_1.height<>
+<v>width<> = <v>size_1<>.width
+<v>height<> = <v>size_1<>.height<>
 @
 @ new, definition, create
 
@@ -16949,6 +16858,43 @@ height = size_1.height<>
 or
 
 <cb>= <v>NamedTuple1<> (<v>field_1<> = <v>value_1<>, f<v>ield_2<> = <v>value_2<>, <v>...<>)<>
+
+
+Creates an instance of named tuple.
+
+
+Example:
+
+<cb>from collections import namedtuple
+<v>Size<> = namedtuple("Size", ["width", "height"])
+
+<v>size_1<> = Size(<v>160<>, <v>100<>)
+<v>size_2<> = Size(width = <v>160<>, height = <v>100<>)<>
+@
+@ new, create
+
+
+
+### Named Tuple - Instantiate From Tuple
+
+<cb>= <v>NamedTuple1<> (*<v>tuple_1<>)<>
+
+or
+
+<cb>= <v>NamedTuple1<> (*(<v>value_1<>, <v>value_2<>, <v>...<>))<>
+
+
+Creates an instance of named tuple from a regular tuple.
+
+
+Example:
+
+<cb>from collections import namedtuple
+<v>Size<> = namedtuple("Size", ["width", "height"])
+
+<v>tuple<> = (<v>160<>, <v>100<>)
+
+<v>size_1<> = Size(*<v>tuple<>)<>
 @
 @ new, create
 
@@ -16961,10 +16907,28 @@ or
 <cb>= <v>item_1<>[0]<>
 
 
+Accesses a value of the named tuple by accessing the property name.
+
+
+Example:
+
+<cb>from collections import namedtuple
+<v>Size<> = namedtuple("Size", ["width", "height"])
+
+<v>size_1<> = Size(<v>160<>, <v>100<>)
+
+<v>width<> = <v>size_1<>.width
+<v>height<> = <v>size_1<>.height<>
+@
+@ fields, properties
+
+
 ### Named Tuple - Update Property
 
 Not possible.
 This is an immutable tuple.
+@
+@ fields, properties
 
 
 
@@ -19876,33 +19840,51 @@ vs: Egg
 
 
 # Other SpeedSheets
+@
+@ sheets
+
+
+### ASCII SpeedSheets
+Searchable ascii tables in SpeedSheet form.
+
+<table><col>Sheet:<><col><l "/s/ascii">ascii<>
+<l "/s/ascii_table">ascii_table<><><>
 
 
 
 ### aiohttp SpeedSheet
-The aiohttp library for making asynchronous http calls:
+The aiohttp library for making asynchronous http calls.
 
-<l>/s/aiohttp<>
+Sheet:	<l "/s/aiohttp">aiohttp<>
 @
 @ async http library, asynchronous, post, put, get, request, url
 
 
 
-### requests SpeedSheet
-The requests library for making http calls:
-
-<l>/s/requests<>
-@
-@ http library, post, put, get, request, url
-
-
-
 ### Numpy SpeedSheet
-A greate library for manipulating large amounts of data:
+A great library for manipulating large amounts of data.
 
-<l>/s/numpy<>
+Sheet:	<l "/s/numpy">numpy<>
 @
 @ np.array, numpy.array, numpy,ndarray, np.ndarray, averages, means, statistics
+
+
+
+### Pillow SpeedSheet
+An image manipulation library.
+
+Sheet:	<l "/s/pillow">pillow<>
+@
+@ pillow, pil.image, images
+
+
+
+### Requests SpeedSheet
+The requests library for making http calls.
+
+Sheet:	<l "/s/requests">requests<>
+@
+@ http library, post, put, get, request, url
 
 
 
@@ -19913,4 +19895,4 @@ This sheet covers core python only. But want to see more here? Or for other libr
 
 @
 @ delta, terminal, process, dataframe, frame
-@ Anacond, Arrowm, BeautifulSoup, Bokeh, Cirq, Conda, Databases, Delorean, Django, Eli5, Fire, FlashText, Flask, Gensim, HTTP, Image, Images, Imaging, Keras, LightGBM, Luminoth, Mahotas, Matplotlib, MoviePy, Networkx, NLTK, Pandas, Pendulum, Picture, Pillow, Pixel, Poetry, PyGame, PyQt, PyPi, PyTorch, Requests, Scikit Learn, Scikit-Learn, SciPy, SqlAlchemy, TensorFlow, Theano, Tkinter, wxPython, ai, a.i., artifical intelligence, Zip
+@ Anacond, Arrowm, BeautifulSoup, Bokeh, Cirq, Conda, Databases, Delorean, Django, Eli5, Fire, FlashText, Flask, Gensim, HTTP, Image, Images, Imaging, Keras, LightGBM, Luminoth, Mahotas, Matplotlib, MoviePy, Networkx, NLTK, Pandas, Pendulum, Picture, Pixel, Poetry, PyGame, PyQt, PyPi, PyTorch, Requests, Scikit Learn, Scikit-Learn, SciPy, SqlAlchemy, TensorFlow, Theano, Tkinter, wxPython, ai, a.i., artifical intelligence
