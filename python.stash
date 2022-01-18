@@ -2,10 +2,11 @@
 <b>Find what you need, faster.<>
 
 Get answers to your Python questions fast.
+For Python 3.
 
-<*>Use <b>Search<> (above) For Instant Answers
-Answers Are To The Point
-Covers <b>Core Python 3<><>
+
+<image "python-example.webp">
+
 
 Follow us on Twitter:
 
@@ -1381,8 +1382,14 @@ else:
 
 #### For - In Range
 
-<cb>for <v>i<> in range(<v>range_options<>):
+<cb>for <v>i<> in range(<v>end_plus_1<>):
 	<v>...<><>
+
+<cb>for <v>i<> in range(<v>start<>, <v>end_plus_1<>):
+	<v>...<><>
+
+
+Loops through a sequence of values from 0 (or <c>start<> if given) to one value before the end value.
 
 
 Examples:
@@ -1399,7 +1406,7 @@ Examples:
 
 #### For - In Range With Step
 
-<cb>for <v>i<> in range(<v>first<>, <v>last_plus_one<>, <v>step<>):
+<cb>for <v>i<> in range(<v>start<>, <v>end_plus_one<>, <v>step<>):
 	<v>...<><>
 
 
@@ -3360,7 +3367,24 @@ Enclose multiline string in <c>'''<> or <c>"""<>.
 = r'<v>A\\String\\With\\Slashes<>'<>
 
 
-Escape characters are just regular characters.
+Returns text exactly as it is represented between the quotes.
+
+No escaped character processing is done.
+Useful for regular expressions.
+
+
+Example:
+
+<cb><v>normal_string<> = 'a\\tb\\tc'
+<v>raw_string<> = r'a\\tb\\tc'
+
+print("Normal", <v>normal_string<>)
+print("Raw   ", <v>raw_string<>)
+
+<#># Prints:
+\#
+\# Normal a    b    c
+\# Raw    a\\tb\\tc<><>
 @
 @ r"", r''
 
@@ -3700,7 +3724,7 @@ Returns <c>False<> for numbers, symbols, emojis, or whitespace characters.
 Returns <c>True<> when all characters are from 0 to 9.
 Returns <c>False<> for <c>+<> or <c>-<>
 @
-@ is, .isdigit(), numbers
+@ is, .isdigit(), numbers, integer
 
 
 
@@ -3873,7 +3897,7 @@ else:
 
 <#># These Are Equal<><>
 @
-@ Equals, Compares, Not, ==, identical, .casefold(), caseless
+@ Equals, Compares, Not, ==, identical, .casefold(), caseless, any
 
 
 
@@ -3898,7 +3922,7 @@ else:
 
 <#># These Are Equal<><>
 @
-@ Equals, Compares, Not, !=, .casefold(), caseless
+@ Equals, Compares, Not, !=, .casefold(), caseless, any
 
 
 
@@ -7779,7 +7803,7 @@ This function short-circuits when a True value is reached.
 
 Use <c><v>test_function<><> to return the <c>True<> / <c>False<> value for <c><v>sequence_1<><> elements.
 @
-@ Boolean, any(), map()
+@ Boolean, any(), map(), is true
 
 
 
@@ -7814,6 +7838,7 @@ Returns:    <c>enumerate<>
 
 
 The <c>enumerate<> function returns a generator.
+
 That generator returns an index, value tuple for each entry in the sequence.
 The index is the position in the sequence (zero based).
 The value is the value in the sequence at that position.
@@ -9597,6 +9622,100 @@ Access using <c><v>class_1<>.<v>attribute_name<><>
 
 
 
+## Nested Class
+@
+@ Inner
+
+
+### Nested Class - Basics
+
+<cb>class <v>Outer<>:
+
+	def __init__(self):
+		self.<v>name<> = "Outer Class"
+		self.<v>inner<> = self.<v>Inner<>()
+
+	def <v>get_name<>(self):
+		return self.<v>name<>
+
+	class <v>Inner<>:
+
+		def __init__(self):
+			self.<v>name<> = "Inner Class"
+
+		def <v>get_name<>(self):
+			return self.<v>name<>
+
+<v>outer<> = <v>Outer<>()
+
+print("outer.name             ", <v>outer<>.<v>name<>)
+print("outer.get_name()       ", <v>outer<>.<v>get_name<>())
+print("outer.inner.name       ", <v>outer<>.<v>inner<>.<v>name<>)
+print("outer.inner.get_name() ", <v>outer<>.<v>inner<>.<v>get_name<>())
+
+<#># Prints:
+\#
+\# outer.name              Outer Class
+\# outer.get_name()        Outer Class
+\# outer.inner.name        Inner Class
+\# outer.inner.get_name()  Inner Class<><>
+
+
+
+### Nested Class - Define
+
+<cb>class <v>Outer<>:
+
+    class <v>Inner<>:<>
+
+<cb>class <v>Outer<>:
+
+    def __init__(self):
+        <v>...<>
+
+    class <v>Inner<>:
+
+        def __init__(self):
+            <v>...<><>
+
+
+
+### Nested Class - Instantiate From Parent
+
+<cb>= self.<v>Inner<>()<>
+
+<cb>class <v>Outer<>:
+
+    def __init__(self):
+        self.<v>inner<> = self.<v>Inner<>()
+
+    class <v>Inner<>:
+		<v>...<><>
+
+
+
+### Nested Class - Instantiate Outside Parent
+
+<cb>= <v>Outer<>.<v>Inner<>()<>
+
+
+### Nested Class - Reference From Parent
+
+<cb>= <v>self<>.<v>inner<><>
+
+<cb>= <v>self<>.<v>inner<>.<v>function_1<>()
+= <v>self<>.<v>inner<>.<v>property_1<><>
+
+
+### Nested Class - Reference Outside Parent
+
+<cb>= <v>outer<>.<v>inner<><>
+
+<cb>= <v>outer<>.<v>inner<>.<v>function_1<>()
+= <v>outer<>.<v>inner<>.<v>property_1<><>
+
+
+
 ## Class Extras
 
 
@@ -10064,83 +10183,6 @@ Example:
 
 
 
-## Math Constants
-@
-@ Package, Library
-
-
-
-### Constant - Exponential Constant
-
-<cb>from math import e
-
-= e<>
-
-Euler's Number
-
-Returns 2.718281828459045.
-@
-@ math.e, euler's number, eulers number
-
-
-
-### Constant - Pi
-
-<cb>from math import pi
-
-= pi<>
-
-π or 3.141592653589793
-@
-@ math.pi
-
-
-
-### Constant - Tau
-
-<cb>from math import tau
-
-= tau<>
-
-Returns 2π or 6.283185.
-@
-@ math.tau
-
-
-
-### Constant - Infinity
-
-<cb>from math import inf
-
-= inf<>
-
-<cb>= float('inf')<>
-
-These are equivalent.
-
-Positive infinity.
-@
-@ math.inf
-
-
-
-### Constant - Not a Number (NAN)
-
-<cb>from math import nan
-
-= nan<>
-
-Equivalent To:
-
-<cb>= float('nan')<>
-
-
-Returns: <c>float<>
-@
-@ math.nan, float, isnan
-
-
-
 ## Power, Logarithm
 @
 @ Package, Library
@@ -10470,7 +10512,7 @@ Returns: <c>float<> (radians)
 = radians(<v>degrees_1<>)<>
 @
 @ converting, conversion, from
-@ math.radians()
+@ math.radians(), rads
 
 
 
@@ -10481,7 +10523,84 @@ Returns: <c>float<> (radians)
 = degrees(<v>radians_1<>)<>
 @
 @ converting, conversion, from
-@ math.degrees(), .degrees()
+@ math.degrees(), .degrees(), rads
+
+
+
+## Math Constants
+@
+@ Package, Library
+
+
+
+### Constant - Exponential Constant
+
+<cb>from math import e
+
+= e<>
+
+Euler's Number
+
+Returns 2.718281828459045.
+@
+@ math.e, euler's number, eulers number
+
+
+
+### Constant - Pi
+
+<cb>from math import pi
+
+= pi<>
+
+π or 3.141592653589793
+@
+@ math.pi, trigonometry
+
+
+
+### Constant - Tau
+
+<cb>from math import tau
+
+= tau<>
+
+Returns 2π or 6.283185.
+@
+@ math.tau
+
+
+
+### Constant - Infinity
+
+<cb>from math import inf
+
+= inf<>
+
+<cb>= float('inf')<>
+
+These are equivalent.
+
+Positive infinity.
+@
+@ math.inf
+
+
+
+### Constant - Not a Number (NAN)
+
+<cb>from math import nan
+
+= nan<>
+
+Equivalent To:
+
+<cb>= float('nan')<>
+
+
+Returns: <c>float<>
+@
+@ math.nan, float, isnan
 
 
 
@@ -10667,15 +10786,22 @@ Examples:
 
 ### Regular Expressions - Find
 
+<cb>= search(<v>match_pattern<>, <v>string_to_search<>)<>
+
+Usage:
+
 <cb>from re import search
 
-<v>match<> = search(<v>match_pattern<>, <v>string_to_search<>)<>
+<v>match<> = search(<v>match_pattern<>, <v>string_to_search<>)
+<v>match_text<> = <v>match<>.group()<>
 
-Returns: <c>re.Match<> | <c>None<>
+<c>search(<v>match_pattern<>, <v>string_to_search<>)<>:
 
-<cb><v>match_text<> = <v>match<>.group()<><>
+	Returns: <c>re.Match<> | <c>None<>
 
-Returns: <c>str<>
+<c><v>match<>.group()<><>
+
+	Returns: <c>str<>
 
 
 Returns the first match.
@@ -10697,6 +10823,10 @@ Example:
 
 
 ### Regular Expressions - Get All
+
+<cb>= findall(<v>match_pattern<>, <v>string_to_search<>)<>
+
+Usage:
 
 <cb>from re import findall
 
@@ -10720,6 +10850,10 @@ Example:
 
 ### Regular Expressions - Is Match
 
+<cb>= match(<v>match_pattern<>, <v>string_1<>)<>
+
+Usage:
+
 <cb>from re import match
 
 = match(<v>match_pattern<>, <v>string_1<>)<>
@@ -10734,15 +10868,18 @@ Returns <c>True<> if <c><v>string_1<><> matches <c><v>match_pattern<><>.
 
 ### Regular Expressions - Replace
 
+<cb>= sub(<v>match_pattern<>, <v>replacement<>, <v>string_to_update<>)<>
+
+Usage:
+
 <cb>from re import sub
 
-<v>string_2<> = sub(<v>match_pattern<>, <v>replacement<>, <v>string_to_update<>)<>
+<v>string_2<> = sub(<v>match_pattern<>, <v>replacement<>, <v>string_to_update<>)
+<v>string_2<> = sub(<v>match_pattern<>, <v>replacement<>, <v>string_to_update<>, <v>split_count<>)<>
 
-or
-
-<cb><v>string_2<> = sub(<v>match_pattern<>, <v>replacement<>, <v>string_to_update<>, <v>split_count<>)<>
 
 Returns a new string with all matches replaced.
+
 <c>sub<> is short for substitute.
 
 
@@ -12796,7 +12933,7 @@ Example:
 run(['ls', '-1'])<>
 @
 @ run(), subprocess.run()
-@ arguments, args, parameters, params
+@ arguments, args, parameters, params, call
 
 
 
@@ -12818,7 +12955,7 @@ Example:
 
 run('echo "This is how to run a shell command."', shell=True)<>
 @
-@ run(), subprocess.run(), bash, shell script
+@ run(), subprocess.run(), bash, shell script, call
 
 
 
@@ -12835,7 +12972,7 @@ Returns: <c>int<>
 Gets the exit code returned by the process after it completed.
 @
 @ run(), subprocess.run()
-@ return code, return value, bash, shell script
+@ return code, return value, bash, shell script, call
 
 
 
@@ -15311,6 +15448,8 @@ Call:
 
 <cb>run(<v>main<>())<>
 
+Usage:
+
 <cb>from asyncio import run
 
 async def <v>main<>():
@@ -15564,9 +15703,13 @@ The event loop resumes the task
 
 #### Event Loop - Create
 
-<cb>from asyncio import new_event_loop()<>
-
 <cb>= new_event_loop()<>
+
+Usage:
+
+<cb>from asyncio import new_event_loop()
+
+<v>event_loop<> = new_event_loop()<>
 
 
 Returns: Subclass of <c>AbstractEventLoop<>
@@ -15580,12 +15723,16 @@ This event loop runs in the current thread by default.
 
 #### Event Loop - Start on Main Loop
 
-<cb>from asyncio import run<>
-
-<cb>async def <v>main<>():
-	<v>...<><>
-
 <cb>run(<v>main<>())<>
+
+Usage:
+
+<cb>from asyncio import run
+
+async def <v>main<>():
+	<v>...<>
+
+run(<v>main<>())<>
 
 
 This is a typical way to start your threads running.
@@ -15597,12 +15744,16 @@ It runs <c>main()<> on the main event loop.
 
 #### Event Loop - Start on Main Loop (Verbose Version)
 
-<cb>from asyncio import get_event_loop<>
+<cb>get_event_loop().run_until_complete(<v>main<>())<>
 
-<cb>async def <v>main<>():
-	<v>...<><>
+Usage:
 
-<cb><v>loop<> = get_event_loop()
+<cb>from asyncio import get_event_loop
+
+async def <v>main<>():
+	<v>...<>
+
+<v>loop<> = get_event_loop()
 <v>loop<>.run_until_complete(<v>main<>())
 <v>loop<>.close()<>
 
@@ -16817,8 +16968,10 @@ Example:
 @ collections.namedtuple, Named Tuples, nametuple, namedtuple()
 
 
+### Named Tuple - Create
 
-### Named Tuple - Define
+
+#### Named Tuple - Define
 
 <cb>= namedtuple("<v>NamedTuple1<>", ["<v>field_1<>", "<v>field_2<>"])<>
 
@@ -16851,7 +17004,7 @@ Example:
 
 
 
-### Named Tuple - Instantiate
+#### Named Tuple - Instantiate
 
 <cb>= <v>NamedTuple1<> (<v>value_1<>, <v>value_2<>, <v>...<>)<>
 
@@ -16875,7 +17028,7 @@ Example:
 
 
 
-### Named Tuple - Instantiate From Tuple
+#### Named Tuple - Instantiate From Tuple
 
 <cb>= <v>NamedTuple1<> (*<v>tuple_1<>)<>
 
@@ -16899,8 +17052,37 @@ Example:
 @ new, create
 
 
+### Named Tuple - Operations
 
-### Named Tuple - Access Property
+
+
+#### Named Tuple - Get Field Names
+
+<cb>= <v>named_tuple_1<>._fields<>
+
+Returns: <c>tuple of str<>
+
+
+Returns the named tuple's fields as a tuple of strings.
+
+
+Example:
+
+<cb>from collections import namedtuple
+<v>Size<> = namedtuple("Size", ["width", "height"])
+
+<v>size_1<> = Size(<v>160<>, <v>100<>)
+
+print("Fields", <v>size_1<>._fields)
+
+<#># Prints: Fields ('width', 'height')<><>
+@
+@ ._fields, namedtuple._fields
+@ fields, properties, propertys
+
+
+
+#### Named Tuple - Get Field Value
 
 <cb>= <v>item_1<>.<v>field_1<><>
 
@@ -16920,15 +17102,42 @@ Example:
 <v>width<> = <v>size_1<>.width
 <v>height<> = <v>size_1<>.height<>
 @
-@ fields, properties
+@ fields, properties, get
 
 
-### Named Tuple - Update Property
+
+#### Named Tuple - Update Field Value
 
 Not possible.
 This is an immutable tuple.
 @
 @ fields, properties
+
+
+
+#### Named Tuple - To Dict
+
+<cb>= <v>named_tuple_1<>._asdict()<>
+
+Returns: <c>tuple of str<>
+
+
+Returns a named tuple as a dict.
+
+
+Example:
+
+<cb>from collections import namedtuple
+<v>Size<> = namedtuple("Size", ["width", "height"])
+
+<v>size_1<> = Size(<v>160<>, <v>100<>)
+
+print("Dict", <v>size_1<>._asdict())
+
+<#># Prints: Dict {'width': 160, 'height': 100}<><>
+@
+@ ._asdict(), namedtuple._asdict()
+@ Convert, conversion, from
 
 
 
@@ -17497,7 +17706,7 @@ Use <c>argv[1:]<> to return arguments.
 <c>.argv[0]<> returns the module file name.
 @
 @ sys.argv
-@ Command Line Start
+@ commandline start, command line, application
 @ parameters, params, args, arguments, system, program
 
 
@@ -17512,7 +17721,7 @@ Use <c>argv[1:]<> to return arguments.
 Returns True when the program has command line arguments.
 @
 @ sys.argv
-@ Command Line Start
+@ commandline start, command line, application
 @ parameters, params, args, arguments, system, program
 
 
@@ -19095,6 +19304,54 @@ Bitwise Shift Left (Bitwise Operator)
 Bitwise Shift Right (Bitwise Operator)
 
 <cb><v>a<> >> <v>shift_count<><>
+
+
+### Symbol f''
+
+F-String
+
+Returns formated text.
+
+<cb>f'<v>text<>'<>
+
+<cb>f'{<v>variable<>}'<>
+@
+@ f'{}'
+
+
+
+### Symbol f""
+
+F-String
+
+Returns formated text.
+
+<cb>f"<v>text<>"<>
+
+<cb>f"{<v>variable<>}"<>
+@
+@ f"{}"
+
+
+
+### Symbol r''
+
+Raw String
+
+Returns text exactly as it is represented between the quotes.
+
+<cb>r'<v>text\\text\\text\\n<>'<>
+
+
+
+### Symbol r""
+
+Raw String
+
+Returns text exactly as it is represented between the quotes.
+
+<cb>r"<v>text\\text\\text\\n<>"<>
+
 
 
 # Terms
