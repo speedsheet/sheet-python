@@ -2,34 +2,59 @@
 <b>Find what you need, faster.<>
 
 Get answers to your Python questions fast.
-For Python 3.
-
-
-<image "python-example.webp">
-
+Covers the core Python 3 programming language.
 
 Follow us on Twitter:
 
 <card><l https://twitter.com/_speedsheet>@_speedsheet<><>
-
-Feedback:
-
-<card>Type '<c><b>feedback:<><>' into the search and then ENTER.<>
 @
-@ feedback:, twitter
+@ twitter
 
+
+### 5 Things Search Can Find For You
+
+The search is the key to using the Python SpeedSheet. Here are 5 things you can find with search:
+
+<in-2><l "/s/python?search=start+async+program">Start an Async Program<>
+<l "/s/python?search=compare+ignore+case&select=6TEG">Ignore String Case Correctly<>
+<l "/s/python?search=f-string+debug">Debug an f-string<>
+<l "/s/python?search=timer">Time an Operation<>
+<l "/s/python?search=execute+shell+command">Execute a Shell Command<><>
+
+
+### In This Sheet
+
+Here are some of the many things you can find in this SpeedSheet:
+
+<in-2><l "/s/python?search=dicts+operations&select=hCt6">Dict Operations<>
+<l "/s/python?search=lists+operations&select=hCt6">List Operations<>
+<l "/s/python?search=slicing">List and Sequence Slicing<>
+<l "/s/python?search=formatting+reference">String Formatting<>
+<l "/s/python?search=strings+operations">String Operations<>
+
+<l "/s/python?search=dataclasses">Dataclasses<>
+<l "/s/python?search=namedtuples">Named Tuples<>
+
+<l "/s/python?search=file+io&select=30R1">File IO (Readind and Writing)<>
+<l "/s/python?search=csv">CSV Files<>
+<l "/s/python?search=configparse">Configuration Files<>
+
+<l "/s/python?search=iterators">Iterators<>
+<l "/s/python?search=generators">Generators<>
+<l "/s/python?search=yield&select=5EkP">Yield Functions<>
+
+<l "/s/python?search=threads&select=uwmS">Threads<>
+<l "?search=processes&select=yNC8">Processes<>
+<l "/s/python?search=asyncio&select=XrWY">Async Functions<><>
 
 
 # Online Links
 
-
 ### Python Documents
 <l>https://docs.python.org/3/<>
 
-
 ### Python Language Reference
 <l>https://docs.python.org/3/reference/index.html<>
-
 
 ### Python Libraries
 <l>https://docs.python.org/3/library/index.html<>
@@ -696,6 +721,18 @@ Do Not zip files into a directory in the zip file.
 <cb>python3 <v>egg_file<>.zip<>
 @
 @ .egg, .zip
+
+
+
+### Application Distribution - Egg - Starting Module
+
+<cb>__main__.py<>
+
+
+Add a module called <v>__main__.py<> to your code.
+Python will call this when starting your application.
+@
+@ __main__.py, entry point
 
 
 
@@ -2189,7 +2226,7 @@ if type(<v>item_1<>) is list:
 
 Is One of These:
 
-<cb>= isinstance(<v>item_1<>, (<v>type_1<>, <v>type_2<>, <v>...<>)<>
+<cb>= isinstance(<v>item_1<>, (<v>type_1<>, <v>type_2<>, <v>...<>))<>
 
 
 Returns true if <c><v>item_1<><> is a type or a subtype of <c><v>type_1<><>.
@@ -3584,12 +3621,13 @@ Example:
 
 
 
-### F-String - Show Name / Expression / Debug Mode
+### F-String - Show Variable Name With Output / Debug Mode
 
 <cb>= f"{<v>item_1<> =}"<>
 
 
 Prints the expression between <c>{<> and <c>}<> and it's value.
+<c>=<> denotes debug mode.
 Useful for debugging.
 
 
@@ -3602,6 +3640,7 @@ Example:
 <#># Returns "string_1 = 'norminal'"<><>
 @
 @ debugging, =, {=}
+@ display
 
 
 
@@ -4042,9 +4081,109 @@ Example:
 
 #### String - Replace
 
-<cb>= <v>string_1<>.replace(<v>search_value<>, <v>replacement_value<>)<>
+<cb>= <v>string_1<>.replace(<v>original<>, <v>replacement<>)<>
+
+
+Replaces all occurrenceses of a substring with another.
+
+Replace is case sensitive.
+
+
+Example:
+
+<cb><v>string_1<> = '<v>Replace this and this and this.<>'
+<v>replaced<> = <v>string_1<>.replace('<v>this<>', '<v>that<>')
+
+print(<v>replaced<>)
+
+<#># Prints 'Replace that and that and that.'<><>
 @
 @ Update, Modify, Change, .replace(), substitute
+
+
+
+#### String - Replace First Occurence
+
+<cb>= <v>string_1<>.replace(<v>original<>, <v>replacement<>, 1)<>
+
+
+Replaces the first occurrencese of a substring with another.
+
+Replace is case sensitive.
+
+
+Example:
+
+<cb><v>string_1<> = '<v>Replace this and this and this.<>'
+<v>replaced<> = <v>string_1<>.replace('<v>this<>', '<v>that<>', 1)
+
+print(<v>replaced<>)
+
+<#># Prints 'Replace that and this and this.'<><>
+@
+@ Update, Modify, Change, .replace(), substitute, only, 1st
+
+
+
+#### String - Replace Ignore Case
+
+<cb>import re
+
+<v>pattern<> = re.compile(<v>original<>, re.IGNORECASE)
+<v>replacement<> = <v>pattern<>.sub(<v>replacement<>, <v>original<>)<>
+
+
+Replaces the occurrences of one string with another
+
+Replace is not case sensitive.
+
+
+Example:
+
+<cb>import re
+
+<v>string_1<> = '<v>Replace this and THIS and ThIs.<>'
+
+<v>pattern<> = re.compile('<v>this<>', re.IGNORECASE)
+<v>replaced<> = <v>pattern<>.sub('<v>that<>', <v>string_1<>)
+
+print(<v>replaced<>)
+
+<#># Prints 'Replace that and this and this.'<><>
+@
+@ Update, Modify, Change, substitute
+@ re.compile(), .sub()
+
+
+
+#### String - Replace Ignore Case, First Occurrence
+
+<cb>import re
+
+<v>pattern<> = re.compile(<v>original<>, re.IGNORECASE)
+<v>replacement<> = <v>pattern<>.sub(<v>replacement<>, <v>original<>, 1)<>
+
+
+Replaces the occurrences of one string with another
+
+Replace is not case sensitive.
+
+
+Example:
+
+<cb>import re
+
+<v>string_1<> = '<v>Replace this and THIS and ThIs.<>'
+
+<v>pattern<> = re.compile('<v>this<>', re.IGNORECASE)
+<v>replaced<> = <v>pattern<>.sub('<v>that<>', <v>string_1<>, 1)
+
+print(<v>replaced<>)
+
+<#># Prints 'Replace that and this and this.'<><>
+@
+@ Update, Modify, Change, substitute, only, 1st
+@ re.compile(), .sub()
 
 
 
@@ -4754,11 +4893,19 @@ Example:
 
 #### Date - To String
 
-<cb>= '{:<v>date_format<>}'.format(<v>date_1<>)<>
+<cb>= '{:<v>format<>}'.format(<v>date_1<>)<>
 
-or
+All Formatting Options:
 
-<cb>= <v>date_1<>.strftime(<v>format<>)<>
+<cb>= f'{<v>date_1<>:<v>format<>}'
+= '{:<v>format<>}'.format(<v>date_1<>)
+= <v>date_1<>.strftime(<v>format<>)
+= <v>date_1<>.isoformat()<>
+
+
+Converts a date into a string.
+
+A typical format would be <c>'%Y-%m-%d'<> or <c>'%m/%d/%Y'<>.
 
 
 Example:
@@ -4769,9 +4916,10 @@ Example:
 
 <#># These are equivalent:<>
 
-<v>string_1<> = ':%Y-%m-%d'.format(<v>date_1<>)
-<v>string_2<> = <v>date_1<>.isoformat()
-<v>string_3<> = <v>date_1<>.strftime(<v>'%Y-%m-%d'<>)
+<v>string_1<> = f'{<v>date_1<>:%Y-%m-%d}'
+<v>string_2<> = '{:%Y-%m-%d}'.format(<v>date_1<>)
+<v>string_3<> = <v>date_1<>.isoformat()
+<v>string_4<> = <v>date_1<>.strftime(<v>'%Y-%m-%d'<>)
 
 <#># Returns '2001-01-01'<><>
 @
@@ -5115,7 +5263,18 @@ Example:
 
 #### DateTime - To String
 
-<cb>= <v>datetime_1<>.strftime(<v>datetime_1<>)<>
+<cb>= f'{<v>datetime_1<>:<v>format<>}<>
+
+All Formatting Options:
+
+<cb>= f'{<v>datetime_1<>:<v>format<>}
+= '{:<v>format<>}'.format(<v>datetime_1<>)
+= <v>datetime_1<>.strftime(<v>format<>)<>
+
+
+Converts a datetime into a string.
+
+A typical format would be <c>'%Y-%m-%d %H:%M:%S'<> or <c>'%m/%d/%Y %H:%M:%S'<>.
 
 
 Example:
@@ -5124,9 +5283,11 @@ Example:
 
 <v>datetime_1<> = datetime(2001, 1, 1, 1, 1, 1)
 
-<v>formatted_datetime<> = '{:<v>%Y-%m-%d %H:%M:%S<>}'.format(<v>datetime_1<>)
+<v>string_1<> = f'{<v>datetime_1<>:<v>%Y-%m-%d %H:%M:%S<>}'
+<v>string_2<> = '{:<v>%Y-%m-%d %H:%M:%S<>}'.format(<v>datetime_1<>)
+<v>string_3<> = <v>datetime_1<>.strftime('<v>%Y-%m-%d %H:%M:%S<>')
 
-<#># Returns '2001-01-01 01-01-01'<><>
+<#># All Return: '2001-01-01 01-01-01'<><>
 @
 @ convert, conversion, to, from, .format(), formatting, formatted, .strftime()
 @ from-datetime, to-string
@@ -6081,6 +6242,7 @@ Returns: <c>dict<>
 Returns a new dict containing only those items in <c><v>dict_1<><> but not in <c><v>dict_2<><>.
 @
 @ Delete, Remove Matching, Difference, dictionaries, dicts, minus, not in
+@ exclude, exclusion
 
 
 
@@ -6437,6 +6599,34 @@ Creates a deep copy.
 
 
 
+#### List - Find Duplicates
+
+<cb>= [item for item, count in Counter(<v>list_1<>).items() if count > 1]<>
+
+Full Usage:
+
+<cb>from collections import Counter
+
+<v>duplicates<> = [item for item, count in Counter(<v>list_1<>).items() if count > 1]<>
+
+
+Example:
+
+<cb>from collections import Counter
+
+<v>items<> = ['<v>a<>', '<v>b<>', '<v>b<>', '<v>c<>', '<v>d<>', '<v>d<>']
+
+<v>duplicates<> = [item for item, count in Counter(<v>items<>).items() if count > 1]
+
+print(<v>duplicates<>)
+
+<#># Prints: ['b', 'd']<><>
+
+@
+@ collection.Counter(), Counter()
+
+
+
 #### List - Is Empty?
 
 <cb>= not <v>list_1<><>
@@ -6521,6 +6711,32 @@ is_it_a_sublist = is_sublist(<v>list_1<>, <v>list_2<>)
 <#># Returns True<><>
 @
 @ contains, is_sublist
+
+
+
+#### List - Exclude
+
+<cb>= [ <v>item<> for <v>item<> in <v>list_1<> if <v>item<> not in <v>exclude_list<> ]<>
+
+
+Removes all the items in the exclude list from <c><v>list_1<><>.
+
+Preserves the order of the items in <c><v>list_1<><>.
+
+
+Example:
+
+<cb><v>list_1<> = [1, 2, 3, 4, 5]
+<v>exclude<> = [2, 3]
+
+<v>remaining<> = [ <v>item<> for <v>item<> in <v>list_1<> if <v>item<> not in <v>exclude<> ]
+
+print(<v>remaining<>)
+
+<#># Prints: [1, 4, 5]<><>
+@
+@ Delete, Remove Matching, minus, 
+@ exclude, exclusion, subtraction
 
 
 
@@ -7157,7 +7373,9 @@ or
 
 Returns a set of the elements in <c><v>set_1<><> not in <c><v>set_2<><>.
 @
-@ Delete, Remove Matching, Difference, dictionaries -, minus, .difference()
+@ .difference(), Difference
+@ Delete, Remove Matching, dictionaries -, minus, 
+@ exclude, exclusion
 
 
 
@@ -9800,6 +10018,10 @@ Return true if <c><v>key<><> is in the class.
 # Iterable, Iterator
 @
 @ iterable-only, iterator-only, iter-only, iterating, iterators
+@ make
+
+
+## Iterable
 
 
 
@@ -9807,8 +10029,8 @@ Return true if <c><v>key<><> is in the class.
 
 <cb>def <v>IterableClass1<>:
 
-	def __iter__(self):					<#>#1<>
-		return <v>iterator<>					<#>#2<><>
+    def __iter__(self):                 <#>#1<>
+        return <v>iterator<>                    <#>#2<><>
 
 
 Defines a class as iterable.
@@ -9825,19 +10047,25 @@ Example:
 
 class <v>Integers<>:
 
-	def __init__(self, max):
-		self.integers = range(1,max + 1)
+    def __init__(self, <v>max<>):
+        self.integers = range(1, <v>max<> + 1)
 
-	def __iter__(self):
-		return iter(self.integers)
+    def __iter__(self):
+        return iter(self.integers)
 
 
 <#># Use:<>
 
-<v>integers_1<> = <v>Integers<>(<v>5<>)
+<v>integers_1<> = <v>Integers<>(<v>3<>)
 
 for <v>integer<> in <v>integers_1<>:
-	print(<v>integer<>)<>
+    print(<v>integer<>)
+
+<#># Prints:
+\#
+\# 1
+\# 2
+\# 3<><>
 @
 @ create, define, __iter__(), 
 
@@ -9847,15 +10075,15 @@ for <v>integer<> in <v>integers_1<>:
 
 <cb>def <v>IterableIteratorClass1<>:
 
-	def __iter__(self):					<#>#1<>
-		return self
+    def __iter__(self):                 <#>#1<>
+        return self
 
-	def __next__(self):					<#>#2<>
+    def __next__(self):                 <#>#2<>
 
-		If <v>at_the_end<>:
-			raise StopIteration			<#>#3<>
-		else:
-			return <v>next_item<>			<#>#4<><>
+        If <v>at_the_end<>:
+            raise StopIteration         <#>#3<>
+        else:
+            return <v>next_item<>           <#>#4<><>
 
 
 This class is both an iterator and an iterable.
@@ -9871,16 +10099,82 @@ This class is both an iterator and an iterable.
 
 
 
+### Iterable - From Dict
+
+<cb>def __iter__(self):
+    = iter(<v>dict_1<>.values())<>
+
+
+Returns an iterable list.
+
+
+Example:
+
+<cb>class <v>Integers<>:
+    def __init__(self):
+        self.<v>dict_values<> = {<v>1<>:<v>1<>, <v>2<>:<v>2<>, <v>3<>:<v>3<>}
+    def __iter__(self):
+        return iter(self.<v>dict_values<>.values())
+
+<v>ints_1<> = <v>Integers<>()
+
+for <v>item<> in <v>ints_1<>:
+    print (<v>item<>)
+
+<#># Prints:
+\#
+\# 1
+\# 2
+\# 3<><>
+@
+@ iter()
+
+
+
+### Iterable - From List
+
+<cb>def __iter__(self):
+    = iter(<v>list_1<>)<>
+
+
+Returns an iterable list.
+
+
+Example:
+
+<cb>class <v>Integers<>:
+    def __init__(self):
+        self.<v>values<> = [<v>1<>, <v>2<>, <v>3<>]
+    def __iter__(self):
+        return iter(self.<v>values<>)
+
+<v>ints_1<> = <v>Integers<>()
+
+for <v>item<> in <v>ints_1<>:
+    print (<v>item<>)
+
+<#># Prints:
+\#
+\# 1
+\# 2
+\# 3<><>
+@
+@ iter()
+
+
+## Iterator
+
+
 ### Iterator - Define
 
 <cb>class <v>Iterator1<>:
 
-	def __next__(self):					<#>#1<>
+    def __next__(self):                 <#>#1<>
 
-		If <v>at_the_end<>:
-			raise StopIteration			<#>#2<>
-		else:
-			return <v>next_item<>			<#>#3<><>
+        If <v>at_the_end<>:
+            raise StopIteration         <#>#2<>
+        else:
+            return <v>next_item<>           <#>#3<><>
 
 
 Defines an iterator class.
@@ -9899,19 +10193,19 @@ Example:
 
 class <v>ListIterator<>:
 
-	def __init__(self, <v>list<>):
+    def __init__(self, <v>list<>):
 
-		self.<v>list<> = <v>list<>
-		self.<v>index<> = -1
+        self.<v>list<> = <v>list<>
+        self.<v>index<> = -1
 
-	def __next__(self):
+    def __next__(self):
 
-		self.<v>index<> += 1
+        self.<v>index<> += 1
 
-		if self.<v>index<> == len(self.<v>list<>):
-			raise StopIteration()
+        if self.<v>index<> == len(self.<v>list<>):
+            raise StopIteration()
 
-		return self.<v>list<>[self.<v>index<>]
+        return self.<v>list<>[self.<v>index<>]
 
 
 <#># Use:<>
@@ -9919,10 +10213,10 @@ class <v>ListIterator<>:
 <v>iterator<> = <v>ListIterator<>([1, 2, 3])
 
 try:
-	while (<v>value<> := next(<v>iterator<>)):
-		print(<v>value<>)
+    while (<v>value<> := next(<v>iterator<>)):
+        print(<v>value<>)
 except StopIteration:
-	print("Done.")<>
+    print("Done.")<>
 @
 @ create, define, __next__()
 
@@ -9930,11 +10224,11 @@ except StopIteration:
 
 ### Iterator - Get Next
 
-<cb>= next(<v>iterator_1<>)						<#>#1<><>
+<cb>= next(<v>iterator_1<>)                     <#>#1<><>
 
 or
 
-<cb>= next(<v>iterator_1<>, <v>default_value<>)		<#>#2<><>
+<cb>= next(<v>iterator_1<>, <v>default_value<>)     <#>#2<><>
 
 
 Returns the next value from an iterator.
@@ -9951,7 +10245,7 @@ Example:
 <cb><v>values<> = iter([1, 2, 3])
 
 while <v>value<> := next(<v>values<>):
-	print(<v>value<>)<>
+    print(<v>value<>)<>
 @
 @ Element, Item, Value, next()
 
@@ -10624,7 +10918,7 @@ Example:
 
 <#># Returns -7136537410058541255<><>
 @
-@ hashing, create, new, hash-only, hash()
+@ hashes, hashing, create, new, hash-only, hash()
 
 
 
@@ -10632,24 +10926,84 @@ Example:
 
 
 
-### From JSON
+### Json String - From JSON String
 
 <cb>from json import loads
 
 <v>data_1<> = loads(<v>json_string<>)<>
+
+
+Converts a json string into a python object made up of lists, dicts and strings.
+
+The s in loads stands for string.
 @
 @ parse, convert, from string, json.loads(), .loads()
+@ convert, conversion
 
 
 
-### To JSON
+### Json String - To JSON String
 
 <cb>from json import dumps
 
 <v>json_string<> = dumps(<v>data_1<>)<>
+
+
+Converts data into a json string.
+
+The s in dumps stands for string.
 @
 @ parse, from, to string, json.dumps(), .dumps()
+@ convert, conversion
 
+
+
+### Json File - From JSON File
+
+<cb>from json import load
+
+with open(<v>file_name<>,'r') as <v>file<>:
+    <v>data_1<> = load(<v>file<>)<>
+
+Converts a json file into a python object made up of lists, dicts and strings.
+@
+@ parse, convert, from string, json.load(), .load()
+@ convert, conversion
+
+
+
+### Json File - To JSON File
+
+<cb>from json import dump
+
+with open(<v>file_name<>, 'w') as file:
+	dump(<v>data_1<>, <v>file<>)<>
+@
+@ parse, from, to string, json.dump(), .dump()
+@ convert, conversion
+
+
+
+### Json - Custom Encoder
+
+<cb>from json import JSONEncoder
+
+class <v>ItemEncoder<>(JSONEncoder):
+
+    def default(self, <v>value<>):
+        if type(<v>value<>) is not <v>ItemType<>:
+            return super().default(<v>value<>)
+
+        return <v>...conver item to json...<>
+
+
+json.dump(<v>data<>, cls = <v>ItemEncoder<>)<>
+
+
+
+To create a custom json encoder, create a class inheriting from <c>JSONEncoder<> and override the <c>default()<> method.
+@
+@ json.jsonencoder, jsonencoder, default()
 
 
 ## Random
@@ -11106,6 +11460,7 @@ It has major vulnerabilities that can be exploited.
 Use <#>SHA2<> instead.
 @
 @ hash, encode, hashlib.md5(), .md5()
+@ hashes, hashing
 
 
 
@@ -11125,6 +11480,7 @@ Returns: <c>bytes<>
 Converts a byte array into an MD5 digest.
 @
 @ hashlib.md5(), .md5().digest(), .digest()
+@ hashes, hashing
 
 
 
@@ -11145,6 +11501,7 @@ Converts a byte array into hex formatted MD5 digest.
 @
 @ hexadecimal
 @ hashlib.md5(), .md5().hexdigest(), .hexdigest()
+@ hashes, hashing
 
 
 
@@ -11162,6 +11519,7 @@ Converts a byte array into a SHA2 hash.
 @
 @ hash, encode, hashlib.sha256(), .sha256()
 @ md5, sha2
+@ hashes, hashing
 
 
 
@@ -11178,6 +11536,7 @@ Returns: <c>bytes<>
 Converts a byte array into an SHA2 digest.
 @
 @ hash, encode, hashlib.sha256().digest(), .sha256().digest(), .digest()
+@ hashes, hashing
 
 
 
@@ -11195,6 +11554,7 @@ Converts a byte array into an SHA2 digest in hex.
 @
 @ hexadecimal
 @ hashlib.sha256().digest(), .sha256().hexdigest(), .hexdigest()
+@ hashes, hashing
 
 
 
@@ -12156,6 +12516,8 @@ For Directory and File Name:
 
 Returns the file extension in <c><v>extension<><>.
 
+Includes the '.' in the extension.
+
 
 Example:
 <cb>from os.path import basename
@@ -12165,6 +12527,7 @@ from os.path import splitext
 @
 @ part
 @ os.path.splitext(), .path.splitext(), .splitext()
+@ os.path.splittext(), .path.splittext(), .splittext(), splittext
 
 
 
@@ -12190,6 +12553,7 @@ from os.path import splitext
 @
 @ part
 @ os.path.splitext(), .path.splitext(), .splitext()
+@ os.path.splittext(), .path.splittext(), .splittext(), splittext
 @ os.path.basename(), .path.basename(), .basename()
 
 
@@ -13234,7 +13598,7 @@ Fails test immediately.
 
 
 
-### Type Hints - Function
+### Type Hints - Function Parameters
 
 <cb>def <v>function_1<>(<v>param_1<>: <v>type<>) -> <v>return_type<>:
 	<v>...<><>
@@ -13247,6 +13611,39 @@ Example:
 
 <cb>def <v>area<>(<v>height<>: <v>float<>, <v>width<>: <v>float<>) -> float:
 	return <v>height<> * <v>width<><>
+@
+@ ->, def
+
+
+
+### Type Hints - Function Type
+
+<cb><v>function_parameter<>: Callable<>
+
+Full Usage:
+
+<cb>from typing import Callable
+
+def <v>function_1<>(<v>function_parameter<>: Callable):
+	<v>...<><>
+
+
+Identifies a parameter as a function.
+
+
+Example:
+
+<cb>from typing import Callable
+
+def <v>print_message<>():
+	print('the message.')
+
+def call_message_function(<v>message_function<>: Callable):
+	<v>message_function<>
+
+call_message_function(<v>print_message<>)
+
+<#># Prints: 'the message'<><>
 @
 @ ->, def
 
@@ -15461,7 +15858,7 @@ run(<v>main<>())<>
 This is a typical way to start your threads running.
 It runs <c>main()<> on the main event loop.
 @
-@ run(), function
+@ run(), function, program, main()
 
 
 
@@ -16182,6 +16579,7 @@ with open(<v>file_name<>) as <v>file<>:
 	<v>data<> = [<v>row<> for <v>row<> in <v>reader<>]<>
 @
 @ csv.dictreader(), .dictreader(), row
+@ from file
 
 
 
@@ -16213,6 +16611,7 @@ with open(<v>file_name<>) as <v>file<>:
 	<v>data<> = [<v>row<> for <v>row<> in <v>reader<>]<>
 @
 @ csv.dictreader(), .dictreader(), fieldnames=, row
+@ from file
 
 
 
@@ -16245,6 +16644,7 @@ with open(<v>file_name<>) as <v>file<>:
 	<v>data<> = [<v>row<> for <v>row<> in <v>reader<>]<>
 @
 @ csv.reader(), .reader(), row
+@ from file
 
 
 
@@ -16271,6 +16671,7 @@ with open(<v>file_name<>) as <v>file<>:
 	<v>data<> = [<v>row<> for <v>row<> in <v>reader<>]<>
 @
 @ csv.reader(), .reader(), row
+@ from file
 
 
 
@@ -16303,6 +16704,7 @@ with open(<v>file_name<>, 'w') as <v>file<>:
 		<v>writer<>.writerow(<v>row_dict<>)<>
 @
 @ csv.DictWriter.writerow(), .writerow(), row, dictionary, dictionaries
+@ to file
 
 
 
@@ -16321,6 +16723,7 @@ with open(<v>file_name<>, 'w') as <v>file<>:
 	<v>writer<>.writerows(<v>list_of_dicts<>)<>
 @
 @ csv.DictWriter.writerows(), .writerows(), rows, dictionary, dictionaries
+@ to file
 
 
 
@@ -16340,6 +16743,7 @@ with open(<v>file_name<>, 'w') as <v>file<>:
 	<v>...<><>
 @
 @ csv.DictWriter.writeheader(), .writeheader(), dictionary, dictionaries
+@ to file
 
 
 
@@ -16359,6 +16763,7 @@ with open(<v>file_name<>, 'w') as <v>file<>:
 		<v>writer<>.writerow(<v>item_list<>)<>
 @
 @ writer.writerow(), .writerow(), row
+@ to file
 
 
 
@@ -16377,6 +16782,7 @@ with open(<v>file_name<>, 'w') as <v>file<>:
 	<v>writer<>.writerows(<v>list_of_lists<>)<>
 @
 @ writer.writerows(), .writerows(), rows
+@ to file
 
 
 
@@ -16452,6 +16858,35 @@ Examples:
 @ data class, dataclasses, dataclasses.dataclass, @dataclass
 
 
+## Dataclass - Basics
+
+Define:
+
+<cb>from dataclasses import dataclass
+
+\@dataclass
+class <v>Dataclass1<>:
+	<v>field_1<>: <v>int<>
+	<v>field_2<>: <v>Str<>
+	<v>...<>
+
+	def <v>some_method<>(self):
+		<v>...<><>
+
+Create:
+
+<cb>= <v>Dataclass1<>(<v>param_1<>, <v>param_2<>, <v>...<>)
+= <v>Dataclass1<>(<v>field_1<> = <v>param_1<>, <v>field_2<> = <v>param_2<>, <v>...<>)<>
+
+Access:
+
+<cb>= <v>dataclass_1<>.<v>field_1<><>
+
+
+
+## Dataclass - Create
+
+
 ### Dataclass - Define
 
 Define:
@@ -16475,13 +16910,15 @@ Or:
 
 Example:
 
-<cb>@dataclass
-class Size:
+<cb>from dataclasses import dataclass
+
+\@dataclass
+class <v>Size<>:
 	width: int
 	height: int
 
-size_1 = Size(10, 20)
-size_2 = Size(width = 10, height = 20)<>
+size_1 = <v>Size<>(10, 20)
+size_2 = <v>Size<>(width = 10, height = 20)<>
 @
 @ create, definition, new
 
@@ -16603,6 +17040,67 @@ Add any setup code you need in here including calling <c>super()<>.
 
 
 
+### Dataclass - Define Method
+
+Same as a normal class.
+
+Define:
+
+<cb>@dataclass
+class <v>NewClass1<>:
+	
+	def <v>method_1<>(self):
+		<v>...<><>
+
+Use:
+
+<cb><v>item_1<>.<v>method_1<>()<>
+@
+@ methods, add, create
+
+
+
+## Dataclass - Operations
+
+
+### Dataclass - Is Dataclass
+
+<cb>= is_dataclass(<v>item_1<>)<>
+
+Full Usage:
+
+<cb>from dataclasses import is_dataclass
+
+= is_dataclass(<v>item_1<>)<>
+
+
+Returns <c>True<> if the item is a type of dataclass.
+
+
+Example:
+
+<cb>from dataclasses import dataclass
+from dataclasses import is_dataclass
+
+\@dataclass
+class <v>Person<>:
+    name: str
+
+<v>name<> = '<v>joe<>'
+<v>person_1<> = Person(<v>name<>)
+
+print(is_dataclass(<v>name<>))
+print(is_dataclass(<v>person_1<>))
+
+<#># Prints:
+\#
+\# False
+\# True<><>
+@
+@ dataclasses.is_dataclass(), .is_dataclass(), type of
+
+
+
 ### Dataclass - Property - Access
 
 Same as a normal class.
@@ -16623,23 +17121,38 @@ Same as a normal class.
 
 
 
-### Dataclass - Method
+### Dataclass - To Dict
 
-Same as a normal class.
+<cb>= asdict(<v>dataclass_1<>)<>
 
-Define:
+Usage:
 
-<cb>@dataclass
-class <v>NewClass1<>:
-	
-	def <v>method_1<>(self):
-		<v>...<><>
+<cb>from dataclasses import asdict
 
-Use:
+= asdict(<v>dataclass_1<>)<>
 
-<cb><v>item_1<>.<v>method_1<>()<>
+
+Converts a dataclass into a dict.
+
+
+Example:
+
+<cb>from dataclasses import dataclass
+from dataclasses import asdict
+
+\@dataclass
+class <v>Person<>:
+    id: int
+    name: str
+
+<v>person_1<> = Person(1, 'Joe')
+<v>person_dict<> = asdict(<v>person_1<>)
+
+print(<v>person_dict<>)
+
+<#># Prints: {'id': 1, 'name': 'Joe'}<><>
 @
-@ methods, add, create
+@ convert, conversion, from, dictionary, to-dict, from-dataclass
 
 
 
@@ -16968,6 +17481,26 @@ Example:
 @ collections.namedtuple, Named Tuples, nametuple, namedtuple()
 
 
+### Named Tuple - Basics
+
+Define:
+
+<cb>from collections import namedtuple
+
+= namedtuple("<v>NamedTuple1<>", ["<v>field_1<>", "<v>field_2<>", <v>...<>])<>
+
+Create:
+
+<cb>= <v>NamedTuple1<>(<v>param_1<>, <v>param_2<>, <v>...<>)
+= <v>NamedTuple1<>(<v>field_1<> = <v>param_1<>, <v>field_2<> = <v>param_2<>, <v>...<>)<>
+
+Access:
+
+<cb>= <v>named_tuple_1<>.<v>field_1<>
+= <v>named_tuple_1<>[0]<>
+
+
+
 ### Named Tuple - Create
 
 
@@ -17010,7 +17543,7 @@ Example:
 
 or
 
-<cb>= <v>NamedTuple1<> (<v>field_1<> = <v>value_1<>, f<v>ield_2<> = <v>value_2<>, <v>...<>)<>
+<cb>= <v>NamedTuple1<> (<v>field_1<> = <v>value_1<>, <v>field_2<> = <v>value_2<>, <v>...<>)<>
 
 
 Creates an instance of named tuple.
@@ -17213,7 +17746,39 @@ for <v>key<> in <v>dict_1<>.keys():
 @ .keys()
 
 
-#### Ordered Dict - Get First
+
+#### Ordered Dict - Get Item
+
+<cb>= list(<v>dict_1<>.items())[<v>index<>]<>
+
+Returns: <c><v>value<><>
+
+
+Returns an item.
+
+The index references the item based on the insert order.
+
+
+Example:
+
+<cb>from collections import OrderedDict
+
+<v>dict_1<> = OrderedDict({
+        '<v>c<>': '<v>First<>',
+        '<v>b<>': '<v>Second<>',
+        '<v>a<>': '<v>Third<>'})
+
+<v>second_tuple<> = list(<v>dict_1<>.items())[0]
+
+print('2nd:', <v>second_tuple<>)
+
+<#># Prints: "2nd: ('c', 'Second')"<><>
+@
+@ .items()[]
+
+
+
+#### Ordered Dict - Get First Item
 
 <cb>= <v>dict_1<>.popitem(last = False)<>
 
@@ -17238,7 +17803,8 @@ Example:
 @ .popitem()
 
 
-#### Ordered Dict - Get Last
+
+#### Ordered Dict - Get Last Item
 
 <cb>= <v>dict_1<>.popitem()<>
 
@@ -17261,6 +17827,39 @@ Example:
 <#># Returns ('a', 'Third')<><>
 @
 @ .popitem(), last
+
+
+
+#### Ordered Dict - Get Items
+
+<cb>= <v>dict_1<>.items()<>
+
+Returns: <c>odict_items<>
+
+
+Returns the items in insertion order.
+
+The returned value is iterable but not indexable or slicable.
+
+
+<cb>from collections import OrderedDict
+
+<v>dict_1<> = OrderedDict()
+
+<v>dict_1<>['<v>c<>'] = '<v>First<>'
+<v>dict_1<>['<v>b<>'] = '<v>Second<>'
+<v>dict_1<>['<v>a<>'] = '<v>Third<>'
+
+for <v>item<> in <v>dict_1<>.items():
+	print (<v>item<>)
+
+<#># Prints:
+\#
+\# First
+\# Second
+\# Third<><>
+@
+@ .items(), values
 
 
 
@@ -17615,7 +18214,8 @@ Windows:
 <cb>= 'Windows'<>
 
 @
-@ get, os, windows, linux, macos, darwin, find
+@ get, os, windows, linux, macos, darwin, find, os name
+@ platform.system(), .system()
 
 
 
@@ -17637,6 +18237,14 @@ Prints to the standard out.
 Automatically moves to the next line.
 @
 @ print(), echo, to console, print-only, standard output, stdout, print()
+
+
+
+### Print - Newline Only
+
+<cb>print()<>
+
+Prints an empty line.
 
 
 
@@ -17898,7 +18506,8 @@ Returns: <c>float<>
 <c>perf_counter()<> returns the elapsed time in seconds,
 Prefer over <c>time.time()<> as <c>perf_counter()<> is more accurate.
 @
-@ time.perf_counter(), .per_counter(), timing
+@ time.perf_counter(), .per_counter(), create, calculate
+@ timers, timing, time operation, time something, measure
 
 
 
@@ -17918,7 +18527,8 @@ Returns: <c>float<>
 <c>process_time()<> returns the execution time (CPU time) in seconds as a float.
 Does not measure time while a process is sleeping or suspended.
 @
-@ time.process_time(), .process_time(), timing
+@ time.process_time(), .process_time(), create, calculate
+@ timers, timing, time operation, time something, measure
 
 
 
@@ -20127,6 +20737,17 @@ Sheet:	<l "/s/numpy">numpy<>
 
 
 
+### Pandas SpeedSheet
+
+⚠️ The Pandas SpeedSheet doesn't hava any content. Send us a note if you'd like to see this updated. Or contribute on Github.
+
+Sheet: <l "/s/pandas">Pandas<>
+
+Git Source: <l>https://github.com/speedsheet/sheet-python-pandas<>
+@
+@ pandas, dataframe, df, frame
+
+
 ### Pillow SpeedSheet
 An image manipulation library.
 
@@ -20149,7 +20770,8 @@ Sheet:	<l "/s/requests">requests<>
 
 This sheet covers core python only. But want to see more here? Or for other libraries? Please let us know.
 
-
+Or make contributions on Github:
+<l "https://github.com/speedsheet?tab=repositories&q=&type=&language=&sort=name">SpeedSheet Source on GitHub<>
 @
-@ delta, terminal, process, dataframe, frame
+@ delta, terminal, process
 @ Anacond, Arrowm, BeautifulSoup, Bokeh, Cirq, Conda, Databases, Delorean, Django, Eli5, Fire, FlashText, Flask, Gensim, HTTP, Image, Images, Imaging, Keras, LightGBM, Luminoth, Mahotas, Matplotlib, MoviePy, Networkx, NLTK, Pandas, Pendulum, Picture, Pixel, Poetry, PyGame, PyQt, PyPi, PyTorch, Requests, Scikit Learn, Scikit-Learn, SciPy, SqlAlchemy, TensorFlow, Theano, Tkinter, wxPython, ai, a.i., artifical intelligence
