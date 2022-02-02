@@ -6513,7 +6513,7 @@ Returns a dictionary with every unique value and the number of times of that val
 <cb>= len(set(<v>list_1<>))<>
 
 
-Returns the number of unique values in <c><v>list_1<></..
+Returns the number of unique values in <c><v>list_1<><>.
 @
 @ items, unique, individual, occurrences, times, len(), .counter(), collections.counter()
 
@@ -6603,7 +6603,7 @@ Creates a deep copy.
 
 <cb>= [item for item, count in Counter(<v>list_1<>).items() if count > 1]<>
 
-Full Usage:
+Usage:
 
 <cb>from collections import Counter
 
@@ -9748,6 +9748,11 @@ Use to encapsulate mutation of internal variables.
 
 ### Class Property - Define
 
+<cb>@property
+def <v>method_name<>(self):<>
+
+Usage:
+
 <cb>class <v>Class1<>:
 
 	def __init__(self):
@@ -12240,6 +12245,17 @@ Renames a filename.
 
 
 
+### File - Create Empty File
+
+<cb>with open(<v>file_name<>, 'w') as file:
+    pass<>
+
+
+This will create a file with 0 bytes.
+@
+@ with open, open()
+
+
 ### Binary File - Read
 
 <cb>with open(<v>file_name<>,'rb') as file:
@@ -12450,7 +12466,7 @@ Example:
 
 ## File / Path Parts
 
-<cb><v>full_path<> = /<v>root_directory<>/<v>parent_directory<>/<v>file_name<><>
+<cb><v>full_path<> = /<v>root_directory<>/<v>parent_directory<>/<v>file_name<>.<v>extension<><>
 
 <cb><v>base_name<> = <v>file_name<>.<v>extension<><>
 @
@@ -12460,11 +12476,20 @@ Example:
 
 ### Path - Get Directory Part
 
+<cb>= dirname(<v>full_path<>)<>
+
+Usage:
+
 <cb>from os.path import dirname
 
-<v>directory_1<> = dirname(<v>full_path<>)<>
+= dirname(<v>full_path<>)<>
+
+Returns:
+
+<cb>str<>
 
 Returns the full directory portion of the path.
+
 If the last element is a directory, that will be removed.
 
 
@@ -12472,7 +12497,9 @@ Example:
 
 <cb>from os.path import dirname
 
-<v>directory_1<> = dirname('<v>/root/parent/file.txt<>')	<#># Returns '/root/parent'<><>
+<v>directory<> = dirname('<v>/root/parent/file.txt<>')
+
+<#># Returns '/root/parent'<><>
 @
 @ os.path.dirname(), .path.dirname(), .dirname()
 
@@ -12480,38 +12507,77 @@ Example:
 
 ### Path - Get Base Name Part
 
+<cb>= basename(<v>file_path<>)<>
+
+Usage:
+
 <cb>from os.path import basename
 
-<v>basename_1<> = basename(<v>full_path<>)<>
+= basename(<v>file<>)<>
+
+Returns:
+
+<cb>str<>
+
 
 Returns the file name and extension, leaving out the directory.
-Use <c>ntpath.basename<> for the windows safe version of this (works with both \\ and /).
-<c>= ntpath.basename(file_path)<>
 
 
 Example:
 
 <cb>from os.path import basename
 
-<v>file_name<> = basename('<v>/root/parent/file.txt<>')	<#># Returns 'file.txt'<><>
+<v>file_name<> = basename('<v>/root/parent/file.txt<>')
+
+<#># Returns: 'file.txt'<><>
 @
 @ base name
 @ os.path.basename(), .path.basename(), .basename()
 
 
 
+### Path - Get Base Name Part / Windows Save Version
+
+<cb>= basename(<v>file_path<>)<>
+
+Usage:
+
+<cb>from ntpath import basename
+
+= basename(<v>file_path<>)<>
+
+Returns:
+
+<cb>str<>
+
+
+Returns a file name and extension portion of a path
+
+This works safely with both \\ and / file separators.
+
+
+Example:
+
+<cb>from ntpath import basename
+
+<v>file_name<> = basename('<v>/root/parent/file.txt<>')
+
+<#># Returns 'file.txt'<><>
+@
+@ base name
+@ ntpath.basename(), .basename()
+
+
+
 ### Path - Get File Extension
 
-<cb>from os.path import basename
-from os.path import splitext<>
+<cb>= splitext(<v>file_name<>)[1]<>
 
-<cb><v>extension<> = splitext(<v>file_name<>)[1]<>
+Usage:
 
-<cb><v>name<>, <v>extension<> = splitext(<v>file_name<>)<>
+<cb>from os.path import splitext
 
-For Directory and File Name:
-
-<cb><v>name<>, <v>extension<> = splitext(basename(<v>full_path<>))<>
+= splitext(<v>file_name<>)[1]<>
 
 
 Returns the file extension in <c><v>extension<><>.
@@ -12520,10 +12586,12 @@ Includes the '.' in the extension.
 
 
 Example:
-<cb>from os.path import basename
-from os.path import splitext
 
-<v>name<>, <v>extension<> = splitext('<v>/root/parent/file.txt<>')	<#># Returns <c>extension<> = '.txt'<><>
+<cb>from os.path import splitext
+
+<v>extension<> = splitext('<v>/root/parent/file.txt<>')[1]
+
+<#># Returns: '.txt'<><>
 @
 @ part
 @ os.path.splitext(), .path.splitext(), .splitext()
@@ -12533,28 +12601,97 @@ from os.path import splitext
 
 ### Path - Get File Name
 
+<cb>= splitext(<v>file_name<>)[0]<>
+
+Usage:
+
+<cb>from os.path import splitext
+
+= splitext(<v>file_name<>)[0]<>
+
+Get File Name From Path:
+
 <cb>from os.path import basename
-from os.path import splitext<>
+from os.path import splitext
 
-<cb><v>name<> = splitext(<v>file_name<>)[0]<>
+= splitext(basename(<v>file_path<>)[0]<>
 
-<cb><v>name<>, <v>extension<> = splitext(<v>file_name<>)<>
 
-For Directory and File Name:
-
-<cb><v>name<>, <v>extension<> = splitext(basename(<v>full_path<>))<>
+Returns the file name, the 'file' from 'file.txt'.
 
 
 Example:
 <cb>from os.path import basename
 from os.path import splitext
 
-<v>name<>, <v>extension<> = splitext(basename('<v>/root/parent/file.txt<>'))	<#># Returns <c>name<> = ('file', '.txt')<><>
+<v>name<>, = splitext(basename('<v>/root/parent/file.txt<>'))[0]
+
+<#># Returns: 'file'<><>
 @
 @ part
 @ os.path.splitext(), .path.splitext(), .splitext()
 @ os.path.splittext(), .path.splittext(), .splittext(), splittext
 @ os.path.basename(), .path.basename(), .basename()
+
+
+
+### Path - Get File Name, Extension
+
+<cb><v>name<>, <v>extension<> = splitext(basename(<v>file_path<>)<>
+
+Usage:
+
+<cb>from os.path import basename
+from os.path import splitext
+
+<v>name<>, <v>extension<> = splitext(basename(<v>file_path<>)<>
+
+
+Returns the name and extension of a file.
+<c>basename()<> strips any directory information before splitting the parts.
+
+
+Example:
+<cb>from os.path import basename
+from os.path import splitext
+
+<v>name<>, <v>extension<> = splitext(basename('<v>/root/parent/file.txt<>'))
+
+<#># Returns: 'file', '.txt'<><>
+@
+@ part, and
+@ os.path.splitext(), .path.splitext(), .splitext()
+@ os.path.splittext(), .path.splittext(), .splittext(), splittext
+@ os.path.basename(), .path.basename(), .basename()
+
+
+
+### Path - Is Absolute Path?
+
+<cb>= isabs(<v>path<>)<>
+
+Usage:
+
+<cb>from os.path import is abs
+
+= isabs(<v>path<>)<>
+
+Returns: <c>bool<>
+
+
+Checks if a path is absolute or not.
+
+
+Example:
+
+<cb>from os.path import isabs
+
+is_absolute = isabs('/Users/user-1')
+
+<#># Returns: True<><>
+@
+@ full, complete
+@ os.path.isabs(), path.isabs(), .isabs()
 
 
 
@@ -13059,7 +13196,7 @@ Iterates over each section and displays all the properties and their values.
 
 ## Internet / urllib
 @
-@ Http, Https, Urls, http-only, https-only, url-only, web, apis, io
+@ Http, Https, Urls, http-only, https-only, url-only, web, apis, io, links
 
 
 
@@ -13305,7 +13442,7 @@ run(['ls', '-1'])<>
 
 <cb>from subprocess import run
 
-run(<v>command<>, shell=True)<>
+run(<v>command<>, shell = True)<>
 
 
 Starts the shell and executes <c><v>command<><> on it.
@@ -13620,7 +13757,7 @@ Example:
 
 <cb><v>function_parameter<>: Callable<>
 
-Full Usage:
+Usage:
 
 <cb>from typing import Callable
 
@@ -16959,7 +17096,7 @@ from dataclasses import field
 
 \@dataclass
 class <v>Dataclass1<>:
-	<v>list_1<>: list = field(default_factory=lambda: [])<>
+	<v>list_1<>: list = field(default_factory = lambda: [])<>
 @
 @ create, definition, new, field
 
@@ -16972,7 +17109,7 @@ from dataclasses import field
 
 \@dataclass
 class <v>Dataclass1<>:
-	<v>dict_1<>: list = field(default_factory=lambda: {})<>
+	<v>dict_1<>: dict = field(default_factory = lambda: {})<>
 @
 @ create, definition, new, field
 
@@ -17067,7 +17204,7 @@ Use:
 
 <cb>= is_dataclass(<v>item_1<>)<>
 
-Full Usage:
+Usage:
 
 <cb>from dataclasses import is_dataclass
 
@@ -17094,8 +17231,8 @@ print(is_dataclass(<v>person_1<>))
 
 <#># Prints:
 \#
-\# False
-\# True<><>
+\#    False
+\#    True<><>
 @
 @ dataclasses.is_dataclass(), .is_dataclass(), type of
 
@@ -18964,6 +19101,8 @@ Example:
 <v>formatted<> = f'{<v>an_int<>:0<v>6<>}'
 
 <#># Returns '001234'<><>
+@
+@ pad with, pad left
 
 
 
