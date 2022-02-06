@@ -11,6 +11,13 @@ Follow us on Twitter:
 @ twitter
 
 
+### 9 SpeedSheet Tips and Tricks
+
+Here is a short video to help you get the most out of this SpeedSheet:
+
+<h>iframe width=640 height=360 src=https://www.youtube.com/embed/PKeRYZTVJbs</h><h>/iframe</h>
+
+
 ### 5 Things Search Can Find For You
 
 The search is the key to using the Python SpeedSheet. Here are 5 things you can find with search:
@@ -301,12 +308,13 @@ Example:
 
 ### Identifiers
 
-( <v>letter<> | <v>_<> ) ( <v>letter<> | <v>digit<> | <v>_<> ) *
+<cb>( <v>letter<> | <v>_<> )   ( <v>letter<> | <v>digit<> | <v>_<> ) *<>
 
+<cb>[_a-zA-Z][_0-9a-zA-Z]*<>
 
 Case sensitive.
-First letter must be an alphabet letter or underscore, not a digit.
-All other letters can be alphabet letter, underscore or digit.
+The first character must be an alphabet letter or underscore, not a digit.
+All other characters can be alphabet letters, underscores or digits.
 
 
 Examples:
@@ -316,7 +324,7 @@ Examples:
 <v>three_word_name<><>
 @
 @ Python names, variable names, module names, class names
-@ alphabet
+@ Rules, Valid, Name, Correct
 
 
 
@@ -13950,6 +13958,10 @@ else:
 
 ### Environment Variable - Get
 
+<cb>= environ['<v>name<>']<>
+
+Usage:
+
 <cb>from os import environ
 
 = environ['<v>name<>']          <#>#1<><>
@@ -13958,13 +13970,17 @@ else:
 
 <cb>= environ.get('<v>name<>', <v>default_value<>)<>
 
-
 \#1  <s>-<>  Raises <c>KeyError<> if not found.
 
 \#2  <s>-<>  Returns <c>None<> if not found.
 
 
 Reads the value of the environment variable.
+
+
+Equivalent To:
+
+<cb>= os.getenv(<v>name<>)<>
 
 
 Example:
@@ -13982,6 +13998,16 @@ print (environ['PYTHONPATH'])<>
 <cb>from os import environ
 
 = environ.keys()<>
+
+
+Example:
+
+<cb>from os import environ
+
+for <v>key<> in sorted(environ.keys(), key = str.lower):
+	print(f'{<v>key<>:\<24}  {environ[<v>key<>]}')
+
+print(f'{"Count":\<24}  {len(environ.keys())}')<>
 @
 @ read all, getenv, os.environ, keys()
 
@@ -13996,7 +14022,7 @@ environ['<v>name<>'] = <v>value<><>
 
 <c><v>value<><> must be a string.
 @
-@ get, getenv, os.environ
+@ os.environ
 
 
 
@@ -20864,6 +20890,15 @@ The aiohttp library for making asynchronous http calls.
 Sheet:	<l "/s/aiohttp">aiohttp<>
 @
 @ async http library, asynchronous, post, put, get, request, url
+
+
+
+### BeautifulSoup SpeedSheet
+An easy to use library for processing HTML or XML.
+
+Sheet:	<l "/s/beautifulsoup">BeautifulSoup<>
+@
+@ bs4.BeautifulSoup(), .BeautifulSoup(), scrape website, extract html, parse html
 
 
 
