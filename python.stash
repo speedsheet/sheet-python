@@ -22,11 +22,13 @@ Here is a short video to help you get the most out of this SpeedSheet:
 
 The search is the key to using the Python SpeedSheet. Here are 5 things you can find with search:
 
-<in-2><l "/s/python?search=start+async+program">Start an Async Program<>
-<l "/s/python?search=compare+ignore+case&select=6TEG">Ignore String Case Correctly<>
-<l "/s/python?search=f-string+debug">Debug an f-string<>
-<l "/s/python?search=timer">Time an Operation<>
-<l "/s/python?search=execute+shell+command">Execute a Shell Command<><>
+<card><table><col><b>Need This?					<><><col><b>Search For:				<><><col><b>See Search In Action:<><>
+<col> <>
+<col>Start an Async Program<><col>start async program<><col><l "/s/python?search=start+async+program">Search Result<><>
+<col>Ignore String Case Correctly<><col>compare ignore case<><col><l "/s/python?search=compare+ignore+case&select=6TEG">Search Result<><>
+<col>Debug with f-string<><col>f-string debug<><col><l "/s/python?search=f-string+debug">Search Result<><>
+<col>Time an Operation<><col>timer<><col><l "/s/python?search=timer">Search Result<><>
+<col>Execute a Shell Command<><col>execute shell command<><col><l "/s/python?search=execute+shell+command">Search Result<><><><>
 
 
 ### In This Sheet
@@ -625,7 +627,7 @@ Underscore <c>'_'<> stores the result of the last evaluated expression.
 
 Press the keys <c>Control + D<> or type <c>exit()<> to quit.
 @
-@ End, Terminate, Stop, Quit, CLI, exit()
+@ End, Terminate, Stop, kill, Quit, CLI, exit()
 
 
 
@@ -1050,7 +1052,7 @@ while (<v>count<> := count + 1) < 5:
 <col><c><v>a<> >= <v>b<><><>
 <col><c><v>a<> \<= <v>b<><><>
 <col> <>
-<col><c><v>a<> is <v>b<><><>
+<col><c><v>a<> is <v>b<><><><col>Identity / Same Item<>
 <col><c><v>a<> is not <v>b<><><><><>
 @
 @ Boolean, ==, !=, \<>, \<, \<=, >, >/, is, not
@@ -1344,6 +1346,28 @@ From Highest To Lowest:
 
 
 
+### == vs is vs id()
+
+==:
+
+<*>Value Operator
+Compares the Value of the Operands
+True If Same Value<>
+
+is:
+
+<*>Identity Operator
+Compares the Operands Identity
+True If Same Item<>
+
+id():
+
+<*>Memery Operator
+Compares Memory Locations
+True If Same Location<>
+
+
+
 # Control Structures
 @
 @ statements, flow
@@ -1402,6 +1426,8 @@ else:
 
 
 The <c>else<> block executes after the <c>for<> block completes.
+
+<c>break<> skips the <c>else<> block. 
 
 
 Examples:
@@ -1943,6 +1969,8 @@ else:
 
 Executes else clause when <c>condition<> is <c>False<>.
 
+<c>break<> skips the <c>else<> block. 
+
 
 
 #### While - Break Continue
@@ -1954,6 +1982,9 @@ Executes else clause when <c>condition<> is <c>False<>.
 	<v>...<><>
 
 
+<c>break<> will skip the <c>else<> block if one is included.
+
+
 
 ### Break
 
@@ -1962,6 +1993,8 @@ Exit Loop:
 <cb>break<>
 
 Applies to <c>for<> and <c>while<> loops.
+
+<c>break<> will skip the <c>else<> block if one is included.
 @
 @ For, While, skip
 
@@ -2265,6 +2298,19 @@ if isinstance(<v>item_1<>, (int, complex, float)):
 Returns true if <c><v>item_1<><> is a subtype of <c><v>type_1<><>.@
 @ equals, is subtype?, is subclass of
 @ check, compare, issubclass()
+
+
+
+### Variables - Memory Address
+
+<cb>= id(<v>a<>)<>
+
+Returns: <c>int<>
+
+
+Returns the memory address of the variable.
+@
+@ id(), location
 
 
 
@@ -3751,31 +3797,6 @@ Returns <c>True<> when <c><v>string_1<><> is not a substring of <c><v>string_2<>
 
 
 
-#### String - Contains Alpha Only
-
-<cb>= <v>string_1<>.isalpha()<>
-
-Returns <c>True<> if consisting entirely of alphabet characters.
-Includes international characters.
-Returns <c>False<> for numbers, symbols, emojis, or whitespace characters.
-@
-@ is, .isalpha(), alphabet characters, ischaracter
-
-
-
-#### String - Contains Digits Only
-
-<cb>= <v>string_1<>.isdigit()<>
-
-
-Returns <c>True<> when all characters are from 0 to 9.
-Returns <c>False<> for <c>+<> or <c>-<>
-@
-@ is, .isdigit(), numbers, integer
-
-
-
-
 #### String - Ends With?
 
 <cb>= <v>string_1<>.endswith(<v>test_value<>)<>
@@ -3973,6 +3994,51 @@ else:
 
 
 
+#### String - is Alpha Only
+
+<cb>= <v>string_1<>.isalpha()<>
+
+Returns <c>True<> if consisting entirely of alphabet characters.
+
+Includes international characters.
+Returns <c>False<> for numbers, symbols, emojis, or whitespace characters.
+@
+@ .isalpha(), alphabet characters, ischaracter
+@ is, contains, consists of
+
+
+
+#### String - is Alphanumerics Only
+
+<cb>= <v>string_1<>.isalnum()<>
+
+Returns <c>True<> if consisting entirely of alphabet characters or numbers..
+
+Includes international characters.
+Returns <c>False<> for symbols, emojis, or whitespace characters.
+@
+@ .isalnum(), .isalphanumeric()
+@ alphabet characters, ischaracter, numeric, numbers
+@ is, contains, consists of
+
+
+
+#### String - Is Digits Only
+
+<cb>= <v>string_1<>.isdigit()<>
+
+
+Checks if a string consists of digits only.
+
+
+Returns <c>True<> when all characters are from 0 to 9.
+Returns <c>False<> for <c>+<> or <c>-<>
+@
+@ is, .isdigit(), numbers, integer
+@ is, contains, consists of
+
+
+
 #### String - Is Integer
 
 <cb>from re import match
@@ -3986,6 +4052,58 @@ def is_int(<v>value<>):
 Works for any integer including those with plus or minus.
 @
 @ .isint(), .isinteger(), is_int(), an, check
+
+
+
+#### String - Is Lower Case Only
+
+<cb>= <v>string_1<>.islower()<>
+
+
+Checks if a string consists of all lower case letters.
+@
+@ .islower(), characters
+@ is, contains, consists of
+
+
+
+#### String - Is Title Case Only
+
+<cb>= <v>string_1<>.istitle()<>
+
+
+Checks if a string consists of all title case words.
+
+To be <c>True<> every word must start with a capitalized letter and the remaining letters must be lower case.
+@
+@ .istitle(), words
+@ is, contains, consists of
+
+
+
+#### String - Is Upper Case Only
+
+<cb>= <v>string_1<>.isupper()<>
+
+
+Checks if a string consists of all upper case letters.
+@
+@ .isupper(), characters
+@ is, contains, consists of
+
+
+
+#### String - Is Valid Python Identifier
+
+<cb>= <v>string_1<>.isidentifier()<>
+
+
+Checks if a string is a valid Python identifier.
+
+Checks to see that the string meets the identifier name rules (starts with [a-zA-Z_] followed by [a-zA-Z0-9_])
+@
+@ .isidentifier(), characters
+@ is, contains
 
 
 
@@ -4350,6 +4468,65 @@ Removes all whitespace characters at the start of the string.
 Removes all whitespace characters at the end of the string.
 @
 @ trim, remove, whitespaces, white spaces, end, ending, .rstrip(), spaces, delete
+
+
+
+#### String - Subtitute / Translate - With Dict
+
+<cb><v>translation<> = str.maketrans(<v>mapping_dict<>)
+<v>translated<> = <v>string_1<>.translate(<v>translation<>)<>
+
+Returns: str
+
+
+Finds all matches for the <c>mapping_dict<> keys in <c>string_1<> and replaces them with their values.
+
+
+Example:
+
+<cb><v>mappings<> = {
+	'1': 'one',
+	'2': 'two',
+	'3': 'three'}
+
+<v>translation<> = str.maketrans(<v>mappings<>)
+
+<v>string_1<> = 'Items 1, 2, 3'
+<v>translated<> = <v>string_1<>.translate(<v>translation<>)
+
+<#># Returns: 'Items one, two, three'<><>
+@
+@ str.maketrans(), .maketrans()
+@ string.translate(), .translate()
+
+
+
+#### String - Subtitute / Translate - With String
+
+<cb><v>translation<> = str.maketrans('<v>originals<>', '<v>replacements<>')
+<v>translated<> = string.translate(<v>translation<>)<>
+
+Returns: str
+
+
+Finds characters from <c>originals<> in <c>string_1<> and replaces them with the matching characters from <c>replacements<>.
+
+<c>originals<> and <c>replacements<> must be the same size.
+
+
+Example:
+
+<cb><v>originals<> = '123'
+<v>replacements<> = 'ABC'
+<v>translation<> = str.maketrans(<v>originals<>, <v>replacements<>)
+
+<v>string_1<> = 'Items 1, 2, 3'
+<v>translated<> = <v>string_1<>.translate(<v>translation<>)
+
+<#># Returns: 'Items A, B, C'<><>
+@
+@ str.maketrans(), .maketrans()
+@ string.translate(), .translate()
 
 
 
@@ -4887,11 +5064,20 @@ That is <c>.weekday()<> with a ().
 You must convert to a datetime first, then to a date.
 
 
-Example:
+Examples:
 
 <cb>from datetime import datetime
 
-<v>date_2<> = datetime.strptime(<v>"2000-01-02"<>, "<v>%Y-%m-%d<>").date()<>
+<v>date_2<> = datetime.strptime(<v>"2000-01-02"<>, "<v>%Y-%m-%d<>").date()
+
+<#># Returns: datetime.date(2000, 1, 2)<>
+
+
+<cb>from datetime import datetime
+
+<v>date_2<> = datetime.strptime(<v>"2000-1-2"<>, "<v>%Y-%m-%d<>").date()
+
+<#># Returns: datetime.date(2000, 1, 2)<>
 @
 @ date.strptime(), .strptime()
 @ convert, conversion, to, from, parse
@@ -5819,9 +6005,9 @@ class <v>EnumName<>(Enum):
 
 	@classmethod
 	def from_string(cls, <v>value<>):          <#>#1<>
-		return cls.<v>_lookup<>[<v>value<>]           <#>#2<>
+		return cls.<v>_lookup<>[<v>value<>]         <#>#2<>
 
-<v>EnumName<>.<v>_lookup<> = {                        <#>#3<>
+<v>EnumName<>.<v>_lookup<> = {                      <#>#3<>
 		<v>"Enum 1a"<>: <v>EnumName<>.<v>ENUM_1<>,
 		<v>"Enum 1b"<>: <v>EnumName<>.<v>ENUM_1<>,
 		<v>"Enum 2a"<>: <v>EnumName<>.<v>ENUM_2<>,
@@ -6385,7 +6571,7 @@ Example:
 
 #### List - Apply Function
 
-<cb>= list(map(<v>function_1<>, <v>list_1<>)<>
+<cb>= list(map(<v>function_1<>, <v>list_1<>))<>
 
 Returns: <c>list<>
 
@@ -6578,8 +6764,20 @@ del <v>list_1<>[<v>2<>:<v>7<>]                           <#># Returns [1, 2, 8, 
 <cb><v>list_1<>.remove(<v>value<>)<>
 
 Deletes the first item on the list that matches <v>value<>.
+
+
+Example:
+
+<cb><v>list_1<> = ['<v>one<>', '<v>two<>', '<v>three<>']
+
+<v>list_1<>.remove('<v>two<>')
+
+print(<v>list_1<>)
+
+<#># Prints: ['one', 'three']<><>
 @
-@ remove element, item, .remove()
+@ .remove(), remove
+@ remove from, element, item
 
 
 
@@ -6931,7 +7129,7 @@ Example:
 
 Removes the first item from the list and returns it.
 @
-@ .pop(), left
+@ .pop(), left, remove, delete
 
 
 
@@ -6941,7 +7139,7 @@ Removes the first item from the list and returns it.
 
 Removes the last item from the list and returns it.
 @
-@ .pop(), right, end
+@ .pop(), right, end, remove, delete
 
 
 
@@ -7338,9 +7536,20 @@ Will have no duplicates.
 
 #### Set - Remove
 
-<cb><v>set_1<>.remove(<v>value<>)<> 
+<cb><v>set_1<>.remove(<v>value<>)<>
+
+or
+
+<cb><v>set_1<>.discard(<v>value<>)<>
+
+
+Removes an item from the set.
+
+
+remove() throws an error if <c><v>value<><> does not exists.
+discard() ignores non-existent values.
 @
-@ Delete, update, modify, change, .remove()
+@ Delete, update, modify, change, .remove(). discard()
 
 
 
@@ -8109,9 +8318,10 @@ Prints:
 
 Returned Type: <c>filter<>
 
-Returns a filter that will return a subset of <c><v>sequence_1<><>.
+
 Returns all values where <c><v>test_function<>(<v>value<>)<> == <c>True<>.
 
+Returns a filter that will return a subset of <c><v>sequence_1<><>.
 Filters are lazy iterators.
 Values are evaluated and returned one at a time, and only when requested.
 
@@ -8129,7 +8339,7 @@ def <v>is_even<>(<v>value<>):
 
 <v>sequence_1<> = [<v>1<>, <v>2<>, <v>3<>, <v>4<>, <v>5<>]
 
-<v>filtered_1<> = filter(<v>is_even<>, <v>sequence_1<>)
+<v>filtered<> = list(filter(<v>is_even<>, <v>sequence_1<>))
 
 <#># Returns values 2, 4.<><>
 
@@ -8137,9 +8347,9 @@ Using a Lambda Filter:
 
 <cb><v>sequence_1<> = [<v>1<>, <v>2<>, <v>3<>, <v>4<>, <v>5<>]
 
-<v>filtered_1<> = filter(
+<v>filtered<> = list(filter(
 		lambda <v>value<> : <v>value % 2 == 0<>,
-		<v>sequence_1<>)
+		<v>sequence_1<>))
 
 <#># Returns values 2, 4.<><>
 @
@@ -8178,6 +8388,8 @@ Returns: <c>map<>
 
 Returns a map of <c><v>sequence_1<><> values passed through <c><v>mapping_function<><>.
 
+Maps are lazy itorators. Wrap with <c>list()<> to get actual values.
+
 
 Example:
 
@@ -8186,7 +8398,7 @@ Example:
 
 <v>list_1<> = [<v>1<>, <v>2<>, <v>3<>]
 
-<v>mapped_1<> = map(<v>add_10<>, <v>list_1<>)
+<v>mapped<> = list(map(<v>add_10<>, <v>list_1<>))
 
 <#># Returns: Map of 11, 12, 13.<><>
 @
@@ -10410,8 +10622,10 @@ The package name is the directory name.
 
 <cb>= __name__<>
 
-Returns the module name.
-'<c>__main__<>' is the root module called in the program.
+Returns the name of the current module (name of the python file without the extension).
+
+<c>'__main__':<>
+If the module is the starting module of the application, __name__ will be '<c>__main__<>'.
 @
 @ __name__, __main__
 
@@ -11030,6 +11244,10 @@ Creates pseudo-random numbers.
 
 ### Random Boolean
 
+<cb>= choice([True, False])<>
+
+Usage:
+
 <cb>from random import choice
 
 <v>random_1<> = choice([True, False])<>
@@ -11039,6 +11257,10 @@ Creates pseudo-random numbers.
 
 
 ### Random Character
+
+<cb>= choice(<v>letters_string<>)<>
+
+Usage:
 
 <cb>from random import choice
 
@@ -11051,21 +11273,60 @@ Example:
 
 <cb>from random import choice
 
-<v>character_1<> = choice(<v>'abcde'<>)<>
+<v>next<> = choice(<v>'abcde'<>)
+
+print(<v>next<>)
+
+<#># Prints: 'd'<><>
 @
 @ choice, choose, pick, random.choice(), .choice()
 
 
 
-### Random Float
+### Random Float - Between 0 and 1
+
+<cb>= random()<>
+
+Usage:
 
 <cb>from random import random
 
-<v>random_1<> = random()				<#># 0.0 \<= x \< 1.0<><>
+= random()<>
+
+Returns: <c>float  (0.0 \<= x \< 1.0)<>
+
+
+Returns a random number between 0 and 1, excluding 1 itself.
+
+
+Example:
+
+<cb>from random import random
+
+<v>next<> = random()
+
+print(<v>next<>)
+
+<#># Prints: 0.4748924784779134<><>
+@
+@ number, .uniform(), random.random(), .random()
+
+
+
+### Random Float - Between Min to Max
+
+<cb>= uniform(<v>min<>, <v>max<>)<>
+
+Usage:
 
 <cb>from random import uniform
 
-<v>random_2<> = uniform(<v>min<>, <v>max<>)		<#># min \<= x \< max<><>
+<v>random_2<> = uniform(<v>min<>, <v>max<>)<>
+
+Returns: <c>float  (<v>min<> \<= x \< <v>max<>)<>
+
+
+Returns a random number between <c>min<> and <c>max<>, excluding <c>max<> itself.
 
 
 Example:
@@ -11074,37 +11335,87 @@ Example:
 
 <v>random_float<> = uniform(<v>1.0<>, <v>5.0<>)	<#># Returns 1.0 \<= x \< 5.0<><>
 @
-@ number, random.uniform(), .uniform(), random.random(), .random()
+@ number, random.uniform(), .uniform()
 
 
 
 ### Random Integer
 
+<cb>= randrange(<v>max_plus_1<>)<>
+
+Usage:
+
 <cb>from random import randrange
 
-<v>random_int_1<> = randrange(<v>max_plus_1<>)		<#># 0 \<= x \< <c>max_plus_1<><><>
+= randrange(<v>max_plus_1<>)
+= randrange(<v>min<>, <v>max_plus_1<>, <v>step<>)<>
+
+Returns: <c>int  (0 \<= x \< <v>max_plus_1<>)<>
+
+
+Returns a random integer value.
+
+
+Example:
+
+<cb>from random import randrange
+
+<v>next<> = randrange(<v>100<>)
+
+print(<v>next<>)
+
+<#># Prints: 17<><>
+@
+@ number, random.randrange(), .randrange(), step, minimum
+
+
+
+### Random Integer - Between Min to Max
+
+<cb>randint(<v>min<>, <v>max_plus_1<>)<>
+
+Usage:
 
 <cb>from random import randint
 
-= randint(<v>min<>, <v>max_plus_1<>) 				<#># min \<= x \< <c>max_plus_1<><><>
+= randint(<v>min<>, <v>max_plus_1<>)<>
 
-<cb>from random import randrange
+Returns: <c>int (<v>min<> \<= x \< <c>max_plus_1<>)<>
 
-= random.randrange(<v>min<>, <v>max_plus_1<>, <v>step<>)<>
+
+Returns a random integer value.
+
+
+Example:
+
+<cb>from random import randint
+
+<v>next<> = randint(<v>100<>, <v>200<>)
+
+print(<v>next<>)
+
+<#># Prints: 180<><>
 @
-@ number, random.randint(), .randint(), random.randrange(), .randrange(), step
+@ number, random.randint(), .randint()
 
 
 
 ### Random - From Sequence
 
+Choose 1 Value:
+
+<cb>= sample(<v>sequence_1<>, 1)[0]<>
+
+Choose n Values:
+
+<cb>= sample(<v>sequence_1<>, <v>n<>)<>
+
+Usage
+
 <cb>from random import sample
 
-<v>random_item<> = sample(<v>sequence_1<>, 1)[0] 		<#># Pick 1 Item<><>
-
-Returns: 1 Item
-
-<cb>= sample(<v>sequence_1<>, <v>count<>)				<#># Pick <c>count<> Items<><>
+= sample(<v>sequence_1<>, 1)[0]
+= sample(<v>sequence_1<>, <v>n<>)<>
 
 Returns: List of Items
 
@@ -11113,6 +11424,38 @@ Return one or more items from <c><v>sequence_1<><>.
 @
 @ list, tuple, pick, choose, item, element
 @ random.sample(), .sample()
+
+
+
+### Random - Set Seed
+
+<cb>seed(<v>seed_value<>)<>
+
+Usage:
+
+<cb>from random import seed
+
+seed(<v>seed_value<>)<>
+
+
+Sets the seed value for all following random numbers.
+
+
+Example:
+
+<cb>from random import seed, randrange
+
+seed(<v>999<>)
+
+print('next', randrange(<v>100<>))
+print('next', randrange(<v>100<>))
+
+<#># Prints:
+\#
+\#    next 86
+\#    next 10<><>
+@
+@ random.seed(), .seed()
 
 
 
@@ -11145,9 +11488,60 @@ Examples:
 
 
 
+## Range - Float Range
+
+Use Function:
+
+<cb>def float_range(<v>min<>, <v>max<> = None, <v>step<> = 1):
+    if <v>max<> is None:
+        <v>min<>, <v>max<> = 0, min
+    <v>value<> = <v>min<>
+    while <v>value<> \< <v>max<>:
+        yield <v>value<>
+        <v>value<> += <v>step<><>
+
+Usage:
+
+<cb>= float_range(<v>max<>)
+= float_range(<v>min<>, <v>max<>)
+= float_range(<v>min<>, <v>max<>, <v>step<>)<>
+
+Type: <c>range<>
+
+
+There is no built in range for float.
+Use the function declared here.
+
+Returns a range of float values from <c>min<> to less than <c>max<>.
+
+
+Examples:
+
+<cb>def float_range(<v>min<>, <v>max<> = None, <v>step<> = 1):
+    if <v>max<> is None:
+        <v>min<>, <v>max<> = 0, min
+    <v>value<> = <v>min<>
+    while <v>value<> \< <v>max<>:
+        yield <v>value<>
+        <v>value<> += <v>step<>
+
+for <v>value<> in float_range(1.0, 3.0, 0.5):
+    print(<v>value<>)
+
+<#># Prints:
+\#
+\# 1.0
+\# 1.5
+\# 2.0
+\# 2.5<><>
+@
+@ step, new, create, floatrange(), float_range()
+
+
+
 ## Regular Expression Functions
 @
-@ regex, string, strings, expressions, regex-only, regular-expressions-only
+@ regex, regexpression, string, strings, expressions, regex-only, regular-expressions-only
 
 
 
@@ -11189,7 +11583,7 @@ Example:
 
 
 
-### Regular Expressions - Get All
+### Regular Expressions - Find All
 
 <cb>= findall(<v>match_pattern<>, <v>string_to_search<>)<>
 
@@ -11211,7 +11605,7 @@ Example:
 <v>string_1<> = "<v>123 abc 456 def 789<>"
 <v>matches<> = findall(r"<v>[a-zA-Z]+<>", <v>string_1<>)		<#># Returns ["abc", "def"]<><>
 @
-@ Find, re.findall(), .findall()
+@ get, match, find, re.findall(), .findall()
 
 
 
@@ -12482,6 +12876,32 @@ Example:
 
 
 
+### Path - Get Absolute Path
+
+<cb>= abspath(<v>relative_path<>)<>
+
+Usage:
+
+<cb>from os.path import abspath
+
+= abspath(<v>relative_path<>)<>
+
+
+Converts any path into its absolute form.
+
+Will return as is if already an absolute path.
+
+
+Example:
+
+<cb>from os.path import abspath
+
+<v>current_directory<> = abspath('<v>.<>')<>
+@
+@ os.path.abspath(), .path.abspath(), .abspath()
+
+
+
 ### Path - Get Directory Part
 
 <cb>= dirname(<v>full_path<>)<>
@@ -12680,7 +13100,7 @@ from os.path import splitext
 
 Usage:
 
-<cb>from os.path import is abs
+<cb>from os.path import isabs
 
 = isabs(<v>path<>)<>
 
@@ -13858,9 +14278,9 @@ This will allow your application to load and run it's own libraries in it's own 
 
 ### Virtual Environment - Create
 
-<cb>python3 -m venv <v>project_venv_dir<><>
+<cb>python3 -m venv <v>venv_directory<><>
 
-Creates a virtual environment in the directory <c><v>project_venv_dir<><>.
+Creates a virtual environment in the directory <c><v>venv_directory<><>.
 @
 @ python3 -m
 
@@ -13868,7 +14288,7 @@ Creates a virtual environment in the directory <c><v>project_venv_dir<><>.
 
 ### Virtual Environment - Upgrade
 
-<cb>python3 -m venv --upgrade <v>project_venv_dir<><>
+<cb>python3 -m venv --upgrade <v>venv_directory<><>
 
 
 Upgrade libraries (must start environment):
@@ -13884,15 +14304,14 @@ Upgrade libraries (must start environment):
 
 Bash:
 
-<cb>. <v>project_venv_dir<>/bin/activate<>
+<cb>. <v>venv_directory<>/bin/activate<>
 
-DOS <m>(Untested. Can someone confirm this works or not?)<>:
+DOS:
 
-<cb>call bin\\activate & <v>...<><>
+<cb><v>venv_directory<>\\Scripts\\activate<>
 
 Run from the project root directory.
 Run this bash script from the command line.
-For DOS, add any commands you want to run after <c><b>&<><>.
 @
 @ start, run, activate
 @ /bin/activate
@@ -13903,12 +14322,11 @@ For DOS, add any commands you want to run after <c><b>&<><>.
 
 Bash:
 
-<cb>. <v>project_venv_dir<>/bin/python <v>path/module.py<><>
+<cb>. <v>project_venv_dir<>/bin/python <v>python_path/module.py<><>
 
 DOS:
-<m>(Untested. Can someone confirm this works?)<>
 
-<cb>bin\\python <v>path/module.py<><>
+<cb><v>venv_directory<>\\Scripts\\python <v>python_path/module.py<><>
 
 Starts the venv and then runs the module in that environment.
 
@@ -14218,6 +14636,7 @@ Stops execution when the parent or main thread terminate.
 Must be called before calling <c>.start()<>.
 @
 @ thread.daemon, .daemon
+@ end, terminate, kill
 
 
 
@@ -14418,7 +14837,7 @@ Stops execution when the parent or main process terminate.
 Must be called before calling <c>.start()<>.
 @
 @ process.daemon, .daemon
-
+@ end, terminate, kill
 
 
 #### Process - Terminate
@@ -14431,6 +14850,7 @@ Will not run any finally clauses or exit handlers. Its Dead!
 Prefer something like a poison pill.
 @
 @ process.terminate(), .terminate()
+@ end, terminate, kill, stop
 
 
 
@@ -14856,7 +15276,8 @@ Returns: <c>bool<>
 Attempts to cancel a request.
 Returns <c>True<> if successful.
 @
-@ future.cancel(), .cancel(), stop
+@ future.cancel(), .cancel()
+@ stop, kill, end, terminate
 
 
 
@@ -14864,7 +15285,7 @@ Returns <c>True<> if successful.
 
 <cb>= <v>future_1<>.done()<>
 @
-@ future.done(), .done(), done? stopped
+@ future.done(), .done(), done? stopped, terminated
 
 
 
@@ -16521,7 +16942,8 @@ Returns: <c>bool<>
 Attempts to cancel a request.
 Returns <c>True<> if successful.
 @
-@ stop
+@ .cancel()
+@ stop, terminate, end, kill
 
 
 
@@ -18153,12 +18575,10 @@ Use This Function:
 <cb>from os import system, name
 
 def <v>clear_screen<>():
-	if name == 'nt':
-		<#># Windows:<>
-		system('cls')
-	else:
-		<#># Mac, Linux:<>
-		system('clear')<>
+    if name == 'nt':
+        system('cls')	<#># Windows<>
+    else:
+        system('clear')	<#># Mac, Linux<><>
 
 Call:
 
@@ -18167,7 +18587,7 @@ Call:
 
 Clears the console screen.
 @
-@ clear_screen()
+@ clear_screen(), cls
 
 
 
@@ -18188,6 +18608,44 @@ Clears the console screen.
 chdir(<v>new_directory<>)<>
 @
 @ set, os.chdir(), cd(), cwd, pwd, path
+
+
+
+### Email - Send Basic Text Email
+
+<cb>from email.message import EmailMessage
+from smtplib import SMTP
+
+<v>MAIL_HOST<> = '...'
+<v>MAIL_PORT<> = 587
+<v>MAIL_ID<> = '...'
+<v>MAIL_PASSWORD<> = '...'
+
+def new_message(<v>sender<>, <v>to<>, <v>subject<>, <v>body<>):
+    <v>message<> = EmailMessage()
+    <v>message<>['From'] = <v>sender<>
+    <v>message<>['To'] = <v>to<>
+    <v>message<>['Subject'] = <v>subject<>
+    <v>message<>.set_content(<v>body<>)
+    return <v>message<>
+
+def new_smtp(<v>host<>, <v>port<>, <v>id<>, <v>password<>):
+    <v>smtp<> = SMTP(<v>host<>, <v>port<>)
+    <v>smtp<>.login(<v>id<>, <v>password<>)
+    return <v>smtp<>
+
+
+message = new_message(
+    sender = '<v>...<>',
+    to = '<v>...<>',
+    subject = '<v>Test Subject<>',
+    body = '<v>Test Message.<>')
+
+with new_smtp(<v>MAIL_HOST<>, <v>MAIL_PORT<>, <v>MAIL_ID<>, <v>MAIL_PASSWORD<>) as <v>smtp<>
+    <v>smtp<>.send_message(<v>message<>)<>
+@
+@ smtplib.smtp, smtp, email.message.emailmessage, message.emailmessage
+@ smtp.send_message(), .send_message()
 
 
 
@@ -18728,7 +19186,7 @@ Not guaranteed to be accurate as it can be changed.
 Python Format Page:
 <l>https://docs.python.org/3/library/string.html#format-specification-mini-language<>
 @
-@ format-only, formatting-only, formats-only, f-strings, fstrings, .format(), f"", f'', codes, symbols
+@ format-only, formatting-only, formats-only, f-strings, fstrings, .format(), f"", f'', codes
 
 
 
@@ -19379,22 +19837,40 @@ Example:
 
 ### __main__
 
-The main/root module reference.
-If <c>__name__ == '__main__'<>, this is the main module, the entry point into the program.
+<cb>__name__ == '__main__'<>
 
-
-Example:
+Usage:
 
 <cb>if __name__ == '__main__':
-	<v>startup_code_here...<><>
+	<v>...<><>
+
+
+The main/root module reference.
+
+
+Why use <c>__name__ == '__main__'<>:
+
+Use this when you want to run a file as the main program and also as a module.
+<c>__name__<> will only be <c>'__main__'<> when the file is the starting file / entry point into the program.
+
+Add module classes and functions as normal.
+But to run as a the main application, add code after the <c>if<> statement.
+
+Form:
+
+<cb>if __name__ == '__main__':
+
+	<#># Code for main program here...<><>
 @
-@ Startup
+@ Startup, entry point
 
 
 
 ### __name__
 
 The name of the object.
+
+For modules, it is the file name (no extension).
 
 e.g. module, class or function name.
 
@@ -19467,6 +19943,117 @@ System Utilities
 
 Zip Class, Functions
 
+
+
+# Reference - External Libraries
+
+
+### NumPy - A Data Crunching Library
+
+A scientific computing/ data crunching library.
+
+SpeedSheet:
+<l>/s/numpy<>
+
+Library Name:
+
+<cb>numpy<>
+
+<cb>pip install numpy<>
+
+Import:
+
+<cb>import numpy as np<>
+
+
+Official Site:
+<l>https://numpy.org/doc/stable/<>
+
+
+
+### pynput - Keyboard / Mouse Library
+
+Ideal for sending keystrokes, mouse actions to the current windown.
+Ideal for monitoring the keyboard and mouse.
+
+Library:
+
+<cb>pynput<>
+
+<cb>pip install pynput<>
+
+Import:
+
+<cb>from pynput import mouse, keyboard<>
+
+
+SpeedSheet (Partial Details):
+<l>/s/pynput<>
+
+Official Site:
+<l>https://pynput.readthedocs.io/en/latest/<>
+@
+@ keystrokes, move
+
+
+
+### pyperclip - A Clipboard Library
+
+A simple and useful library for copying to and from the clipboard.
+
+Library Name:
+
+<cb>pyperclip<>
+
+<cb>pip install pyperclip<>
+
+Import:
+
+<cb>import pyperclip<>
+
+Basics:
+
+<cb>pyperclip.copy(<v>text<>)
+
+<v>text<> = pyperclip.paste()<>
+
+
+Official Site:
+<l>https://github.com/asweigart/pyperclip<>
+
+PyPi:
+<l>https://pypi.org/project/pyperclip/<>
+
+
+
+### pyttsx3 - Text To Speech
+
+Good library for text to speech.
+Uses OS for speech.
+
+Library:
+
+<cb>pyttsx3<>
+
+<cb>pip install pyttsx3<>
+
+Import:
+
+<cb>import pyttsx3<>
+
+Basic Example:
+
+<cb>import pyttsx3
+
+<v>engine<> = pyttsx3.init()
+
+voices = <v>engine<>.getProperty('voices') 
+<v>engine<>.setProperty('voice', voices[0].id)
+
+<v>engine<>.say ("<v>Hello meatbag.<>")
+<v>engine<>.runAndWait()<>
+@
+@ synthesis
 
 
 # Reference - Coming From Other Languages
@@ -19632,8 +20219,6 @@ String<>'''<><><col>A Multiline String<>
 <col><c>(<v>value1<>, <v>value2<>, <v>...<>)<><><col>Tuple<>
 <col> <>
 <col><c><v>a<> := <v>b<><><><col>Walrus Operator / Assignment Expression<><>
-@
-@ Double Underscore, :=, underscore.
 
 
 
@@ -20604,11 +21189,6 @@ It allows multitasking in separate memory spaces.
 It is costly to start and does not share memory (by default) with other processes but it preforms true multitasking.
 
 See: Process
-
-
-
-### Numpy
-A scientific computing package/library.
 
 
 
