@@ -4,6 +4,7 @@
 Get answers to your Python questions fast.
 Covers the core Python 3 programming language.
 
+
 Follow us on Twitter:
 
 <card><l https://twitter.com/_speedsheet>@_speedsheet<><>
@@ -547,7 +548,7 @@ Examples:
 <cb>def _<v>private_func_1<>():
     <v>...<><>
 @
-@ _, leading underscores
+@ _, leading underscore
 
 
 
@@ -576,6 +577,28 @@ Note: There is no mechanism in Python to enforce constants. They are normal vari
 Example:
 
 <cb><v>OK_STATUS<> = <v>200<><>
+
+
+
+### Convention - Underscores
+
+<card><table><col>Single, Leading<><col><c>_<v>name<><>	<><col>Private function, method or variable.
+For internal use only.<>
+<col> <>
+<col>Single, Trailing<><col><c><v>name<>_<><><col>Use to avoid clashing with reserved words.
+(<c>class_<>, <c>def_<>, <c>in_<>)<>
+<col> <>
+<col>Double, Leading<><col><c>__<v>name<><><><col>Used by Python for class name mangling.
+Avoid using.<>
+<col> <>
+<col>Double, Both Ends<><col><c>__<v>name<>__<><><col>Special methods used by Python to enable special features.
+(<c>__name__<>, <c>__repr__<>, <c>__next__<>)<>
+<col> <>
+<col>Single<><col><c>_<><><col>Used as a temporary variable or to indicate 'any' value.
+<c>(match _:), (lambda _ : <v>...<>)<><>
+<><>
+@
+@ _ vs __
 
 
 
@@ -819,6 +842,8 @@ Note: The <c><v>requrements.txt<><> name is by convention only.
 
 ### PIP - Requirements File - Sample File
 
+In <c>requirements.txt<>:
+
 <cb><#># This is a comment line.<>
 
 <v>package_1_name<>					<#># Latest Version<>
@@ -974,7 +999,7 @@ Installs all the packages in the requirements file.
 <col><c><v>a<> // <v>b<><><><col>Floor Divide ( 9 // 4 = 2)<>
 <col> <>
 <col><c><v>a<> % <v>b<><><><col>Modulo ( 7 % 3 = 1)<>
-<col><c><v>a<> ** <v>b<><><><col>To The Power Of<><><>
+<col><c><v>a<> ** <v>b<><><><col>To The Power of<><><>
 @
 @ power, modulo, modulus, plus, minus, divide, multiply, %, **, +, -, /, //
 
@@ -1557,6 +1582,18 @@ Example:
 
 
 
+#### For - Break Continue
+
+<cb>for <v>item<> in <v>sequence_1<>:
+	<v>...<>
+	break
+	<v>...<>
+	continue
+@
+@ next, skip, exit, iteration
+
+
+
 ### Match
 
 Python Version: 3.10+
@@ -1983,6 +2020,8 @@ Executes else clause when <c>condition<> is <c>False<>.
 
 
 <c>break<> will skip the <c>else<> block if one is included.
+@
+@ next, skip, exit
 
 
 
@@ -1996,7 +2035,7 @@ Applies to <c>for<> and <c>while<> loops.
 
 <c>break<> will skip the <c>else<> block if one is included.
 @
-@ For, While, skip
+@ For, While, skip, exit
 
 
 
@@ -2008,7 +2047,7 @@ Continue on Next Iteration:
 
 Applies to <c>for<> and <c>while<> loops.
 @
-@ For, While, skip
+@ For, While, skip, next
 
 
 
@@ -2242,6 +2281,22 @@ Example:
 
 
 
+### Variable Type - Get Type Name
+
+<cb>= type(<v>item_1<>).__name__<>
+
+Returns the type name of the item.
+
+
+Example:
+
+<cb><v>float_1<> = <v>1.0<>
+print(type(<v>float_1<>).__name__)         <#># Prints <c>'float'<>.<><>
+@
+@ Variable, class, __name__, type()
+
+
+
 ### Variable Type - Is Type?
 
 <cb>= type(<v>item_1<>) is <v>type_1<><>
@@ -2325,66 +2380,13 @@ This is an easy way to swap the values of <c><v>a<><> and <c><v>b<><>.
 
 
 
-# Type
-@
-@ type-only, type()
-
-
-### Type - Equals?
-
-<cb>= type(<v>item_1<>) is <v>type_1<><>
-
-Returns true if <c><v>item_1<><> is the same type as <c><v>type_1<><>.
-
-
-Example:
-
-<cb>if type(<v>arg_1<>) is list:
-	<v>...<>                                   <#># Executes if arg_1 is of type <c>list<>.<><>
-@
-@ Variable, equals, is, compare, isclass, type()
-
-
-
-### Type - Get
-
-<cb>= type(<v>item_1<>)<>
-
-Returns the item type.
-
-
-Example:
-
-<cb><v>float_1<> = <v>1.0<>
-<v>type_1<> = type(<v>float_1<>)                  <#># Returns <c>class 'float'<>.<><>
-@
-@ Variable, check, typeof, type()
-
-
-
-### Type - Get Name
-
-<cb>= type(<v>item_1<>).__name__<>
-
-Returns the type name of the item.
-
-
-Example:
-
-<cb><v>float_1<> = <v>1.0<>
-print(type(<v>float_1<>).__name__)         <#># Prints <c>'float'<>.<><>
-@
-@ Variable, class, __name__, type()
-
-
-
 # Data Types - Built In
 @
 @ standard, builtin
 
 
 
-#### Standard Types
+### Standard Types
 
 	<c>bool<>			(Boolean)
 	<c>int<>				(Integer)
@@ -2394,7 +2396,7 @@ print(type(<v>float_1<>).__name__)         <#># Prints <c>'float'<>.<><>
 
 
 
-#### Sequence Types
+### Sequence Types
 
 	<c>list<>			(List / Mutable Array)
 	<c>tuple<>			(Immutable Array)
@@ -2404,7 +2406,7 @@ print(type(<v>float_1<>).__name__)         <#># Prints <c>'float'<>.<><>
 
 
 
-#### Collections
+### Collections
 
 	<c>dict<>			(Dictionary of Key Value Pairs)
 	<c>set<>				(Mutable Set)
@@ -2414,7 +2416,7 @@ print(type(<v>float_1<>).__name__)         <#># Prints <c>'float'<>.<><>
 
 
 
-#### Mutable Types
+### Mutable Types
 
 	<c>bytearray<>
 	<c>classes<>
@@ -2425,7 +2427,7 @@ print(type(<v>float_1<>).__name__)         <#># Prints <c>'float'<>.<><>
 
 
 
-#### Immutable Types
+### Immutable Types
 
 	<c>boolean<>
 	<c>byte<>
@@ -3304,6 +3306,28 @@ Use this function to find the value in your current environment.
 
 
 
+#### Integer - From Binary String
+
+<cb>= int(<v>binary_string<>, 2)<>
+
+<cb>= int("0b<v>value<>", 0)<>
+
+
+Example:
+
+<cb><v>bin_1<> = int("<v>00101010<>", 2)
+
+<#># Returns 42<><>
+
+<cb><v>bin_2<> = int("0x<v>00101010<>", 0)
+
+<#># Returns 42<><>
+@
+@ Convert, Conversion, To, int(), hexadecimal
+@ to-integer, from-string, from-binary-string
+
+
+
 #### Integer - To Binary String
 
 <cb>= bin(<v>int_1<>)<>
@@ -4140,7 +4164,34 @@ else:
 
 
 
+#### String - Count Occurences
+
+<cb>= <v>string_1<>.count(<v>value<>)<>
+
+Returns: <c>int<>
+
+
+Returns the number of times <c>value<> exists in the string.
+
+
+Examples:
+
+<cb><v>count<> = '<v>abc abc a<>'.count('<v>a<>')
+
+<#># Returns 3<><>
+
+<cb><v>count<> = '<v>abc abc a<>'.count('<v>abc<>')
+
+<#># Returns 2<><>
+@
+@ string.count(), str.count(), .count()
+@ character, substring, match, times
+
+
+
 #### String - Join
+
+<cb>= <v>separator<>.join(<>strings<>])<>
 
 <cb>= <v>separator<>.join(<v>iterable<>)<>
 
@@ -5918,14 +5969,14 @@ from time import localtime
 
 DateTime:
 
-<in-2><*>Stores Date and Time in a Class
-Has Many Date Time Manipulation Methods<><>
+<*>Stores Date and Time in a Class
+Has Many Date Time Manipulation Methods<>
 
 Timestamp:
 
-<in-2><*>Stores Number of Seconds
+<*>Stores Number of Seconds
 Since January 1st, 1970
-Returned as a Float<><>
+Returned as a Float<>
 
 
 
@@ -6086,6 +6137,7 @@ Update Value:
 
 <#># Updates To: {1: 'a', 2: 'x'}<><>
 @
+@ dict[]
 @ add, put, insert, update, modify, change, item, element, value, append to
 
 
@@ -6108,7 +6160,8 @@ Example:
 
 <#># Updates To: {1: 'a', 2: 'b2', 3: 'c'}<><>
 @
-@ .update(), extend, extends, join, concatenate, addall, append to
+@ dict.update(), .update()
+@ extend, extends, join, concatenate, addall, append to
 
 
 
@@ -6155,7 +6208,8 @@ Does Not Contain?:
 
 <cb><v>key_1<> not in <v>dict_1<><>
 @
-@ has, check, exists, in, not in, .has_key(), includes
+@ dict.has_key(), .has_key()
+@ has, check, exists, in, not in, includes
 
 
 
@@ -6182,7 +6236,8 @@ Will raise an error if key is not present.
 
 <cb><v>dict_1<>.clear()<>
 @
-@ remove, .clear(), elements, items
+@ dict.clear(), .clear()
+@ remove, elements, items
 
 
 
@@ -6258,7 +6313,8 @@ As List:
 
 Returns list of key value tuples.
 @
-@ sorted, pairs, ordered, items, elements, .items(), sorted(), names, keys, values
+@ @ dict.items(), .items(), sorted()
+@ sorted, pairs, ordered, items, elements, names, keys, values
 
 
 
@@ -6268,7 +6324,8 @@ Returns list of key value tuples.
 
 Returns list of key value tuples.
 @
-@ sorted, pairs, ordered, items, elements, .items(), sorted(), names, keys, values
+@ dict.items(), .items(), sorted()
+@ sorted, pairs, ordered, items, elements, names, keys, values
 
 
 
@@ -6291,7 +6348,8 @@ or
 
 \#2  <s>-<>  Returns <c>None<> if not found.
 @
-@ retrieve, item, elements, keyerror, .get()
+@ dict.get(), .get()
+@ retrieve, item, elements, keyerror
 
 
 
@@ -6307,7 +6365,8 @@ As List:
 
 <cb>= list(<v>dict_1<>.values())<>
 @
-@ retrieve, items, elements, .values()
+@ .values(), dict.values()
+@ retrieve, items, elements,
 
 
 
@@ -6315,7 +6374,8 @@ As List:
 
 <cb>= [<v>dict_1<>[<v>key<>] for <v>key<> in sorted(<v>dict_1<>.keys())]<>
 @
-@ retrieve, items, elements, .values()
+@ dict.values(), .values(), dict.keys(), dict.keys
+@ retrieve, items, elements
 
 
 
@@ -6333,8 +6393,9 @@ As List:
 <cb>for <v>key<>, <v>value<> in <v>dict_1<>.items():
 	<v>...<><>
 @
+@ dict.items(), .items()
 @ for, loop, foreach, each, in
-@ items, elements, .items(), iterating, names, values
+@ items, elements, iterating, names, values
 
 
 
@@ -6503,7 +6564,7 @@ Examples:
 
 <#># Returns 6<><>
 @
-@ 2d, sublists, nesting, of lists
+@ 2d, sublists, nesting, of lists, 3d
 
 
 
@@ -6566,6 +6627,7 @@ Example:
 <#># Sets list_1 to [1, 2, 3, 4]<><>
 @
 @ put, add, addall, concatenate, extend(), combine, append to, .extend()
+@ 2nd, second, list2, list_2
 
 
 
@@ -6618,7 +6680,7 @@ Examples:
 
 <v>list_2<> = [ <v>i<> * 2 for <v>i<> in <v>list_1<> if <v>i<> \<= 3]      <#># Returns [2, 4, 6]<><>
 @
-@ for in if [], conditional, iterating, sequences
+@ for in if [], conditional, iterate, iterating, sequences
 
 
 
@@ -6637,7 +6699,7 @@ Example:
 
 <#># Returns: [[11, 12], [13, 14]]<><>
 @
-@ for in if [], conditional, iterating, sequences
+@ for in if [], conditional, iterate, iterating, sequences
 
 
 
@@ -6672,10 +6734,11 @@ Example:
 <#># Returns: True<><>
 @
 @ has, check, exists, item, element, includes, in, matches, 2nd, other
+@ list_2, list2, second
 
 
 
-#### List - Count Value Occurrences
+#### List - Count Occurrences
 
 <cb>= <v>list_1<>.count(<v>value<>)<>
 
@@ -6881,6 +6944,7 @@ Example:
 
 <#># Returns False<><>
 @
+@ list_2, list2, second list, 2nd
 @ equals, identical, ==
 
 
@@ -6916,7 +6980,8 @@ is_it_a_sublist = is_sublist(<v>list_1<>, <v>list_2<>)
 
 <#># Returns True<><>
 @
-@ contains, is_sublist
+@ contains, is_sublist()
+@ list_2, list2
 
 
 
@@ -7052,21 +7117,46 @@ Example:
 
 
 
-#### List - Get Remainder
-
-<cb>= <v>list_1<>[1:]<>
-
-Return everything but the first item.
-@
-@ tail, items, values, [1:]
-
-
-
 #### List - Get Sublist
 
 <cb>= <v>list_1<>[<v>index<>][<v>sub_index<>]<><>
 @
 @ item, value, 2d, sublists
+
+
+
+#### List - Get Sublist - All Except First
+
+<cb>= <v>list_1<>[1:]<>
+
+Return everything but the first item.
+
+
+Example:
+
+<cb><v>list_1<> = [<v>0<>, <v>1<>, <v>2<>, <v>3<>, <v>4<>]
+
+<v>value<> = <v>list_1<>[1:]
+
+<#># Returns [1, 2, 3, 4]<><>
+@
+@ tail, items, values, [1:]
+@ second, 2nd, to end, to last, remainder
+
+
+
+#### List - Get Values Contained In Second List
+
+<cb>= [<v>value<> for <v>value<> in <v>list_1<> if <v>value<> in <v>list_2<>]<>
+
+
+Returns a subset of list 1 where each value exists in list 2.
+
+Use a list comprehension with if to filter list 1 based on list 2.
+Maintains the original order.
+@
+@ if exists, 2nd, second, contains, other, filter
+@ list2, list_2
 
 
 
@@ -7120,6 +7210,7 @@ Example:
 <cb>= <v>list_1<> + <v>list_2<><>
 @
 @ lists, join, concatenate, combine, union
+@ list_2, list2
 
 
 
@@ -7892,7 +7983,7 @@ Example:
 
 
 
-#### Sequence - Get Remainder
+#### Sequence - Get Sublist - All Except First
 
 <cb>= <v>sequence_1<>[1:]<>
 
@@ -7909,6 +8000,7 @@ Example:
 <#># Returns [1, 2, 3, 4]<><>
 @
 @ item, [1:], sublist, subsequence
+@ second, 2nd, to end, to last, remainder
 
 
 
@@ -8039,7 +8131,7 @@ Example:
 
 
 
-#### Sequence - Count Value Occurrences
+#### Sequence - Count Occurrences
 
 <cb>= <v>sequence_1<>.count(<v>value<>)<>
 
@@ -8050,7 +8142,7 @@ Returns the number of times <c><v>value<><> appears in <c><v>sequence_1<><>.
 
 
 
-#### Sequence - Count Value Occurences
+#### Sequence - Count Occurences With Counter
 
 <cb>from collections import Counter
 
@@ -8550,6 +8642,45 @@ Example:
 <v>combined_list<> = list(<v>zipped<>)            <#># Returns [(1, 'one'), (2, 'two')]<><>
 @
 @ Merge, Combine, List, Set, zip()
+
+
+
+### List vs Tuple vs Sequence vs Array vs NumPy Array
+
+List:
+
+<*>Mutable List<>
+
+<*>Mutable Ordered List of Items
+Can Mix and Match Types<>
+
+Tuple:
+
+<*>Immutable List<>
+
+<*>Immutable Ordered List of Items
+Can Mix and Match Types<>
+
+Sequence:
+
+<*>General Type For All Lists<>
+
+<*>Any Type of Ordered List
+Includes Lists, Tuples<>
+
+Array:
+
+<*>High Performance Single Type List<>
+
+<*>A High Performance List of Items
+Data Must Single Type<>
+
+NumPy Array:
+
+<*>High Performance Multidimenisonal Array<>
+
+<*>Requires NumPy Library (External Library)
+Data Most Be Single Type<>
 
 
 
@@ -10476,7 +10607,33 @@ while <v>value<> := next(<v>values<>):
 
 
 
+### Iterable vs Iterator vs Generator
+
+Iterable:
+
+<*>Think "contains iterable data"
+Implements <c>__iter__()<>
+Returns an Iterator<>
+
+
+Iterator:
+
+<*>Think "the data being iterated over"
+Implements <c>__next__()<>
+Returns Data One at a Time<>
+
+
+Generator:
+
+<*>A Type of Iterable
+Wraps an Iterator Function with an Iterable<>
+
+
+
 # Generators
+
+A generator is a function wrapped in an iterable.
+The function should act like an iterator (eg: returns results with <c>yield<>).
 @
 @ generate
 
@@ -11609,7 +11766,7 @@ Example:
 
 
 
-### Regular Expressions - Is Match
+### Regular Expressions - Starts With
 
 <cb>= match(<v>match_pattern<>, <v>string_1<>)<>
 
@@ -13156,6 +13313,659 @@ the <c>;<> or <c>:<> in <c><v>dir_1<>;<v>dir_2<>;<v>dir_3<><>
 
 
 # Standard Libraries
+
+
+## Argparse
+@
+@ argparser, argument parser
+@ argparse-only
+@ argparse.argumentparser()
+@ parameters
+
+
+
+### Argparse Basics
+
+<cb>from argparse import ArgumentParser
+
+<v>parser<> = ArgumentParser(description = '<v>description<>')<>
+
+Flag:
+
+<cb><v>parser<>.add_argument('-<v>n<>', '--<v>name<>', action='store_true')<>
+
+Optional Field:
+
+<cb><v>parser<>.add_argument('-<v>n<>', '--<v>name<>')<>
+
+Positional Field:
+
+<cb><v>parser<>.add_argument('<v>first<>')
+<v>parser<>.add_argument('<v>second<>')<>
+
+As Int:
+
+<cb><v>parser<>.add_argument('<v>name<>', type = int)<>
+
+From Choices:
+
+<cb><v>parser<>.add_argument('<v>name<>', choices = ['<v>a<>', '<v>b<>', '<v>c<>'])<>
+
+Parameter Help Text:
+
+<cb><v>parser<>.add_argument(<v>...<>, help = '<v>help<>')<>
+
+
+Get:
+
+<cb><v>arguments<> = <v>parser<>.parse_args()
+
+if <v>argumets<>.<v>flag_name<>:
+    <v>...<>
+
+<v>value<> = <v>arguments<>.<v>name<><>
+
+
+### Argparse - Create
+
+
+
+#### Argparse - Create
+
+<cb>= ArgumentParser()<>
+
+Usage:
+
+<cb>from argparse import ArgumentParser
+
+<v>parser<> = ArgumentParser(
+        description = '<v>help description<>')<>
+@
+@ argparser.argumentparser()
+@ new, instantiate, define
+
+
+
+#### Argparse - Create, Override Error
+
+<cb>class ArgumentParserNoExit(ArgumentParser):
+    def error(self, <v>message<>):
+        <v>...<><>
+
+Usage:
+
+<cb>from argparse import ArgumentParser
+
+class ArgumentParserNoExit(ArgumentParser):
+    def error(self, <v>message<>):
+        <v>...<>
+
+<v>parser<> = ArgumentParserNoExit(<v>...<>)<>
+
+
+Override the error() method.
+
+Subclass ArgumentParser and implement the <c>error()<> method to override the error behavior.
+Error messages will be sent to this method instead of calling <c>sys.exit()<>.
+@
+@ error(), argumentparsernoexit
+
+
+
+#### Argparse Settings - Disable Exit On Error
+
+<cb>parser = ArgumentParser(exit_on_error = False)<>
+
+Usage:
+
+<cb>from argparse import ArgumentParser, ArgumentError
+
+<v>parser<> = ArgumentParser(<v>...<>, exit_on_error = False)
+
+try:
+    <v>arguments<> = <v>parser<>.parse_args()
+except ArgumentError as error:
+    <v>...<><>
+
+Default: True
+
+
+Throws ArgumentError instead of exiting the application.
+@
+@ exit_on_error, argumenterror, argparse.argumenterror
+
+
+
+### Argparse - Parse
+@
+@ parser.parse_args(), .parse_args()
+
+
+
+#### Argparser - Parse Command Line
+
+<cb>= parser.parse_args()<>
+
+
+Parses the command line arguments.
+
+Will print help and exit if has '-h', '--help'.
+Will print errors and exit if any errors found.
+@
+@ get, program, application, commandline
+
+
+
+#### Argparse - Parse String
+
+<cb>= parser.parse_args(<v>argument_list<>)<>
+
+Will print help and exit if has '-h', '--help'.
+Will print errors and exit if any errors found.
+@
+@ get
+
+
+
+### Argparse - Flag Parameters
+@
+@ parser.add_argument(), .add_argument()
+
+
+
+#### Argparse - Flag Parameter
+
+<cb><v>parser<>.add_argument('--<v>name<>', '-<v>n<>',
+        action = 'store_true')<>
+
+Full Usage:
+
+<cb><v>parser<>.add_argument('--<v>name<>', '-<v>n<>',
+        action = 'store_true',
+        help = '<v>help text<>')<>
+
+<cb>if <v>arguments<>.<v>name<>:
+    <v>...<><>
+
+Returns: <c>bool<>
+
+
+Defines an argument flag.
+
+The first <c>add_argument<> parameter with leading '--' defines the field name.
+Returns <c>True<> if present, <c>False<> if not.
+
+
+Example:
+
+<cb>from argparse import ArgumentParser
+
+<v>parser<> = ArgumentParser()
+<v>parser<>.add_argument('-d', '--debug', action = 'store_true')
+<v>parser<>.add_argument('-v', '--verbose', action = 'store_true')
+
+<v>arguments<> = parser.parse_args(['-d'])
+
+print(<v>arguments<>.debug, <v>arguments<>.verbose)
+
+<#># Prints: True False<><>
+@
+@ action='store_true', store_true
+
+
+
+#### Argparse - Flag Parameter / As False
+
+<cb><v>parser<>.add_argument(<v>...<>, action='store_false')<>
+
+Full Usage:
+
+<cb><v>parser<>.add_argument('-<v>n<>', '--<v>name<>',
+        action = 'store_false',
+        help = <v>help text<>)<>
+
+<cb>if not <v>arguments<>.<v>name<>:
+    <v>...<><>
+
+Returns: <c>bool<>
+
+
+Returns <c>False<> if present, <c>True<> if not.
+@
+@ action='store_false', store_false
+
+
+
+#### Argparse - Flag Parameter / As Value
+
+<cb><v>parser<>.add_argument(<v>...<>,
+        action = 'store_const', const = <v>value<>)<>
+
+Returns: <c>str<>
+
+
+Returns <c>value<> if present, <c>None<> if not.
+@
+@ action='store_const', store_const, const=, constant
+
+
+
+### Argparse - Optional Argument
+@
+@ named
+@ parser.add_argument(), .add_argument()
+
+
+
+#### Argparse - Optional Argument
+
+<cb><v>parser<>.add_argument("-<v>n<>", "--<v>name<>")<>
+
+Usage:
+
+<cb><v>parser<>.add_argument("-<v>n<>", "--<v>name<>"
+        help = '<v>help text<>')<>
+
+<cb>= <v>arguments<>.<v>name<><>
+
+Returns: <v>str<>
+
+
+Defines optional (named) argument.
+
+Returns the value if present, or <c>None<> if missing.
+
+
+Example:
+
+<cb>from argparse import ArgumentParser
+
+<v>parser<> = ArgumentParser()
+<v>parser<>.add_argument('-n', '--name')
+<v>parser<>.add_argument('-i', '--id')
+
+<v>arguments<> = parser.parse_args(['-i', '42'])
+
+print(<v>arguments<>.name, <v>arguments<>.id)
+
+<#># Prints: None 42<><>
+
+
+
+#### Argparse - Optional Argument / As Integer
+
+<cb><v>parser<>.add_argument(<v>...<>, type = int)<>
+
+Usage:
+
+<cb><v>parser<>.add_argument("-<v>n<>", "--<v>name<>",
+        type = int,
+        help = '<v>help text<>')<>
+
+<cb>= <v>arguments<>.<v>name<><>
+
+Returns: <v>int<>
+
+
+Defines optional (named) argument.
+
+Returns the value as an integer if present, or <c>None<> if missing.
+@
+@ type=int
+
+
+
+#### Argparse - Optional Argument / Choice of
+
+<cb><v>parser<>.add_argument("-<v>n<>", "--<v>name<>",
+        choices = [<v>value_1<>, <v>value_2<>, <v>value_3<>])<>
+
+
+Defines optional (named) argument of limited choices.
+
+Will report an error if an invalid value is given.
+@
+@ choices=
+
+
+
+#### Argparse - Optional Argument / Append Value
+
+<cb><v>parser<>.add_argument("-<v>n<>", "--<v>name<>", action='append')<>
+
+Returns: List
+
+
+Adds optional argument (named argument).
+@
+@ action='append'
+
+
+
+#### Argparse - Optional Argument / Append Constant
+
+<cb><v>parser<>.add_argument("-<v>n<>", "--<v>name<>",
+    action='append_const', const = <v>value<>)<>
+
+Returns: List
+
+
+Adds optional argument (named argument).
+@
+@ const=, action='append_const', append_const
+
+
+
+### Argparse - Positional Arguments
+@
+@ parser.add_argument()
+
+
+
+#### Argparse - Positional Argument
+
+<cb><v>parser<>.add_argument("<v>name<>")<>
+
+Usage:
+
+<cb><v>parser<>.add_argument("<v>first<>", help="<v>first help text<>")
+<v>parser<>.add_argument("<v>second<>", help="<v>second help text<>")
+<v>...<>
+
+<v>first_argument<> = <v>arguments<>.<v>first<><>
+
+Returns: <v>str<>
+
+
+Returns the argument in the position it was defined.
+
+
+Example:
+
+<cb>from argparse import ArgumentParser
+
+<v>parser<> = ArgumentParser()
+<v>parser<>.add_argument('id')
+<v>parser<>.add_argument('name')
+
+<v>arguments<> = parser.parse_args(['42', 'sample-name'])
+
+print(arguments.id, arguments.name)
+
+<#># Prints: 42 sample-name<>
+@
+@ string, str
+
+
+
+#### Argparse - Positional Argument / As Integer
+
+<cb><v>parser<>.add_argument("<v>name<>", type = int)<>
+
+Usage:
+
+<cb><v>parser<>.add_argument("<v>name<>", type = int, help="<v>help text.<>")<>
+
+Returns: <v>int<>
+@
+@ type=int, int
+
+
+
+#### Argparse - Positional Argument / Optional
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs='?')<>
+
+Usage:
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs='?', help="<v>help text.<>")<>
+
+Returns: <v>str<>
+@
+@ nargs='?'
+
+
+
+#### Argparse - Positional Argument / Choice of
+
+<cb><v>parser<>.add_argument("<v>name<>", choice = ['<v>one<>', '<v>two<>', '<v>three<>'])<>
+
+Usage:
+
+<cb><v>parser<>.add_argument("<v>name<>",
+        choice = <v>choice_list<>))<>
+
+Returns: <v>str<>
+@
+@ choice=[], from list
+
+
+
+#### Argparse - Positional Argument / 0 or More
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs='*')<>
+
+Usage:
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs='+', help="<v>help text.<>")<>
+
+Returns: <c>list<>
+
+@
+@ string, str, zero, get, nargs=, '*', "*", *
+
+
+
+#### Argparse - Positional Argument / 1 or More
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs='+')<>
+
+Usage:
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs='+', help="<v>help text.<>")<>
+
+Return: <c>list<>
+
+
+Returns a list of values.
+
+Throws an error if none found.
+@
+@ string, str, get, one, nargs='+', '+', "+", +
+
+
+
+#### Argparse - Positional Argument / N Arguments
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs=<v>n<>)<>
+
+Usage:
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs=<v>n<>, help="<v>help text.<>")<>
+
+Returns: <v>list<>
+@
+@ nargs=, set number
+
+
+
+### Argparse - Groups
+
+
+#### Argparse - Mutually Exclusive Group
+
+<cb>group = parser.add_mutually_exclusive_group()
+
+group.add_argument('<v>option_1<>', <v>...<>)
+group.add_argument('<v>option_2<>', <v>...<>)<>
+
+
+Defines a group of mutually exclusive arguments.
+
+Only one of the defined arguments can exist.
+@
+@ parser.add_mutually_exclusive_group(), .add_mutually_exclusive_group()
+
+
+
+### Argparse - All Arguments
+@
+@ optional, named, positional
+
+
+
+#### Argparse Argument - Return As Integer
+
+<cb><v>parser<>.add_argument(<v>...<>, type = int)<>
+
+Returns: <v>int<>
+
+
+Returns the argument as an integer
+@
+@ type=int, int
+
+
+
+#### Argparse Argument - Return From Choices
+
+<cb><v>parser<>.add_argument(<v>...<>, choice = ['<v>one<>', '<v>two<>', '<v>three<>'])<>
+
+Returns: <v>str<>
+
+
+Returns one of the integers in choices.
+Will report an error if an invalid value is given.
+@
+@ limit, from selection, from list
+@ choice=[]
+
+
+
+#### Argparse Argument - Return As Choice of Integers
+
+<cb><v>parser<>.add_argument(type = int,
+        choices = [<v>value_1<>, <v>value_2<>, <v>value_3<>])<>
+
+Type: <v>int<>
+
+
+Returns the argument as a choice of integers.
+
+Returns one of the integers in <c>choices<>.
+Will report an error if an invalid value is given.
+@
+@ choices=
+
+
+
+#### Argparse Argument - Set Default
+
+<cb><v>parser<>.add_argument(<v>...<>, default = <v>value<>)<>
+
+
+Sets the default value when the argument doesn't exist.
+@
+@ default=
+
+
+#### Argparse Argument - Set Field Name
+
+<cb><v>parser<>.add_argument(<v>...<>, dest = <v>field_name<>)<>
+
+<cb><v>arguments<> = <v>parser<>.parse_args()
+= <v>arguments<>.<v>field_name<><>
+
+
+Explicitly defines the field name the argument value will be stored in.
+@
+@ dest=, variable
+
+
+
+#### Argparse Argument - Set Require
+
+<cb><v>parser.add_argument(<v>...<>, required = True)
+
+
+Requires the argument to be present.
+
+Will display help and exit if not found.
+@
+@ required=
+@ mandatory
+
+
+
+#### Argparse Argument - Set Return Type
+
+<cb><v>parser<>.add_argument(<v>...<>, type = <v>return_type<>)<>
+
+
+Casts the return value to the given type before returning.
+
+
+Return Types:
+
+<cb>int
+float
+ascii
+ord
+open<>
+@
+@ int, float, ascii, ord, open, integer
+@ cast to, type=
+
+
+
+### Argparse Help
+
+
+
+#### Argparse Help - Set Program Name
+
+<cb>parser = ArgumentParser(<v>...<>,
+        prog = "<v>program_name<>")<>
+
+Defaults to: sys.argv[0]
+@
+@ prog=
+
+
+
+#### Argparse Help - Set Usage Text
+
+<cb>parser = ArgumentParser(<v>...<>,
+        usage = "<v>Usage Text<>")<>
+
+
+Sets the usage text that will be displayed with '-h'.
+@
+@ usage=
+
+
+#### Argparse Help - Disable Implicit Help
+
+<cb>parser = ArgumentParser(<v>...<>,
+        add_help = False<>
+
+
+Disables the implict help options.
+@
+@ add_help=
+
+
+
+#### Argparse Help - Show Help
+
+<cb><v>parser<>.print_help()<>
+
+
+Prints the help text.
+@
+@ parser.print_help(), .print_help()
+@ print
+
 
 
 ## ConfigParser
@@ -17747,8 +18557,12 @@ print(<v>person_dict<>)
 
 
 ## Deque
+
+A double ended queue that is implemented as a linked list under the hood.
+
+Guarantees O(1) performance for append, remove on either end of the queue.
 @
-@ collections.deque, deque(), double ended queue, deque-only
+@ collections.deque, deque(), double ended queue, deque-only, linked list
 
 
 
@@ -17843,7 +18657,7 @@ Example:
 
 
 
-#### Deque - Count Value Occurences
+#### Deque - Count Occurences
 
 <cb>= <v>queue_1<>.count(<v>value<>)<>
 
@@ -17881,7 +18695,7 @@ Example:
 
 
 
-### Deque - Is Empty?
+#### Deque - Is Empty?
 
 <cb>= not <v>queue_1<><>
 
@@ -17961,7 +18775,7 @@ Removes the last / right item from the queue and returns it.
 
 
 
-### Deque - Prepend
+#### Deque - Prepend
 
 <cb><v>queue_1<>.appendleft(<v>value<>)<>
 
@@ -20053,7 +20867,7 @@ voices = <v>engine<>.getProperty('voices')
 <v>engine<>.say ("<v>Hello meatbag.<>")
 <v>engine<>.runAndWait()<>
 @
-@ synthesis
+@ synthesis, say, talk, speach
 
 
 # Reference - Coming From Other Languages
