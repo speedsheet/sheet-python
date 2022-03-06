@@ -121,7 +121,7 @@ File Contents:
 
 <cb>print("<v>Hello World!<>")<>
 
-Run From The Command Line:
+Run From The Command-line:
 
 <cb>python3 hello.py<>
 
@@ -142,13 +142,13 @@ if not <v>name<>:
 
 print("<v>hello <>" + <v>name<> + "<v>!<>")<>
 
-Run From The Command Line:
+Run From The Command-line:
 
 <cb>python3 hello2.py <v>your_name_here<><>
 
 
 
-### Hello World - With Command Line Arguments
+### Hello World - With Command-line Arguments
 
 This version takes one arguments and displays it as the name.
 
@@ -168,12 +168,12 @@ else:
 
 print("<v>hello <>" + <v>name<> + "<v>!<>")<>
 
-Run From The Command Line:
+Run From The Command-line:
 
 <cb>python3 hello2.py <v>your_name_here<><>
 
 
-\#1  <s>-<>  Importing argv allows the program to get arguments passed in from the command line.
+\#1  <s>-<>  Importing argv allows the program to get arguments passed in from the command-line.
 
 \#2  <s>-<>  Check if any arguments were passed in.
 
@@ -602,7 +602,9 @@ Avoid using.<>
 
 
 
-# Command Line
+# Command-line
+@
+@ commandline, command line
 
 
 
@@ -612,9 +614,9 @@ Avoid using.<>
 
 <cb>python3 --version<>
 
-Shows the current python version from the command line.
+Shows the current python version from the command-line.
 @
-@ Get, command line, number, python3, --version
+@ Get, number, python3, --version
 
 
 
@@ -678,7 +680,7 @@ Run from source root directory.
 
 
 
-# Unit Test - Command Line
+# Unit Test - Command-line
 @
 @ command-line-only, commandline-only, python3, tests, testing, -m, unittest
 
@@ -3713,7 +3715,7 @@ Example:
 
 <cb><v>string_1<> = "<v>norminal<>"
 
-<v>formatted<> = f"{<v>string_1<>} =}"
+<v>formatted<> = f"{<v>string_1<> =}"
 
 <#># Returns "string_1 = 'norminal'"<><>
 @
@@ -13338,7 +13340,7 @@ Optional Field:
 
 <cb><v>parser<>.add_argument('-<v>n<>', '--<v>name<>')<>
 
-Positional Field:
+Positional Fields:
 
 <cb><v>parser<>.add_argument('<v>first<>')
 <v>parser<>.add_argument('<v>second<>')<>
@@ -13356,7 +13358,7 @@ Parameter Help Text:
 <cb><v>parser<>.add_argument(<v>...<>, help = '<v>help<>')<>
 
 
-Get:
+Parse:
 
 <cb><v>arguments<> = <v>parser<>.parse_args()
 
@@ -13412,42 +13414,18 @@ Error messages will be sent to this method instead of calling <c>sys.exit()<>.
 
 
 
-#### Argparse Settings - Disable Exit On Error
-
-<cb>parser = ArgumentParser(exit_on_error = False)<>
-
-Usage:
-
-<cb>from argparse import ArgumentParser, ArgumentError
-
-<v>parser<> = ArgumentParser(<v>...<>, exit_on_error = False)
-
-try:
-    <v>arguments<> = <v>parser<>.parse_args()
-except ArgumentError as error:
-    <v>...<><>
-
-Default: True
-
-
-Throws ArgumentError instead of exiting the application.
-@
-@ exit_on_error, argumenterror, argparse.argumenterror
-
-
-
 ### Argparse - Parse
 @
 @ parser.parse_args(), .parse_args()
 
 
 
-#### Argparser - Parse Command Line
+#### Argparser - Parse Command-line
 
 <cb>= parser.parse_args()<>
 
 
-Parses the command line arguments.
+Parses the command-line arguments.
 
 Will print help and exit if has '-h', '--help'.
 Will print errors and exit if any errors found.
@@ -13615,17 +13593,16 @@ Returns the value as an integer if present, or <c>None<> if missing.
 
 
 
-#### Argparse - Optional Argument / Choice of
+#### Argparse - Optional Argument / Choice From List
 
-<cb><v>parser<>.add_argument("-<v>n<>", "--<v>name<>",
-        choices = [<v>value_1<>, <v>value_2<>, <v>value_3<>])<>
+<cb><v>parser<>.add_argument("-<v>n<>", "--<v>name<>", choices = [<v>value_1<>, <v>value_2<>, <v>value_3<>])<>
 
 
 Defines optional (named) argument of limited choices.
 
 Will report an error if an invalid value is given.
 @
-@ choices=
+@ choices=, choose, limit, from list
 
 
 
@@ -13692,7 +13669,7 @@ Example:
 
 print(arguments.id, arguments.name)
 
-<#># Prints: 42 sample-name<>
+<#># Prints: 42 sample-name<><>
 @
 @ string, str
 
@@ -13712,21 +13689,7 @@ Returns: <v>int<>
 
 
 
-#### Argparse - Positional Argument / Optional
-
-<cb><v>parser<>.add_argument("<v>name<>", nargs='?')<>
-
-Usage:
-
-<cb><v>parser<>.add_argument("<v>name<>", nargs='?', help="<v>help text.<>")<>
-
-Returns: <v>str<>
-@
-@ nargs='?'
-
-
-
-#### Argparse - Positional Argument / Choice of
+#### Argparse - Positional Argument / Choice From List
 
 <cb><v>parser<>.add_argument("<v>name<>", choice = ['<v>one<>', '<v>two<>', '<v>three<>'])<>
 
@@ -13737,55 +13700,7 @@ Usage:
 
 Returns: <v>str<>
 @
-@ choice=[], from list
-
-
-
-#### Argparse - Positional Argument / 0 or More
-
-<cb><v>parser<>.add_argument("<v>name<>", nargs='*')<>
-
-Usage:
-
-<cb><v>parser<>.add_argument("<v>name<>", nargs='+', help="<v>help text.<>")<>
-
-Returns: <c>list<>
-
-@
-@ string, str, zero, get, nargs=, '*', "*", *
-
-
-
-#### Argparse - Positional Argument / 1 or More
-
-<cb><v>parser<>.add_argument("<v>name<>", nargs='+')<>
-
-Usage:
-
-<cb><v>parser<>.add_argument("<v>name<>", nargs='+', help="<v>help text.<>")<>
-
-Return: <c>list<>
-
-
-Returns a list of values.
-
-Throws an error if none found.
-@
-@ string, str, get, one, nargs='+', '+', "+", +
-
-
-
-#### Argparse - Positional Argument / N Arguments
-
-<cb><v>parser<>.add_argument("<v>name<>", nargs=<v>n<>)<>
-
-Usage:
-
-<cb><v>parser<>.add_argument("<v>name<>", nargs=<v>n<>, help="<v>help text.<>")<>
-
-Returns: <v>list<>
-@
-@ nargs=, set number
+@ choice=[], from list, choose, limit
 
 
 
@@ -13808,13 +13723,13 @@ Only one of the defined arguments can exist.
 
 
 
-### Argparse - All Arguments
+### Argparse - Arguments
 @
 @ optional, named, positional
 
 
 
-#### Argparse Argument - Return As Integer
+#### Argparse Argument - As Integer
 
 <cb><v>parser<>.add_argument(<v>...<>, type = int)<>
 
@@ -13827,77 +13742,7 @@ Returns the argument as an integer
 
 
 
-#### Argparse Argument - Return From Choices
-
-<cb><v>parser<>.add_argument(<v>...<>, choice = ['<v>one<>', '<v>two<>', '<v>three<>'])<>
-
-Returns: <v>str<>
-
-
-Returns one of the integers in choices.
-Will report an error if an invalid value is given.
-@
-@ limit, from selection, from list
-@ choice=[]
-
-
-
-#### Argparse Argument - Return As Choice of Integers
-
-<cb><v>parser<>.add_argument(type = int,
-        choices = [<v>value_1<>, <v>value_2<>, <v>value_3<>])<>
-
-Type: <v>int<>
-
-
-Returns the argument as a choice of integers.
-
-Returns one of the integers in <c>choices<>.
-Will report an error if an invalid value is given.
-@
-@ choices=
-
-
-
-#### Argparse Argument - Set Default
-
-<cb><v>parser<>.add_argument(<v>...<>, default = <v>value<>)<>
-
-
-Sets the default value when the argument doesn't exist.
-@
-@ default=
-
-
-#### Argparse Argument - Set Field Name
-
-<cb><v>parser<>.add_argument(<v>...<>, dest = <v>field_name<>)<>
-
-<cb><v>arguments<> = <v>parser<>.parse_args()
-= <v>arguments<>.<v>field_name<><>
-
-
-Explicitly defines the field name the argument value will be stored in.
-@
-@ dest=, variable
-
-
-
-#### Argparse Argument - Set Require
-
-<cb><v>parser.add_argument(<v>...<>, required = True)
-
-
-Requires the argument to be present.
-
-Will display help and exit if not found.
-@
-@ required=
-@ mandatory
-
-
-
-#### Argparse Argument - Set Return Type
+#### Argparse Argument - As Return Type
 
 <cb><v>parser<>.add_argument(<v>...<>, type = <v>return_type<>)<>
 
@@ -13913,12 +13758,144 @@ ascii
 ord
 open<>
 @
-@ int, float, ascii, ord, open, integer
+@ int, float, ascii, ord, open, integer, set, define
 @ cast to, type=
 
 
 
+#### Argparse Argument - Choice from List
+
+<cb><v>parser<>.add_argument(<v>...<>, choice = ['<v>one<>', '<v>two<>', '<v>three<>'])<>
+
+Returns: <v>str<>
+
+
+Returns one of the integers in choices.
+Will report an error if an invalid value is given.
+@
+@ limit, from selection, from list
+@ choice=[]
+
+
+
+#### Argparse Argument - Choice from Integers
+
+<cb><v>parser<>.add_argument(type = int,
+        choices = [<v>value_1<>, <v>value_2<>, <v>value_3<>])<>
+
+Type: <v>int<>
+
+
+Returns the argument as a choice of integers.
+
+Returns one of the integers in <c>choices<>.
+Will report an error if an invalid value is given.
+@
+@ limit, from selection, from list
+@ choices=
+
+
+
+#### Argparse Argument - 0 or 1 (Optional Value)
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs='?')<>
+
+Usage:
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs='?', help="<v>help text.<>")<>
+
+Returns: <v>str<>
+
+Returns an optional value.
+
+Applies to positional and named parameters.
+@
+@ nargs='?'
+
+
+
+#### Argparse Argument - 0 or More Values
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs='*')<>
+
+Usage:
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs='+', help="<v>help text.<>")<>
+
+Returns: <c>list<>
+
+
+Returns 0 or more values.
+
+Applies to positional and named parameters.
+@
+@ string, str, zero, get, nargs=, '*', "*", *
+
+
+
+#### Argparse Argument - 1 or More Values
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs='+')<>
+
+Usage:
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs='+', help="<v>help text.<>")<>
+
+Return: <c>list<>
+
+
+Returns a list of values.
+
+Throws an error if none found.
+Applies to positional and named parameters.
+@
+@ string, str, get, one, nargs='+', '+', "+", +
+
+
+
+#### Argparse Argument - N Values
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs=<v>n<>)<>
+
+Usage:
+
+<cb><v>parser<>.add_argument("<v>name<>", nargs=<v>n<>, help="<v>help text.<>")<>
+
+Returns: <v>list<>
+
+
+Returns a list of n values.
+
+Applies to positional and named parameters.
+@
+@ nargs=, set number
+
+
+
 ### Argparse Help
+
+
+
+#### Argparse Help - Add Help Flag
+
+Included by default.
+
+Help argument flags:
+
+<cb><v>app_name<> -h
+<v>app_name<> --help<>
+
+
+
+#### Argparse Help - Disable Default Help
+
+<cb>parser = ArgumentParser(<v>...<>, add_help = False)<>
+
+
+Disables the default help options.
+@
+@ add_help=
+@ argparse.argumentparser(), .argumentparser()
 
 
 
@@ -13944,18 +13921,6 @@ Sets the usage text that will be displayed with '-h'.
 @ usage=
 
 
-#### Argparse Help - Disable Implicit Help
-
-<cb>parser = ArgumentParser(<v>...<>,
-        add_help = False<>
-
-
-Disables the implict help options.
-@
-@ add_help=
-
-
-
 #### Argparse Help - Show Help
 
 <cb><v>parser<>.print_help()<>
@@ -13965,6 +13930,109 @@ Prints the help text.
 @
 @ parser.print_help(), .print_help()
 @ print
+
+
+
+### Argparse Settings
+
+
+
+#### Argparse - action
+
+<cb><v>parser<>.add_argument(<v>...<>, action = <v>value<>)<>
+
+action:
+
+<card><table><col><c>= 'append'<><><col>Appends Value<>
+<col><c>= 'append_const'<><><col>Appends Constant<>
+<col><c>= 'store'<>	<><col>Stores Value<>
+<col><c>= 'store_const'<><><col>Stores const=<v>value<><>
+<col><c>= 'store_true'<><><col>Sets to True<>
+<col><c>= 'store_false'<><><col>Sets to False<><><>
+@
+@ add_argument(), store, store_const, store_true, store_false, append, append_const
+
+
+
+#### Argparse - nargs
+
+<cb><v>parser<>.add_argument(<v>...<>, nargs = '<v>value<>')<>
+
+nargs:
+
+<card><table><col><c>= '?'<>			<><col>0 or 1<>
+<col><c>= '*'<><><col>0 or More<>
+<col><c>= '+'<><><col>1 or More<>
+<col> <>
+<col><c>= '<v>3<>'<><><col>3 Exactly<><><>
+@
+@ add_argument()
+
+
+
+#### Argparse Argument - Custom Default Value
+
+<cb><v>parser<>.add_argument(<v>...<>, default = <v>value<>)<>
+
+
+Sets the default value when the argument doesn't exist.
+
+By default, argparse returns <c>None<>.
+@
+@ default=
+
+
+#### Argparse Argument - Custom Field Name
+
+<cb><v>parser<>.add_argument(<v>...<>, dest = <v>field_name<>)<>
+
+<cb><v>arguments<> = <v>parser<>.parse_args()
+= <v>arguments<>.<v>field_name<><>
+
+
+Explicitly defines the field name the argument value will be stored in.
+@
+@ dest=, variable
+
+
+
+#### Argparse Settings - Disable Exit On Error
+
+<cb>parser = ArgumentParser(<v>...<>, exit_on_error = False)<>
+
+Usage:
+
+<cb>from argparse import ArgumentParser, ArgumentError
+
+<v>parser<> = ArgumentParser(<v>...<>, exit_on_error = False)
+
+try:
+    <v>arguments<> = <v>parser<>.parse_args()
+    <v>...<>
+except ArgumentError as <v>error<>:
+    <v>...<><>
+
+Default: True
+
+
+Throws ArgumentError instead of exiting the application.
+@
+@ exit_on_error, argumenterror, argparse.argumenterror
+@ argparse.argumentparser(), .argumentparser()
+
+
+
+#### Argparse Argument - Make Require
+
+<cb><v>parser<>.add_argument(<v>...<>, required = True)<>
+
+
+Requires the argument to be present.
+
+Will display help and exit if not found.
+@
+@ required=
+@ mandatory, set
 
 
 
@@ -15121,7 +15189,7 @@ DOS:
 <cb><v>venv_directory<>\\Scripts\\activate<>
 
 Run from the project root directory.
-Run this bash script from the command line.
+Run this bash script from the command-line.
 @
 @ start, run, activate
 @ /bin/activate
@@ -15141,7 +15209,7 @@ DOS:
 Starts the venv and then runs the module in that environment.
 
 Run from the project root directory.
-Run this bash script from the command line.
+Run this bash script from the command-line.
 @
 @ start, run, activate, execute
 @ /bin/activate
@@ -19382,6 +19450,36 @@ Prints the byte code operations for the given function or class.
 
 
 
+### Command-line Arguments - Get
+
+<cb>from sys import argv
+
+<v>arguments<> = argv[1:]<>
+
+Use <c>argv[1:]<> to return arguments.
+<c>.argv[0]<> returns the module file name.
+@
+@ sys.argv
+@ commandline start, command line, application, program
+@ parameters, params, args, arguments, system
+
+
+
+### Command-line Arguments - Has
+
+<cb>from sys import argv
+
+= len(argv) > 1<>
+
+
+Returns True when the program has command-line arguments.
+@
+@ sys.argv
+@ commandline start, command line, application, program
+@ parameters, params, args, arguments, system
+
+
+
 ### Console Screen - Clear
 
 Use This Function:
@@ -19739,36 +19837,6 @@ Explicit:
 
 
 
-### Program - Arguments - Get
-
-<cb>from sys import argv
-
-<v>arguments<> = argv[1:]<>
-
-Use <c>argv[1:]<> to return arguments.
-<c>.argv[0]<> returns the module file name.
-@
-@ sys.argv
-@ commandline start, command line, application
-@ parameters, params, args, arguments, system, program
-
-
-
-### Program - Arguments - Has
-
-<cb>from sys import argv
-
-= len(argv) > 1<>
-
-
-Returns True when the program has command line arguments.
-@
-@ sys.argv
-@ commandline start, command line, application
-@ parameters, params, args, arguments, system, program
-
-
-
 ### Program - Starting Module
 
 <cb>from sys import argv
@@ -19778,7 +19846,7 @@ Returns True when the program has command line arguments.
 Returns the name of the starting module file.
 @
 @ sys argv, sys.argv
-@ command line, entry point, program, script
+@ command line, commandline, command-line, entry point, program, script
 
 
 
@@ -19906,7 +19974,7 @@ Recommended Exit Codes:
 
 	0	OK
 	1	General Error
-	2	Command Line Validation
+	2	Command-line Validation
 @
 @ error code, status, number, end program, stop, quit, sys.exit(), .exit(), .quit(), python, script, application
 
@@ -21616,7 +21684,7 @@ Called from other python applications.
 ### REPL
 Read Eval Print Loop
 
-Pythons inteactive command line interface for executing Python code.
+Pythons inteactive command-line interface for executing Python code.
 
 
 
@@ -22092,7 +22160,7 @@ A string where values betweth the quotes are seet as in. No processing is done o
 
 
 ### Read Eval Print Loop (REPL)
-Python’s interactive command line environment.
+Python’s interactive command-line environment.
 
 
 
