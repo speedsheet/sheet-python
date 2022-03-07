@@ -2248,7 +2248,7 @@ Exists In Local Scope?
 
 Exists In Global Scope?
 
-<cb>= '<v>variable_name<>' in locals()<>
+<cb>= '<v>variable_name<>' in globals()<>
 
 
 Returns <c>True<> if in the checked scope.
@@ -11531,18 +11531,20 @@ print(<v>next<>)
 
 ### Random Integer - Between Min to Max
 
-<cb>randint(<v>min<>, <v>max_plus_1<>)<>
+<cb>randint(<v>min<>, <v>max<>)<>
 
 Usage:
 
 <cb>from random import randint
 
-= randint(<v>min<>, <v>max_plus_1<>)<>
+= randint(<v>min<>, <v>max<>)<>
 
-Returns: <c>int (<v>min<> \<= x \< <c>max_plus_1<>)<>
+Returns: <c>int (<v>min<> \<= x \< <c>max<>)<>
 
 
 Returns a random integer value.
+
+The range is from <c>min<> to <c>max<> inclusive.
 
 
 Example:
