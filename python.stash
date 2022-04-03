@@ -144,7 +144,7 @@ print("<v>hello <>" + <v>name<> + "<v>!<>")<>
 
 Run From The Command-line:
 
-<cb>python3 hello2.py <v>your_name_here<><>
+<cb>python3 hello2.py<>
 
 
 
@@ -598,7 +598,7 @@ Avoid using.<>
 <c>(match _:), (lambda _ : <v>...<>)<><>
 <><>
 @
-@ _ vs __
+@ _ vs __, double, single
 
 
 
@@ -956,13 +956,13 @@ or
 
 
 
-### PIP - Packages - List
+### PIP - Packages - List All
 
 <cb>pip list<>
 
 Lists all installed packages and their versions.
 @
-@ all, libraries
+@ all, libraries, show all
 
 
 
@@ -1003,7 +1003,8 @@ Installs all the packages in the requirements file.
 <col><c><v>a<> % <v>b<><><><col>Modulo ( 7 % 3 = 1)<>
 <col><c><v>a<> ** <v>b<><><><col>To The Power of<><><>
 @
-@ power, modulo, modulus, plus, minus, divide, multiply, %, **, +, -, /, //
+@ %, **, +, -, /, //
+@ power, modulo, modulus, plus, minus, divide, multiply, floor 
 
 
 
@@ -1024,6 +1025,7 @@ Calculate and update variable:
 <col><c><v>a<> **= <v>value<><><><col>To The Power of<><><>
 @
 @ =, +=, -=, *=, /=, //=, %=, **=, =+, =-, =*, =/, =//, =%, =**
+@ power, modulo, modulus, plus, minus, divide, multiply, floor 
 
 
 
@@ -4368,46 +4370,46 @@ print(<v>replaced<>)
 
 #### String - Split
 
-<cb>= <v>string_1<>.split(<v>split_string<>)<>
+<cb>= <v>string_1<>.split(<v>split_string<>)
 
-<cb>= <v>string_1<>.split(<v>split_string<>, <v>split_count<>)<>
+= <v>string_1<>.split(<v>split_string<>, <v>split_count<>)<>
 
 Returns a list of strings split on <c><v>split_string<><>.
+
 <c><v>split_string<><> is not returned in the results.
 Stops after splitting <c><v>split_count<><> times if given.
 
 
-
 Examples:
 
-<cb><v>string_1<> = "<v>ab/cd/ef<>"
+<cb><v>string_1<> = '<v>ab/cd/ef<>'
 
-<v>split<> = <v>string_1<>.split("<v>/<>")
+<v>split<> = <v>string_1<>.split('<v>/<>')
 <#># Returns ['ab', 'cd', 'ef']<><>
 
-<cb><v>string_1<> = "<v>ab/cd/ef<>"
+<cb><v>string_1<> = '<v>ab/cd/ef<>'
 
-<v>split<> = <v>string_1<>.split("<v>/<>", 1)
+<v>split<> = <v>string_1<>.split('<v>/<>', 1)
 <#># Returns ['ab', 'cd/ef']<><>
 
-<cb><v>string_1<> = "<v>abcd<>"
+<cb><v>string_1<> = '<v>abcd<>'
 
-<v>split<> = <v>string_1<>.split("<v>/<>")
+<v>split<> = <v>string_1<>.split('<v>/<>')
 <#># Returns ['abcd']<><>
 
-<cb><v>string_1<> = "<v>abcd/<>"
+<cb><v>string_1<> = '<v>abcd/<>'
 
-<v>split<> = <v>string_1<>.split("<v>/<>")
+<v>split<> = <v>string_1<>.split('<v>/<>')
 <#># Returns ['abcd', '']<><>
 
-<cb><v>string_1<> = "<v>/abcd<>"
+<cb><v>string_1<> = '<v>/abcd<>'
 
-<v>split<> = <v>string_1<>.split("<v>/<>")
+<v>split<> = <v>string_1<>.split('<v>/<>')
 <#># Returns ['', 'abcd']<><>
 
-<cb><v>string_1<> = "<v>ab//cd<>"
+<cb><v>string_1<> = '<v>ab//cd<>'
 
-<v>split<> = <v>string_1<>.split("<v>/<>")
+<v>split<> = <v>string_1<>.split('<v>/<>')
 <#># Returns ['ab', '', 'cd']<><>
 @
 @ split start, split left side, .split(), delimiter, separate
@@ -4478,6 +4480,32 @@ Example:
 <#># Returns ['one', 'two', 'three']<><>
 @
 @ .splitlines(), new line, line break., lines, by
+
+
+
+#### String - Split on White Space
+
+<cb>= <v>string_1<>.split()
+
+= <v>string_1<>.split(maxsplit = <v>count<>)<>
+
+Returns a list of strings split on white space characters.
+Empty splits are not returned.
+
+
+Example:
+
+<cb><v>string_1<> = '1\\t2\\t\\t3\\t\\t\\t4'
+
+<v>split<> = <v>string_1<>.split()
+<#># Returns ['1', '2', '3', '4']<><>
+
+<cb><v>string_1<> = '1\\t2\\t\\t3\\t\\t\\t4'
+
+<v>split<> = <v>string_1<>.split(maxsplit = 2)
+<#># Returns ['1', '2', '3\\t\\t\\t4']<><>
+@
+@ split .split(), tabs, spaces
 
 
 
@@ -4759,6 +4787,8 @@ Example:
 
 Capitalizes the first letter in every word.
 
+Words are separated by spaces or underscores.
+
 
 Example:
 
@@ -4767,6 +4797,12 @@ Example:
 <v>title_case<> = <v>text<>.title()
 
 <#># Returns 'One Two Three'<><>
+
+<cb><v>text<> = '<v>one_two_three<>'
+
+<v>title_case<> = <v>text<>.title()
+
+<#># Returns 'One_Two_Three'<><>
 @
 @ .title(), convert, conversion
 
@@ -4951,7 +4987,13 @@ Example:
 
 
 
-# Date
+# Dates
+@
+@ date-only, dates-only, datetime.date, date()
+@ create, define, instantiate, new, now, current, data type
+
+
+### Date - Create
 
 <cb>= date(<v>year<>, <v>month<>, <v>day<>)<>
 
@@ -4959,15 +5001,58 @@ Usage:
 
 <cb>from datetime import date
 
-= date.today()
-= date(<v>year<>, <v>month<>, <v>day<>)<>
+= date(<v>year<>, <v>month<>, <v>day<>)
+= date(year = <v>year<>, month = <v>month<>, day = <v>day<>)<>
 
-Returns:
-
-<cb>date<>
+Returns: <c>date<>
 
 
-Returns an instance of Date representing the year, month and day.
+Returns an instance of <c>date<> representing the year, month and day.
+
+
+Unit Ranges:
+
+<in><table><col>Year<><col>1 - 9999<>
+<col>Month<><col>1 - 12<>
+<col>Day<><col>1 - Last-Day-Of-Month<><><>
+
+
+Example:
+
+<cb>from datetime import date
+
+<v>date_1<> = date(<v>2000<>, <v>1<>, <v>2<>)
+
+print("Date 1", <v>date_1<>)
+
+<#># Prints: Date-1 2000-01-02<><>
+@
+@ datetime.date(), .date()
+@ _model_
+
+
+
+### Date - Create Today's Date
+
+<cb>date.today()<>
+
+Usage:
+
+<cb>from datetime import date
+
+= date.today()<>
+
+Returns: <c>date<>
+
+
+Returns a <c>date<> for today.
+
+
+Unit Ranges:
+
+<table><col>Year<><col>1 - 9999<>
+<col>Month<><col>1 - 12<>
+<col>Day<><col>1 - Last-Day-Of-Month<><>
 
 
 Example:
@@ -4975,18 +5060,11 @@ Example:
 <cb>from datetime import date
 
 <v>date_1<> = date.today()
-<v>date_2<> = date(<v>2000<>, <v>1<>, <v>2<>)
 
-print("Today", <v>date_1<>)
-print("Date 2", <v>date_2<>)
-
-<#># Prints:
-\#
-\#    Today  2020-01-01
-\#    Date-2 2000-01-02<><>
+print("Today", <v>date_1<>)<>
 @
-@ date-only, dates-only, .today(), .date(), datetime.date, date.
-@ create, define, instantiate, new, now, current, data type
+@ datetime.date.today(), date.today(), .today()
+@ current date
 @ _model_
 
 
@@ -5056,6 +5134,43 @@ Subtracts the day portion of <c><v>timedelta_2<><> to <c><v>date_1<><>.
 
 
 
+#### Date - Replace Unit
+
+<cb>= <v>date_1<>.replace(<v>unit<> = <v>value<>)<>
+
+Usage:
+
+<cb>= <v>date_1<>.replace(year = <v>year<>)
+= <v>date_1<>.replace(month = <v>month<>)
+= <v>date_1<>.replace(day = <v>day<>)<>
+
+
+Replaces one or more of the date units with a new value.
+
+
+Unit Ranges:
+
+<table><col>Year<><col>1 - 9999<>
+<col>Month<><col>1 - 12<>
+<col>Day<><col>1 - <v>Last-Day-Of-Month<><><>
+
+
+Example:
+
+<cb>from datetime import date
+
+<v>today<> = date.today()
+
+<v>start_of_month<> = <v>today<>.replace(day = 1)
+
+print("Start of Month:", <v>start_of_month<>)<>
+@
+@ date.replace(), .replace()
+@ year, month, day
+@ update, change, set
+
+
+
 #### Date - To Year
 
 <cb>= <v>date_1<>.year<>
@@ -5092,7 +5207,7 @@ That is <c>.weekday()<> with a ().
 0 is Monday.
 6 is Sunday.
 @
-@ Property, Properties, .weekday()
+@ Property, Properties, .weekday(), days
 
 
 
@@ -5243,13 +5358,33 @@ Example:
 
 
 
-# DateTime
+# DateTimes
+@
+@ datetime, datetimes, date times,
+@ datetime-only, datetimes-only, date-time-only, date-times-only, dt
+@ datetime.datetime, .datetime(), datetime.today(), .today(), datetime.now(), .now()
+@ create, define, instantiate, new, now, current, data type
+
+
+### Datetime - Create
+
+<cb>= datetime(<v>year<>, <v>month<>, <v>day<>, <v>hour<>, <v>minute<>, <v>second<>)<>
+
+Usage:
 
 <cb>from datetime import datetime
 
-= datetime.today()
 = datetime(<v>year<>, <v>month<>, <v>day<>, <v>hour<>, <v>minute<>, <v>second<>)
-= datetime(<v>year<>, <v>month<>, <v>day<>, <v>hour<>, <v>minute<>, <v>second<>, <v>microsecond<>)<>
+= datetime(<v>year<>, <v>month<>, <v>day<>, <v>hour<>, <v>minute<>, <v>second<>, <v>microsecond<>)
+
+= datetime()
+        year = <v>year<>,
+        month = <v>month<>,
+        day = <v>day<>,
+        hour = <v>hour<>,
+        minute = <v>minute<>,
+        second = <v>second<>,
+        microsecond = <v>microsecond<>)<>
 
 Returns: <c>datetime<>
 
@@ -5257,13 +5392,14 @@ Returns: <c>datetime<>
 Returns an instance of datetime representing the date and time.
 
 
-Parameter Ranges:
+Unit Ranges:
 
-<table><col>Month<><col>1 - 12<>
+<table><col>Year<><col>1 - 9999<>
+<col>Month<><col>1 - 12<>
 <col>Day<><col>1 - Last-Day-Of-Month<>
-<col>Hour<><col>1 - 23<>
-<col>Minute<><col>1 - 59<>
-<col>Second<><col>1 - 59<>
+<col>Hour<><col>0 - 23<>
+<col>Minute<><col>0 - 59<>
+<col>Second<><col>0 - 59<>
 <col>Microseconds<><col>0 - 999,999<><>
 
 
@@ -5271,23 +5407,78 @@ Example:
 
 <cb>from datetime import datetime
 
-<v>date_1<> = datetime.today()
-<v>date_2<> = datetime(<v>2000<>, <v>11<>, <v>28<>, <v>23<>, <v>59<>, <v>59<>)<>
+<v>date_1<> = datetime(<v>2000<>, <v>11<>, <v>28<>, <v>23<>, <v>59<>, <v>59<>)<>
 @
-@ datetime, date times, datetime-only, datetimes-only, date-time-only, date-times-only, dt
-@ datetime.datetime, .datetime(), datetime.today(), .today()
-@ create, define, instantiate, new, now, current, data type
+@ datetime.datetime, .datetime()
+
+
+
+### Datetime - Create UTC Time
+
+<cb>= datetime.utcnow()<>
+
+Usage:
+
+<cb>from datetime import datetime
+
+= datetime.utcnow()<>
+
+
+Returns the current UTC time.
+
+
+Does not include time zone information.
+@
+@ datetime.datetime.utcnow(), datetime.utcnow(), .utcnow()
+
+
+
+### Datetime - Create Now
+
+<cb>= datetime.now()<>
+
+Usage:
+
+<cb>from datetime import datetime
+
+= datetime.now()<>
+
+Returns: <c>datetime<>
+
+
+Returns an instance of the current date time.
+
+
+Example:
+
+<cb>from datetime import datetime
+
+<v>date_1<> = datetime.now()<>
+@
+@ datetime.today(), .today(), datetime.now(), .now()
+
+
+
+### Datetime - now() vs today()
+
+Prefer <c>now()<> to <c>today()<>.
+
+The reason is because <c>now()<> allows for time zone information to be included.
+
+But in reality for non time zone datetimes, they are equivalent.
+@
+@ datetime.today(), .today(), datetime.now(), .now()
 
 
 
 # DateTime - Operations
 @
-@ datetime, Date Times, datetime-only, datetimes-only, date-time-only, date-times-only, DT
+@ datetime, datetimes, Date Times, datetime-only, datetimes-only, date-time-only, date-times-only, DT
 @ Ops, datetime.datetime, .datetime()
 
 
 
-#### DateTime - Compare
+### DateTime - Compare
 
 <cb>if <v>datetime_1<> == <v>datetime_2<>:
 	<v>...<><>
@@ -5299,7 +5490,7 @@ Example:
 
 
 
-#### DateTime - Difference, Get TimeDelta
+### DateTime - Difference, Get TimeDelta
 
 <cb>= <v>datetime_2<> - <v>datetime_1<><>
 
@@ -5309,7 +5500,7 @@ Returns: <c>timedelta<>
 
 
 
-#### DateTime - Add TimeDelta
+### DateTime - Add TimeDelta
 
 <cb>= <v>datetime_1<> + <v>time_delta_1<><>
 
@@ -5319,7 +5510,7 @@ Returns: <c>datetime<>
 
 
 
-#### DateTime - Subtract TimeDelta
+### DateTime - Subtract TimeDelta
 
 <cb>= <v>datetime_1<> - <v>time_delta_1<><>
 
@@ -5329,7 +5520,7 @@ Returns: <c>datetime<>
 
 
 
-#### DateTime - Get Now
+### DateTime - Get Now
 
 <cb>from datetime import datetime
 
@@ -5339,7 +5530,56 @@ Returns: <c>datetime<>
 
 
 
-#### DateTime - To Year
+### DateTime - Replace Unit
+
+<cb>= <v>datetime_1<>.replace(<v>unit<> = <v>value<>)<>
+
+Usage:
+
+<cb>= <v>datetime_1<>.replace(year = <v>year<>)
+= <v>datetime_1<>.replace(month = <v>month<>)
+= <v>datetime_1<>.replace(day = <v>day<>)
+= <v>datetime_1<>.replace(hour = <v>hour<>)
+= <v>datetime_1<>.replace(minute = <v>minute<>)
+= <v>datetime_1<>.replace(second = <v>second<>)
+= <v>datetime_1<>.replace(microsecond = <v>microsecond<>)<>
+
+
+Replaces one or more of the datetime units with a new value.
+
+
+Unit Ranges:
+
+<table><col>Year<><col>1 - 9999<>
+<col>Month<><col>1 - 12<>
+<col>Day<><col>1 - Last-Day-Of-Month<>
+<col>Hour<><col>0 - 23<>
+<col>Minute<><col>0 - 59<>
+<col>Second<><col>0 - 59<>
+<col>Microseconds<><col>0 - 999,999<><>
+
+
+Example:
+
+<cb>from datetime import datetime
+
+<v>now<> = datetime.now()
+
+<v>start_of_day<> = <v>now<>.replace(
+        hour = 0,
+        minute = 0,
+        second = 0,
+        microsecond = 0)
+
+print("Start of Day:", <v>start_of_day<>)<>
+@
+@ datetime.replace(), .replace()
+@ year, month, day, hour, minute, second, millisecond
+@ update, change, set
+
+
+
+### DateTime - To Year
 
 <cb>= <v>datetime_1<>.year<>
 @
@@ -5347,7 +5587,7 @@ Returns: <c>datetime<>
 
 
 
-#### DateTime - To Month
+### DateTime - To Month
 
 <cb>= <v>datetime_1<>.month<>
 @
@@ -5355,7 +5595,7 @@ Returns: <c>datetime<>
 
 
 
-#### DateTime - To Day
+### DateTime - To Day
 
 <cb>= <v>datetime_1<>.day<>
 @
@@ -5363,7 +5603,7 @@ Returns: <c>datetime<>
 
 
 
-#### DateTime - To Day of Week
+### DateTime - To Day of Week
 
 <cb>= <v>datetime_1<>.weekday()<>
 
@@ -5379,7 +5619,7 @@ Yes, this is <c>.weekday()<> with a <c>()<>.
 
 
 
-#### DateTime - To Hour
+### DateTime - To Hour
 
 <cb>= <v>datetime_1<>.hour<>
 @
@@ -5387,7 +5627,7 @@ Yes, this is <c>.weekday()<> with a <c>()<>.
 
 
 
-#### DateTime - To Minute
+### DateTime - To Minute
 
 <cb>= <v>datetime_1<>.minute<>
 @
@@ -5395,7 +5635,7 @@ Yes, this is <c>.weekday()<> with a <c>()<>.
 
 
 
-#### DateTime - To Second
+### DateTime - To Second
 
 <cb>= <v>datetime_1<>.second<>
 @
@@ -5403,7 +5643,7 @@ Yes, this is <c>.weekday()<> with a <c>()<>.
 
 
 
-#### DateTime - To Date
+### DateTime - To Date
 
 <cb>= <v>datetime_1<>.date()<>
 @
@@ -5412,7 +5652,7 @@ Yes, this is <c>.weekday()<> with a <c>()<>.
 
 
 
-#### DateTime - To Time
+### DateTime - To Time
 
 <cb>= <v>datetime_1<>.time()<>
 @
@@ -5421,7 +5661,7 @@ Yes, this is <c>.weekday()<> with a <c>()<>.
 
 
 
-#### DateTime - From Timestamp
+### DateTime - From Timestamp
 
 <cb>from datetime import datetime
 
@@ -5451,7 +5691,7 @@ Example:
 
 
 
-#### DateTime - To TimeStamp
+### DateTime - To TimeStamp
 
 <cb><v>timestamp_1<> = <v>datetime_1<>.timestamp()<>
 
@@ -5483,7 +5723,7 @@ Example:
 
 
 
-#### DateTime - From String
+### DateTime - From String
 
 <cb>from datetime import datetime
 
@@ -5508,7 +5748,7 @@ Example:
 
 
 
-#### DateTime - To String
+### DateTime - To String
 
 <cb>= f'{<v>datetime_1<>:<v>format<>}<>
 
@@ -5541,7 +5781,7 @@ Example:
 
 
 
-#### DateTime - From ISO-8601 String
+### DateTime - From ISO-8601 String
 
 <cb>from datetime import datetime
 
@@ -5572,7 +5812,7 @@ Example:
 
 
 
-#### DateTime - To ISO-8601 String
+### DateTime - To ISO-8601 String
 
 <cb>= <v>datetime_1<>.isoformat()<>
 
@@ -5605,6 +5845,465 @@ Example:
 @ convert, conversion, to, from, .format(), formatting, formatted, .isoformat(), .strftime(), iso
 @ iso-8601
 @ from-datetime, to-string, to-iso-8601
+
+
+
+# DateTime - Time Zones
+@
+@ datetime.datetime(), .datetime()
+@ timezones, datetimes
+@ new, define, create
+@ timezone-only, timezones-only
+
+
+### Datetime - Create With Time Zone
+
+<cb>= datetime(<v>...<>, tzinfo = <v>time_zone<>)<>
+
+Usage:
+
+<cb>from datetime import datetime
+from zoneinfo import ZoneInfo
+
+= datetime(<v>...<>, tzinfo = ZoneInfo('<v>time_zone<>'))<>
+
+Return: <c>datetime<>
+
+
+Creates a date time with the given time zone.
+
+
+Example:
+
+<cb>from datetime import datetime
+from zoneinfo import ZoneInfo
+
+<v>datetime_1<> = datetime(2001, 1, 1, 0, 0, 0,
+        tzinfo = ZoneInfo('<v>America/New_York<>'))
+
+print(<v>datetime_1<>)
+
+<#># Prints: 2001-01-01 00:00:00-05:00<><>
+@
+@ datetime.datetime(), .datetime(), tzinfo=
+
+
+
+### Datetime - Create With Local Time Zone
+
+<cb>= datetime(<v>...<>).astimezone()<>
+
+Usage:
+
+<cb>from datetime import datetime
+
+= datetime(<v>...<>).astimezone()<>
+
+Return: <c>datetime<>
+
+
+Example:
+
+<cb>from datetime import datetime
+
+<v>datetime_1<> = datetime(2001, 1, 1, 0, 0, 0).astimezone()
+
+print(<v>datetime_1<>)<>
+@
+@ datetime.astimezone(), .astimezone()
+@ datetime.datetime(), .datetime()
+
+
+
+### Datetime - Create With UTC Time Zone
+
+<cb>= datetime(<v>...<>, tzinfo = timezone.utc)<>
+
+Usage:
+
+<cb>from datetime import datetime
+from datetime import timezone
+
+= datetime(<v>...<>, tzinfo = timezone.utc)<>
+
+Return: <c>datetime<>
+
+
+Example:
+
+<cb>from datetime import datetime
+from datetime import timezone
+
+<v>datetime_1<> = datetime(2001, 1, 1, 0, 0, 0, tzinfo = timezone.utc)
+
+print(<v>datetime_1<>)
+
+<#># Prints: 2001-01-01 00:00:00+00:00<><>
+@
+@ datetime.datetime(), .datetime(), tzinfo=
+
+
+
+### Datetime - Create With Fold
+
+<cb>= datetime(<v>...<>, fold = <v>fold_number<>)<>
+
+
+Allows you to set the time unambiguously during a transition from daylight savings.
+
+
+Daylight Savings Clock Change:
+
+<in><table><col>Before	<><col>fold = 0<>
+<col>After<><col>fold = 1<><><>
+
+
+Example:
+
+<cb>from datetime import datetime
+from datetime import timezone
+from zoneinfo import ZoneInfo
+
+<v>before_clock_change<> = datetime(2000, 10, 29, 1, 30, 0,
+	tzinfo = ZoneInfo('America/New_York'), fold = 0)
+
+<v>after_clock_change<> = datetime(2000, 10, 29, 1, 30, 0,
+	tzinfo = ZoneInfo('America/New_York'), fold = 1)
+
+print(<v>before_clock_change<>)
+print(<v>after_clock_change<>)
+
+<#># Prints:
+/#
+/#   2000-10-29 01:30:00-04:00
+/#   2000-10-29 01:30:00-05:00<><>
+
+In UTC:
+
+<cb>print(<v>before_clock_change<>.astimezone(timezone.utc))
+print(<v>after_clock_change<>.astimezone(timezone.utc))
+
+<#># Prints:
+/#
+/#   2000-10-29 05:30:00+00:00
+/#   2000-10-29 06:30:00+00:00<><>
+@
+@ datetime.datetime(), .datetime(), tzinfo=, fo/d=
+
+
+
+### Datetime - Create Now With Time Zone
+
+<cb>= now(tz = <v>time_zone<>)<>
+
+<cb>from datetime import datetime
+from zoneinfo import ZoneInfo
+
+= datetime.now(tz = ZoneInfo('<v>time_zone<>'))<>
+
+Return: <c>datetime<>
+
+
+Returns the current date time with the given time zone.
+
+
+Example:
+
+<cb>from datetime import datetime
+from zoneinfo import ZoneInfo
+
+<v>datetime_1<> = datetime.now(tz = ZoneInfo('<v>America/New_York<>'))
+
+print(<v>datetime_1<>)<>
+@
+@ datetime.today(), .today(), datetime.now(), .now(), tz=
+
+
+
+### Datetime - Create Now With Local Time Zone
+
+<cb>= datetime.now().astimezone()<>
+
+Usage:
+
+<cb>from datetime import datetime
+
+= datetime.now().astimezone()<>
+
+Return: <c>datetime<>
+
+
+Example:
+
+<cb>from datetime import datetime
+
+<v>datetime_1<> = datetime.now().astimezone()
+
+print(<v>datetime_1<>)<>
+@
+@ datetime.today(), .today(), datetime.now(), .now()
+@ datetime.astimezone(), .astimezone()
+
+
+
+### Datetime - Create Now With UTC Time Zone
+
+<cb>= datetime.now(tz = timezone.utc)<>
+
+Usage:
+
+<cb>from datetime import datetime
+from datetime import timezone
+
+= datetime.now(tz = timezone.utc)<>
+
+Return: <c>datetime<>
+
+
+Example:
+
+<cb>from datetime import datetime
+from datetime import timezone
+
+<v>datetime_1<> = datetime.now(tz = timezone.utc)
+
+print(<v>datetime_1<>)<>
+@
+@ datetime.today(), .today(), datetime.now(), .now(), tz=
+@ datetime.timezone.utc, .timezone.utc, .utc
+
+
+
+# DateTime - Time Zone Operations
+@
+@ timezones, datetimes, time zones
+@ timezone-only, timezones-only
+
+
+### Datetime - Change Time Zone
+
+<cb>= <v>datetime_1<>.astimezone(<v>time_zone<>)<>
+
+
+Changes the datetime to datetime in the provided time zone.
+
+
+Example:
+
+<cb>from datetime import datetime
+from zoneinfo import ZoneInfo
+
+<v>ny_datetime<> = datetime(2001, 1, 1, 0, 0, 0,
+        tzinfo = ZoneInfo('America/New_York'))
+
+<v>la_datetime<> = <v>ny_date<>.astimezone(ZoneInfo('America/Los_Angeles'))
+
+print("NY:", <v>ny_datetime<>)
+print("LA:", <v>la_datetime<>)
+
+<#># Prints:
+\#    NY: 2001-01-01 00:00:00-05:00
+\#    LA: 2000-12-31 21:00:00-08:00<><>
+@
+@ datetime.astimezone(), .astimezone()
+
+
+
+### Datetime - Change To Local Time Zone
+
+<cb>= <v>datetime_1<>.astimezone()<>
+
+
+Changes the datetime to the local time zone.
+
+
+Example:
+
+<cb>from datetime import datetime
+from zoneinfo import ZoneInfo
+
+<v>ny_datetime<> = datetime(2001, 1, 1, 0, 0, 0,
+        tzinfo = ZoneInfo('America/New_York'))
+
+<v>local_datetime<> = <v>ny_datetime<>.astimezone()<>
+@
+@ datetime.astimezone(), .astimezone()
+
+
+
+### Datetime - Get Time Zone
+
+<cb>= <v>datetime_1<>.tzname()<>
+
+Returns: <c>str<>
+
+
+Returns the name of the time zone.
+
+
+Example:
+
+<cb>from datetime import datetime
+from zoneinfo import ZoneInfo
+
+<v>datetime_1<> = datetime(2001, 1, 1, 0, 0, 0,
+        tzinfo = ZoneInfo('<v>America/New_York<>'))
+
+print(<v>datetime_1<>.tzname())
+
+<#># Prints: EST<><>
+@
+@ datetime.tzname(), .tzname()
+
+
+
+### Datetime - Is In Daylight Savings?
+
+<cb>= <v>datetime_1<>.dst() == timedelta(seconds=3600)<>
+
+Usage:
+
+<cb>from datetime import timedelta
+
+= <v>datetime_1<>.dst() == timedelta(seconds=3600)<>
+
+
+Returns: <c>str<>
+
+
+Returns <c>True<> if in daylight savings.
+
+<cb>.dst()<> returns the difference in time from the non DST time.
+
+
+Example:
+
+<cb>from datetime import datetime
+from zoneinfo import ZoneInfo
+from datetime import timedelta
+
+<v>datetime_1<> = datetime(2001, 7, 1, 0, 0, 0,
+        tzinfo = ZoneInfo('<v>America/New_York<>'))
+
+print(<v>datetime_1<>.dst() == timedelta(seconds=3600))
+
+<#># Prints: True<><>
+@
+@ datetime.dst(), .dst()
+
+
+
+### Datetime - Is Folded?
+
+<cb>= <v>datetime_1<>.fold<>
+
+
+Returns if the time is after a daylight savings change.
+
+
+Daylight Savings Clock Change:
+
+<in><table><col>Before	<><col>fold = 0<>
+<col>After<><col>fold = 1<><><>
+
+
+Example:
+
+<cb>from datetime import datetime
+from zoneinfo import ZoneInfo
+
+after_clock_change = datetime(2000, 10, 29, 1, 30, 0,
+	tzinfo = ZoneInfo('America/New_York'), fold = 1)
+
+print(after_clock_change.fold)<>
+@
+@ datetime.fold, .fold
+
+
+
+### Datetime - Set / Replace Time Zone
+
+<cb>= <v>datetime_1<>.replace(tzinfo = <v>time_zone<>)<>
+
+
+Updates the time zone but keeps the time unchanged.
+
+
+Example:
+
+<cb>from datetime import datetime
+from zoneinfo import ZoneInfo
+
+<v>ny_date<> = datetime(2001, 1, 1, 0, 0, 0,
+        tzinfo = ZoneInfo('America/New_York'))
+
+<v>la_date<> = <v>ny_date<>.replace(tzinfo = ZoneInfo('America/Los_Angeles'))
+
+print("NY:", <v>ny_date<>)
+print("LA:", <v>la_date<>)
+
+<#># Prints:
+\#    NY: 2001-01-01 00:00:00-05:00
+\#    LA: 2001-01-01 00:00:00-08:00<><>
+@
+@ datetime.replace(), .replace(), tzinfo=
+
+
+
+# Time Zones
+@
+@ timezones
+@ timezone-only, timezones-only
+
+
+
+### Time Zone - Get
+
+<cb>= ZoneInfo('<v>time_zone<>')<>
+
+Usage:
+
+<cb>from zoneinfo import ZoneInfo
+
+= ZoneInfo('America/EST')<>
+
+
+Returns the zone info object for the given time zone.
+
+
+Example:
+
+<cb>from zoneinfo import ZoneInfo
+
+<v>zone_1<> = ZoneInfo('America/New_York')<>
+
+
+
+### Time Zones - List
+
+<cb>= zoneinfo.available_timezones()<>
+
+Usage:
+
+<cb>from zoneinfo import available_timezones
+
+zones = available_timezones())<>
+
+
+Returns all the available time zones.
+
+
+Example:
+
+<cb>from zoneinfo import available_timezones
+
+zones = available_timezones())
+
+for zone in sorted(zones):
+    print(zone)<>
+@
+@ zoneinfo.available_timezones(), .available_timezones()
+@ view, get, all, available.
 
 
 
@@ -5656,6 +6355,21 @@ Examples:
 
 
 Returns: <c>int<>
+@
+@ timedelta.microseconds, .microseconds
+
+
+#### TimeDelta - Get Milliseconds
+
+<cb>= <v>timedelta_1<>.microseconds // 1000<>
+
+Returns: <c>int<>
+
+
+There is no built in way to do this.
+Divide .microseconds by 1000 instead.
+@
+@ timedelta.milliseconds, .mililseconds
 
 
 
@@ -5679,6 +6393,8 @@ Example:
 <v>seconds<> = <v>timedelta_1<>.seconds
 
 <#># Returns 3615 Seconds (1 hour * 3600 + 15 seconds)<><>
+@
+@ timedelta.seconds, .seconds
 
 
 
@@ -5702,6 +6418,8 @@ Example:
 <v>days<> = <v>timedelta_1<>.days
 
 <#># Returns 2<><>
+@
+@ timedelta.days, .days
 
 
 
@@ -5716,7 +6434,7 @@ Returns: <c>float<>
 Returns the timedelta in seconds.
 Returns fraction of a second too.
 @
-@ .total_seconds(), total_seconds(), entire
+@ timedelta.total_seconds(), total_seconds(), entire
 
 
 
@@ -5897,7 +6615,7 @@ Call:
 
 <cb>= <v>seconds_since_epoch<><>
 
-<cb>from time import time()
+<cb>from time import time
 
 = time()<>
 
@@ -5917,6 +6635,7 @@ Example:
 @
 @ epoch time, unix time
 @ time-only, timestamp-only, timestamp., timestamp(), time.time(), .time()
+@ times, times-only, timestamps, timestamps-only
 
 
 
@@ -5924,6 +6643,7 @@ Example:
 @
 @ epoch time, unix time
 @ time-only, timestamp-only, timestamp., timestamp(), time.time(), .time()
+@ times, times-only, timestamps, timestamps-only
 
 
 
@@ -6782,7 +7502,7 @@ Returns the number of unique values in <c><v>list_1<><>.
 
 <cb><v>del<> <v>list_1<>[<v>index<>]<>
 @
-@ remove from, one, single, del
+@ remove from, one, single, del, item, value
 
 
 
@@ -6790,7 +7510,7 @@ Returns the number of unique values in <c><v>list_1<><>.
 
 <cb><v>del<> <v>list_1<>[:]<>
 @
-@ remove from, clear, del
+@ remove from, clear, del, items, values
 
 
 
@@ -6798,7 +7518,7 @@ Returns the number of unique values in <c><v>list_1<><>.
 
 <cb><v>del<> <v>list_1<>[0]<>
 @
-@ remove from start, del
+@ remove from start, del, item, value
 
 
 
@@ -6806,7 +7526,7 @@ Returns the number of unique values in <c><v>list_1<><>.
 
 <cb><v>del<> <v>list_1<>[-1]<>
 @
-@ remove from end, del
+@ remove from end, del, item, value
 
 
 
@@ -8392,17 +9112,21 @@ Prints:
 
 #### Sequence - Min
 
-<cb>= min(<v>sequence_1<>)<>
+<cb>= min(<v>sequence_1<>)
+
+= min(<v>sequence_1<>, key = <v>test_function<>)<>
 @
-@ minimum, value, item, element, min()
+@ minimum, value, item, element, min(), key=
 
 
 
 #### Sequence - Max
 
-<cb>= max(<v>sequence_1<>)<>
+<cb>= max(<v>sequence_1<>)
+
+= max(<v>sequence_1<>, key = <v>test_function<>)<>
 @
-@ greatest, maximum, value, item, element, max()
+@ greatest, maximum, value, item, element, max(), key=
 
 
 
@@ -8694,20 +9418,21 @@ Data Most Be Single Type<>
 
 ## Queue
 
+<cb>= Queue()<>
+
+Usage:
+
 <cb>from queue import Queue
 
-<v>queue_1<> = Queue()<><>
-
-or
-
-<cb><v>queue_1<> = Queue(<v>max_size<>)               <#>#1<><>
+= Queue()
+= Queue(<v>max_size<>)               <#>#1<><>
 
 Asynchronous first in first out queue.
 
-\#1  <s>-<>  This queue has a maximum size.
+\#1  <s>-<>  Defins the maximum number of elements in the queue.
 @
 @ Create, Define, Instantiate, New
-@ Queue-only, queues-only, queue(), queue.queue()
+@ Queue-only, queues-only, queue(), queue.queue(), maximum size
 
 
 
@@ -10766,8 +11491,12 @@ Create File Named:
 
 Create the file in the subdirectory that contains modules.
 
-Package directories require the presence of the file '__init__.py'.
+Package directories are typically defined with the presence of '<c>__init__.py<>'.
+This file is not required as of Python 3.3.
 <c>__init__.py<> can be empty.
+This file is executed when the package is imported.
+@
+@ __init__.py
 
 
 
@@ -10790,15 +11519,17 @@ If the module is the starting module of the application, __name__ will be '<c>__
 
 
 
-### Import - Module
+### Import - Module / Package
 
 Import:
 
 <cb>import <v>module_1<><>
 
-<cb>import <v>package1<>.<v>subpackage1<>.<v>module_1<><>
+<cb>import <v>package_1<>.<v>subpackage_1<>.<v>module_1<><>
 
-<cb>from <v>package1<>.<v>subpackage1<> import <v>module_1<><>
+<cb>from <v>package_1<>.<v>subpackage_1<> import <v>module_1<><>
+
+<cb>from <v>package_1<>.<v>subpackage_1<> import <v>module_1<> as <v>alias<><>
 
 
 Use:
@@ -10806,12 +11537,55 @@ Use:
 <cb><v>module_1<>.<v>item_1<><v>...<><>
 
 
+Imports a module or package into the current namespace.
+
+This uses absolute imports and must contain the full package path to the project root.
+@
+@ namespace, from, as
+
+
+
+### Import - Module / Package - Relative Import
+
+Relative To Parent:
+
+<cb>from .<v>module<> import <v>name<><>
+
+Relative To Grandparent:
+
+<cb>from ..<v>module<> import <v>name<><>
+
+Parent of Current Package:
+
+<cb>from .. import <v>module<><>
+
+
+Imports a module relative to the current module.
+
+Only available with <c>from <v>x<> import <v>y<><> syntax.
+Imports must be within <c>toplevel_package<> only. Not other packages.
+@
+@ from, import, namespace, ...
+
+
+
+### Import - Package - __init__.py
+
+The file <c>__init__.py<> is executed when a package is imported as a module.
+
+<cb>import <v>package_1<><>
+@
+@ namespace
+
+
 
 ### Import - Class / Function
 
-<cb>from <v>package1<>.<v>module_1<> import <v>Class1<><>
+<cb>from <v>package_1<>.<v>module_1<> import <v>Class1<><>
 
-<cb>from <v>package1<>.<v>module_1<> import <v>function_1<><>
+<cb>from <v>package_1<>.<v>module_1<> import <v>function_1<><>
+@
+@ namespace
 
 
 
@@ -11702,7 +12476,7 @@ for <v>value<> in float_range(1.0, 3.0, 0.5):
 
 ## Regular Expression Functions
 @
-@ regex, regexpression, string, strings, expressions, regex-only, regular-expressions-only
+@ regex, regexpression, string, strings, expressions, regex-only, regular-expressions-only, pattern, match
 
 
 
@@ -11740,7 +12514,7 @@ Example:
 <v>letters_1<> = <v>match<>.group()							<#># Returns "abc"<>
 <v>letters_2<> = <v>string_1<>[<v>match<>.start():<v>match<>.end()]		<#># Returns "abc"<><>
 @
-@ get, match, exists, .search(), re.search()
+@ get, match, exists, .search(), re.search(), first
 
 
 
@@ -13328,6 +14102,14 @@ the <c>;<> or <c>:<> in <c><v>dir_1<>;<v>dir_2<>;<v>dir_3<><>
 
 
 
+### Argparse - Video Tutorial
+
+Get going faster with our argparse in a Hurry Video:
+
+<card><l https://youtu.be/66tRWijsm0U>Argparse in a Hurry (2 Mins)<><>
+
+
+
 ### Argparse Basics
 
 <cb>from argparse import ArgumentParser
@@ -14510,6 +15292,10 @@ Iterates over each section and displays all the properties and their values.
 
 ### HTTP - Get
 
+<cb>= urlopen(<v>url<>)<>
+
+Usages:
+
 <cb>from urllib.request import urlopen
 
 with urlopen(<v>url<>) as response:
@@ -14540,6 +15326,10 @@ print("Response:", text)<>
 
 
 ### HTTP - Post
+
+<cb>= urlopen(<v>url<>, data = <v>post_data<>)<>
+
+Usage:
 
 <cb>from urllib.request import urlopen
 
@@ -14612,9 +15402,13 @@ except HTTPError as <v>error<>:
 
 ### HTTP - Escape URL
 
-<cb>from urllib.parse import quote<>
-
 <cb>= quote(<v>url_1<>)<>
+
+Usage:
+
+<cb>from urllib.parse import quote
+
+= quote(<v>url_1<>)<>
 
 
 Example:
@@ -14629,9 +15423,13 @@ Example:
 
 ### HTTP - Unescape URL
 
-<cb>from urllib.parse import unquote<>
-
 <cb>= unquote(<v>encoded_url_1<>)<>
+
+Usage:
+
+<cb>from urllib.parse import unquote
+
+= unquote(<v>encoded_url_1<>)<>
 
 
 Example:
@@ -14646,9 +15444,13 @@ Example:
 
 ### HTTP - Escape URL Parameter
 
-<cb>from urllib.parse import quote_plus<>
+<cb>= quote_plus(<v>parameters_1<>)<>
 
-<cb>= quote(<v>parameters_1<>)<>
+Usage:
+
+<cb>from urllib.parse import quote_plus
+
+= quote_plus(<v>parameters_1<>)<>
 
 
 Example:
@@ -14663,9 +15465,13 @@ Example:
 
 ### HTTP - Unescape URL Parameter
 
-<cb>from urllib.parse import unquote_plus<>
-
 <cb>= unquote_plus(<v>encoded_parameter<>)<>
+
+Usage:
+
+<cb>from urllib.parse import unquote_plus
+
+= unquote_plus(<v>encoded_parameter<>)<>
 
 
 Example:
@@ -15034,6 +15840,127 @@ Fails test immediately.
 	msg=f'obj lacking an attribute. {obj=}, {intendedAttr=}')
 @
 @ assertTrue(), hasattr()
+
+
+
+# doctest
+
+A doctest is one or more tests written into the docstring.
+They follow the format of python cli commands followed by their output.
+
+
+Official Docs: 
+<l>https://docs.python.org/3/library/doctest.html<>
+@
+@ doc tests
+
+
+
+### doctest - Basics
+
+Define:
+
+<cb>def <v>square<>(<v>x<>):
+    <#>""" squares a number<>
+
+    >>> square(<v>2<>)
+    <v>4<>
+    
+    <#>"""<>
+
+    return <v>x<> ** 2<>
+
+Enable:
+
+<cb>if __name__ == "__main__":
+    import doctest
+    doctest.testmod()<>
+
+Run:
+
+<cb>python3 <v>script<>.py<>
+
+
+
+### doctest - Define
+
+<cb>def <v>function_1<>():
+    <#>""" Function Description<>
+
+    >>> function_1(<v>param_a<>)
+    <v>result a<>
+    
+    >>> function_1(<v>param_b<>)
+    <v>result b<>
+    
+    <#>"""<>
+
+    <v>...<><>
+
+
+Example:
+
+<cb>def <v>square<>(<v>x<>):
+    <#>""" squares a number<>
+
+    >>> square(<v>2<>)
+    <v>4<>
+    
+    <#>"""<>
+
+    return <v>x<> ** 2<>
+
+
+### doctest - Define Exception
+
+
+<cb>def <v>function_1<>():
+    <#>""" Function Description
+
+    >>> function_1()
+	Traceback (most recent call last):
+	...
+	<v>Stack Trace, Last Line<>
+    
+    """<>
+
+    <v>...<><>
+
+
+Example:
+
+<cb>def <v>square<>(<v>x<>):
+    <#>""" squares a number<>
+
+    >>> square(<v>'a'<>)
+	Traceback (most recent call last):
+	...
+	TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+    
+    <#>"""<>
+
+    return <v>x<> ** 2<>
+
+
+
+### doctest - Run
+
+In Script File:
+
+<cb>if __name__ == "__main__":
+    import doctest
+    doctest.testmod()<>
+
+Command Line:
+
+<cb>python3 <v>script<>.py<>
+
+
+
+Verbose:
+
+<cb>python3 <v>script<>.py -v<>
+
 
 
 
@@ -18323,6 +19250,15 @@ Examples:
 @ data class, dataclasses, dataclasses.dataclass, @dataclass
 
 
+
+### Dataclass - Video Tutorial
+
+Get going faster with our Dataclasses in a Hurry Video:
+
+<card><l https://youtu.be/_KT2lX4Wm2U>Dataclasses in a Hurry (2 Mins)<><>
+
+
+
 ## Dataclass - Basics
 
 Define:
@@ -18453,12 +19389,15 @@ class <v>NewClass1<>:
 
 
 The class properties can not be changed.
+
+This also implements <c>__hash__()<>.
 @
+@ @dataclass(frozen=True), frozen=true, __hash__
 @ frozen, create, definition, new
 
 
 
-### Dataclass - Define - Override Constructor
+### Dataclass - Define Constructor - Override
 
 <cb>@dataclass
 class <v>NewClass1<>:
@@ -18476,9 +19415,7 @@ Consider using __post_init__() instead.
 @ __init__()
 
 
-### Dataclass - Define - Post Constructor
-
-Post Init Method:
+### Dataclass - Define Constructor - Post Init
 
 <cb>@dataclass
 class <v>NewClass1<>:
@@ -18487,19 +19424,25 @@ class <v>NewClass1<>:
 	def __post_init__(self):
 		<v>...<><>
 
-Call Parent Class:
+
+<c>__post_init__<> is called after the class is created.
+Add any setup code you need in here including calling <c>super()<>.
+@
+@ __post_init_(), setup, after, initialize, __init__()
+
+
+
+### Dataclass - Define Constructor - Call Parent Constructor
 
 <cb>@dataclass
 class <v>NewClass1<>(<v>ParentClass<>):
 	<v>...<>
 
 	def __post_init__(self):
-		super().__init__()
-		<v>...<><>
+		super().__init__()<>
 
 
-<c>__post_init__<> is called after the class is created.
-Add any setup code you need in here including calling <c>super()<>.
+Use <c>__post_init__<> to add a call to the parents constructor and add<c>super().__init__().
 @
 @ super(), __post_init_()
 
@@ -18586,6 +19529,34 @@ Same as a normal class.
 
 
 
+### Dataclass - From Dict
+
+<cb>= <v>Dataclass1<>(**<v>dict_1<>)<>
+
+
+Converts a dict into a dataclass.
+
+
+Example:
+
+<cb>from dataclasses import dataclass
+
+\@dataclass
+class <v>Person<>:
+    id: int
+    name: str
+
+<v>person_dict<> = {'id': 1, 'name': 'Joe'}
+<v>person_1<> = Person(**<v>person_dict<>)
+
+print(<v>person_1<>)
+
+<#># Prints: Person(id=1, name='Joe')<><>
+@
+@ convert, conversion, from, dictionary, from-dict, to-dataclass
+
+
+
 ### Dataclass - To Dict
 
 <cb>= asdict(<v>dataclass_1<>)<>
@@ -18661,21 +19632,51 @@ del <v>queue_1<>[<v>1<>]
 @ new, instantiate, define
 
 
-#### Deque - Create Empty
+#### Deque - Create
+
+<cb>= deque()<>
+
+Usage:
 
 <cb>from collections import deque
 
 = deque()<>
 
 
+Creates an empty queue.
+
+
 
 #### Deque - Create From List
 
+<cb>= deque(<v>list_1<>)<>
+
+Usage:
+
 <cb>from collections import deque
 
-= deque(<v>list_1<>)<>
+= deque(<v>list_1<>)
 
-<cb>= deque([<v>value_1<>, <v>value_2<>, <v>...<>])<>
+= deque([<v>value_1<>, <v>value_2<>, <v>...<>])<>
+
+
+
+#### Deque - Create With Maximum Size
+
+<cb>= deque(maxlen = <v>size<>)<>
+
+Usage:
+
+<cb>from collections import deque
+
+= deque(maxlen = <v>size<>)<>
+
+
+Sets the maximum size of deque().
+
+The oldest item is removed when adding an item to a full deque.
+@
+@ maxlen
 
 
 
@@ -18792,6 +19793,12 @@ There is no need for <b>bool()<> when using <b>if...<>.
 
 <cb>= <v>queue_1<>[<v>index<>]<>
 
+
+Returns an item on the queue.
+
+
+Example:
+
 <cb>from collections import deque
 
 <v>queue_1<> = deque([<v>1<>, <v>2<>, <v>3<>])
@@ -18801,6 +19808,54 @@ There is no need for <b>bool()<> when using <b>if...<>.
 <#># Returns: 2<><>
 @
 @ item, value
+
+
+
+#### Deque - Get First
+
+<cb>= <v>queue_1<>[0]<>
+
+
+Returns the first item on the queue (first added).
+
+Retrieves in O(1) time.
+
+
+Example:
+
+<cb>from collections import deque
+
+<v>queue_1<> = deque([<v>1<>, <v>2<>, <v>3<>])
+
+<v><v>first<> = queue_1<>[0]
+
+<#># Returns: 1<><>
+@
+@ item, value, beginning, oldest
+
+
+
+#### Deque - Get Last
+
+<cb>= <v>queue_1<>[-1]<>
+
+
+Returns the last item on the queue (most recently added).
+
+Retrieves in O(1) time.
+
+
+Example:
+
+<cb>from collections import deque
+
+<v>queue_1<> = deque([<v>1<>, <v>2<>, <v>3<>])
+
+<v><v>item_1<> = queue_1<>[-1]
+
+<#># Returns: 3<><>
+@
+@ item, value, last, end, newest
 
 
 
@@ -18945,9 +20000,30 @@ Example:
 
 
 
+#### Deque - Maximum Size
+
+<cb>= <v>queue_1<>.maxlen<>
+
+
+
 ## Named Tuple
+
+Named tuples allow you to access tuple values by name.
+
+Use the <c>namedtuple<> function to create a class for a given tuple type.
 @
-@ collections.namedtuple, Named Tuples, nametuple, namedtuple()
+@ collections.namedtuple, Named Tuples, nametuple, namedtuples, namedtuple()
+
+
+
+### Named Tuple - Video Tutorial
+
+Get going faster with our Named Tuples in a Hurry Video:
+
+<card><l https://youtu.be/IyYayd6oApg>Named Tuples in a Hurry<>
+
+(2½ Mins)<>
+
 
 
 ### Named Tuple - Basics
@@ -18961,11 +20037,13 @@ Define:
 Create:
 
 <cb>= <v>NamedTuple1<>(<v>param_1<>, <v>param_2<>, <v>...<>)
+
 = <v>NamedTuple1<>(<v>field_1<> = <v>param_1<>, <v>field_2<> = <v>param_2<>, <v>...<>)<>
 
 Access:
 
 <cb>= <v>named_tuple_1<>.<v>field_1<>
+
 = <v>named_tuple_1<>[0]<>
 
 
@@ -18977,18 +20055,21 @@ Access:
 
 <cb>= namedtuple("<v>NamedTuple1<>", ["<v>field_1<>", "<v>field_2<>"])<>
 
-Full Form:
+Usage:
 
 <cb>from collections import namedtuple
 
-= namedtuple("<v>NamedTuple1<>", ["<v>field_1<>", "<v>field_2<>", <v>...<>])<>
+= namedtuple("<v>NamedTuple1<>", ["<v>field_1<>", "<v>field_2<>", <v>...<>])
 
-or
+= namedtuple("<v>NamedTuple1<>", "<v>field_1<> <v>field_2<> <v>..."<>)
 
-<cb>= namedtuple("<v>NamedTuple1<>", "<v>field_1<> <v>field_2<> <v>..."<>)<>
+= namedtuple("<v>NamedTuple1<>", "<v>field_1<>, <v>field_2<>, <v>..."<>)<>
+
+Returns: <c>class<>
 
 
 Defines a named tuple, a tuple with named propeties.
+
 Creates a subclass of <c>tuple<>.
 
 
@@ -19008,14 +20089,12 @@ Example:
 
 #### Named Tuple - Instantiate
 
-<cb>= <v>NamedTuple1<> (<v>value_1<>, <v>value_2<>, <v>...<>)<>
+<cb>= <v>NamedTuple1<> (<v>value_1<>, <v>value_2<>, <v>...<>)
 
-or
-
-<cb>= <v>NamedTuple1<> (<v>field_1<> = <v>value_1<>, <v>field_2<> = <v>value_2<>, <v>...<>)<>
+= <v>NamedTuple1<> (<v>field_1<> = <v>value_1<>, <v>field_2<> = <v>value_2<>, <v>...<>)<>
 
 
-Creates an instance of named tuple.
+Creates an instance of the named tuple.
 
 
 Example:
@@ -19039,7 +20118,7 @@ or
 <cb>= <v>NamedTuple1<> (*(<v>value_1<>, <v>value_2<>, <v>...<>))<>
 
 
-Creates an instance of named tuple from a regular tuple.
+Creates an instance of the named tuple from a regular tuple.
 
 
 Example:
@@ -19852,6 +20931,53 @@ Returns the name of the starting module file.
 
 
 
+### Project - Recommended Project Structure
+
+<cb><v>project_name<>/
+
+    README.md
+    pyproject.toml
+    setup.cfg
+
+    docs/
+
+    src/
+        <v>package<>/
+            __init__.py
+            <v>module<>.py
+
+    tests/<>
+
+
+There are many ways to structure your project but this is perhaps the most standard way.
+
+
+Official Doc:
+<l>https://packaging.python.org/en/latest/tutorials/packaging-projects/<>
+@
+@ directories, standard.
+
+
+
+### Project - Minimal setup.py
+
+<cb>from setuptools import find_packages, setup
+
+setup(
+	name='<v>app_name<>',
+	version='1.0.0',
+	description='<v>App description.<>',
+	packages=find_packages('src'),
+	package_dir={'': 'src'}
+)<>
+
+Note:
+'<c>src<>' is the standard directory for the project source code. On many projects the source folder has the same name as the root directory. Update this to match.
+@
+@ file
+
+
+
 ### Python Home Directory
 
 <cb>from sys import prefix
@@ -19864,7 +20990,7 @@ This is where Python thinks it's home directory is.
 
 
 
-### Python Module Search Path
+### Python Module - Search Path
 
 <cb>import path from sys
 
@@ -19872,6 +20998,19 @@ This is where Python thinks it's home directory is.
 
 
 Returns the python module search path.
+@
+@ sys.path, get, mod, source directory
+
+
+
+### Python Module - Add Path
+
+<cb>import path from sys
+
+path.append(<v>new_module_root_directory<><>
+
+
+Adds a directory to the sources for python modules and scripts.
 @
 @ sys.path, get, mod
 
@@ -20305,7 +21444,7 @@ Works with dates and datetimes.
 
 Using F-String:
 
-<cb>= '{<v>datetime_1<>:%Y-%m-%d %H:%M:%S}'<>
+<cb>= f'{<v>datetime_1<>:%Y-%m-%d %H:%M:%S}'<>
 
 Using format():
 
@@ -20317,6 +21456,44 @@ Returns year, month, day, hour, minute, second.
 For dates will print time as '00:00:00'
 @
 @ datetime, year, month, day, hour, minute, second, yyyymmdd, hhmmsss
+
+
+
+#### Format Date - YYYY-MM-DD HH:MM:SS - Time Zone
+
+Using F-String:
+
+<cb>= f'{<v>datetime_1<>:%Y-%m-%d %H:%M:%S %Z}'<>
+
+Using format():
+
+<cb>= '{:%Y-%m-%d %H:%M:%S %Z}'.format(<v>date_1<>)<>
+
+<cb>= '{:%Y-%m-%d %H:%M:%S %Z}'.format(<v>datetime_1<>)<>
+
+Returns year, month, day, hour, minute, second and timezone.
+For dates will print time as '00:00:00'
+@
+@ datetime, year, month, day, hour, minute, second, yyyymmdd, hhmmsss
+
+
+
+ash.#### Format Date - YYYY-MM-DD HH:MM:SS - UTC Offset
+
+Using F-String:
+
+<cb>= f'{<v>datetime_1<>:%Y-%m-%d %H:%M:%S %z}'<>
+
+Using format():
+
+<cb>= '{:%Y-%m-%d %H:%M:%S %z}'.format(<v>date_1<>)<>
+
+<cb>= '{:%Y-%m-%d %H:%M:%S %z}'.format(<v>datetime_1<>)<>
+
+Returns year, month, day, hour, minute, second and utc offset.
+For dates will print time as '00:00:00'
+@
+@ datetime, year, month, day, hour, minute, second, yyyymmdd, hhmmsss, utc
 
 
 
@@ -21822,11 +22999,32 @@ A zip file containing Python files. It is runnable if it contains __main__.py in
 
 
 
+### Epoch
+The time at Unix Time 0.
+
+January 1st, 1970 at 00:00:00 UTC.
+@
+@ unix time
+
+
+
+### Epoch Time / Unix Time
+The time that has passed in seconds since the Unix epoch (January 1st, 1970).
+
+
+
 ### Event Loop
 A single threaded process that places coroutines and tasks on a queue and executes them one at a time.
 The task or coroutine will voluntarily give up control back to the event loop when blocked, allowing other tasks to continue.
 
 Great for handling IO bound operations where you don't want to block execution when waiting for external operations to complete.
+
+
+
+### Executable Directory
+An executable directory is any directory containing <c>__main__.py<>.
+
+When called from python, it will execute the code in <c>__main__.py<> to start the application.
 
 
 
@@ -22076,6 +23274,17 @@ See: Process
 
 
 
+### Namespace Package
+A package that is split across multiple root directories (those listed in <c>sys.path<>) but with the same package name.
+
+Python scans all directories in sys.path for namespace packages.
+If it finds package directories of the same name but no <c>__init__.py<> file, it will treat them as one single package.
+
+Can not have <c>__init__.py<> files.
+This is to avoid the complexity and issues of deciding the order of running <c>__init__<> files.
+
+
+
 ### Object Aliasing
 The ability for Python to assign multiple names to Python objects.
 
@@ -22091,7 +23300,8 @@ Example: +, -, *, /
 
 
 ### Package
-A directory that contains module files and the file <c>__info__.py<> (required).
+Generally a directory that contains module files and the file <c>__info__.py<> (required).
+
 All packages are modules but not all modules are packages.
 
 
