@@ -1,64 +1,186 @@
 # <#>Python<> SpeedSheet
-<b>Find what you need, faster.<>
+<b>Find it faster.<>
 
-Get answers to your Python questions fast.
-Covers the core Python 3 programming language.
+This is an interactive <b>Python<> cheat sheet. Covers the core Python programming language. Use the search to instantly get answers.
 
 
-Follow us on Twitter:
+<card><b>Most Common Searches<>
 
-<card><l https://twitter.com/_speedsheet>@_speedsheet<><>
+<table><col><*><link "?q=for-loop#for_-_basics">for loop<>			
+<link "?q=if-else#if_else">if else<>
+<link "?q=comprehension#list_-_list_comprehension">list comprehension<>
+<link "?q=sort+list#list_-_sort">sort list<>
+<link "?q=start+async#coroutine_-_start_main_coroutine">start async<><><><col><*><link "?q=open+file">open file<>
+<link "?q=file+io+read">read file<>
+<link "?q=f-string#f-string_-_basics">f-string<>
+<link "?q=reverse+format#format_codes_-_reverse_lookup">reverse format<>
+<link "?q=convert+string+to+list#string_-_to_list">string to list<><><><><>
+
+
+<table><col><b>Basics<>
+
+<*><link "?q=hello+world">Hello World<>
+<link "?q=fundamentals-only">Language Fundamentals<>
+<link "?q=conventions-only">Naming Conventions<><>
+
+<*><link "?q=control-structure-only">Control Structures<>
+<link "?q=error-handling-only">Error Handling<>
+<link "?q=functions-only">Functions<>
+<link "?q=classes-only">Classes<>
+<link "?q=context manager">Context Managers (with as)<>
+<link "?q=decorators-only">Decorators<>
+<link "?q=iterators">Iterators<>
+<link "?q=generators">Generators<>
+<link "?modules-only">Modules<>
+<link "?q=operators-only">Operators<>
+<link "?q=distribution">Packaging<>
+<link "?q=regex-only">Regular Expressions<>
+<link "?q=unit+tests">Unit Tests<>
+<link "?q=type+hints">Type Hints<><>
+
+<b>Control Structures<>
+
+<*><link "?q=if-else-only">If Else<>
+<link "?q=ternary-only">If / Inline<>
+<link "?q=for-only#for_-_basics">For Loop<>
+<link "?q=match-only#match_-_basics">Match<>
+<link "?q=while-only#while_-_basics">While<><>
+
+<b>Running Python<>
+
+<*><link "?q=command-line-only">Command Line<>
+<link "?q=pip-only">PIP / Libraries<>
+<link "?q=venv-only">Virtual Environments<><>
+
+<b>Files<>
+
+<*><link "?q=file+io">File IO<>
+<link "?q=file-only+operations">File Operations<>
+<link "?q=directory+operations">Directory Operations<>
+<link "?q=path-only">Path Operations<><>
+
+<b>Functions<>
+
+<*><link "?q=encode+decode">Encode / Decode<>
+<link "?q=json-only">JSON<>
+<link "?q=math-only">Math<>
+<link "?q=random-only">Random<>
+<link "?q=sequence-functions-only">Sequence<><>
+
+<b>Libraries<>
+
+<*><link "?q=argparse-only">Argparse<>
+<link "?q=configparser-only">Config Parser<>
+<link "?q=csv-only">CSV<>
+<link "?q=http-only">HTTP / Internet<><>
+
+<b>Parallelism<>
+
+<*><link "?q=asyncio-only">Async / Await<>
+<link "?q=thread-only">Threads<>
+<link "?q=process-only">Processes<><>
+
+<*><link "?q=event-only">Events<>
+<link "?q=futures-only">Futures<>
+<link "?q=lock-only">Lock<>
+<link "?q=process-pipes-only">Pipes<>
+<link "?q=process-pool-only">Process Pools<>
+<link "?q=multi-queue-only">Queues<>
+<link "?q=semaphore-only">Semaphore<>
+<link "?q=shared-value-only">Shared Memory<><>
+
+<b>Reference<>
+
+<*><link "?q=acronyms-only">Acronyms<>
+<link "?q=online-docs-only">Online Docs<>
+<link "?q=reserved-only">Reserved Words<>
+<link "?q=terms-only">Terms<>
+<link "?q=symbols-only">Symbols<><>
+
+<><col><b>Data Types<>
+
+<*><link "?q=variables-only">Variables<>
+<link "?q=literals-only">Literals<>
+<link "?q=data-types-only">Data Types<>
+<link "?q=conversions-only">Data Conversions<><>
+
+<*><link "?q=none-only">None<>
+<link "?q=boolean-only">Boolean<>
+<link "?q=byte-only">Byte<>
+<link "?q=complex-only">Complex Numbers<>
+<link "?q=decimal-only">Decimal<>
+<link "?q=float-only">Float<>
+<link "?q=integer-only">Integer<>
+<link "?q=strings-only">String<><>
+
+<*><link "?q=date-only">Date<>
+<link "?q=datetime-only">Datetime<>
+<link "?q=timezone-only">Time Zones<>
+<link "?q=timedelta-only">TimeDelta<>
+<link "?q=timestamp-only">Timestamp<><>
+
+<*><link "?q=enum-only">Enum<>
+<link "?q=dict-only">Dict<>
+<link "?q=list-only">List<>
+<link "?q=set-only">Set<>
+<link "?q=tuple-only">Tuple<><>
+
+<*><link "?q=standard-queue-only">Queue<>
+<link "?q=deque-only">Deque<>
+<link "?q=ordered-dict-only">Ordered Dict<><>
+
+<b>Sequences<>
+
+<*><link "?q=sequence-only">Sequences<>
+<link "?q=slice-only#index_and_slicing_-_basics">Slicing<>
+<link "?q=destructure-only#sequence_destructuring_-_basics">Destructuring<><>
+
+<b>Strings<>
+
+<*><link "?q=strings-only">Strings<>
+<link "?q=f-string#f-string_-_basics">F-Strings<>
+<link "?q=string-format()-only">Format() Strings<>
+<link "?q=formatting-only">Formatting<>
+<link "?q=reverse+format#format_codes_-_reverse_lookup">Formatting / Reverse Lookup<>
+<link "?q=regex-only">Regular Expressions<><>
+
+<b>Structures<>
+
+<*><link "?q=dataclass-only">Dataclass<>
+<link "?q=namedtuple-only">Named Tuple<><>
+
+<b>How To<>
+
+<*><link "?q=how-to">How Tos<><>
+<*><link "?q=execute-only">Run Commands<><>
+
+<*><link "?q=input-only">Input<>
+<link "?q=print-only">Print<>
+<link "?q=formatting-only">Formatting<><>
+
+<*><link "?q=sleep-only">Sleep<>
+<link "?q=timer-only">Timers<><>
+
+<b>Related SpeedSheets<>
+
+<*><link "aiogram">aiogram<>
+<link "aiohttp">aiohttp<>
+<link "beautifulsoup">beatuiful soup<>
+<link "jinja">jinja<>
+<link "matplotlib">matplotlib<>
+<link "numpy">numpy<>
+<link "pillow">pillow<>
+<link "poetry">poetry<>
+<link "pynput">pynput<>
+<link "pytest">pytest<>
+<link "requests">requests<>
+<link "tkinter">tkinter<><><><>
+
+
+
+# Online Documents
 @
-@ twitter
-
-
-### 9 SpeedSheet Tips and Tricks
-
-Here is a short video to help you get the most out of this SpeedSheet:
-
-<h>iframe width=640 height=360 src=https://www.youtube.com/embed/PKeRYZTVJbs</h><h>/iframe</h>
-
-
-### 5 Things Search Can Find For You
-
-The search is the key to using the Python SpeedSheet. Here are 5 things you can find with search:
-
-<card><table><col><b>Need This?					<><><col><b>Search For:				<><><col><b>See Search In Action:<><>
-<col> <>
-<col>Start an Async Program<><col>start async program<><col><l "/s/python?search=start+async+program">Search Result<><>
-<col>Ignore String Case Correctly<><col>compare ignore case<><col><l "/s/python?search=compare+ignore+case&select=6TEG">Search Result<><>
-<col>Debug with f-string<><col>f-string debug<><col><l "/s/python?search=f-string+debug">Search Result<><>
-<col>Time an Operation<><col>timer<><col><l "/s/python?search=timer">Search Result<><>
-<col>Execute a Shell Command<><col>execute shell command<><col><l "/s/python?search=execute+shell+command">Search Result<><><><>
-
-
-### In This Sheet
-
-Here are some of the many things you can find in this SpeedSheet:
-
-<in-2><l "/s/python?search=dicts+operations&select=hCt6">Dict Operations<>
-<l "/s/python?search=lists+operations&select=hCt6">List Operations<>
-<l "/s/python?search=slicing">List and Sequence Slicing<>
-<l "/s/python?search=formatting+reference">String Formatting<>
-<l "/s/python?search=strings+operations">String Operations<>
-
-<l "/s/python?search=dataclasses">Dataclasses<>
-<l "/s/python?search=namedtuples">Named Tuples<>
-
-<l "/s/python?search=file+io&select=30R1">File IO (Readind and Writing)<>
-<l "/s/python?search=csv">CSV Files<>
-<l "/s/python?search=configparse">Configuration Files<>
-
-<l "/s/python?search=iterators">Iterators<>
-<l "/s/python?search=generators">Generators<>
-<l "/s/python?search=yield&select=5EkP">Yield Functions<>
-
-<l "/s/python?search=threads&select=uwmS">Threads<>
-<l "?search=processes&select=yNC8">Processes<>
-<l "/s/python?search=asyncio&select=XrWY">Async Functions<><>
-
-
-# Online Links
+@ online-docs-only, docs-only
 
 ### Python Documents
 <l>https://docs.python.org/3/<>
@@ -110,7 +232,7 @@ Namespaces are one honking great idea -- let's do more of those!
 
 ### Hello World
 
-Create and run the following python script.
+Create and run the following Python script.
 
 
 File Name:
@@ -186,6 +308,8 @@ Run From The Command-line:
 
 
 # Language Fundamentals
+@
+@ language-fundamentals-only, fundamentals-only
 
 
 
@@ -237,6 +361,7 @@ Examples:
 <col>Single Quote ( ' )<><col><c>\\'<><>
 <col>Double Quote ( " )<><col><c>\\"<><>
 <col> <>
+<col>Carriage Return<><col><c>\\r<><>
 <col>Newline<><col><c>\\n<><>
 <col>Tab<><col><c>\\t<><>
 <col> <>
@@ -249,8 +374,8 @@ Example:
 
 <cb>= "<v>1st Line\\n2nd Line<>"<>
 @
-@ Newline, New Line, End of Line, Line Separator, \\n, \\\\, \\', \\", \\t, null, \\00, String
-@ /n, //, /', /", /t, /00, single quote, double quote, backslash
+@ Newline, New Line, End of Line, Line Separator, \\n, \\r, \\\\, \\', \\", \\t, null, \\00, String
+@ /n, /r, //, /', /", /t, /00, single quote, double quote, backslash, carriage return
 @ whitespaces, white spaces, characters, tab, newline, nl, null
 
 
@@ -311,7 +436,9 @@ Example:
 
 ### Identifiers
 
-<cb>( <v>letter<> | <v>_<> )   ( <v>letter<> | <v>digit<> | <v>_<> ) *<>
+<cb>( <v>letter<> | _ )( <v>letter<> | <v>digit<> | _ )*<>
+
+Regex Form:
 
 <cb>[_a-zA-Z][_0-9a-zA-Z]*<>
 
@@ -327,7 +454,7 @@ Examples:
 <v>three_word_name<><>
 @
 @ Python names, variable names, module names, class names
-@ Rules, Valid, Name, Correct
+@ Rules, Valid, allowable, allowed, Name, Correct
 
 
 
@@ -476,7 +603,7 @@ print("one"); print("two"); print("three");<>
 
 # Naming Conventions
 @
-@ Names
+@ Names, naming-conventions-only, conventions-only
 
 
 
@@ -604,7 +731,7 @@ Avoid using.<>
 
 # Command-line
 @
-@ commandline, command line
+@ commandline, command line, cli, cli-only, command-line-only, commandline-only
 
 
 
@@ -656,17 +783,18 @@ Press the keys <c>Control + D<> or type <c>exit()<> to quit.
 
 
 
-### Script - Run Program
+### Application / Script - Run Program
 
 <cb>python3 <v>python_file.py<><>
 
 Run from the source root directory.
 @
 @ Start, Launch, python3
+@ program
 
 
 
-### Script - Run Module
+### Application / Script - Run Module
 
 <cb>python3 -m <v>package<>.<v>module_name<><>
 
@@ -677,12 +805,34 @@ Run from parent directory to the <c><v>package<><> directory.
 Run from source root directory.
 @
 @ python3, -m, subdirectory, subfolder
+@ program
 
+
+
+### Application - Run Directory
+
+<cb>python3 <v>source_directory<><>
+
+This will run a python program from it's source directory.
+
+The source directory must contain <c>__main__.py<>.
+Place your startup code in that file.
+Python will call it to start the application.
+
+
+Directory Structure:
+
+<cb><v>source<>\
+	__main__.py
+	<v>...<><>
+@
+@ program
 
 
 # Unit Test - Command-line
 @
-@ command-line-only, commandline-only, python3, tests, testing, -m, unittest
+@ cli, command-line-only, commandline-only, python3, tests, testing, -m, unittest
+@ unit-tests-only, unit-test-only
 
 
 
@@ -729,6 +879,8 @@ Run from source root directory.
 # Distribution
 @
 @ Package, Dist
+@ packaging
+@ distribution-only, packaging-only, package-only
 
 
 
@@ -815,7 +967,7 @@ PIP = PIP Installs Packages
 
 
 
-### PIP - Installed Package Location
+## PIP - Installed Package Location
 
 <cb><v>python_home_directory<>/lib/python3.<v>x<>/site-packages<>
 
@@ -989,6 +1141,7 @@ Installs all the packages in the requirements file.
 # Operators
 @
 @ Operators, Operations, Expressions
+@ operators-only
 
 
 
@@ -1038,6 +1191,7 @@ Ternary conditional operator.
 @
 @ Ternary conditional operator, tertiary
 @ Inline If, iif, if else, ?
+@ ternary-only
 
 
 
@@ -1322,7 +1476,7 @@ Examples:
 
 print (0 \< <v>value<> \< 2)
 
-<#># False:<>
+<#>`alse:<>
 
 print (1 \< <v>value<> \< 2)
 
@@ -1400,7 +1554,80 @@ True If Same Location<>
 # Control Structures
 @
 @ statements, flow
-@ control-only
+@ control-only, control-structure-only, control-structures-only
+@ control-statements-only
+
+
+### Control Structures - Basics
+
+<table><col>If Else		<><col><c>if <v>condition_1<>:
+	<v>...<><><>
+<col> <>
+<col> <>
+<col> <><col><c>if <v>condition_1<>:
+	<v>...<>
+elif <v>condition_2<>:
+	<v>...<>
+else:
+	<v>...<><><>
+<col> <>
+<col> <>
+<col>For<><col><c>for <v>i<> in range(<v>max_plus_1<>):
+	<v>...<><><>
+<col> <>
+<col> <>
+<col> <><col><c>for <v>item<> in <v>sequence_1<>:
+	<v>...<><><>
+<col> <>
+<col> <>
+<col> <><col><c>for <v>item<> in <v>sequence_1<>:
+	<v>...<>
+	break
+	<v>...<>
+	continue
+else:
+	<v>...<><><>
+<col> <>
+<col> <>
+<col>Match<><col><c>match <v>variable_1<>:
+
+    case <v>value_1<>:
+        <v>...<>
+
+    case <v>value_2<> | <v>value_3<>:
+        <v>...<>
+
+    case (<v>value_4_1<>, <v>value_4_2<>):
+        <v>...<>
+
+    case <v>Class1<>(<v>param_1<>, <v>param_2<>):
+        <v>...<>
+
+    case <v>Enum1<>.<v>ENUM_1<>:
+        <v>...<>
+
+    case (<v>value_8<>, <v>x<>):
+        <v>...<>
+
+    case (<v>value_8<>, <v>x<>) if <v>condition<>:
+        <v>...<>   
+
+    case _:
+        <v>...<><><>
+<col> <>
+<col> <>
+<col>While<><col><c>while <v>condition<>:
+	<v>...<><><>
+<col> <>
+<col> <>
+<col> <><col><c>while <v>condition<>:
+	<v>...<>
+	break
+	<v>...<>
+	continue
+	<v>...<>
+else:
+	<v>...<><><><>
 
 
 
@@ -1414,7 +1641,8 @@ else:
 	<v>...<><>
 @
 @ basics, conditional
-@ if-only, then, else, elif, elseif
+@ then, else, elif, elseif
+@ if-only, if-else-only
 
 
 ### For
@@ -1607,7 +1835,7 @@ Python Version: 3.10+
 
 
 
-#### Match - Match Basics
+#### Match - Basics
 
 <cb>match <v>variable_1<>:
 
@@ -1634,10 +1862,10 @@ Python Version: 3.10+
 
     case (<v>value_8<>, <v>x<>):				<#>Bind To Variable<>
         <v>...<>
-	
+
     case (<v>value_8<>, <v>x<>) if <v>condition<>:
         <v>...<>   
-	
+
     case _:							<#>Unmatched<>
         <v>...<><>
 
@@ -2029,6 +2257,22 @@ Executes else clause when <c>condition<> is <c>False<>.
 
 
 
+### While - "Do-While" Form
+
+<cb>while True:
+
+	<v>...<>
+
+	if <v>exit_condition<>:
+		break<>
+
+
+Executes the while loop at least one time.
+@
+@ execute at least once, do-while, do while
+
+
+
 ### Break
 
 Exit Loop:
@@ -2386,7 +2630,7 @@ This is an easy way to swap the values of <c><v>a<><> and <c><v>b<><>.
 
 # Data Types - Built In
 @
-@ standard, builtin
+@ standard, builtin, data-types-only
 
 
 
@@ -2490,26 +2734,26 @@ This is an easy way to swap the values of <c><v>a<><> and <c><v>b<><>.
 
 ## Literals - Basics
 
-<table><col><c>= True | False<><><col>Boolean Literal<>
+<table><col>Boolean Literal	<><col><c>= True | False<><>
 <col> <>
-<col><c>= 11<><><col>Integer Literal<>
-<col><c>= -11<><><col>Integer Literal<>
-<col><c>= 12_345<><><col>Integer Literal<>
+<col>Integer Literal<><col><c>= 11<><>
+<col>Integer Literal<><col><c>= -11<><>
+<col>Integer Literal<><col><c>= 12_345<><>
 <col> <>
-<col><c>= 0b<v>1011<><><><col>Binary Literal<>
-<col><c>= 0o<v>13<><><><col>Octal Literal<>
-<col><c>= 0x<v>0B<><><><col>Hex Literal<>
+<col>Binary Literal<><col><c>= 0b<v>1011<><><>
+<col>Octal Literal<><col><c>= 0o<v>13<><><>
+<col>Hex Literal<><col><c>= 0x<v>0B<><><>
 <col> <>
-<col><c>= 11.23<><><col>Float Literal<>
-<col><c>= -1.23<><><col>Float Literal<>
+<col>Float Literal<><col><c>= 11.23<><>
+<col>Float Literal<><col><c>= -1.23<><>
 <col> <>
-<col><c>= <v>1<> + <v>2<>j<><><col>Complex Literal<>
+<col>Complex Literal<><col><c>= <v>1<> + <v>2<>j<><>
 <col> <>
-<col><c>= '<v>A String<>'<><><col>String Literal<>
-<col><c>= "<v>A String<>"<><><col>String Literal<>
+<col>String Literal<><col><c>= '<v>A String<>'<><>
+<col>String Literal<><col><c>= "<v>A String<>"<><>
 <col> <>
-<col><c>= f'<v>...<>'<><><col>F-String Literal<>
-<col><c>= f"<v>...<>"<><><col>F-String Literal<><>
+<col>F-String Literal<><col><c>= f'<v>...<>'<><>
+<col>F-String Literal<><col><c>= f"<v>...<>"<><><>
 
 
 
@@ -2662,58 +2906,6 @@ Subset of Integer
 @ Create, Define, Instantiate, New, True, False, data type
 
 
-# Boolean Operations
-@
-@ bool, bool-only, bools-only, boolean-only, booleans-only
-@ Ops, True, False
-
-
-
-#### Boolean - To Integer
-
-<cb>= int(<v>bool_1<>)<>
-
-False = 0
-True = 1
-@
-@ Convert, Conversion, From, int(), from-boolean, to-integer
-
-
-
-#### Boolean - From String (Empty / Not Empty)
-
-<cb>= bool(<v>string_value<>)<>
-
-
-Tests for empty string.
-
-Empty String = <v>False<>
-Otherwise = <v>True<>
-@
-@ Convert, Conversion, To, bool(), to-boolean, from-string
-
-
-
-#### Boolean - From String (Conversion)
-
-<cb>= <v>string_value<>.lower() in ['t', 'true', 'y', 'yes', 1]<>
-
-Returns true if <c><v>string_value<><> is one of 't', 'true', 'y', 'yes', or 1.
-Case is ignored.
-@
-@ Convert, Conversion, To, True, False, parse, .tolower(), yes, no, to-boolean, from-string
-
-
-
-#### Boolean - To String
-
-<cb>= str(<v>value_1<>)<>
-
-Returns 'True' or 'False'.
-@
-@ Convert, Conversion, From, str(), from-boolean, to-string
-
-
 
 
 # Byte
@@ -2742,140 +2934,11 @@ Creates a byte array.
 
 
 
-#### Bytes - Length
+### Bytes - Length
 
 <cb>= len(<v>bytes_1<>)<>
 @
 @ size, count, len()
-
-
-
-#### Bytes - To Base64
-
-<cb>from base64 import b64encode
-
-= b64encode(<v>bytes_1<>)<>
-
-Returns: <c>bytes<>
-
-
-Encodes a byte array into Base64.
-Returns as another byte array.
-
-
-Example:
-
-<cb>from base64 import b64encode
-
-<v>text<> = "Text in Base64"
-<v>bytes<> = <v>text<>.encode("utf-8")
-
-<v>base64_bytes<> = b64encode(<v>bytes<>)             <#>#1<>
-<v>base64_text<> = <v>base64_bytes<>.decode("ascii")
-
-print (<v>base64_text<>)                           <#>#2<><>
-
-\#1  <s>-<>  Base64 Conversion
-
-\#2  <s>-<>  Prints 'VGV4dCBpbiBCYXNlNjQ='
-@
-@ encode(), .encode(), Base 64, base64.b64encode(), b64encode()
-@ Convert, Conversion, From
-@ from-bytes, to-base64
-
-
-
-#### Bytes - From Base64
-
-<cb>from base64 import b64decode
-
-= b64decode(<v>bytes_1<>)<>
-
-Retuns: <c>bytes<>
-
-
-Decodes a base64 encoded byte array.
-Returns another byte array.
-
-
-Example:
-
-<cb>from base64 import b64decode
-
-<v>base64_text<> = 'VGV4dCBpbiBCYXNlNjQ='
-<v>base64_bytes<> = <v>base64_text<>.encode('ascii')
-
-<v>decoded_bytes<> = b64decode(<v>base64_bytes<>)     <#>#1<>
-<v>decoded_text<> = <v>decoded_bytes<>.decode("utf-8")
-
-print (<v>decoded_text<>)                      <#>#2<><>
-
-\#1  <s>-<>  Base64 Decoding
-
-\#2  <s>-<>  Prints 'This in Base64'
-@
-@ .decode(), Base 64, base64.b64decode(), .b64decode()
-@ Convert, Conversion, To, to-bytes, from-base64
-
-
-
-#### Bytes - To Hex
-
-<cb>from binascii import hexlify
-
-= hexlify(<v>bytes_1<>)<>
-
-Returns: <c>bytes<>
-
-
-Converts a byte array into its hex representation.
-
-
-Example:
-
-<cb>from binascii import hexlify
-
-<v>value_bytes<> = b'in bytes'
-<v>value_hex<> = hexlify(<v>value_bytes<>)
-
-print (<v>value_hex<>.decode('ascii'))     <#>#1<><>
-
-\#1  <s>-<>  Prints '696e206279746573'
-@
-@ Convert, Conversion, hexadecimal, binascii.hexlify(), .hexlify()
-@ from-bytes, to-hex
-
-
-
-#### Bytes - To Int
-
-<cb>= int.from_bytes(<v>bytes_1<>, "big")<>
-
-Use <c>"big"<> for bytes with the most significant byte first.
-Use <c>"little"<> for bytes with the most significant byte first.
-@
-@ Convert, Conversion, To
-@ from-bytes, to-integer
-
-
-
-#### Bytes - From String
-
-<cb>= <v>string_1<>.encode()<>
-
-<cb>= <v>string_1<>.encode('utf-8')<>
-@
-@ Convert, Conversion, To, .encode(), utf-8, utf8
-@ to-bytes, from-string
-
-
-
-#### Bytes - To String
-
-<cb>= <v>bytes_1<>.decode("utf-8")<>
-@
-@ Convert, Conversion, From, decode, utf-8, utf8, .decode()
-@ from-bytes, to-string
 
 
 
@@ -2913,7 +2976,7 @@ Example:
 
 
 
-#### Complex Number - Real Part
+### Complex Number - Real Part
 
 <cb>= <v>complex_1<>.real<>
 @
@@ -2921,29 +2984,11 @@ Example:
 
 
 
-#### Complex Number - Imaginary Part
+### Complex Number - Imaginary Part
 
 <cb>= <v>complex_1<>.imag<>
 @
 @ Get, .imag
-
-
-
-#### Complex Number - From String
-
-<cb>= complex("<v>1<> + <v>2<>j")<>
-@
-@ Convert, Conversion, To, parse, complex()
-@ to-complex, from-string
-
-
-
-#### Complex Number - To String
-
-<cb>= str(<v>complex_1<>)<>
-@
-@ Convert, Conversion, From, str()
-@ from-comple, to-string
 
 
 
@@ -3175,52 +3220,11 @@ Underscores between digits are ignored. Use them to make numbers more readable.
 
 
 
-#### Float - NAN
+### Float - NAN
 
 <cb>= float('nan')<>
 @
 @ Not a number, is
-
-
-
-#### Float - To Integer
-
-<cb>= int(<v>float_value<>)<>
-
-Example:
-
-<cb><v>int_1<> = int(<v>1234.567<>)   <#># Returns 1234<><>
-@
-@ Convert, Conversion, From
-@ from-float, to-integer
-
-
-
-#### Float - From String
-
-<cb>= float(<v>float_string<>)<>
-
-Example:
-
-<cb><v>float_1<> = float("<v>123.3<>")<>
-@
-@ Convert, Conversion, To, parse, float()
-@ to-float, from-string
-
-
-
-#### Float - To String
-
-<cb>= "<v>format<>".format(<v>float_value<>)<>
-
-Example:
-
-<cb><v>string_1<> = "<v>{0:,.2f}<>".format(<v>1234.567<>)
-
-<#># Returns "1,234.56"<><>
-@
-@ Convert, Conversion, From, .format()
-@ from-float, to-string
 
 
 
@@ -3249,7 +3253,7 @@ Underscores between numbers are ignored. Use them to make the number more readab
 
 
 
-#### Integer - Is Zero
+### Integer - Is Zero
 
 <cb>= not <v>int_1<><>
 
@@ -3260,7 +3264,7 @@ Underscores between numbers are ignored. Use them to make the number more readab
 
 
 
-#### Integer - Not Zero
+### Integer - Not Zero
 
 <cb>= bool(<v>int_1<>)<>
 
@@ -3271,7 +3275,7 @@ Underscores between numbers are ignored. Use them to make the number more readab
 
 
 
-#### Integer - Length
+### Integer - Length
 
 <cb>from math import floor
 from math import log10
@@ -3293,7 +3297,7 @@ Example:
 
 
 
-#### Integer - Maximum Value
+### Integer - Maximum Value
 
 <cb>import sys
 
@@ -3307,131 +3311,6 @@ Use this function to find the value in your current environment.
 64 bits = 9,223,372,036,854,775,807
 @
 @ Size, sys.maxsize, .maxsize, greatest
-
-
-
-#### Integer - From Binary String
-
-<cb>= int(<v>binary_string<>, 2)<>
-
-<cb>= int("0b<v>value<>", 0)<>
-
-
-Example:
-
-<cb><v>bin_1<> = int("<v>00101010<>", 2)
-
-<#># Returns 42<><>
-
-<cb><v>bin_2<> = int("0x<v>00101010<>", 0)
-
-<#># Returns 42<><>
-@
-@ Convert, Conversion, To, int(), hexadecimal
-@ to-integer, from-string, from-binary-string
-
-
-
-#### Integer - To Binary String
-
-<cb>= bin(<v>int_1<>)<>
-
-Returns: <c>str<>
-
-
-Example:
-
-<cb><v>binary_1<> = bin(<v>11<>)
-
-<#># Returns '0b1001'<><>
-@
-@ bin(), convert
-@ from-integer, to-binary-string, to-string, bits, binary, byte
-
-
-
-#### Integer - From Hex String
-
-<cb>= int(<v>hex_string<>, 16)<>
-
-<cb>= int("0x<v>hex_value<>", 0)<>
-
-
-Example:
-
-<cb><v>hex_1<> = int("<v>A9<>", 16)
-
-<#># Returns 169<><>
-
-<cb><v>hex_2<> = int("0x<v>A9<>", 0)
-
-<#># Returns 169<><>
-@
-@ Convert, Conversion, To, int(), hexadecimal
-@ to-integer, from-string, from-hex-string
-
-
-
-#### Integer - To Hex String
-
-<cb>= hex(<v>int_1<>)<>
-
-Returns: <c>str<>
-
-
-Example:
-
-<cb><v>hex_1<> = hex(<v>169<>)
-
-<#># Returns '0xa9'<><>
-@
-@ Convert, Conversion, From, hex(), hexadecimal
-@ from-integer, to-hex-string, to-string
-
-
-
-#### Integer - To Octal String
-
-<cb>= oct(<v>int_1<>)<>
-
-Returns: <c>str<>
-
-
-Example:
-
-<cb><v>octal_1<> = oct(<v>57<>)
-
-<#># Returns '0o71'<><>
-@
-@ Convert, Conversion, From, oct()
-@ from-integer, to-oct-string, to-string
-
-
-
-#### Integer - From String
-
-<cb>= int(<v>string_value<>)<>
-
-Example:
-
-<cb><v>int_1<> = int("<v>123<>")<>
-@
-@ Convert, Conversion, To, int(), parse
-@ to-integer, from-string
-
-
-
-#### Integer - To String
-
-<cb>= str(<v>int_1<>)<>
-
-
-Example:
-
-<cb><v>string_1<> = str(<v>123<>)<>
-@
-@ Convert, Conversion, From, str()
-@ from-integer, to-string
 
 
 
@@ -3463,7 +3342,7 @@ Stored as variable byte unicode.
 
 
 
-#### String - Multiline String
+### String - Multiline String
 
 <cb>= '''<v>This is
 a multiline
@@ -3480,7 +3359,7 @@ Enclose multiline string in <c>'''<> or <c>"""<>.
 
 
 
-#### String - Raw String
+### String - Raw String
 
 <cb>= r"<v>A\\String\\With\\Slashes<>"
 = r'<v>A\\String\\With\\Slashes<>'<>
@@ -3513,6 +3392,7 @@ print("Raw   ", <v>raw_string<>)
 @
 @ Strings, string-only, strings-only, str-only, text, text-only, .format(), {}
 @ formatting, formats, new, create
+@ string-format()-only
 
 
 
@@ -3609,19 +3489,22 @@ Creates a formatted string using a string literal.
 
 ### F-String - Basics
 
-<cb>string_1 = "value 1"
-string_2 = "value 2"
-float_3 = 12345.67<>
-
-<cb><v>formatted_string<> = f"{<v>string_1<>}"<>
-
-<cb><v>string_1_and_2<> = f"{<v>string_1<>} {<v>string_2<>}"<>
-
-<cb><v>string_1_and_2<> = f"{<v>string_1<>}" f"{<v>string_2<>}"<>
-
-<cb><v>pad_right<> = f"{<v>string_1<>:<v>\<20<>}"<>
-
-<cb><v>formatted_number<> = f"{<v>float_3<>:<v>,.1f<>}"<>
+<card><table><col>Variable<><col><c>= f'{<v>var_1<>}'<><><col><c>'value-1'<><>
+<col><><col><c>= f"{<v>var_1<>}"<><><col><c>'value-1'<><>
+<col> <>
+<col>Text and Variable<><col><c>= f'<v>text<> {<v>var_1<>}'<><><col><c>'text value-1'<><>
+<col><><col><c>= f"<v>text<> {<v>var_1<>}"<><><col><c>'text value-1'<><>
+<col> <>
+<col>Concatenate<><col><c>= f'{<v>string_1<>}{<v>string_2<>}'<><><col><c>'value-1value-2'<><>
+<col><><col><c>= f'{<v>string_1<>}' f'{<v>string_2<>}'<><><col><c>'value-1value-2'<><>
+<col> <>
+<col>Align Right<><col><c>= f'{<v>string_1<>:<v>>10<>}'<><><col><c>'   value-1'<><>
+<col>Align Center<><col><c>= f'{<v>string_1<>:<v>^10<>}'<><><col><c>' value-1  '<><>
+<col>Align Left<><col><c>= f'{<v>string_1<>:<v>\<10<>}'<><><col><c>'value-1   '<><>
+<col> <>
+<col>Comma<><col><c>= f'{<v>float_1<>:<v>,<>}'<><><col><c>'12,345'<><>
+<col>Decimals<><col><c>= f'{<v>float_1<>:<v>.2f<>}'<><><col><c>'12345.12'<><>
+<col>Comma, Decimals<><col><c>= f'{<v>float_1<>:<v>,.2f<>}'<><><col><c>'12,345.12'<><><><>
 @
 @ Examples
 
@@ -3629,14 +3512,15 @@ float_3 = 12345.67<>
 
 ### F-String - Single Variable
 
-<cb>= f'{<v>item_1<>}'<>
+<cb>= f'{<v>item_1<>}'
 
-<cb>= f"{<v>item_1<>}"<>
+= f"{<v>item_1<>}"<>
 
 
 Example:
 
 <cb><v>string_1<> = "<v>norminal<>"
+
 <v>formatted<> = f"Everything is {<v>string_1<>}."
 
 <#># Returns "Everything is norminal."<><>
@@ -3673,10 +3557,6 @@ Example:
 
 <#># Prints 30<><>
 
-<cb>print(f'{"<v>Everything Is Norminal<>"}')
-
-<#># Prints "Everything Is Norminal"<><>
-
 
 
 ### F-String - Repr Variable
@@ -3693,11 +3573,11 @@ Prints the repr() form of the value.
 
 Example:
 
-<cb><v>string_1<> = "<v>norminal<>"
+<cb><v>string_1<> = '<v>norminal<>'
 
-<v>formatted<> = f"{<v>string_1<>!r}."
+<v>formatted<> = f'{<v>string_1<>!r}.'
 
-<#># Returns "'norminal'"<><>
+<#># Returns: "'norminal'."<><>
 @
 @ !r, {!r}
 
@@ -3769,14 +3649,14 @@ Ugly Way:
 
 
 
-# String - Operations
+# String Operations
 @
 @ Strings, string-only, strings-only, str-only, text, text-only, str., string.
 @ Ops
 
 
 
-#### String - Append
+### String - Append
 
 <cb><v>string_1<> += <v>string_2<><>
 
@@ -3786,7 +3666,7 @@ Appends <c><v>string_2<><> to the end of <c><v>string_1<><>.
 
 
 
-#### String - Concatenate
+### String - Concatenate
 
 <cb>= <v>string_1<> + <v>string_2<> + <v>...<><>
 
@@ -3799,7 +3679,7 @@ Combines 2 or more strings into one string.
 @ add, +, Combine, join
 
 
-#### String - Contains?
+### String - Contains?
 
 <cb>= <v>string_1<> in <v>string_2<><>
 
@@ -3812,7 +3692,7 @@ Returns <c>True<> when <c><v>string_1<><> is a substring of <c><v>string_2<><>.
 
 
 
-#### String - Not Contains?
+### String - Not Contains?
 
 <cb>= <v>string_1<> not in <v>string_2<><>
 
@@ -3825,7 +3705,7 @@ Returns <c>True<> when <c><v>string_1<><> is not a substring of <c><v>string_2<>
 
 
 
-#### String - Ends With?
+### String - Ends With?
 
 <cb>= <v>string_1<>.endswith(<v>test_value<>)<>
 
@@ -3838,7 +3718,7 @@ Returns <c>True<> if <c><v>string_1<><> ends with or equals <c><v>test_value<><>
 
 
 
-#### String - Find
+### String - Find
 
 <cb>= <v>string_1<>.find(<v>search_value<>)<>
 
@@ -3854,7 +3734,7 @@ If -1 is returned then no match was found.
 
 
 
-#### String - Find Last
+### String - Find Last
 
 <cb>= <v>string_1<>.rfind(<v>search_value<>)<>
 
@@ -3866,7 +3746,7 @@ If -1 is returned then no match was found.
 
 
 
-#### String - Get Character
+### String - Get Character
 
 <cb>= <v>string_1<>[<v>position<>]<>
 
@@ -3878,7 +3758,7 @@ Example:
 
 
 
-#### String - Is Blank?
+### String - Is Blank?
 
 <cb>= not <v>string_1<> or <v>string_1<>.isspace()<>
 
@@ -3892,7 +3772,7 @@ Returns <c>True<> for <c>None<> or <c>""<> or is all whitespace.
 
 
 
-#### String - Is Empty?
+### String - Is Empty?
 
 <cb>= not <v>string_1<><>
 
@@ -3906,7 +3786,7 @@ Returns <c>True<> for <c>None<> or <c>""<>.
 
 
 
-#### String - Not Empty?
+### String - Not Empty?
 
 <cb>= (<v>string_1<> != None and <v>string_1<> != "")<>
 
@@ -3933,7 +3813,7 @@ Then call like this:
 
 
 
-#### String - Is Equal?
+### String - Is Equal?
 
 <cb>= <v>string_1<> == <v>string_2<><>
 
@@ -3952,7 +3832,7 @@ else:
 
 
 
-#### String - Not Equal?
+### String - Not Equal?
 
 <cb>= <v>string_1<> != <v>string_2<><>
 
@@ -3971,7 +3851,7 @@ else:
 
 
 
-#### String - Is Equal, Ignore Case?
+### String - Is Equal, Ignore Case?
 
 <cb>= <v>string_1<>.casefold() == <v>string_2<>.casefold()<>
 
@@ -3994,10 +3874,11 @@ else:
 <#># These Are Equal<><>
 @
 @ Equals, Compares, Not, ==, identical, .casefold(), caseless, any
+@ folding
 
 
 
-#### String - Not Equal, Ignore Case?
+### String - Not Equal, Ignore Case?
 
 <cb>= <v>string_1<>.casefold() != <v>string_2<>.casefold()<>
 
@@ -4022,7 +3903,7 @@ else:
 
 
 
-#### String - is Alpha Only
+### String - is Alpha Only
 
 <cb>= <v>string_1<>.isalpha()<>
 
@@ -4036,7 +3917,7 @@ Returns <c>False<> for numbers, symbols, emojis, or whitespace characters.
 
 
 
-#### String - is Alphanumerics Only
+### String - is Alphanumerics Only
 
 <cb>= <v>string_1<>.isalnum()<>
 
@@ -4051,7 +3932,7 @@ Returns <c>False<> for symbols, emojis, or whitespace characters.
 
 
 
-#### String - Is Digits Only
+### String - Is Digits Only
 
 <cb>= <v>string_1<>.isdigit()<>
 
@@ -4067,7 +3948,7 @@ Returns <c>False<> for <c>+<> or <c>-<>
 
 
 
-#### String - Is Integer
+### String - Is Integer
 
 <cb>from re import match
 
@@ -4083,7 +3964,7 @@ Works for any integer including those with plus or minus.
 
 
 
-#### String - Is Lower Case Only
+### String - Is Lower Case Only
 
 <cb>= <v>string_1<>.islower()<>
 
@@ -4095,7 +3976,7 @@ Checks if a string consists of all lower case letters.
 
 
 
-#### String - Is Title Case Only
+### String - Is Title Case Only
 
 <cb>= <v>string_1<>.istitle()<>
 
@@ -4109,7 +3990,7 @@ To be <c>True<> every word must start with a capitalized letter and the remainin
 
 
 
-#### String - Is Upper Case Only
+### String - Is Upper Case Only
 
 <cb>= <v>string_1<>.isupper()<>
 
@@ -4121,7 +4002,7 @@ Checks if a string consists of all upper case letters.
 
 
 
-#### String - Is Valid Python Identifier
+### String - Is Valid Python Identifier
 
 <cb>= <v>string_1<>.isidentifier()<>
 
@@ -4135,7 +4016,7 @@ Checks to see that the string meets the identifier name rules (starts with [a-zA
 
 
 
-#### String - Iterate Over Characters
+### String - Iterate Over Characters
 
 <cb>for <v>character<> in <v>string_1<>:
 	<v>...<><>
@@ -4146,7 +4027,7 @@ Iterates over <c><v>string_1<><> one character at a time.
 
 
 
-#### String - Compare?
+### String - Compare?
 
 Is Less Than?:
 
@@ -4168,7 +4049,7 @@ else:
 
 
 
-#### String - Count Occurences
+### String - Count Occurences
 
 <cb>= <v>string_1<>.count(<v>value<>)<>
 
@@ -4193,11 +4074,13 @@ Examples:
 
 
 
-#### String - Join
+### String - Join
 
-<cb>= <v>separator<>.join(<>strings<>])<>
+<cb>= <v>separator<>.join(<v>strings<>)
 
-<cb>= <v>separator<>.join(<v>iterable<>)<>
+= <v>separator<>.join([<v>string1<>, <v>string2<>, <v>string3<>])
+
+= <v>separator<>.join(<v>iterable<>)<>
 
 Joins all elements of <c><v>iterable<><> into 1 string with <c><v>separator<><> between each element.
 
@@ -4208,10 +4091,11 @@ Example:
 <v>string_1<> = '<v>, <>'.join(<v>list_1<>)          <#># Returns 'a, b, c'<><>
 @
 @ .join()
+@ concatenate, combine
 
 
 
-#### String - Length
+### String - Length
 
 <cb>= len(<v>string_1<>)<>
 @
@@ -4219,7 +4103,7 @@ Example:
 
 
 
-#### String - Pad Left
+### String - Pad Left
 
 <cb>= <v>string_1<>.rjust(<v>width<>)                 <#># Pad With Spaces<><>
 
@@ -4232,7 +4116,7 @@ Pads with <c><v>fill_char<><>, or spaces if not given.
 
 
 
-#### String - Pad Right
+### String - Pad Right
 
 <cb>= <v>string_1<>.ljust(<v>width<>)                 <#># Pad With Spaces<><>
 
@@ -4245,7 +4129,7 @@ Pads with <c><v>fill_char<><>, or spaces if not given.
 
 
 
-#### String - Repeat
+### String - Repeat
 
 <cb>= <v>string_1<> * <v>count<><>
 
@@ -4260,7 +4144,7 @@ Example:
 
 
 
-#### String - Replace
+### String - Replace
 
 <cb>= <v>string_1<>.replace(<v>original<>, <v>replacement<>)<>
 
@@ -4283,7 +4167,7 @@ print(<v>replaced<>)
 
 
 
-#### String - Replace First Occurence
+### String - Replace First Occurence
 
 <cb>= <v>string_1<>.replace(<v>original<>, <v>replacement<>, 1)<>
 
@@ -4306,7 +4190,7 @@ print(<v>replaced<>)
 
 
 
-#### String - Replace Ignore Case
+### String - Replace Ignore Case
 
 <cb>import re
 
@@ -4337,7 +4221,7 @@ print(<v>replaced<>)
 
 
 
-#### String - Replace Ignore Case, First Occurrence
+### String - Replace Ignore Case, First Occurrence
 
 <cb>import re
 
@@ -4368,7 +4252,7 @@ print(<v>replaced<>)
 
 
 
-#### String - Split
+### String - Split
 
 <cb>= <v>string_1<>.split(<v>split_string<>)
 
@@ -4416,7 +4300,7 @@ Examples:
 
 
 
-#### String - Split From End
+### String - Split From End
 
 <cb>= <v>string_1<>.rsplit(<v>split_string<>)<>
 
@@ -4436,7 +4320,7 @@ Example:
 
 
 
-#### String - Split / Partition
+### String - Split / Partition
 
 <cb>= <v>string_1<>.partition("<v>partition_string<>")<>
 
@@ -4463,7 +4347,7 @@ Examples:
 
 
 
-#### String - Split On Newline
+### String - Split On Newline
 
 <cb>= <v>string_2<>.splitlines()<>
 
@@ -4479,11 +4363,11 @@ Example:
 
 <#># Returns ['one', 'two', 'three']<><>
 @
-@ .splitlines(), new line, line break., lines, by
+@ .splitlines(), new line, line break., lines, by, into, to
 
 
 
-#### String - Split on White Space
+### String - Split on White Space
 
 <cb>= <v>string_1<>.split()
 
@@ -4509,7 +4393,7 @@ Example:
 
 
 
-#### String - Starts With?
+### String - Starts With?
 
 <cb>= <v>string_1<>.startswith(<v>test_value<>)<>
 
@@ -4519,10 +4403,11 @@ Returns: <c>bool<>
 Returns <c>True<> if <c><v>string_1<><> begins with or equals <c><v>test_value<><>.
 @
 @ Begins, .startswith(), Starting
+@ is, substring
 
 
 
-#### String - Strip
+### String - Strip
 
 <cb>= <v>string_1<>.strip()<>
 
@@ -4532,7 +4417,7 @@ Removes all whitespace characters from the beginning and end of the string.
 
 
 
-#### String - Strip Left
+### String - Strip Left
 
 <cb>= <v>string_1<>.lstrip()<>
 
@@ -4542,7 +4427,7 @@ Removes all whitespace characters at the start of the string.
 
 
 
-#### String - Strip Right
+### String - Strip Right
 
 <cb>= <v>string_1<>.rstrip()<>
 
@@ -4552,7 +4437,7 @@ Removes all whitespace characters at the end of the string.
 
 
 
-#### String - Subtitute / Translate - With Dict
+### String - Substitute / Translate - With Dict
 
 <cb><v>translation<> = str.maketrans(<v>mapping_dict<>)
 <v>translated<> = <v>string_1<>.translate(<v>translation<>)<>
@@ -4579,10 +4464,11 @@ Example:
 @
 @ str.maketrans(), .maketrans()
 @ string.translate(), .translate()
+@ replace
 
 
 
-#### String - Subtitute / Translate - With String
+### String - Substitute / Translate - With String
 
 <cb><v>translation<> = str.maketrans('<v>originals<>', '<v>replacements<>')
 <v>translated<> = string.translate(<v>translation<>)<>
@@ -4608,10 +4494,11 @@ Example:
 @
 @ str.maketrans(), .maketrans()
 @ string.translate(), .translate()
+@ replace
 
 
 
-#### String - Substring
+### String - Substring
 
 <cb>= <v>string_1<>[<v>index<>]
 
@@ -4620,7 +4507,7 @@ Example:
 = <v>string_1<>[:<v>end_plus_1<>]<>
 
 
-See Also: <l "/s/python?search=slice+sequence">Slicing Sequences<>
+See Also: <l "?q=slicing-only">Slicing Sequences<>
 
 
 Examples:
@@ -4643,7 +4530,7 @@ Examples:
 
 
 
-#### String - Substring - Left
+### String - Substring - Left
 
 <cb>= <v>string_1<>[:<v>length_plus_1<>]<>
 
@@ -4660,7 +4547,7 @@ Example:
 
 
  
-#### String - Substring - Right
+### String - Substring - Right
 
 <cb>= <v>string_1<>[<v>start<>:]<>
 
@@ -4677,7 +4564,7 @@ Example:
 
 
 
-#### String - Substring - Remove Prefix
+### String - Substring - Remove Prefix
 
 <cb>= <v>string_1<>.removeprefix(<v>prefix_1<>)<>
 
@@ -4701,7 +4588,7 @@ Example:
 
 
 
-#### String - Substring - Remove Suffix
+### String - Substring - Remove Suffix
 
 <cb>= <v>string_1<>.removesuffix(<v>prefix_1<>)<>
 
@@ -4725,7 +4612,7 @@ Example:
 
 
 
-#### String - Word Count
+### String - Word Count
 
 <cb>= len(<v>string_1<>.split())<>
 
@@ -4740,7 +4627,7 @@ Example:
 
 
 
-#### String - To Capitalized Case
+### String - To Capitalized Case
 
 <cb>= <v>string_1<>.capitalize()<>
 
@@ -4760,7 +4647,7 @@ Example:
 
 
  
-#### String - To Lower Case
+### String - To Lower Case
 
 <cb>= <v>string_1<>.lower()<>
 
@@ -4780,7 +4667,7 @@ Example:
 
 
 
-#### String - To Title Case
+### String - To Title Case
 
 <cb>= <v>string_1<>.title()<>
 
@@ -4808,7 +4695,7 @@ Example:
 
 
 
-#### String - To Upper Case
+### String - To Upper Case
 
 <cb>= <v>string_1<>.upper()<>
 
@@ -4828,7 +4715,7 @@ Example:
 
 
 
-#### String - Fold Case
+### String - Fold Case
 
 <cb>= <v>string_1<>.casefold()<>
 
@@ -4883,7 +4770,7 @@ print_cases("<v>Ὀδυσσεύς<>")
 
 
 
-#### String - To Words
+### String - To Words
 
 <cb>= <v>string_1<>.split()<>
 
@@ -4897,81 +4784,7 @@ Splits the string along whitespaces.
 
 
 
-#### String - From List
-
-<cb>= ''.join(<v>list1<>)<>
-
-Joins all elements of <c><v>list1<><> into 1 string.
-
-
-Example:
-
-<cb><v>list_1<> = ['<v>1<>', '<v>2<>', '<v>3<>', '<v>4<>']
-
-<v>string_1<> = ''.join(<v>list_1<>)
-
-<#># Returns: '1234'<><>
-@
-@ convert to, conversion, characters, .join()
-@ from-list, to-string
-
-
-
-#### String - To List
-
-<cb>= [<v>character<> for <v>character<> in <v>string_1<>]<>
-
-
-Returns: <c>list<> of <c>str<>
-
-
-Converts a string to a list of characters.
-
-
-Example:
-
-<cb><v>string_1<> = '<v>abc<>'
-
-<v>list_1<> = [<v>character<> for <v>character<> in <v>string_1<>]
-
-<#># Returns: ['a', 'b', 'c']<><>
-@
-@ convert from, conversion, characters, from, chars
-@ from-string, to-list
-
-
-
-#### String Character - From ASCII Code / chr()
-
-<cb>= chr(<v>ascii_code<>)<>
-
-Example:
-
-<cb><v>string_1<> = chr(67)                        <#># Returns 'C'<><>
-@
-@ Convert, Conversion, To, Character, chr()
-
-
-
-#### String Character - To ASCII Code / ord()
-
-<cb>= ord(<v>string_char<>)<>
-
-<c><v>string_char<><> must be a single letter string.
-
-
-Example:
-
-<cb><v>ascii_code<> = ord("<v>C<>")
-
-<#># Returns 67<><>
-@
-@ convert, conversion, from, character, ord(), value
-@ from-string, to-ascii
-
-
-
-#### String List - Longest String
+### String List - Longest String
 
 <cb>= max(<v>string_list<>, key = len)<>
 @
@@ -4979,7 +4792,7 @@ Example:
 
 
 
-#### String List - Max Length
+### String List - Max Length
 
 <cb>= max(len(<v>string<>) for <v>string<> in <v>string_list<>)<>
 @
@@ -5076,7 +4889,7 @@ print("Today", <v>date_1<>)<>
 
 
 
-#### Date - Compare
+### Date - Compare
 
 <cb>if <v>date_1<> == <v>date_2<>:
 	<v>...<><>
@@ -5088,7 +4901,7 @@ print("Today", <v>date_1<>)<>
 
 
 
-#### Date - Difference, Get TimeDelta
+### Date - Difference, Get TimeDelta
 
 <cb>= <v>date_2<> - <v>date_1<><>
 
@@ -5100,7 +4913,7 @@ Returns the difference in days.
 
 
 
-#### Date - Add TimeDelta
+### Date - Add TimeDelta
 
 <cb>= <v>date_1<> + <v>timedelta_2<><>
 
@@ -5112,7 +4925,7 @@ Adds the day portion of <c><v>timedelta_2<><> to <c><v>date_1<><>.
 
 
 
-#### Date - Subtract TimeDelta
+### Date - Subtract TimeDelta
 
 <cb>= <v>date_1<> - <v>timedelta_2<><>
 
@@ -5124,7 +4937,7 @@ Subtracts the day portion of <c><v>timedelta_2<><> to <c><v>date_1<><>.
 
 
 
-#### Date - Get Now
+### Date - Get Now
 
 <cb>from datetime import date
 
@@ -5134,7 +4947,7 @@ Subtracts the day portion of <c><v>timedelta_2<><> to <c><v>date_1<><>.
 
 
 
-#### Date - Replace Unit
+### Date - Replace Unit
 
 <cb>= <v>date_1<>.replace(<v>unit<> = <v>value<>)<>
 
@@ -5171,7 +4984,7 @@ print("Start of Month:", <v>start_of_month<>)<>
 
 
 
-#### Date - To Year
+### Date - To Year
 
 <cb>= <v>date_1<>.year<>
 @
@@ -5179,7 +4992,7 @@ print("Start of Month:", <v>start_of_month<>)<>
 
 
 
-#### Date - To Month
+### Date - To Month
 
 <cb>= <v>date_1<>.month<>
 @
@@ -5187,7 +5000,7 @@ print("Start of Month:", <v>start_of_month<>)<>
 
 
 
-#### Date - To Day
+### Date - To Day
 
 <cb>= <v>date_1<>.day<>
 @
@@ -5195,7 +5008,7 @@ print("Start of Month:", <v>start_of_month<>)<>
 
 
 
-#### Date - To Day of Week
+### Date - To Day of Week
 
 <cb>= <v>date_1<>.weekday()<>
 
@@ -5211,7 +5024,7 @@ That is <c>.weekday()<> with a ().
 
 
 
-#### Date - From Timestamp
+### Date - From Timestamp
 
 <cb>from datetime import date
 
@@ -5222,7 +5035,7 @@ That is <c>.weekday()<> with a ().
 
 
 
-#### Date - From String
+### Date - From String
 
 <cb>from datetime import datetime
 
@@ -5238,14 +5051,14 @@ Examples:
 
 <v>date_2<> = datetime.strptime(<v>"2000-01-02"<>, "<v>%Y-%m-%d<>").date()
 
-<#># Returns: datetime.date(2000, 1, 2)<>
+<#># Returns: datetime.date(2000, 1, 2)<><>
 
 
 <cb>from datetime import datetime
 
 <v>date_2<> = datetime.strptime(<v>"2000-1-2"<>, "<v>%Y-%m-%d<>").date()
 
-<#># Returns: datetime.date(2000, 1, 2)<>
+<#># Returns: datetime.date(2000, 1, 2)<><>
 @
 @ date.strptime(), .strptime()
 @ convert, conversion, to, from, parse
@@ -5253,7 +5066,7 @@ Examples:
 
 
 
-#### Date - To String
+### Date - To String
 
 <cb>= '{:<v>format<>}'.format(<v>date_1<>)<>
 
@@ -5290,7 +5103,7 @@ Example:
 
 
 
-#### Date - From ISO-8601 String
+### Date - From ISO-8601 String
 
 <cb>from datetime import date
 
@@ -5322,7 +5135,7 @@ from datetime import datetime
 
 
 
-#### Date - To ISO-8601 String
+### Date - To ISO-8601 String
 
 <cb>= <v>date_1<>.isoformat()<>
 
@@ -5853,7 +5666,7 @@ Example:
 @ datetime.datetime(), .datetime()
 @ timezones, datetimes
 @ new, define, create
-@ timezone-only, timezones-only
+@ timezone-only, timezones-only, time-zone-only, time-zones-only
 
 
 ### Datetime - Create With Time Zone
@@ -5988,7 +5801,8 @@ print(<v>after_clock_change<>.astimezone(timezone.utc))
 /#   2000-10-29 05:30:00+00:00
 /#   2000-10-29 06:30:00+00:00<><>
 @
-@ datetime.datetime(), .datetime(), tzinfo=, fo/d=
+@ datetime.datetime(), .datetime(), tzinfo=, fold=
+@ folding
 
 
 
@@ -6217,7 +6031,7 @@ after_clock_change = datetime(2000, 10, 29, 1, 30, 0,
 
 print(after_clock_change.fold)<>
 @
-@ datetime.fold, .fold
+@ datetime.fold, .fold, folding
 
 
 
@@ -6349,7 +6163,7 @@ Examples:
 
 
 
-#### TimeDelta - Get Microseconds
+### TimeDelta - Get Microseconds
 
 <cb>= <v>timedelta_1<>.microseconds<>
 
@@ -6359,7 +6173,7 @@ Returns: <c>int<>
 @ timedelta.microseconds, .microseconds
 
 
-#### TimeDelta - Get Milliseconds
+### TimeDelta - Get Milliseconds
 
 <cb>= <v>timedelta_1<>.microseconds // 1000<>
 
@@ -6373,7 +6187,7 @@ Divide .microseconds by 1000 instead.
 
 
 
-#### TimeDelta - Get Seconds
+### TimeDelta - Get Seconds
 
 <cb>= <v>timedelta_1<>.seconds<>
 
@@ -6398,7 +6212,7 @@ Example:
 
 
 
-#### TimeDelta - Get Days
+### TimeDelta - Get Days
 
 <cb>= <v>timedelta_1<>.days<>
 
@@ -6423,7 +6237,7 @@ Example:
 
 
 
-#### TimeDelta - Get Total Seconds
+### TimeDelta - Get Total Seconds
 
 <cb>= <v>timedelta_1<>.total_seconds()<>
 
@@ -6444,7 +6258,7 @@ Returns fraction of a second too.
 
 
 
-#### TimeDelta - Compares?
+### TimeDelta - Compares?
 
 Is Less Than:
 
@@ -6458,7 +6272,7 @@ Is Greater Than:
 
 
 
-#### TimeDelta - Absolute Value
+### TimeDelta - Absolute Value
 
 <cb>= abs(<v>timedelta_1<>)<>
 @
@@ -6466,7 +6280,7 @@ Is Greater Than:
 
 
 
-#### TimeDelta - Add
+### TimeDelta - Add
 
 <cb>= <v>timedelta_1<> + <v>timedelta_2<><>
 
@@ -6494,7 +6308,7 @@ Example:
 
 
 
-#### TimeDelta - Subtract
+### TimeDelta - Subtract
 
 <cb>= <v>timedelta_1<> - <v>timedelta_2<><>
 
@@ -6522,7 +6336,7 @@ Example:
 
 
 
-#### TimeDelta - Divide By TimeDelta
+### TimeDelta - Divide By TimeDelta
 
 <cb>= <v>timedelta_1<> / <v>timedelta_2<><>
 
@@ -6548,7 +6362,7 @@ Example:
 
 
 
-#### TimeDelta - Divide By Int / Float
+### TimeDelta - Divide By Int / Float
 
 <cb>= <v>timedelta_1<> / <v>int_2<><>
 
@@ -6575,7 +6389,7 @@ Example:
 
 
 
-#### TimeDelta - To String
+### TimeDelta - To String
 
 <cb>= str(<v>timedelta_1<>)<>
 
@@ -6586,7 +6400,7 @@ Formatting with <c>.format()<> or f"" is not an option.
 
 
 
-#### TimeDelta - To String Using Function
+### TimeDelta - To String Using Function
 
 Function:
 
@@ -6629,9 +6443,9 @@ Measures from the Epoch, January 1, 1970, at 00:00:00 UTC.
 
 Example:
 
-<cb>Set to 2001-01-01 00:00:00:
+<cb><#>Set to 2001-01-01 00:00:00:<>
 
-<v>timestamp_1<> = <v>978325200<><>
+<v>timestamp_1<> = <v>978325200.0<><>
 @
 @ epoch time, unix time
 @ time-only, timestamp-only, timestamp., timestamp(), time.time(), .time()
@@ -6657,13 +6471,23 @@ Example:
 
 ### Timestamp - To Datetime
 
-<cb>= datetime.datetime.fromtimestamp(<v>timestamp_1<>)<>
+<cb>= datetime.fromtimestamp(<v>timestamp_1<>)<>
+
+Usage:
+
+<cb>from datetime import datetime
+
+= datetime.fromtimestamp(<v>timestamp_1<>)<>
 @
 @ convert, datetime.fromtimestamp(), .fromtimestamp()
 
 
 
 ### Timestamp - To String
+
+<cb>= strftime("<v>format<>", localtime(<v>timestamp_1<>))<>
+
+Usage:
 
 <cb>from time import strftime
 from time import localtime
@@ -6833,7 +6657,7 @@ Internally stored as a hash table.
 
 
 
-#### Dict - Add / Update
+### Dict - Add / Update
 
 <cb><v>dict_1<>[<v>key<>] = <v>value<><>
 
@@ -6865,7 +6689,7 @@ Update Value:
 
 
 
-#### Dict - Add / Update From Dict
+### Dict - Add / Update From Dict
 
 <cb><v>dict_1<>.update(<v>dict_2<>)<>
 
@@ -6887,7 +6711,7 @@ Example:
 
 
 
-#### Dict - Dict Comprehension
+### Dict - Dict Comprehension
 
 <cb>= {<v>key_expression<> : <v>value_expression<> for <v>item<> in <v>sequence_1<>}<>
 
@@ -6916,7 +6740,7 @@ With Conditional if:
 
 
 
-#### Dict - Contains Key?
+### Dict - Contains Key?
 
 Contains Key?:
 
@@ -6935,7 +6759,7 @@ Does Not Contain?:
 
 
 
-#### Dict - Contains Value?
+### Dict - Contains Value?
 
 <cb>= <v>value_1<> in <v>dict_1<>.values()<>
 @
@@ -6943,7 +6767,7 @@ Does Not Contain?:
 
 
 
-#### Dict - Delete
+### Dict - Delete
 
 <cb>del <v>dict_1<>[<v>key_1<>]<>
 
@@ -6954,16 +6778,16 @@ Will raise an error if key is not present.
 
 
 
-#### Dict - Delete All
+### Dict - Delete All
 
 <cb><v>dict_1<>.clear()<>
 @
 @ dict.clear(), .clear()
-@ remove, elements, items
+@ clear, del, empty, remove, reset, elements, items, values
 
 
 
-#### Dict - Duplicate
+### Dict - Duplicate
 
 <cb>= <v>dict_1<>.copy()<>
 
@@ -6974,7 +6798,7 @@ Creates a shallow copy.
 
 
 
-#### Dict - Duplicate - Deep Copy
+### Dict - Duplicate - Deep Copy
 
 <cb>from copy import deepcopy
 
@@ -6987,7 +6811,7 @@ Creates a deep copy.
 
 
 
-#### Dict - Is Empty?
+### Dict - Is Empty?
 
 <cb>= not <v>dict_1<><>
 
@@ -6998,7 +6822,7 @@ Creates a deep copy.
 
 
 
-#### Dict - Not Empty?
+### Dict - Not Empty?
 
 <cb>= bool(<v>dict_1<>)<>
 
@@ -7009,7 +6833,7 @@ Creates a deep copy.
 
 
 
-#### Dict - Get Keys
+### Dict - Get Keys
 
 <cb>= <v>dict_1<>.keys()<>
 
@@ -7021,7 +6845,7 @@ As List:
 
 
 
-#### Dict - Get Key Value Pairs
+### Dict - Get Key Value Pairs
 
 <cb>= <v>dict_1<>.items()<>
 @
@@ -7029,7 +6853,7 @@ As List:
 
 
 
-#### Dict - Get Key Value Pairs - Sorted By Key
+### Dict - Get Key Value Pairs - Sorted By Key
 
 <cb>= sorted(<v>dict_1<>.items(), <v>key<>=lambda item: item[0])<>
 
@@ -7040,7 +6864,7 @@ Returns list of key value tuples.
 
 
 
-#### Dict - Get Key Value Pairs - Sorted By Value
+### Dict - Get Key Value Pairs - Sorted By Value
 
 <cb>= sorted(<v>dict_1<>.items(), <v>key<>=lambda item: item[1])<>
 
@@ -7051,7 +6875,7 @@ Returns list of key value tuples.
 
 
 
-#### Dict - Get Value
+### Dict - Get Value
 
 <cb>= <v>dict_1<>[<v>key_1<>]                         <#>#1<><>
 
@@ -7075,7 +6899,7 @@ or
 
 
 
-#### Dict - Get Values
+### Dict - Get Values
 
 <cb>= <v>dict_1<>.values()<>
 
@@ -7092,7 +6916,7 @@ As List:
 
 
 
-#### Dict - Get Values Sorted By Key
+### Dict - Get Values Sorted By Key
 
 <cb>= [<v>dict_1<>[<v>key<>] for <v>key<> in sorted(<v>dict_1<>.keys())]<>
 @
@@ -7101,7 +6925,7 @@ As List:
 
 
 
-#### Dict - Iterate Over Keys
+### Dict - Iterate Over Keys
 
 <cb>for <v>key<> in <v>dict_1<>:
 	<v>...<><>
@@ -7110,7 +6934,7 @@ As List:
 
 
 
-#### Dict - Iterate Over Key, Value Pairs
+### Dict - Iterate Over Key, Value Pairs
 
 <cb>for <v>key<>, <v>value<> in <v>dict_1<>.items():
 	<v>...<><>
@@ -7121,7 +6945,7 @@ As List:
 
 
 
-#### Dict - Iterate Over Values
+### Dict - Iterate Over Values
 
 <cb>for <v>value<> in <v>dict_1<>.values():
 	<v>...<><>
@@ -7131,7 +6955,7 @@ As List:
 
 
 
-#### Dict - Intersection
+### Dict - Intersection
 
 <cb>= {<v>key<> : <v>dict_1<>[<v>key<>] for <v>key<> in <v>dict_1<> if <v>key<> in <v>dict_2<>}<>
 
@@ -7144,7 +6968,7 @@ Return a dict with only those items in common between <c><v>dict_1<><> and <c><v
 
 
 
-#### Dict - Merge
+### Dict - Merge
 
 <cb>= dict_1 | dict_2                       <#>#1<><>
 
@@ -7164,7 +6988,7 @@ Return a new dict with all items of <c><v>dict_1<><> and <c><v>dict_2<><>.
 
 
 
-#### Dict - Pop Value
+### Dict - Pop Value
 
 <cb>= <v>dict_1<>.pop(<v>key<>)<>
 
@@ -7174,7 +6998,7 @@ Removes and returns the value for <c><v>key<><>.
 
 
 
-#### Dict - Size
+### Dict - Size
 
 <cb>= len(<v>dict_1<>)<>
 @
@@ -7182,7 +7006,7 @@ Removes and returns the value for <c><v>key<><>.
 
 
 
-#### Dict - Sort Keys
+### Dict - Sort Keys
 
 <cb>= sorted(<v>dict_1<>.keys())<>
 
@@ -7195,7 +7019,7 @@ Returns: <c>list<>
 
 
 
-#### Dict - Sort Values
+### Dict - Sort Values
 
 <cb>= sorted(<v>dict_1<>.values())<>
 
@@ -7209,7 +7033,7 @@ Returns: <c>list<>
 
 
 
-#### Dict - Subtraction
+### Dict - Subtraction
 
 <cb>= {<v>key<>: <v>dict_1<>[<v>key<>] for <v>key<> in <v>dict_1<> if <v>key<> not in <v>dict_2<>}<>
 
@@ -7223,7 +7047,7 @@ Returns a new dict containing only those items in <c><v>dict_1<><> but not in <c
 
 
 
-#### Dict - To List
+### Dict - To List
 
 <cb>= list(<v>dict_1<>.values())<>
 @
@@ -7255,7 +7079,7 @@ Example:
 
 
 
-#### List - Nested Lists
+### List - Nested Lists
 
 <cb>= [[<v>0<>, <v>1<>, <v>2<>], [<v>10<>, <v>11<>, <v>12<>], <v>...<>]<>
 
@@ -7290,7 +7114,7 @@ Examples:
 
 
 
-#### List - Create With Initial Value
+### List - Create With Initial Value
 
 <cb>= [<v>value<>] * <v>size<><>
 
@@ -7311,7 +7135,7 @@ Example:
 
 
 
-#### List - Append
+### List - Append
 
 <cb><v>list_1<>.append(<v>value<>)<>
 
@@ -7331,7 +7155,7 @@ Example:
 
 
 
-#### List - Append List
+### List - Append List
 
 <cb><v>list_1<>.extend(<v>list_2<>)<>
 
@@ -7353,7 +7177,7 @@ Example:
 
 
 
-#### List - Apply Function
+### List - Apply Function
 
 <cb>= list(map(<v>function_1<>, <v>list_1<>))<>
 
@@ -7379,7 +7203,7 @@ Example:
 
 
 
-#### List - List Comprehension
+### List - List Comprehension
 
 <cb>= [<v>expression<> for <v>value<> in <v>list_1<>]<>
 
@@ -7406,7 +7230,7 @@ Examples:
 
 
 
-#### List - List Comprehension, Nested
+### List - List Comprehension, Nested
 
 <cb>= [[<v>expression<> for <v>value<> in <v>sublist<>] for <v>sublist<> in <v>list_1<>]<>
 
@@ -7425,7 +7249,7 @@ Example:
 
 
 
-#### List - Contains?
+### List - Contains?
 
 <cb>= <v>value<> in <v>list_1<><>
 
@@ -7436,7 +7260,7 @@ Example:
 
 
 
-#### List - Contains Any From Second List?
+### List - Contains Any From Second List?
 
 <cb>= any(<v>value<> in <v>list_1<> for <v>value<> in <v>compare_list<>)<>
 
@@ -7460,7 +7284,7 @@ Example:
 
 
 
-#### List - Count Occurrences
+### List - Count Occurrences
 
 <cb>= <v>list_1<>.count(<v>value<>)<>
 
@@ -7471,7 +7295,7 @@ Returns the number of times <c><v>value<><> appears in <c><v>list_1<><>.
 
 
 
-#### List - Count By Distinct Value
+### List - Count By Distinct Value
 
 <cb>from collections import Counter
 
@@ -7487,7 +7311,7 @@ Returns a dictionary with every unique value and the number of times of that val
 
 
 
-#### List - Count Distinct Values
+### List - Count Distinct Values
 
 <cb>= len(set(<v>list_1<>))<>
 
@@ -7498,7 +7322,7 @@ Returns the number of unique values in <c><v>list_1<><>.
 
 
 
-#### List - Delete
+### List - Delete
 
 <cb><v>del<> <v>list_1<>[<v>index<>]<>
 @
@@ -7506,15 +7330,15 @@ Returns the number of unique values in <c><v>list_1<><>.
 
 
 
-#### List - Delete All
+### List - Delete All
 
 <cb><v>del<> <v>list_1<>[:]<>
 @
-@ remove from, clear, del, items, values
+@ clear, del, empty, remove, reset, elements, items, values
 
 
 
-#### List - Delete First
+### List - Delete First
 
 <cb><v>del<> <v>list_1<>[0]<>
 @
@@ -7522,7 +7346,7 @@ Returns the number of unique values in <c><v>list_1<><>.
 
 
 
-#### List - Delete Last
+### List - Delete Last
 
 <cb><v>del<> <v>list_1<>[-1]<>
 @
@@ -7530,7 +7354,7 @@ Returns the number of unique values in <c><v>list_1<><>.
 
 
 
-#### List - Delete In Range
+### List - Delete In Range
 
 <cb>del <v>list_1<>[<v>start<> : <v>end_plus_1<>]<>
 
@@ -7544,11 +7368,14 @@ del <v>list_1<>[<v>2<>:<v>7<>]                           <#># Returns [1, 2, 8, 
 
 
 
-#### List - Delete Matching Value
+### List - Delete Matching Value
 
 <cb><v>list_1<>.remove(<v>value<>)<>
 
+
 Deletes the first item on the list that matches <v>value<>.
+
+Throws <c>ValueError<> if not found.
 
 
 Example:
@@ -7566,7 +7393,7 @@ print(<v>list_1<>)
 
 
 
-#### List - Duplicate
+### List - Duplicate
 
 <cb>= <v>list_1<>.copy()<>
 
@@ -7577,7 +7404,7 @@ Creates a shallow copy.
 
 
 
-#### List - Duplicate - Deep Copy
+### List - Duplicate - Deep Copy
 
 <cb>from copy import deepcopy
 
@@ -7590,35 +7417,7 @@ Creates a deep copy.
 
 
 
-#### List - Find Duplicates
-
-<cb>= [item for item, count in Counter(<v>list_1<>).items() if count > 1]<>
-
-Usage:
-
-<cb>from collections import Counter
-
-<v>duplicates<> = [item for item, count in Counter(<v>list_1<>).items() if count > 1]<>
-
-
-Example:
-
-<cb>from collections import Counter
-
-<v>items<> = ['<v>a<>', '<v>b<>', '<v>b<>', '<v>c<>', '<v>d<>', '<v>d<>']
-
-<v>duplicates<> = [item for item, count in Counter(<v>items<>).items() if count > 1]
-
-print(<v>duplicates<>)
-
-<#># Prints: ['b', 'd']<><>
-
-@
-@ collection.Counter(), Counter()
-
-
-
-#### List - Is Empty?
+### List - Is Empty?
 
 <cb>= not <v>list_1<><>
 
@@ -7627,7 +7426,7 @@ print(<v>duplicates<>)
 
 
 
-#### List - Not Empty?
+### List - Not Empty?
 
 <cb>= bool(<v>list_1<>)<>
 
@@ -7641,7 +7440,7 @@ There is no need for <b>bool()<> when using <b>if...<>.
 
 
 
-#### List - Is Equal
+### List - Is Equal
 
 <cb>= <v>list_1<> == <v>list_2<><>
 
@@ -7671,7 +7470,7 @@ Example:
 
 
 
-#### List - Is Sublist
+### List - Is Sublist
 
 Use Function:
 
@@ -7707,7 +7506,7 @@ is_it_a_sublist = is_sublist(<v>list_1<>, <v>list_2<>)
 
 
 
-#### List - Exclude
+### List - Exclude
 
 <cb>= [ <v>item<> for <v>item<> in <v>list_1<> if <v>item<> not in <v>exclude_list<> ]<>
 
@@ -7733,7 +7532,7 @@ print(<v>remaining<>)
 
 
 
-#### List - Extract To Sublist
+### List - Extract To Sublist
 
 <cb>= <v>list_1<>[<v>start<> : <v>end_plus_1<>]<>
 
@@ -7742,7 +7541,7 @@ print(<v>remaining<>)
 <cb>= <v>list_1<>[:<v>end_plus_1<>]                   <#># From the start to before <c><v>end_plus_1<><>.<><>
 
 
-See Also: <l "/s/python?search=slice+sequence">Slicing Sequences<>
+See Also: <l "?q=slicing-only">Slicing Sequences<>
 
 
 Examples:
@@ -7757,7 +7556,34 @@ Examples:
 
 
 
-#### List - Find Index
+### List - Find Duplicates
+
+<cb>= [item for item, count in Counter(<v>list_1<>).items() if count > 1]<>
+
+Usage:
+
+<cb>from collections import Counter
+
+<v>duplicates<> = [item for item, count in Counter(<v>list_1<>).items() if count > 1]<>
+
+
+Example:
+
+<cb>from collections import Counter
+
+<v>items<> = ['<v>a<>', '<v>b<>', '<v>b<>', '<v>c<>', '<v>d<>', '<v>d<>']
+
+<v>duplicates<> = [item for item, count in Counter(<v>items<>).items() if count > 1]
+
+print(<v>duplicates<>)
+
+<#># Prints: ['b', 'd']<><>
+@
+@ collection.Counter(), Counter()
+
+
+
+### List - Find Index
 
 <cb>= <v>list_1<>.index(<v>value<>)<>
 
@@ -7771,7 +7597,7 @@ Returns the index of the first match.
 
 
 
-#### List - Flatten
+### List - Flatten
 
 Define:
 
@@ -7815,7 +7641,7 @@ Example:
 
 
 
-#### List - Get
+### List - Get
 
 <cb>= <v>list_1<>[<v>index<>]<>
 @
@@ -7823,7 +7649,7 @@ Example:
 
 
 
-#### List - Get First
+### List - Get First
 
 <cb>= <v>list_1<>[0]<>
 @
@@ -7831,7 +7657,7 @@ Example:
 
 
 
-#### List - Get Last
+### List - Get Last
 
 <cb>= <v>list_1<>[-1]<>
 @
@@ -7839,7 +7665,7 @@ Example:
 
 
 
-#### List - Get Sublist
+### List - Get Sublist
 
 <cb>= <v>list_1<>[<v>index<>][<v>sub_index<>]<><>
 @
@@ -7847,7 +7673,7 @@ Example:
 
 
 
-#### List - Get Sublist - All Except First
+### List - Get Sublist - All Except First
 
 <cb>= <v>list_1<>[1:]<>
 
@@ -7867,7 +7693,7 @@ Example:
 
 
 
-#### List - Get Values Contained In Second List
+### List - Get Values Contained In Second List
 
 <cb>= [<v>value<> for <v>value<> in <v>list_1<> if <v>value<> in <v>list_2<>]<>
 
@@ -7882,7 +7708,7 @@ Maintains the original order.
 
 
 
-#### List - Insert
+### List - Insert
 
 <cb><v>list_1<>.insert(<v>index<>, <v>value<>)<>
 
@@ -7900,7 +7726,7 @@ Example:
 
 
 
-#### List - Insert First
+### List - Insert First
 
 <cb><v>list_1<>.insert(0, <v>value<>)<>
 
@@ -7918,7 +7744,7 @@ Example:
 
 
 
-#### List - Iterate
+### List - Iterate
 
 <cb>for <v>value<> in <v>list_1<>:
 	<v>...<><>
@@ -7927,7 +7753,7 @@ Example:
 
 
 
-#### List - Merge
+### List - Merge
 
 <cb>= <v>list_1<> + <v>list_2<><>
 @
@@ -7936,7 +7762,7 @@ Example:
 
 
 
-#### List - Pop First
+### List - Pop First
 
 <cb>= <v>list_1<>.pop(0)<>
 
@@ -7946,7 +7772,7 @@ Removes the first item from the list and returns it.
 
 
 
-#### List - Pop Last
+### List - Pop Last
 
 <cb>= <v>list_1<>.pop()<>
 
@@ -7956,7 +7782,7 @@ Removes the last item from the list and returns it.
 
 
 
-#### List - Repeat
+### List - Repeat
 
 <cb>= <v>list_1<> * <v>count<><>
 
@@ -7973,7 +7799,7 @@ Example:
 
 
 
-#### List - Reverse
+### List - Reverse
 
 <cb>= <v>list_1<>[::-1]<>
 
@@ -8005,7 +7831,7 @@ Reverse in Place:
 
 
 
-#### List - Size
+### List - Size
 
 <cb>= len(<v>list_1<>)<>
 @
@@ -8013,7 +7839,7 @@ Reverse in Place:
 
 
 
-#### List - Sort
+### List - Sort
 
 <cb>= sorted(<v>list_1<>)<>
 
@@ -8029,7 +7855,19 @@ Returns a new list in sorted order.
 
 
 
-#### List - Sort In Place
+### List - Sort Reversed
+
+<cb>= sorted(<v>list_1<>, reverse = True)<>
+
+Returns: <c>list<>
+
+Sorts the list elements in reverse order.
+@
+@ sorted()
+
+
+
+### List - Sort In Place
 
 <cb><v>list_1<>.sort()<>
 
@@ -8046,7 +7884,7 @@ Sorts the list in place.
 
 
 
-#### List - Unpack
+### List - Unpack
 
 <cb><v>item_1<>, <v>item_2<>, <v>...<> = <v>list_1<><>
 
@@ -8063,7 +7901,7 @@ Example:
 
 
 
-#### List - Update
+### List - Update
 
 <cb><v>list_1<>[<v>index<>] = <v>updated_value<><>
 @
@@ -8071,7 +7909,7 @@ Example:
 
 
 
-#### List - From Dict
+### List - From Dict
 
 <cb>=list(<v>dict_1<>.values())<>
 
@@ -8083,7 +7921,7 @@ Returns the values of <c><v>dict_1<><> as a list.
 
 
 
-#### List - To Dict
+### List - To Dict
 
 <cb>= {value:value for value in <v>list_1<>}<>
 
@@ -8098,7 +7936,7 @@ Returns a dict where every value is also the key to that value.
 @ from-list, to-dict
 
 
-#### List - To Dict - Enumerated
+### List - To Dict - Enumerated
 
 <cb>= dict(enumerate(<v>list_1<>))<>
 
@@ -8112,7 +7950,7 @@ Returns a dict where the value's list position maps to the value.
 
 
 
-#### List - To Dict - From 2 Lists
+### List - To Dict - From 2 Lists
 
 <cb>= dict(zip(<v>key_list<>, <v>value_list<>)<>
 
@@ -8124,7 +7962,7 @@ Returns: <c>dict<>
 
 
 
-#### List - From Set
+### List - From Set
 
 <cb>= list(<v>set_1<>)<>
 @
@@ -8133,7 +7971,7 @@ Returns: <c>dict<>
 
 
 
-#### List - To Set
+### List - To Set
 
 <cb>= set(<v>list_1<>)<>
 
@@ -8144,7 +7982,7 @@ Returns a set with all duplicates removed.
 
 
 
-#### List - From Tuple
+### List - From Tuple
 
 <cb>= list(<v>tuple_1<>)<>
 @
@@ -8153,7 +7991,7 @@ Returns a set with all duplicates removed.
 
 
 
-#### List - To Tuple
+### List - To Tuple
 
 <cb>= tuple(<v>list_1<>)<>
 @
@@ -8162,7 +8000,7 @@ Returns a set with all duplicates removed.
 
 
 
-#### List - To Any Type
+### List - To Any Type
 
 <cb>= list(map(<v>conversion<>, <v>list_1<>))<>
 
@@ -8209,7 +8047,7 @@ Contains no duplicates.
 
 
 
-#### Set - Add
+### Set - Add
 
 <cb><v>set_1<>.add(<v>value<>)<>
 @
@@ -8217,7 +8055,7 @@ Contains no duplicates.
 
 
 
-#### Set - Contains?
+### Set - Contains?
 
 Contains:
 
@@ -8231,7 +8069,7 @@ Does Not Contain:
 
 
 
-#### Set - Duplicate
+### Set - Duplicate
 
 <cb>= <v>set_1<>.copy()<>
 
@@ -8242,7 +8080,7 @@ Creates a shallow copy of <c><v>set_1<><>.
 
 
 
-#### Set - Duplicate - Deep Copy
+### Set - Duplicate - Deep Copy
 
 <cb>from copy import deepcopy
 
@@ -8255,7 +8093,7 @@ Creates a deep copy of <c><v>set_1<><>.
 
 
 
-#### Set - Get
+### Set - Get
 
 <cb>= next(iter(<v>set_1<>))<>
 
@@ -8267,7 +8105,7 @@ Repeating this call will return the same item!
 
 
 
-#### Set - Get, Pop
+### Set - Get, Pop
 
 <cb>= <v>set_1<>.pop()<>
 
@@ -8277,7 +8115,7 @@ Removes and returns an item from the set.
 
 
 
-#### Set - Intersection
+### Set - Intersection
 
 <cb>= <v>set_1<> & <v>set_2<><>
 
@@ -8291,7 +8129,7 @@ Returns a set containing only those values in both <c><v>set_1<><> and <c><v>set
 
 
 
-#### Set - Is Equal?
+### Set - Is Equal?
 
 <cb>= <v>set_1<> == <v>set_2<><>
 
@@ -8302,7 +8140,7 @@ Returns a set containing only those values in both <c><v>set_1<><> and <c><v>set
 
 
 
-#### Set - Is Disjoint?
+### Set - Is Disjoint?
 
 <cb>= <v>set_1<>.isdisjoint(<v>set_2<>)<>
 
@@ -8312,7 +8150,7 @@ Returns true if <c><v>set_1<><> and <c><v>set_2<><> have no elements in common.
 
 
 
-#### Set - Is Subset?
+### Set - Is Subset?
 
 <cb>= <v>set_1<>.issubset(<v>set_2<>)<>
 
@@ -8322,7 +8160,7 @@ Returns true if <c><v>set_2<><> is a subset of <c><v>set_1<><>.
 
 
 
-#### Set - Is Superset?
+### Set - Is Superset?
 
 <cb>= <v>set_1<>.issuperset(<v>set_2<>)<>
 
@@ -8332,7 +8170,7 @@ Returns true if <c><v>set_2<><> is a superset of <c><v>set_1<><>.
 
 
 
-#### Set - Merge
+### Set - Merge
 
 <cb>= <v>set_1<> | <v>set_2<><>
 
@@ -8347,7 +8185,7 @@ Will have no duplicates.
 
 
 
-#### Set - Remove
+### Set - Remove
 
 <cb><v>set_1<>.remove(<v>value<>)<>
 
@@ -8366,15 +8204,16 @@ discard() ignores non-existent values.
 
 
 
-#### Set - Remove All
+### Set - Delete All
 
 <cb><v>set_1<>.clear()<>
 @
 @ Delete, Clear, .clear()
+@ clear, del, empty, remove, reset, elements, items, values
 
 
 
-#### Set - Size
+### Set - Size
 
 <cb>= len(<v>set_1<>)<>
 
@@ -8385,7 +8224,7 @@ Returns the number of elements in the set.
 
 
 
-#### Set - Sort
+### Set - Sort
 
 <cb>= sorted(<v>set_1<>)<>
 @
@@ -8393,7 +8232,7 @@ Returns the number of elements in the set.
 
 
 
-#### Set - Subtraction
+### Set - Subtraction
 
 <cb>= <v>set_1<> - <v>set_2<><>
 
@@ -8409,7 +8248,7 @@ Returns a set of the elements in <c><v>set_1<><> not in <c><v>set_2<><>.
 
 
 
-#### Set - Symmetric Difference
+### Set - Symmetric Difference
 
 <cb>= <v>set_1<>.symmetric_difference(<v>set_2<>)<>
 
@@ -8445,7 +8284,7 @@ Tuples are immutable arrays.
 
 
 
-#### Tuple - Contains?
+### Tuple - Contains?
 
 <cb>= <v>value<> in <v>tuple_1<><>
 @
@@ -8453,7 +8292,7 @@ Tuples are immutable arrays.
 
 
 
-#### Tuple - Empty?
+### Tuple - Empty?
 
 <cb>= not <v>tuple_1<><>
 
@@ -8464,13 +8303,13 @@ Tuples are immutable arrays.
 
 
 
-#### Tuple - Get
+### Tuple - Get
 
 <cb>= <v>tuple_1<>[<v>index<>]<>
 
 
 
-#### Tuple - Get First
+### Tuple - Get First
 
 <cb>= <v>tuple_1<>[0]<>
 @
@@ -8478,7 +8317,7 @@ Tuples are immutable arrays.
 
 
 
-#### Tuple - Get Last
+### Tuple - Get Last
 
 <cb>= <v>tuple_1<>[-1]<>
 @
@@ -8486,12 +8325,12 @@ Tuples are immutable arrays.
 
 
 
-#### Tuple - Subset
+### Tuple - Subset
 
 <cb>= <v>tuple_1<>[<v>start<>:<v>end_plus_1<>]<>
 
 
-See Also: <l "/s/python?search=slice+sequence">Slicing Sequences<>
+See Also: <l "?q=slicing-only">Slicing Sequences<>
 
 
 Example:
@@ -8504,7 +8343,7 @@ Example:
 
 
 
-#### Tuple - Unpack
+### Tuple - Unpack
 
 <cb><v>item_1<>, <v>item_2<>, <v>...<> = <v>tuple_1<><>
 
@@ -8531,13 +8370,14 @@ Sequence operations can be performed on any sequence type including lists, and t
 
 
 
-### Index and Slicing Operations
+## Index and Slicing Operations
 @
 @ indexing, Slice, subsequence, Subscripts
+@ slice-only, slicing-only, sequence-slicing-only
 
 
 
-#### Index and Slicing - Basics
+### Index and Slicing - Basics
 
 Syntax:
 
@@ -8585,7 +8425,7 @@ Examples:
 
 
 
-#### Sequence - Get Value
+### Sequence - Get Value
 
 <cb>= <v>sequence_1<>[<v>index<>]<>
 
@@ -8605,7 +8445,7 @@ Example:
 
 
 
-#### Sequence - Get First Value
+### Sequence - Get First Value
 
 <cb>= <v>sequence_1<>[0]<>
 
@@ -8625,7 +8465,7 @@ Example:
 
 
 
-#### Sequence - Get Last Value
+### Sequence - Get Last Value
 
 <cb>= <v>sequence_1<>[-1]<>
 
@@ -8645,7 +8485,7 @@ Example:
 
 
 
-#### Sequence - Get Sublist
+### Sequence - Get Sublist
 
 <cb>= <v>sequence_1<>[<v>start<> : <v>end_plus_1<>]<>
 
@@ -8665,7 +8505,7 @@ Example:
 
 
 
-#### Sequence - Get Sublist From Position
+### Sequence - Get Sublist From Position
 
 <cb>= <v>sequence_1<>[<v>start<>:]<>
 
@@ -8685,7 +8525,7 @@ Example:
 
 
 
-#### Sequence - Get Sublist To Position
+### Sequence - Get Sublist To Position
 
 <cb>= <v>sequence_1<>[<v>start<> : <v>end_plus_1<>]<>
 
@@ -8705,7 +8545,7 @@ Example:
 
 
 
-#### Sequence - Get Sublist - All Except First
+### Sequence - Get Sublist - All Except First
 
 <cb>= <v>sequence_1<>[1:]<>
 
@@ -8726,13 +8566,13 @@ Example:
 
 
 
-### Sequence Destructuring
+## Sequence Destructuring
 @
 @ destructure, unpack, unpacking, destructure-only, destructuring-only
 
 
 
-#### Sequence Destructuring - Basics
+### Sequence Destructuring - Basics
 
 <cb><table><col><v>first<>, *<v>remainder<><><col>= <v>sequence_1  <><>
 <col><v>first<>, <v>second<>, *<v>remainder<><><col>= <v>sequence_1<><>
@@ -8747,7 +8587,7 @@ Example:
 
 
 
-#### Sequence - Destructure First Elements, Remainder
+### Sequence - Destructure First Elements, Remainder
 
 <cb><v>first<>, *<v>remainder<> = <v>sequence_1<><>
 
@@ -8770,7 +8610,7 @@ Example:
 
 
 
-#### Sequence - Destructure First, Last Only
+### Sequence - Destructure First, Last Only
 
 <cb><v>first<>, *_, <v>last<> = <v>sequence_1<><>
 
@@ -8788,7 +8628,7 @@ Example:
 
 
 
-#### Sequence - Destructure Ignore Element
+### Sequence - Destructure Ignore Element
 
 <cb><v>first<>, _, <v>third<>, *<v>remainder<> = <v>sequence_1<><>
 
@@ -8805,7 +8645,7 @@ Example:
 
 
 
-#### Sequence - Destructure Ignore Remainder
+### Sequence - Destructure Ignore Remainder
 
 <cb><v>first<>, <v>second<>, <v>third<>, *_ = <v>sequence_1<><>
 
@@ -8822,7 +8662,7 @@ Example:
 
 
 
-#### Sequence - Destructure Ignore Start
+### Sequence - Destructure Ignore Start
 
 <cb>*_, <v>second_last<>, <v>last<> = <v>sequence_1<><>
 
@@ -8839,11 +8679,11 @@ Example:
 
 
 
-### Sequence Operations
+## Sequence Operations
 
 
 
-#### Sequence - Contains?
+### Sequence - Contains?
 
 <cb>= <v>value<> in <v>sequence_1<><>
 
@@ -8853,7 +8693,7 @@ Example:
 
 
 
-#### Sequence - Count Occurrences
+### Sequence - Count Occurrences
 
 <cb>= <v>sequence_1<>.count(<v>value<>)<>
 
@@ -8864,7 +8704,7 @@ Returns the number of times <c><v>value<><> appears in <c><v>sequence_1<><>.
 
 
 
-#### Sequence - Count Occurences With Counter
+### Sequence - Count Occurences With Counter
 
 <cb>from collections import Counter
 
@@ -8880,7 +8720,7 @@ Returns a dictionary with every unique value and the number of times of that val
 
 
 
-#### Sequence - Count By Distinct Value
+### Sequence - Count By Distinct Value
 
 <cb>= len(set(<v>sequence_1<>))<>
 
@@ -8891,7 +8731,7 @@ Returns the number of unique values in <c><v>sequence_1<></..
 
 
 
-#### Sequence - Duplicate
+### Sequence - Duplicate
 
 <cb>= <v>sequence_1<>.copy()<>
 
@@ -8901,7 +8741,7 @@ Creates a shallow copy.
 
 
 
-#### Sequence - Duplicate - Deep Copy
+### Sequence - Duplicate - Deep Copy
 
 <cb>from copy import deepcopy
 
@@ -8913,7 +8753,7 @@ Creates a deep copy.
 
 
 
-#### Sequence - Is Empty?
+### Sequence - Is Empty?
 
 <cb>= not <v>sequence_1<><>
 
@@ -8922,7 +8762,7 @@ Creates a deep copy.
 
 
 
-#### Sequence - Not Empty?
+### Sequence - Not Empty?
 
 <cb>= bool(<v>sequence_1<>)<>
 
@@ -8933,7 +8773,7 @@ Creates a deep copy.
 
 
 
-#### Sequence - Find
+### Sequence - Find
 
 <cb>= <v>sequence_1<>.index(<v>value<>)<>
 
@@ -8948,7 +8788,7 @@ Returns the index of the first match.
 
 
 
-#### Sequence - Iterate
+### Sequence - Iterate
 
 <cb>for <v>value<> in <v>sequence_1<>:
 	<v>...<><>
@@ -8957,7 +8797,7 @@ Returns the index of the first match.
 
 
 
-#### Sequence - To Dict
+### Sequence - To Dict
 
 <cb>= {<v>value<>:<v>value<> for <v>value<> in <v>sequence_1<>}<>
 
@@ -8972,7 +8812,7 @@ Returns a dict where every value is also the key to that value.
 
 
 
-#### Sequence - To Dict - Enumerated
+### Sequence - To Dict - Enumerated
 
 <cb>= dict(enumerate(<v>sequence_1<>))<>
 
@@ -8987,7 +8827,7 @@ Returns a dict where the key to a value is the original index position of that v
 
 
 
-#### Sequence - To Set
+### Sequence - To Set
 
 <cb>= set(<v>sequence_1<>)<>
 
@@ -8998,7 +8838,7 @@ Returns a set with all duplicates removed.
 
 
 
-#### Sequence - To Tuple
+### Sequence - To Tuple
 
 <cb>= tuple(<v>sequence_1<>)<>
 @
@@ -9007,7 +8847,7 @@ Returns a set with all duplicates removed.
 
 
 
-#### Sequence - To Iterator
+### Sequence - To Iterator
 
 <cb>= iter(<v>sequence_1<>)<>
 
@@ -9018,11 +8858,13 @@ Turns any sequence type into an iterator.
 
 
 
-### Sequence Functions
+## Sequence Functions
+@
+@ seq-functions-only, sequence-functions-only
 
 
 
-#### Sequence - All
+### Sequence - All
 
 <cb>= all(<v>boolean_sequence_1<>)<>
 
@@ -9039,7 +8881,7 @@ Use <c><v>test_function<><> to return the <c>True<> / <c>False<> value for <c><v
 
 
 
-#### Sequence - Any
+### Sequence - Any
 
 <cb>= any(<v>boolean_sequence_1<>)<>
 
@@ -9056,7 +8898,7 @@ Use <c><v>test_function<><> to return the <c>True<> / <c>False<> value for <c><v
 
 
 
-#### Sequence - Average
+### Sequence - Average
 
 <cb>= sum(<v>sequence_1<>) / len(<v>sequence_1<>)<>
 
@@ -9075,9 +8917,11 @@ Example:
 @ average()
 
 
-#### Sequence - Enumerate
+### Sequence - Enumerate
 
-<cb>= enumerate(<v>sequence_1<>)<>
+<cb>= enumerate(<v>sequence_1<>)
+
+= enumerate(<v>sequence_1<>, <v>starting_value<>)<>
 
 <cb>for <v>index<>, <v>value<> in enumerate(<v>sequence_1<>):
 	<v>...<><>
@@ -9110,7 +8954,7 @@ Prints:
 
 
 
-#### Sequence - Min
+### Sequence - Min
 
 <cb>= min(<v>sequence_1<>)
 
@@ -9120,7 +8964,7 @@ Prints:
 
 
 
-#### Sequence - Max
+### Sequence - Max
 
 <cb>= max(<v>sequence_1<>)
 
@@ -9130,7 +8974,7 @@ Prints:
 
 
 
-#### Sequence - Filter
+### Sequence - Filter
 
 <cb>= filter(<v>test_function<>, <v>sequence_1<>)<>
 
@@ -9175,7 +9019,7 @@ Using a Lambda Filter:
 
 
 
-##### Filter - Test Function
+#### Filter - Test Function
 
 <cb>def <v>test_function<>(<v>value<>):
 	return <v>true_or_false_value<><>
@@ -9189,7 +9033,7 @@ Must return <c>True<> or <c>False<>.
 
 
 
-##### Filter - To List
+#### Filter - To List
 
 <cb>= list(<v>filtered_1<>)<>
 @
@@ -9197,7 +9041,7 @@ Must return <c>True<> or <c>False<>.
 
 
 
-#### Sequence - Map
+### Sequence - Map
 
 <cb>= map(<v>mapping_function<>, <v>sequence_1<>)<>
 
@@ -9225,7 +9069,7 @@ Example:
 
 
 
-##### Map - Mapping Function
+#### Map - Mapping Function
 
 <cb>def <v>mapping_function<>(<v>value<>):
 	return <v>some_transformation<><>
@@ -9234,7 +9078,7 @@ Returns a new value based on the original value.
 
 
 
-##### Map - To List
+#### Map - To List
 
 <cb>= list(<v>mapped_1<>)<>
 
@@ -9242,7 +9086,7 @@ Returns a new value based on the original value.
 
 
 
-#### Sequence - Reduce
+### Sequence - Reduce
 
 <cb>from functools import reduce
 
@@ -9270,7 +9114,7 @@ Examples:
 
 
 
-##### Reducing Function
+#### Reducing Function
 
 <cb>def <v>reducing_function<>(<v>previous_result<>, <v>next_value<>):
 	return <v>some_calculation<><>                                    
@@ -9283,7 +9127,7 @@ For the first calculation, <c><v>previous_result<><> will either be:
 
 
 
-#### Sequence - Shuffle
+### Sequence - Shuffle
 
 <cb>from random import shuffle
 
@@ -9295,7 +9139,7 @@ Randomizes a sequence in place.
 
 
 
-#### Sequence - Sort
+### Sequence - Sort
 
 <cb>= sorted(<v>sequence_1<>)<>
 
@@ -9331,7 +9175,19 @@ Example:
 
 
 
-#### Sequence - Sum
+### Sequence - Sort Reversed
+
+<cb>= sorted(<v>sequence_1<>, reverse = True)<>
+
+Returns: <c>list<>
+
+Sorts the elements in reverse order.
+@
+@ sorted()
+
+
+
+### Sequence - Sum
 
 <cb>= sum(<v>sequence_1<>)<>
 
@@ -9344,7 +9200,7 @@ Example:
 
 
 
-#### Sequence - Zip
+### Sequence - Zip
 
 <cb>= zip(<v>sequence_1<>, <v>sequence_2<>)<>
 
@@ -9357,6 +9213,7 @@ Returns: <c>zip(*iterable)<>
 Zips two or more sequences or iterables together.
 The returned zip object is iterable and returns tuples.
 Each tuple contains the element from each sequence at that position.
+If the sequences are different sizes, returns the shortest size.
 
 
 Example:
@@ -9365,9 +9222,45 @@ Example:
 <v>list_2<> = ["one", "two"]
 
 <v>zipped<> = zip(<v>list_1<>, <v>list_2<>)
-<v>combined_list<> = list(<v>zipped<>)            <#># Returns [(1, 'one'), (2, 'two')]<><>
+<v>combined<> = list(<v>zipped<>)
+
+<#># Returns [(1, 'one'), (2, 'two')]<><>
 @
 @ Merge, Combine, List, Set, zip()
+
+
+
+### Sequence - Zip Unequal Sized Lists
+
+<cb>= zip_longest(<v>sequence_1<>, <v>sequence_2<>)<>
+
+Usage:
+
+<cb>from itertools import zip_longest
+
+= zip_longest(<v>sequence_1<>, <v>sequence_2<>)<>
+
+Returns: <c>zip_longest<>
+
+
+Returns an iterable that returns tuples from each list.
+
+Returns <c>None<> where shorter lists have no value.
+
+
+Example:
+
+<cb>from itertools import zip_longest
+
+<v>list_1<> = [1, 2, 3, 4]
+<v>list_2<> = ['one', 'two']
+
+<v>zipped<> = zip_longest(<v>list_1<>, <v>list_2<>)
+<v>combinded<> = list(<v>zipped<>)
+
+<#># Returns: [(1, 'one'), (2, 'two'), (3, None), (4, None)]<><>
+@
+@ itertools.zip_longest(), .zip_longest(), zip()
 
 
 
@@ -9432,12 +9325,15 @@ Asynchronous first in first out queue.
 \#1  <s>-<>  Defins the maximum number of elements in the queue.
 @
 @ Create, Define, Instantiate, New
-@ Queue-only, queues-only, queue(), queue.queue(), maximum size
+@ queue(), queue.queue(), maximum size
+@ Queue-only, queues-only, standard-queue-only, standard-queues-only, std-queue-only, std-queues-only
 
 
 
 ## Queue Operations
-@ Queue-only, queues-only
+@
+@ queue(), queue.queue()
+@ Queue-only, queues-only, standard-queue-only, standard-queues-only, std-queue-only, std-queues-only
 
 
 
@@ -9515,6 +9411,539 @@ Returns the number of items in the queue.
 
 
 
+# Conversions
+@
+@ convert, converting, to, from
+@ conversions-only, convert-only
+
+
+
+### ASCII Code - To String Character / chr()
+
+<cb>= chr(<v>ascii_code<>)<>
+
+Example:
+
+<cb><v>string_1<> = chr(67)                        <#># Returns 'C'<><>
+@
+@ Character, chr(), ascii-to, to-char
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### Base64 - To Bytes
+
+<cb>from base64 import b64decode
+
+= b64decode(<v>bytes_1<>)<>
+
+Retuns: <c>bytes<>
+
+
+Decodes a base64 encoded byte array.
+Returns another byte array.
+
+
+Example:
+
+<cb>from base64 import b64decode
+
+<v>base64_text<> = 'VGV4dCBpbiBCYXNlNjQ='
+<v>base64_bytes<> = <v>base64_text<>.encode('ascii')
+
+<v>decoded_bytes<> = b64decode(<v>base64_bytes<>)     <#>#1<>
+<v>decoded_text<> = <v>decoded_bytes<>.decode("utf-8")
+
+print (<v>decoded_text<>)                      <#>#2<><>
+
+\#1  <s>-<>  Base64 Decoding
+
+\#2  <s>-<>  Prints 'This in Base64'
+@
+@ .decode(), Base 64, base64.b64decode(), .b64decode()
+@ to-bytes, from-base64, base64-to
+
+
+
+### Binary String - To Integer
+
+<cb>= int(<v>binary_string<>, 2)<>
+
+<cb>= int("0b<v>value<>", 0)<>
+
+
+Example:
+
+<cb><v>bin_1<> = int("<v>00101010<>", 2)
+
+<#># Returns 42<><>
+
+<cb><v>bin_2<> = int("0x<v>00101010<>", 0)
+
+<#># Returns 42<><>
+@
+@ int()
+@ to-integer, from-string, from-binary-string, binary-to
+@ Long, int-only, ints-only, long-only, longs-only, integer-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### Boolean - To Integer
+
+<cb>= int(<v>bool_1<>)<>
+
+False = 0
+True = 1
+@
+@ int(), from-boolean, bool-to, boolean-to, to-integer
+@ bool, bool-only, bools-only, boolean-only, booleans-only
+
+
+
+### Boolean - To String
+
+<cb>= str(<v>value_1<>)<>
+
+Returns 'True' or 'False'.
+@
+@ str(), from-boolean, bool-to, boolean-to, to-string
+@ bool, bool-only, bools-only, boolean-only, booleans-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### Bytes - To Base64
+
+<cb>from base64 import b64encode
+
+= b64encode(<v>bytes_1<>)<>
+
+Returns: <c>bytes<>
+
+
+Encodes a byte array into Base64.
+Returns as another byte array.
+
+
+Example:
+
+<cb>from base64 import b64encode
+
+<v>text<> = "Text in Base64"
+<v>bytes<> = <v>text<>.encode("utf-8")
+
+<v>base64_bytes<> = b64encode(<v>bytes<>)             <#>#1<>
+<v>base64_text<> = <v>base64_bytes<>.decode("ascii")
+
+print (<v>base64_text<>)                           <#>#2<><>
+
+\#1  <s>-<>  Base64 Conversion
+
+\#2  <s>-<>  Prints 'VGV4dCBpbiBCYXNlNjQ='
+@
+@ encode(), .encode(), Base 64, base64.b64encode(), b64encode()
+@ from-bytes, byte-to, bytes-to, to-base64
+@ bytes, byte-only, bytes-only, binary
+
+
+
+### Bytes - To Hex
+
+<cb>from binascii import hexlify
+
+= hexlify(<v>bytes_1<>)<>
+
+Returns: <c>bytes<>
+
+
+Converts a byte array into its hex representation.
+
+
+Example:
+
+<cb>from binascii import hexlify
+
+<v>value_bytes<> = b'in bytes'
+<v>value_hex<> = hexlify(<v>value_bytes<>)
+
+print (<v>value_hex<>.decode('ascii'))     <#>#1<><>
+
+\#1  <s>-<>  Prints '696e206279746573'
+@
+@ hexadecimal, binascii.hexlify(), .hexlify()
+@ from-bytes, byte-to, bytes-to,  to-hex
+@ bytes, byte-only, bytes-only, binary
+
+
+
+### Bytes - To Int
+
+<cb>= int.from_bytes(<v>bytes_1<>, "big")<>
+
+Use <c>"big"<> for bytes with the most significant byte first.
+Use <c>"little"<> for bytes with the most significant byte first.
+@
+@ from-bytes, byte-to, bytes-to, to-integer
+@ bytes, byte-only, bytes-only, binary
+
+
+
+### Bytes - To String
+
+<cb>= <v>bytes_1<>.decode("utf-8")<>
+@
+@ decode, utf-8, utf8, .decode()
+@ from-bytes, byte-to, bytes-to, to-string
+@ bytes, byte-only, bytes-only, binary
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### Complex Number - To String
+
+<cb>= str(<v>complex_1<>)<>
+@
+@ str()
+@ from-complex, complex-to, complex-number-to, to-string
+@ complex-only, complex-numbers-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### Float - To Decimal
+
+<cb>from decimal import Decimal
+
+= Decimal(<v>float_value<>)<>
+
+
+Creates an immutable decimal value.
+
+
+Example:
+
+<cb>from decimal import Decimal
+
+<v>decimal_1<> = Decimal(<v>12.34<>)
+
+print(<v>decimal_1<>)
+
+<#># Prints 12.339999999999999857891452847979962825775146484375<><>
+@ money, currency
+@ from-float, float-to, to-decimal
+@ dec-only, decs-only, decimal-only, decimals-only
+
+
+
+### Float - To Integer
+
+<cb>= int(<v>float_value<>)<>
+
+Example:
+
+<cb><v>int_1<> = int(<v>1234.567<>)   <#># Returns 1234<><>
+@
+@ int()
+@ from-float, float-to, to-integer
+
+
+
+### Float - To String
+
+<cb>= "<v>format<>".format(<v>float_value<>)<>
+
+Example:
+
+<cb><v>string_1<> = "<v>{0:,.2f}<>".format(<v>1234.567<>)
+
+<#># Returns "1,234.56"<><>
+@
+@ .format()
+@ from-float, float-to, to-string
+@ float-only, floats-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### Hex String - To Integer
+
+<cb>= int(<v>hex_string<>, 16)<>
+
+<cb>= int("0x<v>hex_value<>", 0)<>
+
+
+Example:
+
+<cb><v>hex_1<> = int("<v>A9<>", 16)
+
+<#># Returns 169<><>
+
+<cb><v>hex_2<> = int("0x<v>A9<>", 0)
+
+<#># Returns 169<><>
+@
+@ int(), hexadecimal
+@ to-integer, from-string, from-hex-string, hex-to, hexadecimal-to
+@ Long, int-only, ints-only, long-only, longs-only, integer-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### Integer - To Binary String
+
+<cb>= bin(<v>int_1<>)<>
+
+Returns: <c>str<>
+
+
+Example:
+
+<cb><v>binary_1<> = bin(<v>11<>)
+
+<#># Returns '0b1001'<><>
+@
+@ bin()
+@ from-integer, int-to, integer-to, to-binary-string, to-string, bits, binary, byte
+@ Long, int-only, ints-only, long-only, longs-only, integer-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### Integer - To Hex String
+
+<cb>= hex(<v>int_1<>)<>
+
+Returns: <c>str<>
+
+
+Example:
+
+<cb><v>hex_1<> = hex(<v>169<>)
+
+<#># Returns '0xa9'<><>
+@
+@ hex(), hexadecimal
+@ from-integer, int-to, integer-to, to-hex-string, to-string
+@ Long, int-only, ints-only, long-only, longs-only, integer-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### Integer - To Octal String
+
+<cb>= oct(<v>int_1<>)<>
+
+Returns: <c>str<>
+
+
+Example:
+
+<cb><v>octal_1<> = oct(<v>57<>)
+
+<#># Returns '0o71'<><>
+@
+@ oct()
+@ from-integer, int-to, integer-to, to-oct-string, to-string
+@ Long, int-only, ints-only, long-only, longs-only, integer-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### Integer - To String
+
+<cb>= str(<v>int_1<>)<>
+
+
+Example:
+
+<cb><v>string_1<> = str(<v>123<>)<>
+@
+@ str()
+@ from-integer, int-to, integer-to, to-string
+@ Long, int-only, ints-only, long-only, longs-only, integer-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### List - To String
+
+<cb>= ''.join(<v>list1<>)<>
+
+Joins all elements of <c><v>list1<><> into 1 string.
+
+
+Example:
+
+<cb><v>list_1<> = ['<v>1<>', '<v>2<>', '<v>3<>', '<v>4<>']
+
+<v>string_1<> = ''.join(<v>list_1<>)
+
+<#># Returns: '1234'<><>
+@
+@ convert to, conversion, characters, .join()
+@ from-list, list-to, to-string
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### String Character - To ASCII Code / ord()
+
+<cb>= ord('<v>character<>')<>
+
+<c><v>character<><> must be a single letter string.
+
+
+Example:
+
+<cb><v>ascii_code<> = ord('<v>C<>')
+
+<#># Returns 67<><>
+@
+@ character, ord(), value
+@ from-string, string-to, char-to, character-to, to-ascii
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### String - To Boolean
+
+<cb>= <v>string_value<>.lower() in ['t', 'true', 'y', 'yes', 1]<>
+
+Returns true if <c><v>string_value<><> is one of 't', 'true', 'y', 'yes', or 1.
+Case is ignored.
+@
+@ True, False, parse, .tolower(), yes, no, to-boolean, from-string
+@ bool, bool-only, bools-only, boolean-only, booleans-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+@ from-string, string-to, to-boolean
+
+
+### String (Empty / Not Empty) - To Boolean
+
+<cb>= bool(<v>string_value<>)<>
+
+
+Tests for empty string.
+
+Empty String = <v>False<>
+Otherwise = <v>True<>
+@
+@ bool(), to-boolean, from-string
+@ bool, bool-only, bools-only, boolean-only, booleans-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+@ from-string, string-to, to-boolean
+
+
+
+### String - To Bytes
+
+<cb>= <v>string_1<>.encode()<>
+
+<cb>= <v>string_1<>.encode('utf-8')<>
+@
+@ .encode(), utf-8, utf8
+@ to-bytes, from-string
+@ bytes, byte-only, bytes-only, binary
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+@ from-string, string-to, to-bytes
+
+
+
+### String - To Complex Number
+
+<cb>= complex("<v>1<> + <v>2<>j")<>
+@
+@ parse, complex()
+@ to-complex, from-string
+@ complex-only, complex-numbers-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+@ from-string, string-to, to-complex-number
+
+
+
+### String - To Decimal
+
+<cb>from decimal import Decimal
+
+= Decimal('<v>10.99<>')<>
+
+
+Creates an immutable decimal value.
+Keeps the precision the decimal was created to.
+
+
+Example:
+
+<cb>from decimal import Decimal
+
+<v>decimal_1<> = Decimal('<v>12.34<>')
+
+print(<v>decimal_1<>)
+
+<#># Prints 12.34<><>
+@ money, currency
+@ dec-only, decs-only, decimal-only, decimals-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+@ from-string, string-to, to-decimal
+
+
+
+### String - To Float
+
+<cb>= float(<v>float_string<>)<>
+
+Example:
+
+<cb><v>float_1<> = float("<v>123.3<>")<>
+@
+@ parse, float()
+@ from-string, string-to, to-float
+@ float-only, floats-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### String - To Integer
+
+<cb>= int(<v>string_value<>)<>
+
+Example:
+
+<cb><v>int_1<> = int("<v>123<>")<>
+@
+@ int(), parse
+@ from-string, string-to, to-integer
+@ Long, int-only, ints-only, long-only, longs-only, integer-only
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
+### String - To List
+
+<cb>= [<v>character<> for <v>character<> in <v>string_1<>]<>
+
+
+Returns: <c>list<> of <c>str<>
+
+
+Converts a string to a list of characters.
+
+
+Example:
+
+<cb><v>string_1<> = '<v>abc<>'
+
+<v>list_1<> = [<v>character<> for <v>character<> in <v>string_1<>]
+
+<#># Returns: ['a', 'b', 'c']<><>
+@
+@ characters, from, chars
+@ from-string, string-to, to-list
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
 # Context Manager
 
 Allows a resource's lifecycle to be handled correctly.
@@ -9523,6 +9952,7 @@ and will close it correctly when exiting the block.
 No <c>close<>() method needs to be called, even if an exception is thrown.
 @
 @ managers
+@ context-only, context-manager-only, context-managers-only
 
 
 ### Context Manager - Define
@@ -9652,6 +10082,45 @@ All subclasses of a exception are caught in the same block as the exception.
 \#2 -  Always executes even if an exception is thrown.
 @
 @ exception, else, finally
+
+
+
+### Try Except - Basic
+
+<cb>try:
+	<v>...<>
+except <v>Exception1<> as exception:
+	<v>...<>
+except <v>Exception2<> as exception:
+	<v>...<>
+finally:
+	<v>...<><>
+
+
+
+### Try Except - Else, Finally
+
+<cb>try:
+	<v>...<>
+except <v>Exception1<> as exception:
+	<v>...<>
+else:
+	<v>...<>
+finally:
+	<v>...<><>
+
+
+
+### Try Except - Single Line Multiple Exceptions
+
+<cb>try:
+	<v>...<>
+
+except (<v>Exception1<>, <v>Exception2<>):
+	<v>...<>
+
+except (<v>Exception3<>, <v>Exception4<> as <v>error<>
+	<v>...<><>
 
 
 
@@ -10846,6 +11315,11 @@ Usage:
 	def <v>variable_1<>(self, <v>arg_1<>):
 
 		self.<v>_variable_1<> = <v>arg_1<><>
+
+
+Defines a method to work like a property (instance variable).
+
+The decorator <c>@property<> does not need to be imported.
 @
 @ @property, .setter
 
@@ -11480,6 +11954,8 @@ This is very useful for recursion.
 
 
 # Packages, Modules
+@
+@ packages-only, modules-only
 
 
 
@@ -11590,6 +12066,8 @@ The file <c>__init__.py<> is executed when a package is imported as a module.
 
 
 # Math Functions
+@
+@ math-only, maths-only, manths, mathematics
 
 
 
@@ -12083,6 +12561,8 @@ Example:
 
 
 ## JSON Functions
+@
+@ json-only
 
 
 
@@ -12172,6 +12652,7 @@ Creates pseudo-random numbers.
 @
 @ randomize, rnd
 @ generate, create, new, generator
+@ random-only
 
 
 
@@ -12724,6 +13205,7 @@ Example:
 # Encode, Decode
 @
 @ encodings, decodings, to, from
+@ encode-only, decode-only, encoders-only, decoders-only
 
 
 
@@ -13329,7 +13811,7 @@ for <v>root<>, <v>directories<>, <v>files<> in walk(<v>'.'<>):
 
 ## File Operations
 @
-@ ops, file-ops, file-ops-only, file-operations
+@ ops, file-ops, file-ops-only, file-operations, file-only
 
 
 
@@ -13576,9 +14058,10 @@ Renames a filename.
 
 
 
-## File Manipulation
+## File IO
 @
-@ open as, .open(), io
+@ open as, .open()
+@ file-io-only
 
 
 
@@ -13731,6 +14214,73 @@ Deletes the file if it exists before writing to it.
 
 
 
+### Text File - Write Line
+
+<cb>with open(<v>file_name<>, 'w') as file:
+	file.write(<v>line<> + '\\n')<>
+
+Writes a single line to a file.
+
+You have to add the newline character manually between lines.
+Deletes the file if it exists before writing to it.
+@
+@ create, new, save
+@ open(), with open, from
+@ 'w', "w", 'wt', "wt"
+@ .write(), to
+
+
+
+### Text File - Write Lines
+
+<cb>with open(<v>file_name<>, 'w') as file:
+		file.write('\\n'.join(<v>lines<>))<>
+
+Writes a sequence of lines to a file.
+
+Inserts a newline character between each line.
+Deletes the file if it exists before writing to it.
+@
+@ create, new, save
+@ open(), with open, from
+@ 'w', "w", 'wt', "wt"
+@ .writeline()
+@ list, sequence of, to
+
+
+
+### Text File - Write Strings
+
+<cb>with open(<v>file_name<>, 'w') as file:
+		file.writelines(<v>strings<>)<>
+
+Writes a sequence of strings to a file.
+
+<c>writeline()<> will NOT insert a newline character between each string.
+Deletes the file if it exists before writing to it.
+@
+@ create, new, save
+@ open(), with open, from
+@ 'w', "w", 'wt', "wt"
+@ .writeline()
+@ list, sequence of, to
+
+
+
+### Text File - Write
+
+<cb>with open(<v>file_name<>, 'w') as file:
+	file.write(<v>contents<>)<>
+
+Deletes the file if it exists before writing to it.
+@
+@ create, new, save
+@ open(), with open, from
+@ 'w', "w", 'wt', "wt"
+@ .write(), to
+
+
+
 ### Text File - Append
 
 <cb>with open(<v>file_name<>, 'a') as file:
@@ -13807,7 +14357,7 @@ Example:
 
 <cb><v>base_name<> = <v>file_name<>.<v>extension<><>
 @
-@ path-parts, file-parts, components
+@ path-parts, file-parts, components, path-only, paths-only
 
 
 
@@ -14825,6 +15375,7 @@ Will display help and exit if not found.
 Reads, and writes Windows style ini files.
 @
 @ config parser
+@ configparser-only, config-parser-only
 
 
 
@@ -15400,7 +15951,7 @@ except HTTPError as <v>error<>:
 
 
 
-### HTTP - Escape URL
+### HTTP - URL - Escape
 
 <cb>= quote(<v>url_1<>)<>
 
@@ -15418,10 +15969,11 @@ Example:
 <#># Returns 'somewebsite.com/p/page%20numbered%20-%201'<><>
 @
 @ urlib.parse.quote(), parse.quote(), .quote(), encode()
+@ encode, uri
 
 
 
-### HTTP - Unescape URL
+### HTTP - URL - Unescape
 
 <cb>= unquote(<v>encoded_url_1<>)<>
 
@@ -15439,10 +15991,11 @@ Example:
 <#># Returns 'somewebsite.com/p/page numbered - 1'<><>
 @
 @ urlib.parse.unquote(), parse.unquote(), .unquote(), decode()
+@ decode, uri
 
 
 
-### HTTP - Escape URL Parameter
+### HTTP - URL Parameter - Escape
 
 <cb>= quote_plus(<v>parameters_1<>)<>
 
@@ -15460,10 +16013,11 @@ Example:
 <#># Returns 'param1%3Dparam+1+value%26param2%3D+param+2+value'<><>
 @
 @ urlib.parse.quote_plus(), parse.quote_plus(), .quote_plus(), encode()
+@ encode
 
 
 
-### HTTP - Unescape URL Parameter
+### HTTP - URL Parameter - Unescape
 
 <cb>= unquote_plus(<v>encoded_parameter<>)<>
 
@@ -15481,6 +16035,7 @@ Example:
 <#># Returns 'param1=param 1 value&param2= param 2 value'<><>
 @
 @ urlib.parse.unquote_plus(), parse.unquote_plus(), .unquote_plus(), decode()
+@ decode
 
 
 
@@ -15525,7 +16080,8 @@ Converts a file back into the original object hierarchy.
 # Execute External Commands
 @
 @ executing, run, launch, process, subprocess
-@ execute-only, exec-only, run-only, process-only
+@ execute-only, exec-only, run-only, subprocess-only
+@ execute-command-only, run-command-only
 
 
 
@@ -15852,7 +16408,7 @@ They follow the format of python cli commands followed by their output.
 Official Docs: 
 <l>https://docs.python.org/3/library/doctest.html<>
 @
-@ doc tests
+@ doc tests, comments
 
 
 
@@ -15970,7 +16526,21 @@ Verbose:
 
 
 
-### Type Hints - Function Parameters
+### Type Hints - Dict Type
+
+<cb><v>dict_1<>: Dict[str, str]<>
+
+Usage:
+
+<cb>from typing import Dict
+
+<v>dict_1<>: Dict[<v>key_type<>, <v>value_type<>]<>
+@
+@ typing.dict
+
+
+
+### Type Hints - Function Definition
 
 <cb>def <v>function_1<>(<v>param_1<>: <v>type<>) -> <v>return_type<>:
 	<v>...<><>
@@ -15984,19 +16554,19 @@ Example:
 <cb>def <v>area<>(<v>height<>: <v>float<>, <v>width<>: <v>float<>) -> float:
 	return <v>height<> * <v>width<><>
 @
-@ ->, def
+@ ->, def, definition, parameters, return
 
 
 
 ### Type Hints - Function Type
 
-<cb><v>function_parameter<>: Callable<>
+<cb><v>function_1<>: Callable<>
 
 Usage:
 
 <cb>from typing import Callable
 
-def <v>function_1<>(<v>function_parameter<>: Callable):
+def <v>main_function<>(<v>function_1<>: Callable):
 	<v>...<><>
 
 
@@ -16017,7 +16587,36 @@ call_message_function(<v>print_message<>)
 
 <#># Prints: 'the message'<><>
 @
-@ ->, def
+@ type.callable, callable
+@ ->, def, passing
+
+
+
+### Type Hints - List Type
+
+<cb><v>list_1<>: List[str]<>
+
+Usage:
+
+<cb>from typing import List
+
+<v>list_1<>: List[<v>type<>]<>
+@
+@ typing.list
+
+
+
+### Type Hints - Tuple Type
+
+<cb><v>tuple_1<>: Tuple[str, float]<>
+
+Usage:
+
+<cb>from typing import Tuple
+
+<v>tuple_1<>: Tuple[<v>type_1<>, <v>type_2<>, <v>...<>]<>
+@
+@ typing.tuple
 
 
 
@@ -16353,6 +16952,8 @@ Wait for Completion:
 
 
 ### Thread - Create
+@
+@ new, define, instantiate
 
 
 
@@ -16381,6 +16982,9 @@ Create With Name:
 Define:
 
 <cb>class <v>ThreadClass<>(Thread):		<#>#1<>
+
+	def __init__(self):
+		Thread.__init__()
 
 	def run(self):				<#>#2<>
 		<v>...<><>
@@ -16431,6 +17035,7 @@ Starts the execution of the thread.
 The thread is initially stopped.
 @
 @ thread.start(), .start()
+@ class, initialize
 
 
 
@@ -16711,6 +17316,7 @@ Must call <c>.start()<> first.
 ## Process Pool
 @
 @ pool-only, pools-only, process-pools-only, multiprocessing.pool(), .pool()
+@ process-pool-only, process-pools-only
 
 
 
@@ -17196,6 +17802,7 @@ Contains no locks and no guarantees.
 If two processes write to the same side of the queue, data can get corrupt.
 @
 @ multiprocessing.pipe(), .pipe(), pipe-only, pipes-only
+@ process-pipe-only, process-pipes-only
 
 
 
@@ -17259,6 +17866,9 @@ Blocks until a message is received.
 The preferred way to communicate between threads or processes.
 @
 @ queue-only, queues-only, .queue(), parallel
+@ process-queue-only, process-queues-only
+@ thread-queue-only, thread-queues-only
+@ multi-queue-only, multi-queues-only, multitask-queue-only, multitask-queues-only, multitasking-queue-only, multitasking-queues-only
 
 
 
@@ -17921,6 +18531,8 @@ Automatically acquires and releases the semaphore.
 Creates a synchronized value that can be shared between different processes.
 @
 @ multiprocessing.value
+@ shared-value-only, shared-values-only
+@ shared-memory-only
 
 
 
@@ -18055,7 +18667,7 @@ Example:
 
 ## Parallel Extras
 @
-@ how to, how-to
+@ multiprocessing, multitasking
 
 
 
@@ -18087,6 +18699,8 @@ Example:
 
 
 # Asyncio
+@
+@ asyncio-only, async-only, await-only
 
 
 
@@ -18185,6 +18799,7 @@ Example:
 <#># Sleep 1½ seconds.<><>
 @
 @ asyncio.sleep(), .sleep(), await
+@ sleep-only, async-sleep-only, pause
 
 
 
@@ -18199,6 +18814,7 @@ Releases control back to the event loop so it can process other coroutines.
 Execution returns to this immediately after the other tasks in the event loop have run.
 @
 @ asyncio.sleep(), .sleep(), sleep(0), await, release control
+@ sleep-only, async-sleep-only, pause
 
 
 
@@ -18217,6 +18833,7 @@ Call:
 <cb>await <v>sleep_until<>(<v>datetime_1<>)<>
 @
 @ asyncio.sleep(), .sleep(), await
+@ sleep-only, async-sleep-only, pause
 
 
 
@@ -18941,6 +19558,8 @@ Other Libraries:
 
 
 # CSV
+@
+@ csv-only
 
 
 ### CSV File - Read To Dict - With Header
@@ -19248,10 +19867,11 @@ Examples:
 # Dataclass
 @
 @ data class, dataclasses, dataclasses.dataclass, @dataclass
+@ dataclass-only, dataclasses-only, data-class-only, data-classes-only
 
 
 
-### Dataclass - Video Tutorial
+## Dataclass - Video Tutorial
 
 Get going faster with our Dataclasses in a Hurry Video:
 
@@ -19355,6 +19975,10 @@ size_1 = Size()<>
 
 ### Dataclass - Define With Default List
 
+<cb>= field(default_factory = lambda: [])<>
+
+Usage:
+
 <cb>from dataclasses import dataclass
 from dataclasses import field
 
@@ -19368,14 +19992,50 @@ class <v>Dataclass1<>:
 
 ### Dataclass - Define With Default Dict
 
+<cb>= field(default_factory = lambda: {})<>
+
 <cb>from dataclasses import dataclass
 from dataclasses import field
+from typing import Dict
 
 \@dataclass
 class <v>Dataclass1<>:
-	<v>dict_1<>: dict = field(default_factory = lambda: {})<>
+
+    <v>dict_1<>: Dict[<v>K<>: <v>V<>] = field(
+            default_factory = lambda: {})
+
+    <v>dict_2<>: Dict[<v>K<>: <v>V<>] = field(
+            default_factory = lambda: {'<v>a<>': <v>1<>, '<v>b<>': <v>2<>})<>
 @
+@ dataclass.field, default_factory
 @ create, definition, new, field
+
+
+
+### Dataclass - Define With Comparison Gunctions
+
+<cb>@dataclass(order=true)<>
+
+Usage:
+
+<cb>from dataclasses import dataclass
+
+\@dataclass(order=true)
+class <v>Dataclass1<>:
+	<v>...<><>
+
+
+Adds comparison functions to the dataclass.
+
+Comparisons are done in order by field.
+
+
+Implements:
+
+<c>__lt__(), __le__(), __gt__(), and __ge__()<>
+@
+@ order=, order=true, @dataclass(order=true)
+@ Comparators
 
 
 
@@ -19415,6 +20075,7 @@ Consider using __post_init__() instead.
 @ __init__()
 
 
+
 ### Dataclass - Define Constructor - Post Init
 
 <cb>@dataclass
@@ -19450,7 +20111,7 @@ Use <c>__post_init__<> to add a call to the parents constructor and add<c>super(
 
 ### Dataclass - Define Method
 
-Same as a normal class.
+Works the same as a normal class.
 
 Define:
 
@@ -19464,7 +20125,7 @@ Use:
 
 <cb><v>item_1<>.<v>method_1<>()<>
 @
-@ methods, add, create
+@ methods, add, create, extend, extension
 
 
 
@@ -19603,7 +20264,8 @@ A double ended queue that is implemented as a linked list under the hood.
 
 Guarantees O(1) performance for append, remove on either end of the queue.
 @
-@ collections.deque, deque(), double ended queue, deque-only, linked list
+@ collections.deque, deque(), double ended queue, linked list
+@ deque-only, deques-only
 
 
 
@@ -19762,7 +20424,8 @@ Example:
 
 <cb><v>queue_1<>.clear()<>
 @
-@ remove from, clear, del, .clear()
+@ .clear()
+@ clear, del, empty, remove, reset, elements, items, values
 
 
 
@@ -20013,6 +20676,7 @@ Named tuples allow you to access tuple values by name.
 Use the <c>namedtuple<> function to create a class for a given tuple type.
 @
 @ collections.namedtuple, Named Tuples, nametuple, namedtuples, namedtuple()
+@ namedtuple-only, named-tuple-only, named-tuples-only
 
 
 
@@ -20131,6 +20795,38 @@ Example:
 <v>size_1<> = Size(*<v>tuple<>)<>
 @
 @ new, create
+
+
+
+#### Named Tuple - Extend
+
+<cb>class <v>ExtendedNamedTuple1<>(<v>NamedTuple1<>):
+
+	def <v>method_1<>(self)...<>
+
+Extend by creating an extended class.
+
+Allows you to add custom fields and methods to your base namedtuple.
+
+
+Example:
+
+<cb>from collections import namedtuple
+
+<v>BaseSize<> = namedtuple("Size", ["width", "height"])
+
+class <v>Size<>(<v>BaseSize<>):
+
+    def area(self):
+        return self.<v>width<> * self.<v>height<>
+
+<v>size_1<> = <v>Size<>(160, 100)
+<v>area<> = <v>size_1<>.area()
+
+<#>Returns: 16000<><>
+@
+@ base
+
 
 
 ### Named Tuple - Operations
@@ -20257,6 +20953,7 @@ for <v>key<> in <v>dict_1<>.keys():
 \# a Third<><>
 @
 @ collections.ordereddict, .ordereddict, ordereddict()
+@ ordered-dict-only, ordered-dicts-only, ordereddict-only
 
 
 
@@ -20414,7 +21111,6 @@ for <v>item<> in <v>dict_1<>.items():
 # How To
 @
 @ how-to, how-only, how-to-only
-
 
 
 ### Anything - Convert To String
@@ -20685,20 +21381,43 @@ Returns all symbols currently in global scope from the symbol table.
 
 <cb>= input()<>
 
-<cb>= input("<v>Input caption:<>")<>
+<cb>= input()
+= input("<v>Enter value: <>")
+= input("<v>Enter value:\\n<>")<>
 
-<cb>= input("<v>Input caption with new line:\\n<>")<>
 
 Read a line from the standard input.
 
 
 Example:
 
-<cb><v>text<> = input("<v>Enter a number between 1 and 10:\\n<>")
+<cb><v>name<> = input("<v>Enter your name:\\n<>")
 
-print("You entered", <v>text<>)<>
+print("You entered", <v>name<>)<>
 @
-@ input(), user, input-only
+@ input(), user, input-only, enters
+@ input-only, inputs-only
+
+
+
+### Input - Read Integer
+
+<cb>= int(input("<v>Input number: <>"))<>
+
+
+Read input as an integer.
+
+Throws <c>ValueError<> if not an integer.
+
+
+Example:
+
+<cb><v>number<> = int(input("<v>Enter a number: <>"))
+
+print("You entered", <v>number<>)<>
+@
+@ input(), int(), user, input-only, enters, to
+@ input-only, inputs-only
 
 
 
@@ -20739,6 +21458,7 @@ Prints all available methods and attributes on an item.
 Works for classes, class instances, functions, just about everything.
 @
 @ dir(), available methods, attributes, class, view, functions
+@ help-only
 
 
 
@@ -20851,6 +21571,7 @@ Prints to the standard out.
 Automatically moves to the next line.
 @
 @ print(), echo, to console, print-only, standard output, stdout, print()
+@ print-only, printing-only
 
 
 
@@ -20859,6 +21580,7 @@ Automatically moves to the next line.
 <cb>print()<>
 
 Prints an empty line.
+@ print-only, printing-only
 
 
 
@@ -20867,6 +21589,7 @@ Prints an empty line.
 <cb>print('<v>text...<>', end='')<>
 @
 @ print(), echo, to console, print-only, standard output, stdout, new line, end=
+@ print-only, printing-only
 
 
 
@@ -20875,6 +21598,7 @@ Prints an empty line.
 <cb>print('<v>text1<>', '<v>text2<>', '<v>text3<>', sep='')<>
 @
 @ print(), echo, to console, print-only, standard output, stdout, sep=
+@ print-only, printing-only
 
 
 
@@ -20887,6 +21611,23 @@ pprint.pprint(<v>value<>)<>
 Prints Python data structures in a readable format.
 @
 @ pretty print pprint.pprint()
+@ print-only, printing-only
+
+
+
+### Print - Stay on Same Line
+
+<cb>print('<v>text...<>', end='\\r')<>
+
+
+Returns the print cursor to the start of the line.
+
+
+'\\r' - Carriage Return
+@
+@ \\r, Carriage Return
+@ print-only, printing-only
+
 
 
 
@@ -20901,6 +21642,7 @@ Alternative:
 <cb>sys.stderr.write('<v>text...<>')<>
 @
 @ print(), echo, to console, print-only, standard output, stderr, sys.stderr, file=
+@ print-only, printing-only
 
 
 
@@ -20915,6 +21657,7 @@ Explicit:
 <cb>print('<v>text...<>', file = sys.stdout)<>
 @
 @ print(), echo, to console, print-only, standard output, stdout, sys.stdout, file=
+@ print-only, printing-only
 
 
 
@@ -20955,7 +21698,7 @@ There are many ways to structure your project but this is perhaps the most stand
 Official Doc:
 <l>https://packaging.python.org/en/latest/tutorials/packaging-projects/<>
 @
-@ directories, standard.
+@ directories, standard, python
 
 
 
@@ -20967,8 +21710,8 @@ setup(
 	name='<v>app_name<>',
 	version='1.0.0',
 	description='<v>App description.<>',
-	packages=find_packages('src'),
-	package_dir={'': 'src'}
+	packages=find_packages('<v>src<>'),
+	package_dir={'': '<v>src<>'}
 )<>
 
 Note:
@@ -21060,6 +21803,7 @@ Will display the docstring if available.
 Works for keywords, functions, classes, methods, or modules.
 @
 @ functions, help(), docstring, class, documentation, keyword, module, methods
+@ help-only
 
 
 
@@ -21070,7 +21814,9 @@ Works for keywords, functions, classes, methods, or modules.
 sleep(<v>time_in_seconds<>)<>
 
 Sleep for the time in seconds.
-Takes floats (0.030 = 30 ms)
+
+Takes floats (0.030 = 30 ms).
+Will pause current thread to allow other threads to run.
 
 
 Example:
@@ -21081,6 +21827,7 @@ sleep(1.5)
 <#># Sleep 1½ seconds.<><>
 @
 @ sleep(), pause, suspend, time delay, time.sleep()
+@ sleep-only
 
 
 
@@ -21100,6 +21847,7 @@ Call:
 
 Sleeps until the given time has passed.
 Works fine for sub-second times.
+@ sleep-only
 
 
 
@@ -21152,6 +21900,7 @@ Prefer over <c>time.time()<> as <c>perf_counter()<> is more accurate.
 @
 @ time.perf_counter(), .per_counter(), create, calculate
 @ timers, timing, time operation, time something, measure
+@ timer-only, timers-only
 
 
 
@@ -21173,6 +21922,7 @@ Does not measure time while a process is sleeping or suspended.
 @
 @ time.process_time(), .process_time(), create, calculate
 @ timers, timing, time operation, time something, measure
+@ timer-only, timers-only
 
 
 
@@ -21201,7 +21951,7 @@ Not guaranteed to be accurate as it can be changed.
 @ time.process_time(), .process_time()
 @ time.time(), .time()
 @ versus
-
+@ timer-only, timers-only
 
 
 # Reference - Formatting
@@ -21210,6 +21960,7 @@ Python Format Page:
 <l>https://docs.python.org/3/library/string.html#format-specification-mini-language<>
 @
 @ format-only, formatting-only, formats-only, f-strings, fstrings, .format(), f"", f'', codes
+@ string-format()-only
 
 
 
@@ -22084,6 +22835,8 @@ Official Site:
 
 PyPi:
 <l>https://pypi.org/project/pyperclip/<>
+@
+@ copy, paste
 
 
 
@@ -22117,12 +22870,52 @@ voices = <v>engine<>.getProperty('voices')
 @ synthesis, say, talk, speach
 
 
+
+# Reference - Configuration Files
+
+
+
+### pyproject.toml
+
+Place in your project root directory.
+
+Sample:
+
+<cb>[project]
+name = "<v>project_name<>"
+description = "<v>Project description.<>"
+version = "<v>0.1.0<>"
+license = "<v>license type<>"
+authors = [
+	{ name = "<v>your_name_here<>", email = "<v>your_email_here<>" }
+]
+
+dependencies = [
+	"<v>package_1<>",
+	"<v>package_2<>"
+]
+
+[project.optional-dependencies]
+dev = [
+	"pytest",
+	"<v>test_package_1<>"
+]
+
+[build-system]
+requires = [
+    "setuptools >= 35.0.2",
+    "setuptools_scm >= 2.0.0, <3"
+]
+build-backend = "setuptools.build_meta"<>
+
+
+
 # Reference - Coming From Other Languages
 
 
 ### Arrays
 
-Use <c><l "/s/python?search=list-only">list<><>.
+Use <c><l "?q=list-only">list<><>.
 
 Python does not have built in arrays.
 Use lists instead.
@@ -22134,19 +22927,19 @@ You can also use the Array library.
 
 ### Arrow Functions, ->, =>
 
-Use <c><l "/s/python?search=lambda-only">lambdas<><>.
+Use <c><l "?q=lambda-only">lambdas<><>.
 
 
 
 ### istype, instanceof
 
-Use <c><l "/s/python?search=type()">type()<><> or <c><l "/s/python?search=isinstance()">isinstance()<><>.
+Use <c><l "?q=type()">type()<><> or <c><l "?q=isinstance()">isinstance()<><>.
 
 
 
 ### Long
 
-Use <c><l "/s/python?search=int-only">int<><>.
+Use <c><l "?q=int-only">int<><>.
 
 Python has only one integer type and that is <c>int<>.
 @
@@ -22157,7 +22950,7 @@ Python has only one integer type and that is <c>int<>.
 
 ### Money, Currency
 
-Use <c><l "/s/python?search=decimal-only">Decimal<><>.
+Use <c><l "?q=decimal-only">Decimal<><>.
 @
 @ $, ¢, €, £, ¥, ¤, usd, euro, yen, yuan, dollars, cents
 
@@ -22180,7 +22973,7 @@ Example:
 
 ### Nil, Null
 
-Use <c><l "/s/python?search=none-only">None<><>.
+Use <c><l "?q=none-only">None<><>.
 
 Python's version of <c>nil<> or <c>null<> is <c>None<>.
 
@@ -22193,7 +22986,7 @@ For char(0), use <c>"\\00"<>.
 
 ### Stack
 
-There is no stack. Use <c><l "/s/python?search=list-only">list<><> instead.
+There is no stack. Use <c><l "?q=list-only">list<><> instead.
 
 
 Example:
@@ -22214,7 +23007,7 @@ Use:
 
 <cb>raise <v>Exception1<>()<>
 
-See: <l "/s/python?search=exceptions-only">Exceptions<>.
+See: <l "?q=exceptions-only">Exceptions<>.
 @
 @ throws, thrown
 
@@ -22228,7 +23021,7 @@ Use:
 
 except Exception as <v>exception_1<>:<>
 
-See: <l "/s/python?search=exceptions-only">Exceptions<>.
+See: <l "?q=exceptions-only">Exceptions<>.
 @
 @ thrown
 
@@ -22419,7 +23212,7 @@ Sublist destructured (extracted) from a sequence or other list.
 
 <cb><v>first<>, *<v>remainder<> = <v>sequence_1<><>
 
-See: <l "/s/python?search=destructur&select=2jr2">Destructuring<>
+See: <l "?q=destructur&select=2jr2">Destructuring<>
 
 
 
@@ -22428,7 +23221,7 @@ An ignored sublist during destructuring of a sequence.
 
 <cb><cb><v>first<>, *_, <v>last<> = <v>sequence_1<><><>
 
-See: <l "/s/python?search=destructur&select=2jr2">Destructuring<>
+See: <l "?q=destructur&select=2jr2">Destructuring<>
 @
 @ asterisk, star, underscore
 
@@ -22775,11 +23568,59 @@ Returns text exactly as it is represented between the quotes.
 
 
 
-# Terms
+# Reserved Words
 @
-@ Glossary
-@ terms-only, glossary-only
+@ reserved-words-only, reserved-only
+@ keywords-only, keyword-only
 
+A reserved word is a keyword that has special meaning or purpose to Python.
+It can not be used as the name of an object, variable or function.
+
+<*><c>and<>
+<c>as<>
+<c>assert<>
+<c>break<>
+<c>class<>
+<c>continue<>
+<c>def<>
+<c>del<>
+<c>elif<>
+<c>else<>
+<c>except<>
+<c>False<>
+<c>finally<>
+<c>for<>
+<c>from<>
+<c>global<>
+<c>if<>
+<c>import<>
+<c>in<>
+<c>is<>
+<c>lambda<>
+<c>None<>
+<c>nonlocal<>
+<c>not<>
+<c>or<>
+<c>pass<>
+<c>raise<>
+<c>return<>
+<c>True<>
+<c>try<>
+<c>while<>
+<c>with<>
+<c>yield<><>
+@
+@ Keywords
+@ and, as, assert, break, class, continue, def, del, elif, else, except
+@ False, finally, for, from, global, if, import, in, is, lambda, None
+@ nonlocal, not, or, pass, raise, return, True, try, while, with, yield
+
+
+
+# Acronyms
+@
+@ Glossary, glossary-only
+@ acronyms-only, acronym-only
 
 
 ### ABC
@@ -22813,7 +23654,7 @@ File Pointer
 <cb>with open(<v>file_name<>, "w") as <v>fp<>:
 	<v>fp<>.write()<>
 
-See: <l "/s/python?search=open()+write">Write File<>
+See: <l "?q=open()+write">Write File<>
 
 
 
@@ -22870,6 +23711,12 @@ Pythons inteactive command-line interface for executing Python code.
 ### VENV
 Virtual Environment
 
+
+
+# Terms
+@
+@ Glossary, glossary-only
+@ terms-only, term-only
 
 
 ### Asynchronous Programs
@@ -23376,52 +24223,6 @@ Python’s interactive command-line environment.
 
 
 
-### Reserved Words
-
-A reserved word is a keyword that has special meaning or purpose to Python.
-It can not be used as the name of an object, variable or function.
-
-<*><c>and<>
-<c>as<>
-<c>assert<>
-<c>break<>
-<c>class<>
-<c>continue<>
-<c>def<>
-<c>del<>
-<c>elif<>
-<c>else<>
-<c>except<>
-<c>False<>
-<c>finally<>
-<c>for<>
-<c>from<>
-<c>global<>
-<c>if<>
-<c>import<>
-<c>in<>
-<c>is<>
-<c>lambda<>
-<c>None<>
-<c>nonlocal<>
-<c>not<>
-<c>or<>
-<c>pass<>
-<c>raise<>
-<c>return<>
-<c>True<>
-<c>try<>
-<c>while<>
-<c>with<>
-<c>yield<><>
-@
-@ Keywords
-@ and, as, assert, break, class, continue, def, del, elif, else, except
-@ False, finally, for, from, global, if, import, in, is, lambda, None
-@ nonlocal, not, or, pass, raise, return, True, try, while, with, yield
-
-
-
 ### RPython
 A strict subset of python that can be statically compiled into C.
 
@@ -23548,14 +24349,6 @@ vs: Egg
 # Other SpeedSheets
 @
 @ sheets
-
-
-### ASCII SpeedSheets
-Searchable ascii tables in SpeedSheet form.
-
-<table><col>Sheet:<><col><l "/s/ascii">ascii<>
-<l "/s/ascii_table">ascii_table<><><>
-
 
 
 ### aiohttp SpeedSheet
