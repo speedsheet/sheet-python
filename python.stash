@@ -31,7 +31,7 @@ This is an interactive <b>Python<> cheat sheet. Covers the core Python programmi
 <link "?q=decorators-only">Decorators<>
 <link "?q=iterators">Iterators<>
 <link "?q=generators">Generators<>
-<link "?modules-only">Modules<>
+<link "?q=modules-only">Modules<>
 <link "?q=operators-only">Operators<>
 <link "?q=distribution">Packaging<>
 <link "?q=regex-only">Regular Expressions<>
@@ -191,6 +191,9 @@ This is an interactive <b>Python<> cheat sheet. Covers the core Python programmi
 ### Python Libraries
 <l>https://docs.python.org/3/library/index.html<>
 
+### Python PEPs
+<l>https://peps.python.org/pep-0000/<>
+
 
 
 # The Python Philosophy
@@ -272,7 +275,7 @@ Run From The Command-line:
 
 ### Hello World - With Command-line Arguments
 
-This version takes one arguments and displays it as the name.
+This version takes one argument and displays it as the name.
 
 
 File Name:
@@ -361,11 +364,20 @@ Examples:
 <col>Single Quote ( ' )<><col><c>\\'<><>
 <col>Double Quote ( " )<><col><c>\\"<><>
 <col> <>
+<col>Backspace<><col><c>\\b<><>
 <col>Carriage Return<><col><c>\\r<><>
 <col>Newline<><col><c>\\n<><>
 <col>Tab<><col><c>\\t<><>
+<col>Vertical Tab<><col><c>\\v<><>
 <col> <>
-<col>Null<><col><c>\\00<><><>
+<col>Null<><col><c>\\0<><><col>(octal value)<>
+<col> <>
+<col>Hex Value<><col><c>\\x<><><col><c>\\x<v>ff<><><>
+<col>Octal Value<><col><c>\\<><><col><c>\\<v>777<><><>
+<col>Unicode, 16-Bit<><col><c>\\u<><><col><c>\\u<v>ff<><><>
+<col>Unicode, 32-Bit<><col><c>\\U<><><col><c>\\U<v>77<><><>
+<col> <>
+<col>Unicode Character / Emoji<><col><c>\\N{}<><><col><c>\\N{<v>name<>}<><><>
 
 
 Example:
@@ -1123,6 +1135,9 @@ Lists all installed packages and their versions.
 <cb>pip freeze > <v>requirements.txt<><>
 
 Create requirements file from installed packages.
+
+Uses the packages installed in the current virtual environment.
+If no environment, uses the global packages.
 @
 @ command, library, libraries, packages, freeze
 
@@ -1238,7 +1253,7 @@ while (<v>count<> := count + 1) < 5:
 <col><c><v>a<> is <v>b<><><><col>Identity / Same Item<>
 <col><c><v>a<> is not <v>b<><><><><>
 @
-@ Boolean, ==, !=, \<>, \<, \<=, >, >/, is, not
+@ Boolean, ==, !=, \<>, \<, \<=, >, >=, is, not
 @ less than, greater than, less that or equal, greater than or equal
 @ compare, camparator
 
@@ -1252,7 +1267,7 @@ while (<v>count<> := count + 1) < 5:
 
 Versus <c>&&<>, <c>||<>, <c>!<> used in other languages.
 @
-@ Boolean, and, or, not, &&, ||, !
+@ Boolean, and, or, not, negation, &&, ||, !
 
 
 
@@ -1294,9 +1309,11 @@ Example:
 
 <cb><v>a<> = 0b<v>110<>
 
-<v>compement<> = ~<v>a<>
+<v>complement<> = ~<v>a<>
 
-<#># Returns -0b111<><>
+print(f'{<v>complement<>:b}')
+
+<#># Prints: -111<><>
 @
 @ ~, NOT
 
@@ -1309,12 +1326,14 @@ Example:
 
 Example:
 
-<cb><v>a<> = 0b<v>110<>
-<v>b<> = 0b<v>011<>
+<cb><v>a<> = 0b<v>1100<>
+<v>b<> = 0b<v>1010<>
 
 <v>value<> = <v>a<> & <v>b<>
 
-<#># Returns 0b10<><>
+print(f'{<v>value<>:04b}')
+
+<#># Prints: 1000<><>
 @
 @ &
 
@@ -1327,12 +1346,14 @@ Example:
 
 Example:
 
-<cb><v>a<> = 0b<v>110<>
-<v>b<> = 0b<v>011<>
+<cb><v>a<> = 0b<v>1100<>
+<v>b<> = 0b<v>1010<>
 
 <v>value<> = <v>a<> | <v>b<>
 
-<#># Returns 0b111<><>
+print(f'{<v>value<>:04b}')
+
+<#># Prints: 1110<><>
 @
 @ |
 
@@ -1345,12 +1366,14 @@ Example:
 
 Example:
 
-<cb><v>a<> = 0b<v>110<>
-<v>b<> = 0b<v>011<>
+<cb><v>a<> = 0b<v>1100<>
+<v>b<> = 0b<v>1010<>
 
 <v>value<> = <v>a<> ^ <v>b<>
 
-<#># Returns 0b101<><>
+print(f'{<v>value<>:04b}')
+
+<#># Prints: 0110<><>
 @
 @ ^
 
@@ -1363,11 +1386,13 @@ Example:
 
 Example:
 
-<cb><v>a<> = 0b<v>110<>
+<cb><v>a<> = 0b<v>1100<>
 
 <v>value<> = <v>a<> \<\< <v>2<>
 
-<#># Returns 0b11000<><>
+print(f'{<v>value<>:b}')
+
+<#># Prints: 110000<><>
 @
 @ \<\<
 
@@ -1380,11 +1405,13 @@ Example:
 
 Example:
 
-<cb><v>a<> = 0b<v>110<>
+<cb><v>a<> = 0b<v>1100<>
 
 <v>value<> = <v>a<> >> <v>2<>
 
-<#># Returns 0b1<><>
+print(f'{<v>value<>:04b}')
+
+<#># Prints: 0011<><>
 @
 @ >>
 
@@ -2737,23 +2764,32 @@ This is an easy way to swap the values of <c><v>a<><> and <c><v>b<><>.
 <table><col>Boolean Literal	<><col><c>= True | False<><>
 <col> <>
 <col>Integer Literal<><col><c>= 11<><>
-<col>Integer Literal<><col><c>= -11<><>
-<col>Integer Literal<><col><c>= 12_345<><>
+<col><><col><c>= -11<><>
+<col><><col><c>= 12_345<><>
 <col> <>
 <col>Binary Literal<><col><c>= 0b<v>1011<><><>
 <col>Octal Literal<><col><c>= 0o<v>13<><><>
 <col>Hex Literal<><col><c>= 0x<v>0B<><><>
 <col> <>
 <col>Float Literal<><col><c>= 11.23<><>
-<col>Float Literal<><col><c>= -1.23<><>
+<col><><col><c>= -1.23<><>
 <col> <>
 <col>Complex Literal<><col><c>= <v>1<> + <v>2<>j<><>
 <col> <>
 <col>String Literal<><col><c>= '<v>A String<>'<><>
-<col>String Literal<><col><c>= "<v>A String<>"<><>
+<col><><col><c>= "<v>A String<>"<><>
+<col><><col><c>= '''<v>A String<>'''<><>
+<col><><col><c>= """<v>A String<>"""<><>
 <col> <>
-<col>F-String Literal<><col><c>= f'<v>...<>'<><>
-<col>F-String Literal<><col><c>= f"<v>...<>"<><><>
+<col>Raw String Literal<><col><c>= r'<v>A\\String<>'<><>
+<col><><col><c>= r"<v>A\\String<>"<><>
+<col><><col><c>= r'''<v>A\\String<>'''<><>
+<col><><col><c>= r"""<v>A\\String<>"""<><>
+<col> <>
+<col>F-String Literal<><col><c>= f'<v>...<> {<v>var1<>} <v>...<>'<><>
+<col><><col><c>= f"<v>...<> {<v>var1<>} <v>...<>"<><>
+<col><><col><c>= f'''<v>...<> {<v>var1<>} <v>...<>'''<><>
+<col><><col><c>= f"""<v>...<> {<v>var1<>} <v>...<>"""<><><>
 
 
 
@@ -2840,13 +2876,178 @@ Underscores are for readability and are ignored by Python.
 
 
 
-### String Literal
+### String Literals
 
 <cb>= '<v>A String<>'<>
 
-Or
-
 <cb>= "<v>A String<>"<>
+
+<cb>= '''<v>A Multiline
+String<>'''<>
+
+<cb>= """<v>A Multiline
+String<>"""<>
+
+
+
+### String Literals - F-String
+
+<cb>= f'<v>F-String with Value<> {<v>item1<>}'<>
+
+<cb>= f"<v>F-String with Value<> {<v>item1<>}"<>
+
+<cb>= f'''<v>Multiline F-String
+With Value<> {<v>item1<>}'''<>
+
+<cb>= f"""<v>Multiline F-String
+With Value<> {<v>item1<>}"""<>
+@
+@ template
+
+
+
+### String Literals - Raw String
+
+<cb>= r'<v>A\\Raw\\String<>'<>
+
+<cb>= r"<v>A\\Raw\\String<>"<>
+
+<cb>= r'''<v>A\\Raw
+Multiline\\String<>'''<>
+
+<cb>= r"""<v>A\\Raw
+Multiline\\String<>"""<>
+
+
+
+### String Literals - Raw F-String
+
+<cb>= rf'<v>Raw\\F-String\\with\\Value\\<>{<v>item1<>}'<>
+
+<cb>= rf"<v>Raw\\F-String\\with\\Value\\<>{<v>item1<>}"<>
+
+<cb>= rf'''<v>Multiline\\Raw\\F-String
+With\\Value<> {<v>item1<>}'''<>
+
+<cb>= rf"""<v>Multiline\\Raw\\F-String
+With\\Value<> {<v>item1<>}"""<>
+@
+@ template
+
+
+
+### String Literals - Escape Hex Value
+
+<cb>\\x<v>ff<><>
+
+Base:
+
+<cb>\\x<>
+
+Escapes a hex value into a string character.
+
+
+Equivalent:
+
+<cb>= "\\x61"
+
+= "a"<>
+@
+@ \\x
+
+
+
+### String Literals - Escape Octal Value
+
+<cb>\\<v>777<><>
+
+Base:
+
+<cb>\\<>
+
+Escapes an _ value into a string character.
+
+Watch for any trailing digit characters that are not part of the octal value. They will be incorporated.
+
+
+Equivalent:
+
+<cb>= "\\141"
+
+= "a"<>
+@
+@ \\
+
+
+
+### String Literals - Escape Unicode, 16-Bit
+
+<cb>\\u<v>ffff<><>
+
+Base:
+
+<cb>\\u<>
+
+Escapes a 16 bit Unicode hex value into a string character.
+
+Requires 4 hex digits.
+
+
+Equivalent:
+
+<cb>= "\\u0061"
+
+= "a"<>
+@
+@ \\u
+
+
+
+### String Literals - Escape Unicode, 32-Bit
+
+<cb>\\U<v>ffffffff<><>
+
+Base:
+
+<cb>\\U<>
+
+Escapes a 32 bit Unicode hex value into a string character.
+
+Requires 8 hex digits.
+
+
+Equivalent:
+
+<cb>= "\\U00000061"
+
+= "a"<>
+
+<cb>= "\\U0001f44d"
+
+= "👍"<>
+@
+@ \\U
+
+
+
+### String Literals - Escape Unicode Character / Emoji
+
+<cb>\\N{<v>name<>}<>
+
+Base:
+
+<cb>\\N{}<>
+
+Escapes an unicode character name into a string character.
+
+
+Equivalent:
+
+<cb>= "\\N{thumbs up sign}"
+
+= "👍"<>
+@
+@ \\N{}
 
 
 
@@ -2854,6 +3055,8 @@ Or
 
 <cb>= None<>
 
+
+Assigns 'no value' to a variable.
 
 <c>None<> is a singleton in Python.
 
@@ -3481,8 +3684,8 @@ Formatted String literal or f-string.
 Creates a formatted string using a string literal.
 @
 @ Strings, string-only, strings-only, str-only, text, text-only
-@ Formatted String literal
-@ String Literals, {}, f"", f''
+@ Formatted, template
+@ {}, f"", f''
 @ f-strings, fstrings, variable in, formatting, formats, f-string-only, f-strings-only
 
 
@@ -4038,6 +4241,9 @@ Is Greater Than?:
 <cb>= <v>string_1<> > <v>string_2<><>
 
 
+Compare strings using ==, !=, \<, >, \<=, >=.
+
+
 Example:
 
 <cb>if <v>"a"<> < <v>"b"<>:
@@ -4113,6 +4319,7 @@ Pads <c><v>string_1<><> on the left to the given width.
 Pads with <c><v>fill_char<><>, or spaces if not given.
 @
 @ Right Justify, .rjust(), start
+@ pad-left, right-justify, align-right
 
 
 
@@ -4126,6 +4333,7 @@ Pads <c><v>string_1<><> to the given width.
 Pads with <c><v>fill_char<><>, or spaces if not given.
 @
 @ Left Justify, .ljust(), end
+@ pad-right, left-justify, align-left
 
 
 
@@ -4163,7 +4371,8 @@ print(<v>replaced<>)
 
 <#># Prints 'Replace that and that and that.'<><>
 @
-@ Update, Modify, Change, .replace(), substitute
+@ Update, Modify, Change, substitute, all occurences, matches
+@ .replace()
 
 
 
@@ -4590,7 +4799,7 @@ Example:
 
 ### String - Substring - Remove Suffix
 
-<cb>= <v>string_1<>.removesuffix(<v>prefix_1<>)<>
+<cb>= <v>string_1<>.removesuffix(<v>suffix_1<>)<>
 
 
 Removes the suffix but only if it is present.
@@ -4787,6 +4996,9 @@ Splits the string along whitespaces.
 ### String List - Longest String
 
 <cb>= max(<v>string_list<>, key = len)<>
+
+
+Returns the longest string in the list.
 @
 @ strings, max()
 
@@ -4795,6 +5007,9 @@ Splits the string along whitespaces.
 ### String List - Max Length
 
 <cb>= max(len(<v>string<>) for <v>string<> in <v>string_list<>)<>
+
+
+Returns the length of the longest string.
 @
 @ strings, max(), greatest
 
@@ -4947,6 +5162,93 @@ Subtracts the day portion of <c><v>timedelta_2<><> to <c><v>date_1<><>.
 
 
 
+### Date - Get Last Day of Month
+
+<cb>= calendar.monthrange(<v>date_1<>.year, <v>date_1<>.month)[1]<>
+
+Usage:
+
+<cb>import calendar
+
+= calendar.monthrange(<v>date_1<>.year, <v>date_1<>.month)[1]<>
+
+Returns: <c>int<>
+
+
+Returns the last day of the month.
+
+
+Example:
+
+<cb>import calendar
+from datetime import date
+
+<v>date_1<> = date(<v>2000<>, <v>2<>, <v>1<>)
+
+<v>last_day<> = calendar.monthrange(<v>date_1<>.year, <v>date_1<>.month)[1]
+
+<#># Returns: 29<><>
+@
+@ calendar.monthrange(), .monthrange()
+@ get, find, end
+
+
+
+### Date - Get Next Month, First Day
+
+<cb>= <v>date_1<> + relativedelta(months=1, day=1)<>
+
+Usage:
+
+<cb>from dateutil.relativedelta import relativedelta
+
+= <v>date_1<> + relativedelta(months=1, day=1)<>
+
+
+Returns a date for the first day of the next month.
+
+
+Example:
+
+<cb>from datetime import date
+from dateutil.relativedelta import relativedelta
+
+<v>date_1<> = date(<v>2000<>, <v>2<>, <v>1<>)
+
+<v>next_month<> = <v>date_1<> + relativedelta(months=1, day=1)
+
+<#># Returns: datetime(2000, 3, 1)<><>
+@
+@ 1st
+
+
+
+### Date - Get Previous Month, Last Day
+
+<cb>= <v>date_1<>.replace(day = 1) - timedelta(days=1)<>
+
+Usage:
+
+<cb>from datetime import timedelta
+
+= <v>date_1<>.replace(day = 1) - timedelta(days=1)<>
+
+
+Returns the last day of the previous month:
+
+
+Example:
+
+<cb>from datetime import date
+from datetime import timedelta
+
+<v>today<> = date.today()
+<v>last_month<> = <v>today<>.replace(day = 1) - timedelta(days=1)
+
+print('last month', <v>last_month<>)<>
+
+
+
 ### Date - Replace Unit
 
 <cb>= <v>date_1<>.replace(<v>unit<> = <v>value<>)<>
@@ -5060,7 +5362,7 @@ Examples:
 
 <#># Returns: datetime.date(2000, 1, 2)<><>
 @
-@ date.strptime(), .strptime()
+@ date.strptime(), date.strptime(), .strptime()
 @ convert, conversion, to, from, parse
 @ to-date, from-string
 
@@ -5175,7 +5477,7 @@ Example:
 @
 @ datetime, datetimes, date times,
 @ datetime-only, datetimes-only, date-time-only, date-times-only, dt
-@ datetime.datetime, .datetime(), datetime.today(), .today(), datetime.now(), .now()
+@ datetime.datetime, .datetime()
 @ create, define, instantiate, new, now, current, data type
 
 
@@ -5190,7 +5492,7 @@ Usage:
 = datetime(<v>year<>, <v>month<>, <v>day<>, <v>hour<>, <v>minute<>, <v>second<>)
 = datetime(<v>year<>, <v>month<>, <v>day<>, <v>hour<>, <v>minute<>, <v>second<>, <v>microsecond<>)
 
-= datetime()
+= datetime(
         year = <v>year<>,
         month = <v>month<>,
         day = <v>day<>,
@@ -5274,10 +5576,19 @@ Example:
 
 ### Datetime - now() vs today()
 
+<c>now()<>:
+
+<*>Preferred
+Allows for Time Zone<>
+
+<c>today()<>
+
+<*>No Time Zone Allowed<>
+
+
 Prefer <c>now()<> to <c>today()<>.
 
-The reason is because <c>now()<> allows for time zone information to be included.
-
+<c>now()<> allows for time zone information to be included.
 But in reality for non time zone datetimes, they are equivalent.
 @
 @ datetime.today(), .today(), datetime.now(), .now()
@@ -5340,6 +5651,68 @@ Returns: <c>datetime<>
 = datetime.today()<>
 @
 @ current, datetime.today(), .today()
+
+
+
+### DateTime - Get Last Day of Month
+
+<cb>= calendar.monthrange(<v>datetime_1<>.year, <v>datetime_1<>.month)[1]<>
+
+Usage:
+
+<cb>import calendar
+
+= calendar.monthrange(<v>datetime_1<>.year, <v>datetime_1<>.month)[1]<>
+
+Returns: <c>int<>
+
+
+Returns the last day of the month.
+
+
+Example:
+
+<cb>import calendar
+from datetime import datetime
+
+<v>datetime_1<> = datetime(<v>2000<>, <v>2<>, <v>1<>, <v>0<>, <v>0<>, <v>0<>)
+
+<v>last_day<> = calendar.monthrange(<v>datetime_1<>.year, <v>datetime_1<>.month)[1]
+
+<#># Returns: 29<><>
+@
+@ calendar.monthrange(), .monthrange()
+@ get, find, end
+
+
+
+### DateTime - Get Next Month, First Day
+
+<cb>= <v>datetime_1<> + relativedelta(months=1, day=1)<>
+
+Usage:
+
+<cb>from dateutil.relativedelta import relativedelta
+
+= <v>datetime_1<> + relativedelta(months=1, day=1)<>
+
+
+Returns a datetime for the first day of the next month.
+
+
+Example:
+
+<cb>from datetime import datetime
+from dateutil.relativedelta import relativedelta
+
+<v>datetime_1<> = datetime(<v>2000<>, <v>2<>, <v>1<>, <v>0<>, <v>0<>, <v>0<>)
+
+<v>next_month<> = <v>datetime_1<> + relativedelta(months=1, day=1)
+
+<#># Returns: datetime(2000, 3, 1, 0, 0)<><>
+@
+@ 1st
+@ dateutil.relativedelta.relativedelta, .relativedelta.relativedelta, .relativedelta
 
 
 
@@ -6252,7 +6625,7 @@ Returns fraction of a second too.
 
 
 
-#### TimeDelta - Is Equal?
+### TimeDelta - Is Equal?
 
 <cb>= <v>timedelta_1<> == <v>timedelta_2<><>
 
@@ -6422,6 +6795,9 @@ Function:
 Call:
 
 <cb>= <v>format_timedelta<>(<v>timedelta_1<>)<>
+
+
+Prints days, hours, minutes, seconds.
 
 
 
@@ -6715,8 +7091,6 @@ Example:
 
 <cb>= {<v>key_expression<> : <v>value_expression<> for <v>item<> in <v>sequence_1<>}<>
 
-<cb>= {<v>key_expression<> : <v>value_expression<> for <v>item<> in <v>sequence_1<> if <v>condition<>}<>
-
 Returns: <c>dict<>
 
 
@@ -6730,7 +7104,23 @@ Example:
 
 <v>dict_1<> = {<v>i<> : str(<v>i<>) for <v>i<> in <v>items<>}<>
 
-With Conditional if:
+@
+@ dict for in if {} :, conditional, iterating
+
+
+
+### Dict - Dict Comprehension - If Condition
+
+<cb>= {<v>key_expression<> : <v>value_expression<> for <v>item<> in <v>sequence_1<> if <v>condition<>}<>
+
+Returns: <c>dict<>
+
+
+Iterates over a sequence, performing an operation on items that matth the if condition.
+Returns the result as <c>dict<>.
+
+
+Example:
 
 <cb><v>items<> = [1, 2, 3, 4, 5]
 
@@ -6744,18 +7134,23 @@ With Conditional if:
 
 Contains Key?:
 
-<cb>= <v>key_1<> in <v>dict_1<>                       <#># Preferred<><>
+<cb>= <v>key_1<> in <v>dict_1<>               <#># Preferred<><>
 
 or
 
-<cb>= <v>dict_1<>.has_key(<v>key_1<>)                 <#># Alternative<><>
+<cb>= <v>dict_1<>.has_key(<v>key_1<>)         <#># Alternative<><>
+@
+@ dict.has_key(), .has_key()
+@ has, check, exists, in, includes
 
-Does Not Contain?:
+
+
+### Dict - Not Contains Key?
 
 <cb><v>key_1<> not in <v>dict_1<><>
 @
 @ dict.has_key(), .has_key()
-@ has, check, exists, in, not in, includes
+@ has, check, exists, in, includes, doesn't, doesnt
 
 
 
@@ -6764,6 +7159,14 @@ Does Not Contain?:
 <cb>= <v>value_1<> in <v>dict_1<>.values()<>
 @
 @ has, check, exists, item, element, in, includes, .values()
+
+
+
+### Dict - Not Contains Value?
+
+<cb>= <v>value_1<> not in <v>dict_1<>.values()<>
+@
+@ has, check, exists, item, element, in, includes, .values(), doesn't, doesnt
 
 
 
@@ -6965,6 +7368,14 @@ Returns: <c>dict<>
 Return a dict with only those items in common between <c><v>dict_1<><> and <c><v>dict_2<><>.
 @
 @ dictionaries, dicts, in, conjuction
+
+
+
+### Dict - Is Dict?
+
+<cb>= type(<v>item_1<>) is dict<>
+@
+@ type of, instance of
 
 
 
@@ -7207,26 +7618,40 @@ Example:
 
 <cb>= [<v>expression<> for <v>value<> in <v>list_1<>]<>
 
-<cb>= [<v>expression<> for <v>value<> in <v>list_1<> if <v>condition<>]<>
-
 Returns: <c>list<>
 
 
 Iterates over a list or sequence, performing an operation on every item.
-Returns the result as a <c>list<>.
 
 
-Examples:
+Example:
 
 <cb><v>list_1<> = [1, 2, 3, 4, 5]
 
 <v>list_2<> = [ <v>i<> * 2 for <v>i<> in <v>list_1<>]               <#># Returns [2, 4, 6, 8, 10]<><>
 
+@
+@ for in [], iterate, iterating, sequences
+
+
+
+### List - List Comprehension - If Condition
+
+<cb>= [<v>expression<> for <v>value<> in <v>list_1<> if <v>condition<>]<>
+
+Returns: <c>list<>
+
+
+Iterates over a list or sequence, performing an operation on those items that match the if condition.
+
+
+Example:
+
 <cb><v>list_1<> = [1, 2, 3, 4, 5]
 
 <v>list_2<> = [ <v>i<> * 2 for <v>i<> in <v>list_1<> if <v>i<> \<= 3]      <#># Returns [2, 4, 6]<><>
 @
-@ for in if [], conditional, iterate, iterating, sequences
+@ for in if [], conditional, iterate, iterating, sequences, find, with
 
 
 
@@ -7234,7 +7659,12 @@ Examples:
 
 <cb>= [[<v>expression<> for <v>value<> in <v>sublist<>] for <v>sublist<> in <v>list_1<>]<>
 
+Returns: <c>list[list]<>
+
+
 Iterates over a list of lists or sequece of sequences, performing operations on every value in each sublist.
+
+Returns a list of lists.
 
 
 Example:
@@ -7244,6 +7674,30 @@ Example:
 <v>plus_10<> = [[<v>value<> + 10 for <v>value<> in <v>sublist<>] for <v>sublist<> in <v>list_1<>]
 
 <#># Returns: [[11, 12], [13, 14]]<><>
+@
+@ for in if [], conditional, iterate, iterating, sequences
+
+
+
+### List - List Comprehension, Nested, Flatten
+
+<cb>= [<v>expression<> for <v>sublist<> in <v>list_1<> for <v>value<> in <v>sublist<>]<>
+
+Returns: <c>list<>
+
+
+Iterates over a list of lists or sequece of sequences, as if it were a flat list.
+
+Returns a flat list.
+
+
+Example:
+
+<cb><v>list_1<> = [[<v>1<>, <v>2<>], [<v>3<>, <v>4<>]]
+
+<v>plus_10<> = [<v>value<> + 10 for <v>sublist<> in <v>list_1<> for <v>value<> in <v>sublist<>]
+
+<#># Returns: [11, 12, 13, 14]<><>
 @
 @ for in if [], conditional, iterate, iterating, sequences
 
@@ -7267,7 +7721,7 @@ Example:
 Returns: <c>bool<>
 
 
-Returns <c>True<> if any item from <c>item_list<> is in <v>list_1<>.
+Returns <c>True<> if any item from <c><v>compare_list<> is in <c><v>list_1<><>.
 
 
 Example:
@@ -7281,6 +7735,17 @@ Example:
 @
 @ has, check, exists, item, element, includes, in, matches, 2nd, other
 @ list_2, list2, second
+
+
+
+### List - Not Contains?
+
+<cb>= <v>value<> not in <v>list_1<><>
+
+<cb>if <v>value<> not in <v>list_1<>:
+	<v>...<><>
+@
+@ has, check, exists, item, element, includes, in, doesnt, doesn't
 
 
 
@@ -7342,7 +7807,7 @@ Returns the number of unique values in <c><v>list_1<><>.
 
 <cb><v>del<> <v>list_1<>[0]<>
 @
-@ remove from start, del, item, value
+@ remove from start, del, item, value, 1st
 
 
 
@@ -7440,7 +7905,7 @@ There is no need for <b>bool()<> when using <b>if...<>.
 
 
 
-### List - Is Equal
+### List - Is Equal?
 
 <cb>= <v>list_1<> == <v>list_2<><>
 
@@ -7470,7 +7935,15 @@ Example:
 
 
 
-### List - Is Sublist
+### List - Is List?
+
+<cb>= type(<v>item_1<>) is list<>
+@
+@ type of, instance of
+
+
+
+### List - Is Sublist?
 
 Use Function:
 
@@ -7490,6 +7963,8 @@ Call:
 
 
 Returns True if <c><v>list_1<><> is a sublist of <c><v>list_2<><>.
+
+Create the function <c>is_sublist()<> above to test if a list is a sublist of another list.
 
 
 Example:
@@ -7548,9 +8023,9 @@ Examples:
 
 <cb><v>list_1<> = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-= <v>list_1<>[0:5]                             <#># [1, 2, 3, 4, 5]<>
+= <v>list_1<>[0:5]                         <#># [1, 2, 3, 4, 5]<>
 = <v>list_1<>[5:]                          <#># [6, 7, 8, 9]<>
-= <v>list_1<>[0::8]                            <#># [1, 9] First, last items.<><>
+= <v>list_1<>[0::8]                        <#># [1, 9] First, last items.<><>
 @
 @ Split, Slice, [:], ::, [::]
 
@@ -7653,7 +8128,7 @@ Example:
 
 <cb>= <v>list_1<>[0]<>
 @
-@ item, value, [0]
+@ item, value, [0], 1st
 
 
 
@@ -7661,7 +8136,7 @@ Example:
 
 <cb>= <v>list_1<>[-1]<>
 @
-@ item, value, [-1]
+@ item, value, [-1], end
 
 
 
@@ -7689,7 +8164,7 @@ Example:
 <#># Returns [1, 2, 3, 4]<><>
 @
 @ tail, items, values, [1:]
-@ second, 2nd, to end, to last, remainder
+@ second, 2nd, to end, to last, remainder, 1st
 
 
 
@@ -7722,7 +8197,9 @@ Example:
 
 <#># Sets: [1, 10, 2, 3]<><>
 @
-@ put, set, item, .insert()
+@ put, set, add
+@ item, value, element
+@ .insert()
 
 
 
@@ -7740,7 +8217,9 @@ Example:
 
 <#># Sets: [10, 1, 2, 3]<><>
 @
-@ put, item, prepend, .insert()
+@ put, set, add, prepend, 1st, first
+@ item, value, element
+@ .insert()
 
 
 
@@ -7768,8 +8247,7 @@ Example:
 
 Removes the first item from the list and returns it.
 @
-@ .pop(), left, remove, delete
-
+@ .pop(), left, remove, delete, 1st
 
 
 ### List - Pop Last
@@ -7863,7 +8341,7 @@ Returns: <c>list<>
 
 Sorts the list elements in reverse order.
 @
-@ sorted()
+@ sorted(), descending
 
 
 
@@ -8313,7 +8791,7 @@ Tuples are immutable arrays.
 
 <cb>= <v>tuple_1<>[0]<>
 @
-@ [0]
+@ [0], 1st
 
 
 
@@ -8321,7 +8799,34 @@ Tuples are immutable arrays.
 
 <cb>= <v>tuple_1<>[-1]<>
 @
-@ [-1]
+@ [-1], end, value, item
+
+
+
+### Tuple - Is Equal?
+
+<cb>= <v>tuple_1<> == <v>tuple_2<><>
+
+
+<cb>if <v>tuple_1<> == <v>tuple_2<>:
+	<v>...<><>
+
+
+Use <c>==<> to test if tuples are the same.
+
+Python does a value by value comparison.
+
+
+Example:
+
+<cb><v>tuple_1<> = (1, 2)
+<v>tuple_2<> = (2, 3)
+
+print ("Equal?", <v>tuple_1<> == <v>tuple_2<>)
+
+<#># Prints: Equal? False<><>
+@
+@ equals, second, 2nd, ==, identity, two
 
 
 
@@ -8461,11 +8966,11 @@ Example:
 
 <#># Returns 0<><>
 @
-@ item, [0]
+@ item, [0], 1st
 
 
 
-### Sequence - Get Last Value
+### Sequence - Get Last
 
 <cb>= <v>sequence_1<>[-1]<>
 
@@ -8481,7 +8986,7 @@ Example:
 
 <#># Returns 4<><>
 @
-@ item, [-1]
+@ item, value, end [-1]
 
 
 
@@ -8562,7 +9067,7 @@ Example:
 <#># Returns [1, 2, 3, 4]<><>
 @
 @ item, [1:], sublist, subsequence
-@ second, 2nd, to end, to last, remainder
+@ second, 2nd, to end, to last, remainder, 1st
 
 
 
@@ -8606,7 +9111,7 @@ Example:
 
 <v>first<>, <v>second<>, *<v>remainder<> = <v>sequence_1<>      <#># Returns 1, 2, [3, 4, 5]<><>
 @
-@ tail, *
+@ tail, *, 1st
 
 
 
@@ -8624,7 +9129,7 @@ Example:
 
 <v>first<>, *_, <v>last<> = <v>sequence_1<>          <#># Returns 1, 5<><>
 @
-@ *_
+@ *_, 1st, end, items, values
 
 
 
@@ -8690,6 +9195,16 @@ Example:
 <cb>if <v>value<> in <v>sequence_1<>:<>
 @
 @ has, check, exists, item, element, in, includes
+
+
+
+### Sequence - Not Contains?
+
+<cb>= <v>value<> not in <v>sequence_1<><>
+
+<cb>if <v>value<> not in <v>sequence_1<>:<>
+@
+@ has, check, exists, item, element, in, includes, doesn't
 
 
 
@@ -8799,7 +9314,7 @@ Returns the index of the first match.
 
 ### Sequence - To Dict
 
-<cb>= {<v>value<>:<v>value<> for <v>value<> in <v>sequence_1<>}<>
+<cb>= {value:value for value in <v>sequence_1<>}<>
 
 Returns: <c>dict<>
 
@@ -9015,7 +9530,7 @@ Using a Lambda Filter:
 
 <#># Returns values 2, 4.<><>
 @
-@ filter()
+@ filter(), find in
 
 
 
@@ -10119,7 +10634,22 @@ finally:
 except (<v>Exception1<>, <v>Exception2<>):
 	<v>...<>
 
-except (<v>Exception3<>, <v>Exception4<> as <v>error<>
+except (<v>Exception3<>, <v>Exception4<>) as <v>error<>
+	<v>...<><>
+
+
+Example:
+
+<cb>try:
+	<v>value<> = input("Enter number: ")
+
+	if not <v>value<>:
+		raise ValueError("Must enter a value.")
+
+	if not <v>value<>.isdigit():
+		raise TypeError("Must be a number.")
+
+except (TypeError, ValueError):
 	<v>...<><>
 
 
@@ -10278,7 +10808,7 @@ Use <c>pass<> to define an empty function.
 
 
 
-### Function - Arguments - Optional
+### Function - Arguments - Default Values
 
 <cb>def <v>function_1<>(<v>optional_arg_1<> = <v>default_value<>, <v>...<>):
 	<v>...<><>
@@ -10295,7 +10825,7 @@ Example:
 <v>say_hello<>("<v>John<>")
 <v>say_hello<>("<v>John<>", "<v>Hi<>")<>
 @
-@ new, create, values, default, arguments, args, parameters, params
+@ new, create, values, optional, default, arguments, args, parameters, params
 
 
 
@@ -10706,7 +11236,7 @@ Calls <c><v>decorated_function<><> through <c><v>decorator_1<><>.
 An anonymous function.
 All lambdas return a value. Returns are implied.
 @
-@ lambdas, ->, =>, lambda-only,lambdas-only
+@ lambdas, ->, =>, lambda-only,lambdas-only, lamda
 
 
 
@@ -11289,7 +11819,7 @@ class <v>AbstractClass1<>(ABC):
 Defines class functions as if they were class variables.
 Use to encapsulate mutation of internal variables.
 @
-@ getter, setter, @property, method as, property, to, into
+@ getter, setter, @property, method as, property, to, into, function as
 
 
 
@@ -11911,6 +12441,7 @@ Returns: <c>generator<>
 
 
 <c>yield<> turns a function into a generator.
+
 The generator returns a result every time yield is executed, suspending the function.
 Execution continues when the generator is called again.
 
@@ -11947,15 +12478,16 @@ Short For:
 
 
 Allows the function to delegate part of its generator results to a 2nd generator.
+
 Must be inside a function.
-This is very useful for recursion.
+This is very useful when using recursion.
 @
 @ delegate, subgenerator, subgenerate, recursion, recursive, to
 
 
 # Packages, Modules
 @
-@ packages-only, modules-only
+@ packages-only, modules-only, module-only
 
 
 
@@ -13025,7 +13557,7 @@ Example:
 
 
 
-### Regular Expressions - Starts With
+### Regular Expressions - Matches / Starts With
 
 <cb>= match(<v>match_pattern<>, <v>string_1<>)<>
 
@@ -16521,8 +17053,28 @@ Verbose:
 
 
 # Type Hints
+
+Official Docs: <l "https://docs.python.org/3/library/typing.html">Typing<>
 @
-@ Static Typing, :
+@ Static Typing, :, annotations, type-hints-only, type-annotations-only
+
+
+
+### Type Hints - Any Type
+
+<cb><v>item_1<>: Any<>
+
+Usage:
+
+<cb>from typing import Any
+
+<v>item_1<>: Any
+<v>list_1<>: list[Any]<>
+
+
+Tells the type checker to ignore this type.
+@
+@ typing.any
 
 
 
@@ -16555,6 +17107,18 @@ Example:
 	return <v>height<> * <v>width<><>
 @
 @ ->, def, definition, parameters, return
+
+
+
+### Type Hints - Function With Default Values
+
+<cb>def <v>function_1<>(<v>param_1<>: <v>type<> = <v>default_value<>):
+	<v>...<><>
+
+
+Define the parameter type before the equals (<c>=<>).
+@
+@ def, definition, parameters
 
 
 
@@ -16601,8 +17165,33 @@ Usage:
 <cb>from typing import List
 
 <v>list_1<>: List[<v>type<>]<>
+
+
+Examples:
+
+<cb><v>names<>: List[str]<>
+
+<cb>from typing import Any
+
+<v>items<>: List[Any]<>
 @
 @ typing.list
+
+
+
+### Type Hints - None Type
+
+<cb><v>item_1<>: None<>
+
+
+Defines a type as <c>None<>.
+
+This is normally done when None is one of the types a value can have.
+
+
+Example:
+
+<cb><v>string_1<>: str | None<>
 
 
 
@@ -16669,6 +17258,21 @@ Examples:
 <cb><v>addresses<>: dict[int, Address]<>
 @
 @ dict, list, tuple
+
+
+
+### Type Hints - Variable Type, Multiple Types
+
+<cb><v>name<>: <v>type1<> | <v>type2<> | <v>type3<><>
+
+
+Define a variable that may have one of many types by separating the types with the pipe symbol (<c>|<>).
+
+
+
+Examples:
+
+<cb><v>id<>: int | str | None<>
 
 
 
@@ -19690,12 +20294,12 @@ with open(<v>file_name<>) as <v>file<>:
 
 Using <b><c>csv.reader()<>:<>
 
-<indent-half>Returns a blank line as an empty list <c>[]<>.
+<in>Returns a blank line as an empty list <c>[]<>.
 The last line is ignored if blank.<>
 
 Using <b><c>DictReader<>:<>
 
-<indent-half>Ignores all blank lines.<>
+<in>Ignores all blank lines.<>
 
 
 
@@ -19969,7 +20573,7 @@ class Size:
 
 size_1 = Size()<>
 @
-@ create, definition, new
+@ create, definition, new, values
 
 
 
@@ -19986,7 +20590,7 @@ from dataclasses import field
 class <v>Dataclass1<>:
 	<v>list_1<>: list = field(default_factory = lambda: [])<>
 @
-@ create, definition, new, field
+@ create, definition, new, field, values
 
 
 
@@ -20008,11 +20612,11 @@ class <v>Dataclass1<>:
             default_factory = lambda: {'<v>a<>': <v>1<>, '<v>b<>': <v>2<>})<>
 @
 @ dataclass.field, default_factory
-@ create, definition, new, field
+@ create, definition, new, field, values
 
 
 
-### Dataclass - Define With Comparison Gunctions
+### Dataclass - Define With Comparison Functions
 
 <cb>@dataclass(order=true)<>
 
@@ -20035,7 +20639,7 @@ Implements:
 <c>__lt__(), __le__(), __gt__(), and __ge__()<>
 @
 @ order=, order=true, @dataclass(order=true)
-@ Comparators
+@ Comparators, compare dataclasses
 
 
 
@@ -20053,7 +20657,7 @@ The class properties can not be changed.
 This also implements <c>__hash__()<>.
 @
 @ @dataclass(frozen=True), frozen=true, __hash__
-@ frozen, create, definition, new
+@ frozen, freeze, create, definition, new
 
 
 
@@ -20167,6 +20771,70 @@ print(is_dataclass(<v>person_1<>))
 \#    True<><>
 @
 @ dataclasses.is_dataclass(), .is_dataclass(), type of
+
+
+
+### Dataclass - Is Equal?
+
+<cb>= <v>dataclass_1<> == <v>dataclass_2<><>
+
+
+Use <c>==<> to test if the dataclasses are the same.
+
+Python will do a field by field comparison.
+
+
+Example:
+
+<cb>from dataclasses import dataclass
+
+\@dataclass
+class <v>Item<>:
+    name: str
+    number: int
+
+<v>item_1<> = Item('one', 1)
+<v>item_2<> = Item('two', 2)
+
+print ("Equal?", <v>item_1<> == <v>item_2<>)
+
+<#># Prints: Equal? False<><>
+@
+@ equals, sendond, 2nd, ==, identity, two
+
+
+
+### Dataclass - Is Equal?
+
+<cb>= <v>dataclass_1<> == <v>dataclass_2<><>
+
+
+<cb>if <v>dataclass_1<> == <v>dataclass_2<>:
+	<v>...<><>
+
+
+Use <c>==<> to test if the dataclasses are the same.
+
+Python will do a field by field comparison.
+
+
+Example:
+
+<cb>from dataclasses import dataclass
+
+\@dataclass
+class <v>Item<>:
+    name: str
+    number: int
+
+<v>item_1<> = Item('one', 1)
+<v>item_2<> = Item('two', 2)
+
+print ("Equal?", <v>item_1<> == <v>item_2<>)
+
+<#># Prints: Equal? False<><>
+@
+@ equals, second, 2nd, ==, identity, two
 
 
 
@@ -20883,6 +21551,36 @@ Example:
 
 
 
+#### Named Tuple - Is Equal?
+
+<cb>= <v>named_1<> == <v>named_2<><>
+
+
+<cb>if <v>named_1<> == <v>named_2<>:
+	<v>...<><>
+
+
+Use <c>==<> to test if the named tuples are the same.
+
+Python does a field by field comparison.
+
+
+Example:
+
+<cb>from collections import namedtuple
+<v>Size<> = namedtuple("Size", ["width", "height"])
+
+<v>size_1<> = Size(<v>160<>, <v>100<>)
+<v>size_2<> = Size(<v>100<>, <v>160<>)
+
+print ("Equal?", <v>size_1<> == <v>size_2<>)
+
+<#># Prints: Equal? False<><>
+@
+@ equals, sendond, 2nd, ==, identity, two
+
+
+
 #### Named Tuple - Update Field Value
 
 Not possible.
@@ -21071,7 +21769,7 @@ Example:
 
 <#># Returns ('a', 'Third')<><>
 @
-@ .popitem(), last
+@ .popitem(), last, end
 
 
 
@@ -21624,6 +22322,19 @@ Returns the print cursor to the start of the line.
 
 
 '\\r' - Carriage Return
+
+
+Example:
+
+<cb><#># 5 Second Countdown:<>
+
+from time import sleep
+
+for <v>i<> in range(5,0,-1):
+	print(<v>i<>, end='\\r')
+	sleep(1)
+
+print('Done.')<>
 @
 @ \\r, Carriage Return
 @ print-only, printing-only
@@ -21677,19 +22388,18 @@ Returns the name of the starting module file.
 ### Project - Recommended Project Structure
 
 <cb><v>project_name<>/
-
-    README.md
-    pyproject.toml
-    setup.cfg
-
-    docs/
-
-    src/
-        <v>package<>/
-            __init__.py
-            <v>module<>.py
-
-    tests/<>
+├─ README.md
+├─ pyproject.toml
+├─ setup.cfg
+├─ docs/
+│  └─ ...
+├─ src/
+│  ├─ __main__.py
+│  └─ <v>package<>/
+│     ├─__init__.py
+│     └─<v>module<>.py
+└─ tests/
+   └─ ...<>
 
 
 There are many ways to structure your project but this is perhaps the most standard way.
@@ -22033,6 +22743,7 @@ Example:
 <#># Returns '<c>*******Pad Left<>'<><>
 @
 @ Right Justify, start
+@ pad-left, right-justify, align-right
 
 
 
@@ -22066,6 +22777,68 @@ Example:
 <#># Returns '<c>Pad Right******<>'<><>
 @
 @ Left Justify, End
+@ pad-right, left-justify, align-left
+
+
+
+### Format Binary
+@
+@ to string, integer, bits
+
+
+#### Format Integer - As Binary
+
+<cb>= f'{<v>value<>:b}'<>
+
+<cb>= '{:b}'.format(<v>value<>)<>
+
+
+Examples:
+
+<cb><#># Assign Binary 1100:<>
+
+<v>value<> = <v>12<>
+
+print(f'{<v>value<>:b}')
+
+<#># Prints: 1100<><>
+
+<cb><#># Assign Binary 1100:<>
+
+<v>value<> = <v>12<>
+
+print('{:b}'.format(<v>value<>))
+
+<#># Prints: 1100<><>
+
+
+
+#### Format Integer - As Binary, Leading Zeros
+
+<cb>= f'{<v>int_1<>:0<v>length<>b}'<>
+
+<cb>= '{:0<v>length<>b}'.format(<v>int_1<>)<>
+
+
+Examples:
+
+<cb><#># Assign Binary 1100:<>
+
+<v>value<> = <v>12<>
+
+print(f'{<v>value<>:0<v>8<>b}')
+
+<#># Prints: 1100<><>
+
+<cb><#># Assign Binary 1100:<>
+
+<v>value<> = <v>12<>
+
+print('{:0<v>8<>b}'.format(<v>value<>))
+
+<#># Prints: 00001100<><>
+@
+@ to string, integer, pad, fixed length, 8
 
 
 
@@ -22530,7 +23303,27 @@ Codes for the <c><v>format<><> Part In:
 
 # Reference - Magic Methods
 @
-@ magic-only, magic-methods-only, double underscore
+@ magic-only, magic-methods-only, double underscore, dunder methods
+
+
+### Basics
+
+
+__all__				Defines 
+__bool__
+__contains__
+__dict__
+__doc__
+__file__
+__hash__
+__init__
+__iter__
+__len___
+__main__
+__name__
+__next__
+__repr__
+__str__
 
 
 ### __bool__
@@ -22598,6 +23391,40 @@ Returns the object's docstring.
 ### __file__
 
 Returns the file name of the current module.
+
+
+
+### __hash__
+
+<cb>def __hash__(self):
+	return hash(<v>key_tuple<>)<>
+
+Usage:
+
+<cb>def __hash__(self):
+    return hash(<v>key_tuple<>)<>
+
+<cb>def __hash__(self):
+    return hash((self.<v>key_1<>, self.<v>key_2<>, <v>...<>))<>
+
+
+Hashes the identity of an object.
+
+Use an object's keys to create hash.
+The key should never change for the lifetime of the object.
+Prefer immutable objects over mutable ones.
+
+
+Object Identity vs Object Hash:
+
+<cb>if <v>a<> == <v>b<> then
+    hash(<v>a<>) == hash(<v>b<>)
+
+if hash(<v>a<>) == hash(<v>b<>) then
+    <v>a<> maybe == <v>b<>
+
+if hash(<v>a<>) != hash(<v>b<>) then
+    <v>a<> != <v>b<><>
 
 
 
@@ -22780,6 +23607,8 @@ Import:
 
 Official Site:
 <l>https://numpy.org/doc/stable/<>
+@
+@ ndarray, ndim, shapes
 
 
 
@@ -23963,6 +24792,8 @@ Also called: Greenlets
 The creator of Python.
 
 Guido created Python in 1991.
+@
+@ python creator
 
 
 
@@ -24214,7 +25045,7 @@ Python was created in 1991 by Guido van Rossum.
 
 
 ### Raw String
-A string where values betweth the quotes are seet as in. No processing is done on the values between the quotes.
+A string where values between the quotes are seet as in. No processing is done on the values between the quotes.
 
 
 
