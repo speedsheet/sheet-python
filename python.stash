@@ -585,11 +585,11 @@ Prefer using parenthesis '<c>( )<>', brackets '<c>[ ]<>', braces '<c>{ }<>' for 
 
 Example:
 
-<cb>string_1 = "<v>Part 1 and <v>" + \\
-		"<v>part 2 and <v>" + \\
-		"<v>part 3<v>"<>
+<cb>string_1 = "<v>Part 1 and <>" + \\
+		"<v>part 2 and <>" + \\
+		"<v>part 3<>"<>
 @
-@ Split, Separate, Separator, Wrap, multiline statement, \\
+@ Split, Separate, Separator, Wrap, multiline statement, \\, next line, continue on
 
 
 
@@ -1062,6 +1062,17 @@ or
 
 
 
+### PIP - Package - Install From Requirements File
+
+<cb>pip install -r <v>requirements.txt<><>
+
+Installs all the packages listed in the requirements.txt file.
+@
+@ packages, libraries, library
+@ -r, requirements.txt
+
+
+
 ### PIP - Package - Install From Wheel File
 
 <cb>pip install <v>package_name<>.whl<>
@@ -1076,6 +1087,7 @@ or
 
 <cb>pip install <v>package_name<> --proxy="https://<v>user<>:<v>password<>@<v>proxyserver.com<><>
 @
+@ packages, libraries, library
 @ Library, --proxy
 
 
@@ -1084,7 +1096,8 @@ or
 
 <cb>pip install --force-reinstall <v>package_name<><>
 @
-@--force-reinstall
+@ packages, libraries, library, virtual environment
+@ --force-reinstall
 
 
 
@@ -1092,6 +1105,7 @@ or
 
 <cb>pip install --upgrade <v>package_name<><>
 @
+@ packages, libraries, library
 @ library, install, --upgrade, --update, update
 
 
@@ -1100,6 +1114,7 @@ or
 
 <cb>pip install --upgrade --force-reinstall <v>package_name<><>
 @
+@ packages, libraries, library
 @ library, install, --upgrade, --force-reinstall, --update, update
 
 
@@ -1108,6 +1123,7 @@ or
 
 <cb>pip uninstall <v>package_name<><>
 @
+@ packages, libraries, library
 @ library, Remove
 
 
@@ -1130,6 +1146,20 @@ Lists all installed packages and their versions.
 
 
 
+### PIP - Packages - Upgrade All
+
+<cb>pip install -r requirements.txt<>
+
+
+Upgrades any existing libraries.
+
+Just run normal install command to upgrade the libraries.
+@
+@ update
+@ pip install -r
+
+
+
 ### PIP - Requirements File - Create
 
 <cb>pip freeze > <v>requirements.txt<><>
@@ -1143,20 +1173,10 @@ If no environment, uses the global packages.
 
 
 
-### PIP - Requirements File - Install
-
-<cb>pip install -r <v>requirements.txt<><>
-
-Installs all the packages in the requirements file.
-@
-@ command, library, libraries, packages, install, -r
-
-
-
 # Operators
 @
 @ Operators, Operations, Expressions
-@ operators-only
+@ op-only, operator-only, operators-only
 
 
 
@@ -1667,7 +1687,7 @@ elif <v>condition_2<>:
 else:
 	<v>...<><>
 @
-@ basics, conditional
+@ basics, conditionals
 @ then, else, elif, elseif
 @ if-only, if-else-only
 
@@ -3513,7 +3533,7 @@ Use this function to find the value in your current environment.
 32 bits = 2,147,483,647
 64 bits = 9,223,372,036,854,775,807
 @
-@ Size, sys.maxsize, .maxsize, greatest
+@ Size, sys.maxsize, .maxsize, greatest, largest
 
 
 
@@ -3891,7 +3911,7 @@ Combines 2 or more strings into one string.
 
 Returns <c>True<> when <c><v>string_1<><> is a substring of <c><v>string_2<><>.
 @
-@ in, includes
+@ in, includes, is substring
 
 
 
@@ -5011,7 +5031,7 @@ Returns the longest string in the list.
 
 Returns the length of the longest string.
 @
-@ strings, max(), greatest
+@ strings, max(), greatest, largest
 
 
 
@@ -6037,7 +6057,7 @@ Example:
 # DateTime - Time Zones
 @
 @ datetime.datetime(), .datetime()
-@ timezones, datetimes
+@ timezones, time-zones, datetimes
 @ new, define, create
 @ timezone-only, timezones-only, time-zone-only, time-zones-only
 
@@ -6263,7 +6283,7 @@ print(<v>datetime_1<>)<>
 
 # DateTime - Time Zone Operations
 @
-@ timezones, datetimes, time zones
+@ timezones, datetimes, time zones, time-zones
 @ timezone-only, timezones-only
 
 
@@ -6439,9 +6459,8 @@ print("LA:", <v>la_date<>)
 
 # Time Zones
 @
-@ timezones
+@ timezones, time-zones
 @ timezone-only, timezones-only
-
 
 
 ### Time Zone - Get
@@ -8529,7 +8548,19 @@ Contains no duplicates.
 
 <cb><v>set_1<>.add(<v>value<>)<>
 @
-@ Insert, put, update, modify, change, .add()
+@ Insert, put, update, modify, change, element, item, value, into
+@ .add()
+
+
+
+### Set - Add From Set
+
+<cb><v>set_1<>.update(<v>set_2<>)<>
+
+Inserts the elements from set 1 into set 2.
+@
+@ Insert, put, update, modify, change, append, elements, items, values, into
+@ .update()
 
 
 
@@ -8682,12 +8713,55 @@ discard() ignores non-existent values.
 
 
 
-### Set - Delete All
+### Set - Remove All
 
 <cb><v>set_1<>.clear()<>
 @
 @ Delete, Clear, .clear()
 @ clear, del, empty, remove, reset, elements, items, values
+
+
+
+### Set - Set Comprehension
+
+<cb>= {<v>expression<> for <v>item<> in <v>sequence_1<>}<>
+
+Returns: <c>set<>
+
+
+Iterates over a sequence, performing an operation on every item.
+Returns the result as <c>set<>.
+
+
+Example:
+
+<cb><v>items<> = [1, 2, 3, 4, 5]
+
+<v>set_<> = {str(<v>i<>) for <v>i<> in <v>items<>}<>
+
+@
+@ set for in if {}, conditional, iterating
+
+
+
+### Set - Set Comprehension - If Condition
+
+<cb>= {<v>expression<> for <v>item<> in <v>sequence_1<> if <v>condition<>}<>
+
+Returns: <c>set<>
+
+
+Iterates over a sequence, performing an operation on items that matth the if condition.
+Returns the result as <c>set<>.
+
+
+Example:
+
+<cb><v>items<> = [1, 2, 3, 4, 5]
+
+<v>set_1<> = {str(<v>i<>) for <v>i<> in <v>items<> if <v>i<> % 2 == 0}<>
+@
+@ set for in if {}, conditional, iterating
 
 
 
@@ -9485,7 +9559,7 @@ Prints:
 
 = max(<v>sequence_1<>, key = <v>test_function<>)<>
 @
-@ greatest, maximum, value, item, element, max(), key=
+@ greatest, largest, maximum, value, item, element, max(), key=
 
 
 
@@ -9912,7 +9986,7 @@ Returns <c>True<> if the queue is full and can't take any more items.
 Returns the maximum allowed size of the queue.
 Returns 0 if no maximum set.
 @
-@ count, length, .maxsize
+@ count, length, .maxsize, greatest, largest
 
 
 
@@ -10459,6 +10533,31 @@ Example:
 
 
 
+### String - To Set
+
+<cb>= set(<v>string_1<>)<>
+
+
+Returns: <c>set<> of <c>str<>
+
+
+Converts a string to a set of characters.
+
+
+Example:
+
+<cb><v>string_1<> = '<v>abc<>'
+
+<v>set_1<> = set(<v>string_1<>)
+
+<#># Returns: ['a', 'b', 'c']<><>
+@
+@ characters, from, chars
+@ from-string, string-to, to-set
+@ Strings, string-only, strings-only, str-only, text, text-only, str(), str., string
+
+
+
 # Context Manager
 
 Allows a resource's lifecycle to be handled correctly.
@@ -10686,6 +10785,14 @@ Example:
 @ std
 
 
+#### Exception - AssertionError
+
+<cb>AssertionError<>
+
+Raised when an assertion fails.
+
+
+
 #### Exception - FileNotFoundError
 
 <cb>FileNotFoundError<>
@@ -10740,7 +10847,7 @@ Use to indicate invalid or None type.
 Use when type is correct but value is outside the expected range.
 Use this for request validations.
 @
-@ invalid value.
+@ invalid value, bad value
 
 
 
@@ -10750,7 +10857,7 @@ Use this for request validations.
 
 
 
-## Functions - Basics
+## Function - Basics
 
 <cb>def <v>function_1<>(<v>arg_1<>, <v>arg_2<> <v>...<>):
 	<#>"""Function docstring."""<>
@@ -11216,6 +11323,60 @@ When a function is decorated and then called, <c><v>decorated_function<><> will 
 	return <v>wrapper<>()<>
 @
 @ new, create, response, returning, with return, value
+
+
+
+### Decorator - Define - With Decorator Arguments
+
+<cb>def <v>decorator_1<>(<v>arg_1<>, <v>arg_2<>):
+
+	def decorator_actual(<v>decorated_function<>)
+
+		def <v>wrapper<>():
+			<v>...<>                           <#>#1<>
+			<v>decorated_function<>()          <#>#2<>
+			<v>...<>                           <#>#3<>
+
+		return <v>wrapper<>()<>
+
+	return <>decorator_actual<><>
+
+
+Passes arguments to the decorator itself.
+
+This uses an outer decorator factory.
+Use this decorator factory as the @decorator name.
+
+
+Example:
+
+<cb>def <v>announce_from<>(<v>name<>):
+
+	def decorator(<v>function<>):
+
+		def function_wrapper():
+
+			<v>function<>()
+			print('From', <v>name<>)
+
+		return function_wrapper
+
+	return decorator
+
+
+\@<v>announce_from<>("your-name-here")
+def <v>say_hi<>():
+	print("Hi")
+
+<v>say_hi<>()
+
+<#># Prints:
+\#
+\#    Hi
+\#    From your-name-here<><>
+@
+@ new, create
+@ arguments, args, parameters, params
 
 
 
@@ -13312,7 +13473,7 @@ print(<v>next<>)
 
 <#># Prints: 17<><>
 @
-@ number, random.randrange(), .randrange(), step, minimum
+@ number, random.randrange(), .randrange(), step, minimum, range
 
 
 
@@ -13567,9 +13728,10 @@ Usage:
 
 = match(<v>match_pattern<>, <v>string_1<>)<>
 
-Returns: <c>bool<>
+Returns: <c>re.Match | None<>
 
-Returns <c>True<> if <c><v>string_1<><> matches <c><v>match_pattern<><>.
+Returns <c>re.Match<> object if <c><v>string_1<><> starts with <c><v>match_pattern<><>.
+Otherwise returns None.
 @
 @ Matches, re.match(), .match()
 
@@ -14459,8 +14621,27 @@ copyfile(<v>source_path<>, <v>destination_path<>)<>
 
 
 Creates a copy of a file.
+
+Does not copy metadata.
 @
 @ shutil.copyfile(), .copyfile(), cp
+
+
+
+### File - Copy With Metadata
+
+<cb>copy2(<v>source_path<>, <v>destination_path<>)<>
+
+With Import:
+
+<cb>from shutil import copy2
+
+copy2(<v>source_path<>, <v>destination_path<>)<>
+
+
+Creates a copy of a file along with the metadata.
+@
+@ shutil.copy2(), .copy2(), shutil.copyfile(), .copyfile(), cp
 
 
 
@@ -14976,7 +15157,7 @@ Example:
 
 <#># Returns: 'file.txt'<><>
 @
-@ base name
+@ base name, body
 @ os.path.basename(), .path.basename(), .basename()
 
 
@@ -15009,7 +15190,7 @@ Example:
 
 <#># Returns 'file.txt'<><>
 @
-@ base name
+@ base name, body
 @ ntpath.basename(), .basename()
 
 
@@ -15038,7 +15219,7 @@ Example:
 
 <#># Returns: '.txt'<><>
 @
-@ part
+@ part, end
 @ os.path.splitext(), .path.splitext(), .splitext()
 @ os.path.splittext(), .path.splittext(), .splittext(), splittext
 
@@ -15073,7 +15254,7 @@ from os.path import splitext
 
 <#># Returns: 'file'<><>
 @
-@ part
+@ part, base body and extension
 @ os.path.splitext(), .path.splitext(), .splitext()
 @ os.path.splittext(), .path.splittext(), .splittext(), splittext
 @ os.path.basename(), .path.basename(), .basename()
@@ -15104,7 +15285,7 @@ from os.path import splitext
 
 <#># Returns: 'file', '.txt'<><>
 @
-@ part, and
+@ part, and, base, body
 @ os.path.splitext(), .path.splitext(), .splitext()
 @ os.path.splittext(), .path.splittext(), .splittext(), splittext
 @ os.path.basename(), .path.basename(), .basename()
@@ -17291,6 +17472,11 @@ This will allow your application to load and run it's own libraries in it's own 
 <cb>python3 -m venv <v>venv_directory<><>
 
 Creates a virtual environment in the directory <c><v>venv_directory<><>.
+
+
+Typical Example:
+
+<cb>python3 -m venv <v>venv<><>
 @
 @ python3 -m
 
@@ -17301,11 +17487,11 @@ Creates a virtual environment in the directory <c><v>venv_directory<><>.
 <cb>python3 -m venv --upgrade <v>venv_directory<><>
 
 
-Upgrade libraries (must start environment):
+Typical Example:
 
-<cb>pip install -r requirements.txt<>
+<cb>python3 -m venv --upgrade <v>venv<><>
 @
-@ pip install requirement.txt
+@ update
 @ python3 -m --upgrade
 
 
@@ -17322,6 +17508,17 @@ DOS:
 
 Run from the project root directory.
 Run this bash script from the command-line.
+
+
+Typical Example:
+
+Bash:
+
+<cb>. <v>venv<>/bin/activate<>
+
+DOS:
+
+<cb><v>venv<>\\Scripts\\activate<>
 @
 @ start, run, activate
 @ /bin/activate
@@ -17332,7 +17529,7 @@ Run this bash script from the command-line.
 
 Bash:
 
-<cb>. <v>project_venv_dir<>/bin/python <v>python_path/module.py<><>
+<cb>. <v>venv_directory<>/bin/python <v>python_path/module.py<><>
 
 DOS:
 
@@ -17342,8 +17539,19 @@ Starts the venv and then runs the module in that environment.
 
 Run from the project root directory.
 Run this bash script from the command-line.
+
+
+Typical Example:
+
+Bash:
+
+<cb>. <v>venv<>/bin/python <v>src/__main__.py<><>
+
+DOS:
+
+<cb><v>venv<>\\Scripts\\python <v>src/__main__.py<><>
 @
-@ start, run, activate, execute
+@ start, run, activate, execute, program, script
 @ /bin/activate
 
 
@@ -17355,6 +17563,16 @@ Run this bash script from the command-line.
 Run <c>deactivate<> to exit the venv environment.
 @
 @ end, stop, deactivate
+
+
+
+### Virtual Environment Variable
+
+<cb>VIRTUAL_ENV<>
+
+Contains the path to the parent of the virtual environment bin directory.
+@
+@ VIRTUAL_ENV
 
 
 
@@ -21811,6 +22029,21 @@ for <v>item<> in <v>dict_1<>.items():
 @ how-to, how-only, how-to-only
 
 
+### Assert
+
+<cb>assert <v>expression<><>
+
+<cb>assert <v>expression<>, <v>expression<>, <v>...<><>
+
+
+Asserts an expression is true.
+
+If false, rasises AssertionError.
+Use to debug code or alert of unexpected conditions.
+@
+@ command, statement, assertionerror
+
+
 ### Anything - Convert To String
 
 <cb>= repr(<v>variable<> <s>|<> <v>expression<>)<>
@@ -22795,17 +23028,13 @@ Example:
 
 Examples:
 
-<cb><#># Assign Binary 1100:<>
-
-<v>value<> = <v>12<>
+<cb><v>value<> = <v>12<>
 
 print(f'{<v>value<>:b}')
 
 <#># Prints: 1100<><>
 
-<cb><#># Assign Binary 1100:<>
-
-<v>value<> = <v>12<>
+<cb><v>value<> = <v>12<>
 
 print('{:b}'.format(<v>value<>))
 
@@ -22822,23 +23051,134 @@ print('{:b}'.format(<v>value<>))
 
 Examples:
 
-<cb><#># Assign Binary 1100:<>
-
-<v>value<> = <v>12<>
+<cb><v>value<> = <v>12<>
 
 print(f'{<v>value<>:0<v>8<>b}')
 
-<#># Prints: 1100<><>
+<#># Prints: 00001100<><>
 
-<cb><#># Assign Binary 1100:<>
-
-<v>value<> = <v>12<>
+<cb><v>value<> = <v>12<>
 
 print('{:0<v>8<>b}'.format(<v>value<>))
 
 <#># Prints: 00001100<><>
 @
 @ to string, integer, pad, fixed length, 8
+
+
+
+### Format Hex
+@
+@ to string, integer, hexadecimal
+
+
+#### Format Integer - As Hex, Lower Case
+
+<cb>= f'{<v>value<>:x}'<>
+
+<cb>= '{:x}'.format(<v>value<>)<>
+
+
+Format to lower case hex values using lower case 'x'.
+
+
+Examples:
+
+<cb><v>value<> = <v>42<>
+
+print(f'{<v>value<>:x}')
+
+<#># Prints: 2a<><>
+
+<cb><v>value<> = <v>42<>
+
+print('{:x}'.format(<v>value<>))
+
+<#># Prints: 2a<><>
+
+
+
+#### Format Integer - As Hex, Lower Case, Leading Zeros
+
+<cb>= f'{<v>int_1<>:0<v>length<>x}'<>
+
+<cb>= '{:0<v>length<>x}'.format(<v>int_1<>)<>
+
+
+Format to lower case hex values using lower case 'x'.
+Format with leading zeros by adding '0' and length after the ':'.
+
+
+Examples:
+
+<cb><v>value<> = <v>42<>
+
+print(f'{<v>value<>:0<v>4<>x}')
+
+<#># Prints: 002a<><>
+
+<cb><v>value<> = <v>42<>
+
+print('{:0<v>4<>x}'.format(<v>value<>))
+
+<#># Prints: 002a<><>
+@
+@ to string, integer, pad, fixed length
+
+
+
+#### Format Integer - As Hex, Upper Case
+
+<cb>= f'{<v>value<>:X}'<>
+
+<cb>= '{:X}'.format(<v>value<>)<>
+
+
+Format to upper case hex values using upper case 'X'.
+
+
+Examples:
+
+<cb><v>value<> = <v>42<>
+
+print(f'{<v>value<>:X}')
+
+<#># Prints: 2A<><>
+
+<cb><v>value<> = <v>42<>
+
+print('{:X}'.format(<v>value<>))
+
+<#># Prints: 2A<><>
+
+
+
+#### Format Integer - As Hex, Upper Case, Leading Zeros
+
+<cb>= f'{<v>int_1<>:0<v>length<>X}'<>
+
+<cb>= '{:0<v>length<>X}'.format(<v>int_1<>)<>
+
+
+Format to upper case hex values using upper case 'X'.
+Format with leading zeros by adding '0' and length after the ':'.
+
+
+Examples:
+
+<cb><v>value<> = <v>42<>
+
+print(f'{<v>value<>:0<v>4<>X}')
+
+<#># Prints: 002A<><>
+
+<cb><v>value<> = <v>42<>
+
+print('{:0<v>4<>X}'.format(<v>value<>))
+
+<#># Prints: 002A<><>
+@
+@ to string, integer, pad, fixed length
 
 
 
