@@ -1,5 +1,8 @@
-# <#>Python<> SpeedSheet
+<meta>index: tags<>
+# <#>Python<> Sheet
+<meta>index: none<>
 <b>Find it faster.<>
+
 
 This is an interactive <b>Python<> cheat sheet. Covers the core Python programming language. Use the search to instantly get answers.
 
@@ -182,17 +185,23 @@ This is an interactive <b>Python<> cheat sheet. Covers the core Python programmi
 @
 @ online-docs-only, docs-only
 
-### Python Documents
+##### Python Documents
 <l>https://docs.python.org/3/<>
 
-### Python Language Reference
+##### Python Language Reference
 <l>https://docs.python.org/3/reference/index.html<>
 
-### Python Libraries
+##### Python Libraries
 <l>https://docs.python.org/3/library/index.html<>
 
-### Python PEPs
+##### Python PEPs
 <l>https://peps.python.org/pep-0000/<>
+
+##### Amazing Python Scripts (I)
+<l>https://github.com/vinta/awesome-python<>
+
+##### Amazing Python Scripts (II)
+<l>https://github.com/avinashkranjan/Amazing-Python-Scripts<>
 
 
 
@@ -525,7 +534,7 @@ Receive as dict:
 
 \#4  <s>-<>   Converts named arguments to a dict.
 @
-@ args, arguments, list, dict, kwargs, Single Asterisk, Double Asterisks, parameters, params, *args, **kwargs
+@ args, arguments, list, dict, kwargs, Single Asterisk, Double Asterisks, parameters, params, *args, **kwargs, *kwargs
 
 
 
@@ -567,6 +576,17 @@ def <v>SomeFunction<>():
 		["Comprehension Level", "Comprehension Level"]]<>
 @
 @ variables
+
+
+
+### Startup Module - __main__.py
+
+<cb>__main__.py<>
+
+
+Python calls this as the starting module by default.
+@
+@ entry, starting
 
 
 
@@ -638,6 +658,9 @@ print("one"); print("two"); print("three");<>
 <col> <>
 <col>Variable - Constant<><col><v>UPPER_SNAKE_CASE<><>
 <col> <><>
+@
+@ summary
+
 
 
 ## Naming Conventions - Details
@@ -834,17 +857,22 @@ Python will call it to start the application.
 
 Directory Structure:
 
-<cb><v>source<>\
+<cb><v>src<>\
 	__main__.py
 	<v>...<><>
+
+Run:
+
+<cb>python3 <v>src<><>
 @
-@ program
+@ python3, program, src
+
 
 
 # Unit Test - Command-line
 @
-@ cli, command-line-only, commandline-only, python3, tests, testing, -m, unittest
-@ unit-tests-only, unit-test-only
+@ cli, command-line-only, commandline-only, python3,
+@ __mai__.py
 
 
 
@@ -898,16 +926,17 @@ Run from source root directory.
 
 ### Application Distribution - Egg - Create
 
-Follow the following steps to create an egg file.
+Steps:
 
-<b>Steps:<>
+<*>Create the startup module <c>__main__.py<>.
+Zip all python files into a single zip file.<>
 
-1)  Create the file <c>__main__.py<> to root directory.
-2)  Add startup code to <c>__main__.py<>.
-3)  Zip all python files into a single zip file.
 
-Note: The root directory of the zip file must be the root directory of the python source files.
-Do Not zip files into a directory in the zip file.
+Zip the contents of the source folder into a zip file to create a distibutable egg file.
+Include the __main__.py file. This will be called on startup of the egg file.
+
+The root directory of the zip file must be the root directory of the python source files.
+Do not place files into a directory in the zip file.
 @
 @ Deploy, __main__.py
 
@@ -918,6 +947,11 @@ Do Not zip files into a directory in the zip file.
 <cb>python3 <v>egg_file<>.egg<>
 
 <cb>python3 <v>egg_file<>.zip<>
+
+
+This will run an egg file by calling the included __main__.py file.
+
+Install and run an environment prior to running the egg file, if required.
 @
 @ .egg, .zip
 
@@ -931,18 +965,23 @@ Do Not zip files into a directory in the zip file.
 Add a module called <v>__main__.py<> to your code.
 Python will call this when starting your application.
 @
-@ __main__.py, entry point
+@ __main__.py, entry point, startup
 
 
 
 ### Application Distribution - Wheel - Setup
 
-Create <c>setup.py<> file.
+Steps:
 
-Ensure <c>__init__.py<> in source root directory.
+<*>Create <c>setup.py<>
+Create <c>/src/__init_-.py<><>
 
 
-Example File:
+Create <c>setup.py<> in the project directory.
+Create <c>__init__.py<> in the source root directory.
+
+
+Example setup.py:
 
 <cb>from setuptools import setup, find_packages
 
@@ -953,7 +992,7 @@ setup(
 	packages=find_packages(exclude=['contrib', 'docs', 'tests']),	<#># Required<>
 )<>
 @
-@ setup.py, setuptools, find_packages, setup(), .whl
+@ setup.py, setuptools, find_packages, setup(), .whl, __init__.py
 
 
 
@@ -1192,7 +1231,8 @@ If no environment, uses the global packages.
 <col><c><v>a<> ** <v>b<><><><col>To The Power of<><><>
 @
 @ %, **, +, -, /, //
-@ power, modulo, modulus, plus, minus, divide, multiply, floor 
+@ power, modulo, modulus, plus, minus, divide, multiply, floor
+@ basics, summary
 
 
 
@@ -1213,7 +1253,8 @@ Calculate and update variable:
 <col><c><v>a<> **= <v>value<><><><col>To The Power of<><><>
 @
 @ =, +=, -=, *=, /=, //=, %=, **=, =+, =-, =*, =/, =//, =%, =**
-@ power, modulo, modulus, plus, minus, divide, multiply, floor 
+@ power, modulo, modulus, plus, minus, divide, multiply, floor
+@ basics, summary
 
 
 
@@ -1276,6 +1317,7 @@ while (<v>count<> := count + 1) < 5:
 @ Boolean, ==, !=, \<>, \<, \<=, >, >=, is, not
 @ less than, greater than, less that or equal, greater than or equal
 @ compare, camparator
+@ basics, summary
 
 
 
@@ -1288,6 +1330,7 @@ while (<v>count<> := count + 1) < 5:
 Versus <c>&&<>, <c>||<>, <c>!<> used in other languages.
 @
 @ Boolean, and, or, not, negation, &&, ||, !
+@ basics, summary
 
 
 
@@ -1309,6 +1352,7 @@ Versus <c>&&<>, <c>||<>, <c>!<> used in other languages.
 <col><c><v>a<> >> <v>shift_count<><><><col>Bitwise Shift Right<><>
 @
 @ &, |, ^, \<\<, >>
+@ summary
 
 
 
@@ -1455,7 +1499,7 @@ Same Memory Location?:
 
 
 <c>is<> and <c>is not<> compare items' identities to see if they are the same.
-<c>id<><> compares memory locations.
+<c>id<> compares memory locations.
 @
 @ id, is not, memory location, pointer, compare, same, equals
 @ Object, id()
@@ -1467,7 +1511,7 @@ Same Memory Location?:
 <cb>= not <v>var_1<><>
 
 <cb>if not <v>var_1<>:
-	<v>...<><><>
+	<v>...<><>
 
 Use on sequences, strings, lists, sets, dicts, tuples.
 
@@ -1675,6 +1719,8 @@ else:
 	<v>...<>
 else:
 	<v>...<><><><>
+@
+@ summary
 
 
 
@@ -1855,7 +1901,7 @@ Example:
 
 <cb>for <v>tens<> in range(2):
     for <v>units<> in range(5):
-    	print(str(<v>tens<>) + str(<v>units<>))<><>
+    	print(str(<v>tens<>) + str(<v>units<>))<>
 @
 @ nesting
 
@@ -1877,7 +1923,7 @@ Example:
 
 Python Version: 3.10+
 @
-@ Structural Pattern Matching
+@ Structural Pattern Matching, match by
 @ switch, case, match-only
 
 
@@ -1901,7 +1947,7 @@ Python Version: 3.10+
     case {<v>key_6<>: <v>value_6<>}:			<#>Dict (Contains)<>
         <v>...<>
 
-    case <v>Class1<>(<v>param_1<>, <v>param_2<>):	<#>Class<>
+    case <v>Class1<>(<v>field_1<>, <v>field_2<>):	<#>Class<>
         <v>...<>
 
     case <v>Enum1<>.<v>ENUM_1<>:				<#>Enum<>
@@ -1951,6 +1997,7 @@ match <v>item_1<>:
 @ capture pattern, value
 
 
+
 #### Match - Match Specific Values
 
 <cb>match <v>item_1<>:
@@ -1992,6 +2039,8 @@ match <v>int_1<>:
         print ('Unmatched Month')
 
 <#># Prints: 'It's February'<><>
+@
+@ multiple, either or
 
 
 
@@ -2033,6 +2082,23 @@ match <v>status<>:
 
 
 
+#### Match - Match Classes
+
+<cb>match <v>value<>:
+    case <v>Class1<>():
+        <v>...<>
+    case <v>Class2<>(<v>field_1<>, <v>field_2<>:
+        <v>...<>
+    case _:
+        <v>...<><>
+
+
+Matches on class type and class field values.
+@
+@ type, name
+
+
+
 #### Match - Match Dict
 
 <cb>match <v>dict_1<>:
@@ -2064,6 +2130,8 @@ match <v>dict_1<>:
         print('Unmatched value.')
 
 <#># Prints: 'Value b:b1'<><>
+@
+@ by key, value, dicts
 
 
 
@@ -2139,6 +2207,8 @@ match <v>list_1<>:
         print ('Unmatched Value')
 
 <#># Prints: Value (1, 3)'<><>
+@
+@ values
 
 
 
@@ -2177,7 +2247,7 @@ match <v>tuple_1<>:
 
 
 
-#### Match - Match Conditionally / If
+#### Match - Match If / Conditionally
 
 <cb>match <v>item_1<>:
     case <v>...<> if <v>condition<>:
@@ -2187,17 +2257,31 @@ match <v>tuple_1<>:
 Will match the case only when <v>condition<> is met.
 
 
+Examples:
+
+<cb><v>value<> = 2
+
+match <v>value<>:
+    case <v>x<> if <v>x<> % 2 == 0:
+        print(f'Value {value} is even.')
+    case <v>x<> if <v>x<> % 2 == 1:
+        print(f'Value {x} is odd.')
+    case _:
+        print('Unmatched value')
+
+<#>Prints: 'Value 2 is even.'<><>
+
 <cb><v>item_1<> = (<v>1<>, <v>2<>)
 
 match <v>item_1<>:
     case (<v>1<>, <v>x<>) if <v>x<> % 2 == 0:
-        print('Value (1,x), x Is Even')
+        print('Value (1,x) x is even.')
     case (<v>1<>, <v>x<>):
-        print('Value (1,x), x Is Odd')
+        print('Value (1,x) x is odd.')
     case _:
         print('Unmatched value')
 
-<#>Prints: 'Value (1,x), x Is Even'<><>
+<#>Prints: 'Value (1,x) x is even.'<><>
 @
 @ with condition
 
@@ -2810,11 +2894,12 @@ This is an easy way to swap the values of <c><v>a<><> and <c><v>b<><>.
 <col><><col><c>= f"<v>...<> {<v>var1<>} <v>...<>"<><>
 <col><><col><c>= f'''<v>...<> {<v>var1<>} <v>...<>'''<><>
 <col><><col><c>= f"""<v>...<> {<v>var1<>} <v>...<>"""<><><>
+@
+@ summary
 
 
 
 ## Literals - Details
-
 
 
 ### Boolean Literal
@@ -3262,6 +3347,7 @@ print(<v>decimal_1<>)
 <#># Prints 12.339999999999999857891452847979962825775146484375<><>
 @
 @ money, currency
+@ new, create
 @ dec-only, decs-only, decimal-only, decimals-only
 
 
@@ -3313,7 +3399,7 @@ Integer To Decimal:
 
 ### Decimal - Rounding - Get
 
-<cb>from decimal import getcontext<>
+<cb>from decimal import getcontext
 
 = getcontext().rounding<>
 
@@ -3376,7 +3462,7 @@ Except When Last Rounded Digit = 0 or 5
 
 ### Decimal - Precision - Get
 
-<cb>from decimal import getcontext<>
+<cb>from decimal import getcontext
 
 = getcontext().prec<>
 
@@ -3433,6 +3519,22 @@ Underscores between digits are ignored. Use them to make numbers more readable.
 @
 @ float-only, floats-only
 @ Create, Define, Instantiate, New, data type
+
+
+
+### Decimal - To Float
+
+<cb>= float(<v>decimal_1<>)<>
+
+Converts a decimal to a float.
+
+
+
+### Decimal - To Integer
+
+<cb>= int(<v>decimal_1<>)<>
+
+Converts a decimal to a int.
 
 
 
@@ -3632,6 +3734,8 @@ float_3 = 12345.67<>
 <cb><v>pad_right<> = "{:<v>\<20<>}".format(<v>string_1<>)<>
 
 <cb><v>formatted_number<> = "{:<v>,.1f<>}".format(<v>float_3<>)<>
+@
+@ basics
 
 
 
@@ -3729,7 +3833,7 @@ Creates a formatted string using a string literal.
 <col>Decimals<><col><c>= f'{<v>float_1<>:<v>.2f<>}'<><><col><c>'12345.12'<><>
 <col>Comma, Decimals<><col><c>= f'{<v>float_1<>:<v>,.2f<>}'<><><col><c>'12,345.12'<><><><>
 @
-@ Examples
+@ Examples, summary
 
 
 
@@ -3863,12 +3967,11 @@ Ugly Way:
 <cb>= f"{'}'}"              <#>#2<><>
 
 
-\#1  -  Returns '{'<>
+\#1  -  Returns '{'
 
-\#2  -  Returns '}'<>
+\#2  -  Returns '}'
 @
 @ {}, } {{, }}
-
 
 
 
@@ -3911,7 +4014,7 @@ Combines 2 or more strings into one string.
 
 Returns <c>True<> when <c><v>string_1<><> is a substring of <c><v>string_2<><>.
 @
-@ in, includes, is substring
+@ has, in, includes, is substring
 
 
 
@@ -4208,7 +4311,7 @@ Checks if a string consists of all title case words.
 
 To be <c>True<> every word must start with a capitalized letter and the remaining letters must be lower case.
 @
-@ .istitle(), words
+@ .istitle(), words, titlecase, caps
 @ is, contains, consists of
 
 
@@ -4271,7 +4374,7 @@ Example:
 else:
 	print("Not Less Than")<>
 @
-@ Is Less Than, Is Greater Than, <, <=, >, >=
+@ Is Less Than, Is Greater Than, \<, \<=, >, >=
 
 
 
@@ -4300,27 +4403,6 @@ Examples:
 
 
 
-### String - Join
-
-<cb>= <v>separator<>.join(<v>strings<>)
-
-= <v>separator<>.join([<v>string1<>, <v>string2<>, <v>string3<>])
-
-= <v>separator<>.join(<v>iterable<>)<>
-
-Joins all elements of <c><v>iterable<><> into 1 string with <c><v>separator<><> between each element.
-
-
-Example:
-
-<cb><v>list_1<> = ['<v>a<>', '<v>b<>', '<v>c<>']
-<v>string_1<> = '<v>, <>'.join(<v>list_1<>)          <#># Returns 'a, b, c'<><>
-@
-@ .join()
-@ concatenate, combine
-
-
-
 ### String - Length
 
 <cb>= len(<v>string_1<>)<>
@@ -4329,13 +4411,13 @@ Example:
 
 
 
-### String - Pad Left
+### String - Pad on Left
 
 <cb>= <v>string_1<>.rjust(<v>width<>)                 <#># Pad With Spaces<><>
 
 <cb>= <v>string_1<>.rjust(<v>width<>, <v>fill_char<>)<>
 
-Pads <c><v>string_1<><> on the left to the given width.
+Pads <c><v>string_1<><> on the left side to the given width.
 Pads with <c><v>fill_char<><>, or spaces if not given.
 @
 @ Right Justify, .rjust(), start
@@ -4343,13 +4425,13 @@ Pads with <c><v>fill_char<><>, or spaces if not given.
 
 
 
-### String - Pad Right
+### String - Pad on Right
 
 <cb>= <v>string_1<>.ljust(<v>width<>)                 <#># Pad With Spaces<><>
 
 <cb>= <v>string_1<>.ljust(<v>width<>, <v>fill_char<>)<>
 
-Pads <c><v>string_1<><> to the given width.
+Pads <c><v>string_1<><> to the given width on the right side.
 Pads with <c><v>fill_char<><>, or spaces if not given.
 @
 @ Left Justify, .ljust(), end
@@ -4481,6 +4563,27 @@ print(<v>replaced<>)
 
 
 
+### String - Reverse
+
+<cb>= <v>string_1<>[::-1]<>
+
+
+Reverses a string.
+
+
+Example:
+
+<cb><v>string_1<> = '<v>12345<>'
+<v>reversed<> = <v>string_1<>[::-1]
+
+print(<v>reversed<>)
+
+<#># Prints '54321'<><>
+@
+@ backwards
+
+
+
 ### String - Split
 
 <cb>= <v>string_1<>.split(<v>split_string<>)
@@ -4545,7 +4648,7 @@ Example:
 <cb><v>string_1<> = "<v>ab/cd/ef<>"
 <v>split_1<> = <v>string_1<>.rsplit("<v>/<>", 1)            <#># Returns ['ab-cd', 'ef']<><>
 @
-@ split right side, .rsplit(), delimiter
+@ split right side, .rsplit(), delimiter, last
 
 
 
@@ -4961,9 +5064,9 @@ Some languages have more than one case or special rules for when a particular fo
 
 Example:
 
-<cb><v>case_folded<> = '<v>Ὀδυσσεύς<>'.casefold()
+<cb><v>case_folded<> = '<v>Ὀδυσσεύ<m>ς<><>'.casefold()
 
-<#># Returns 'ὀδυσσεύσ'<><>
+<#># Returns 'ὀδυσσεύ<m>σ<>'<><>
 
 
 In Depth:
@@ -4980,22 +5083,22 @@ def print_cases(text):
 
 print_cases("<v>Hegelstraße<>")
 
-<#>\#  Original:   Hegelstraße
-\#  Upper:      HEGELSTRASSE
-\#  Lower:      hegelstraße
-\#  Folded:     hegelstrasse<><>
+<#>\#  Original:   Hegelstra<m>ß<>e
+\#  Upper:      HEGELSTRA<m>SS<>E
+\#  Lower:      hegelstra<m>ß<>e
+\#  Folded:     hegelstra<m>ss<>e<><>
 
 
 <cb><#># Greek Letter Σ/σ/ς<>
 
 print_cases("<v>Ὀδυσσεύς<>")
 
-<#>\#  Original: Ὀδυσσεύς
-\#  Upper:    ὈΔΥΣΣΕΎΣ
-\#  Lower:    ὀδυσσεύς
-\#  Folded:   ὀδυσσεύσ<><>
+<#>\#  Original: Ὀδυσσεύ<m>ς<>
+\#  Upper:    ὈΔΥΣΣΕΎ<m>Σ<>
+\#  Lower:    ὀδυσσεύ<m>ς<>
+\#  Folded:   ὀδυσσεύ<m>σ<><><>
 @
-@ .casefold(), case folding, compare strings unicode
+@ .casefold(), case folding, compare strings unicode, normalize, normalization
 
 
 
@@ -5010,6 +5113,50 @@ Returns: <c>list<>
 Splits the string along whitespaces.
 @
 @ .split(), whitespaces, white spaces, convert
+
+
+
+### String List - Join
+
+<cb>= ''.join(<v>strings<>)
+
+= ''.join([<v>string1<>, <v>string2<>, <v>string3<>])
+
+= ''.join(<v>iterable<>)<>
+
+
+Joins all elements of <c><v>iterable<><> into 1 string with <c><v>separator<><> between each element.
+
+
+Example:
+
+<cb><v>list_1<> = ['<v>a<>', '<v>b<>', '<v>c<>']
+<v>string_1<> = ''.join(<v>list_1<>)          <#># Returns 'abc'<><>
+@
+@ .join()
+@ concatenate, combine, strings
+
+
+
+### String List - Join With Separator
+
+<cb>= <v>separator<>.join(<v>strings<>)
+
+= <v>separator<>.join([<v>string1<>, <v>string2<>, <v>string3<>])
+
+= <v>separator<>.join(<v>iterable<>)<>
+
+
+Joins all elements of <c><v>iterable<><> into 1 string with <c><v>separator<><> between each element.
+
+
+Example:
+
+<cb><v>list_1<> = ['<v>a<>', '<v>b<>', '<v>c<>']
+<v>string_1<> = '<v>, <>'.join(<v>list_1<>)          <#># Returns 'a, b, c'<><>
+@
+@ .join()
+@ concatenate, combine, strings
 
 
 
@@ -5548,7 +5695,9 @@ Example:
 
 
 
-### Datetime - Create UTC Time
+### Datetime - Create UTC Time (Deprecated)
+
+<m>This is deprecated and will be removed from future Python releases<>
 
 <cb>= datetime.utcnow()<>
 
@@ -5557,6 +5706,11 @@ Usage:
 <cb>from datetime import datetime
 
 = datetime.utcnow()<>
+
+
+Use this instead:
+
+<cb>= datetime.now(tz = timezone.utc)<>
 
 
 Returns the current UTC time.
@@ -6660,7 +6814,7 @@ Is Greater Than:
 
 <cb>= <v>timedelta_1<> > <v>timedelta_2<><>
 @
-@ is less than, is greater than, <, <=, >, >=
+@ is less than, is greater than, \<, \<=, >, >=
 
 
 
@@ -7315,6 +7469,22 @@ or
 \#1  <s>-<>  Raises <c>KeyError<> if not found.
 
 \#2  <s>-<>  Returns <c>None<> if not found.
+
+
+Returns the value of a dict.
+
+
+Example:
+
+<cb><v>dict_1<> = {"a": "value a", "b": "value b", "c": "value c"}
+
+<v>value_a<> = <v>dict_1<>["a"]
+<v>value_a<> = <v>dict_1<>.get("a")
+<v>value_a<> = <v>dict_1<>.get("z", "value a")
+
+print(<v>value_a<>)
+
+<#># Print: value a<><>
 @
 @ dict.get(), .get()
 @ retrieve, item, elements, keyerror
@@ -8086,6 +8256,8 @@ print(<v>duplicates<>)
 <cb>= <v>list_1<>.index(<v>value<>, <v>start<>, <v>end<>)<>
 
 Returns the index of the first match.
+
+Throws <c><l "?q=valueerror-only">ValueError<><> if not found.
 @
 @ search, index, get, location, position, .index()
 
@@ -8161,7 +8333,7 @@ Example:
 
 ### List - Get Sublist
 
-<cb>= <v>list_1<>[<v>index<>][<v>sub_index<>]<><>
+<cb>= <v>list_1<>[<v>index<>][<v>sub_index<>]<>
 @
 @ item, value, 2d, sublists
 
@@ -8342,7 +8514,10 @@ Reverse in Place:
 
 <cb>= sorted(<v>list_1<>, key = str.lower)     <#># Ignores case.<><>
 
-<cb>= sorted(<v>list_1<>, key = <v>compare<>)         <#># <c>compare<> takes 1 argument.<><>
+<cb>= sorted(<v>list_1<>, key = 
+	lambda <v>x<>: (<v>x<>.<v>field_1<>, <v>x<>.<v>field_2<>)) <#># Multiple fields.<><>
+
+<cb>= sorted(<v>list_1<>, key = <v>compare<>)       <#># <c>compare<> takes 1 argument.<><>
 
 Returns a new list in sorted order.
 
@@ -8620,21 +8795,31 @@ Repeating this call will return the same item!
 
 Removes and returns an item from the set.
 @
-@ item, value, .pop()
+@ item, value,
+@ set.pop(), .pop()
 
 
 
-### Set - Intersection
+### Set - Is Empty?
 
-<cb>= <v>set_1<> & <v>set_2<><>
+<cb>= not <v>set_1<><>
 
-or
+<cb>if not <v>set_1<>:
+	<v>...<><>
 
-<cb>= <v>set_1<>.intersection(<v>set_2<>)<>
 
-Returns a set containing only those values in both <c><v>set_1<><> and <c><v>set_2<><>.
+
+### Set - Not Empty?
+
+<cb>= bool(<v>set_1<>)<>
+
+<cb>if <v>set_1<>:
+	<v>...<><>
+
+Use <b>bool()<> if you need to get a True/False value.
+There is no need for <b>bool()<> when using <b>if...<>.
 @
-@ conjunction, &
+@ bool()
 
 
 
@@ -8644,53 +8829,35 @@ Returns a set containing only those values in both <c><v>set_1<><> and <c><v>set
 
 <cb>if <v>set_1<> == <v>set_2<>:
 	<v>...<><>
+
+
+Returns True if both sets are of same size and contain the same values.
+
+
+Example:
+
+<cb><v>set_1<> = {<v>1, 2, 3<>}
+<v>set_2<> = {<v>1, 2, 3<>}
+<v>set_3<> = {<v>1, 2, 4<>}
+
+<v>is_identical<> = <v>set_1<> == <v>set_2<>
+
+<#># Returns True<>
+
+<v>is_identical<> = <v>set_1<> == <v>set_3<>
+
+<#># Returns False<><>
 @
-@ Equals, compare, ==
+@ set_2, set2, second set, 2nd
+@ equals, compare, identical, ==
 
 
 
-### Set - Is Disjoint?
+### Set - Is Set?
 
-<cb>= <v>set_1<>.isdisjoint(<v>set_2<>)<>
-
-Returns true if <c><v>set_1<><> and <c><v>set_2<><> have no elements in common.
+<cb>= type(<v>item_1<>) is set<>
 @
-@ .isdisjoint()
-
-
-
-### Set - Is Subset?
-
-<cb>= <v>set_1<>.issubset(<v>set_2<>)<>
-
-Returns true if <c><v>set_2<><> is a subset of <c><v>set_1<><>.
-@
-@ .issubset()
-
-
-
-### Set - Is Superset?
-
-<cb>= <v>set_1<>.issuperset(<v>set_2<>)<>
-
-Returns true if <c><v>set_2<><> is a superset of <c><v>set_1<><>.
-@
-@ .issuperset()
-
-
-
-### Set - Merge
-
-<cb>= <v>set_1<> | <v>set_2<><>
-
-or
-
-<cb>= <v>set_1<>.union(<v>set_2<>)<>
-
-Returns a set with all the values of <c><v>set_1<><> and <c><v>set_2<><>.
-Will have no duplicates.
-@
-@ addall, add all, join, union, combine, |, .union()
+@ type of, instance of
 
 
 
@@ -8784,7 +8951,70 @@ Returns the number of elements in the set.
 
 
 
-### Set - Subtraction
+# Set on Set Operations
+@
+@ set-only, sets-only, set-operations-only
+@ ops
+
+
+
+### Set - Is Disjoint?
+
+<cb>= <v>set_1<>.isdisjoint(<v>set_2<>)<>
+
+Returns true if <c><v>set_1<><> and <c><v>set_2<><> have no elements in common.
+@
+@ .isdisjoint(), .is_disjoint()
+
+
+
+### Set - Is Subset?
+
+<cb>= <v>set_2<>.issubset(<v>set_1<>)<>
+
+Returns true if <c><v>set_2<><> is a subset of <c><v>set_1<><>.
+
+
+Example:
+
+<cb><v>set_1<> = {"one", "two", "three"}
+<v>set_2<> = {"one", "two"}
+
+if <v>set_2<>.issubset(<v>set_1<>):
+	print ("Is a subset.")
+else:
+	print ("Not a subset.")
+
+<#># prints: Is a subset.<><>
+@
+@ .issubset(), .is_subset()
+
+
+
+### Set - Is Superset?
+
+<cb>= <v>set_2<>.issuperset(<v>set_1<>)<>
+
+Returns true if <c><v>set_2<><> is a superset of <c><v>set_1<><>.
+
+
+Example:
+
+<cb><v>set_1<> = {"one", "two"}
+<v>set_2<> = {"one", "two", "three"}
+
+if <v>set_2<>.issuperset(<v>set_1<>):
+	print ("Is a superset.")
+else:
+	print ("Not a superset.")
+
+<#># prints: Is a superset.<><>
+@
+@ .issuperset(), .is_superset()
+
+
+
+### Set - Difference
 
 <cb>= <v>set_1<> - <v>set_2<><>
 
@@ -8795,8 +9025,23 @@ or
 Returns a set of the elements in <c><v>set_1<><> not in <c><v>set_2<><>.
 @
 @ .difference(), Difference
-@ Delete, Remove Matching, dictionaries -, minus, 
+@ Delete, Remove Matching, dictionaries -, minus, subtract
 @ exclude, exclusion
+
+
+
+### Set - Intersection
+
+<cb>= <v>set_1<> & <v>set_2<><>
+
+or
+
+<cb>= <v>set_1<>.intersection(<v>set_2<>)<>
+
+Returns a set containing only those values in both <c><v>set_1<><> and <c><v>set_2<><>.
+@
+@ conjunction, intersects
+@ set.intersection(), .intersection(), &
 
 
 
@@ -8809,6 +9054,21 @@ Returns a set of the elements in <c><v>set_1<><> not in <c><v>set_2<><>.
 Returns a set of the elements in <c><v>set_1<><> not in <c><v>set_2<><> and the elements in <c><v>set_2<><> not in <c><v>set_1<><>.
 @
 @ Delete, Remove Matching, Difference, dictionaries -, minus, .difference()
+
+
+
+### Set - Union
+
+<cb>= <v>set_1<> | <v>set_2<><>
+
+or
+
+<cb>= <v>set_1<>.union(<v>set_2<>)<>
+
+Returns a set with all the values of <c><v>set_1<><> and <c><v>set_2<><>.
+Will have no duplicates.
+@
+@ addall, add all, join, union, merge, combine, |, .union()
 
 
 
@@ -9001,6 +9261,7 @@ Examples:
 <col><v>odd_from_1<><><col>= <v>list_1<>[<v>1<>::<v>2<>]<><col><#># Returns [1, 3]<><><><>
 @
 @ examples, [0], [-1], [:], [::], [:-1]
+@ summary
 
 
 
@@ -9163,6 +9424,7 @@ Example:
 <c>_<> is an element that is ignored.
 @
 @ example, _, *_
+@ summary
 
 
 
@@ -9314,7 +9576,7 @@ Returns a dictionary with every unique value and the number of times of that val
 <cb>= len(set(<v>sequence_1<>))<>
 
 
-Returns the number of unique values in <c><v>sequence_1<></..
+Returns the number of unique values in <c><v>sequence_1<><>.
 @
 @ items, unique, individual, occurrences, times, len(), .counter(), collections.counter()
 
@@ -9645,7 +9907,7 @@ Maps are lazy itorators. Wrap with <c>list()<> to get actual values.
 Example:
 
 <cb>def <v>add_10<>(<v>value<>):
-	return <v>value + 10<>
+	return <v>value<> + 10
 
 <v>list_1<> = [<v>1<>, <v>2<>, <v>3<>]
 
@@ -9679,9 +9941,9 @@ Returns a new value based on the original value.
 
 <cb>from functools import reduce
 
-<v>reduced_1<> = reduce(<v>reducing_function<>, <v>sequence_1<>)<><>
+<v>reduced_1<> = reduce(<v>reducing_function<>, <v>sequence_1<>)<>
 
-<cb>= reduce(<v>reducing_function<>, <v>sequence_1<>, <v>initial_value<>)<><>
+<cb>= reduce(<v>reducing_function<>, <v>sequence_1<>, <v>initial_value<>)<>
 
 Returns a single value calculated by passing every value in <c><v>sequence_1<><> into <c><v>reducing_function<><>.
 
@@ -9785,7 +10047,7 @@ Example:
 
 <cb>= sum(<v>[1, 2, 3]<>)                      <#># Returns 6<><>
 @
-@ sum()
+@ sum(), total
 
 
 
@@ -9850,45 +10112,6 @@ Example:
 <#># Returns: [(1, 'one'), (2, 'two'), (3, None), (4, None)]<><>
 @
 @ itertools.zip_longest(), .zip_longest(), zip()
-
-
-
-### List vs Tuple vs Sequence vs Array vs NumPy Array
-
-List:
-
-<*>Mutable List<>
-
-<*>Mutable Ordered List of Items
-Can Mix and Match Types<>
-
-Tuple:
-
-<*>Immutable List<>
-
-<*>Immutable Ordered List of Items
-Can Mix and Match Types<>
-
-Sequence:
-
-<*>General Type For All Lists<>
-
-<*>Any Type of Ordered List
-Includes Lists, Tuples<>
-
-Array:
-
-<*>High Performance Single Type List<>
-
-<*>A High Performance List of Items
-Data Must Single Type<>
-
-NumPy Array:
-
-<*>High Performance Multidimenisonal Array<>
-
-<*>Requires NumPy Library (External Library)
-Data Most Be Single Type<>
 
 
 
@@ -10628,6 +10851,7 @@ finally:
 	<v>...<><>
 @
 @ try, except, finally, raise
+@ summary
 
 
 ### Define
@@ -10755,7 +10979,13 @@ except (TypeError, ValueError):
 
 ### Exception - Get Message
 
+<cb>= str(<v>exception_1<>)<>
+
+Works in some circumstances:
+
 <cb>= <v>exception_1<>.args[0]<>
+
+Returns the error message.
 @
 @ .args[0]
 
@@ -10782,7 +11012,7 @@ Example:
 
 ## Standard Exceptions
 @
-@ std
+@ std, standard-exceptions-only, std-exceptions-only
 
 
 #### Exception - AssertionError
@@ -10790,6 +11020,8 @@ Example:
 <cb>AssertionError<>
 
 Raised when an assertion fails.
+@
+@ assertionerror-only
 
 
 
@@ -10798,6 +11030,7 @@ Raised when an assertion fails.
 <cb>FileNotFoundError<>
 @
 @ not found
+@ filenotfounderror-only
 
 
 #### Exception - IndexError
@@ -10807,6 +11040,7 @@ Raised when an assertion fails.
 Use to indicate index out of bounds or other index error.
 @
 @ index out of bounds
+@ indexerror-only
 
 
 
@@ -10817,6 +11051,7 @@ Use to indicate index out of bounds or other index error.
 A runtime exception.
 @
 @ not implemented error
+@ notimplementederror-only
 
 
 
@@ -10827,6 +11062,7 @@ A runtime exception.
 Use to indicate an iterator or generator has completed.
 @
 @ stop iterator, iterator finished, generator, yield
+@ stopiteration-only
 
 
 
@@ -10837,6 +11073,7 @@ Use to indicate an iterator or generator has completed.
 Use to indicate invalid or None type.
 @
 @ invalid, none type
+@ typeerror-only
 
 
 
@@ -10848,6 +11085,7 @@ Use when type is correct but value is outside the expected range.
 Use this for request validations.
 @
 @ invalid value, bad value
+@ valueerror-only
 
 
 
@@ -10874,7 +11112,7 @@ Functions are stored as global attributes.
 Function definitions can be monkey patched by changing the global definition.
 Functions are first class objects and can be passed as values.
 @
-@ examples, def
+@ examples, def, summary
 
 
 
@@ -10960,7 +11198,7 @@ Example:
 <v>say<>(greeting = "<v>Hi<>", name = "<v>John<>")<>
 @
 @ arguments, args, parameters, params
-@ dictionary, **kwargs, kwargs, keyword
+@ dictionary, **kwargs, *kwargs, kwargs, keyword
 
 
 
@@ -11262,7 +11500,7 @@ def <v>print_message<>(message):
 
 <v>print_message<>(<v>"This message appears after 'Before' but before 'After'."<>)<>
 @
-@ examples, @
+@ examples, \@, summary
 
 
 
@@ -11337,9 +11575,9 @@ When a function is decorated and then called, <c><v>decorated_function<><> will 
 			<v>decorated_function<>()          <#>#2<>
 			<v>...<>                           <#>#3<>
 
-		return <v>wrapper<>()<>
+		return <v>wrapper<>()
 
-	return <>decorator_actual<><>
+	return <v>decorator_actual<><>
 
 
 Passes arguments to the decorator itself.
@@ -11553,7 +11791,7 @@ Instance variables must be created in a class function and attached to self.
 The <c>self<> argument is required for all class functions.
 - <c>self<> is called <v>self<> by convention.
 @
-@ Examples, cls
+@ Examples, cls, summary
 
 
 
@@ -11718,7 +11956,7 @@ Call Outside Class:
 <cb><v>class_1<>.<v>method_1<>(<v>arg_1<>, <v>...<>)<>
 
 Reference instance methods internally in the class with '<b>self.<>' .
-Reference instance methods externally through the instance name (u>class_1<> in this case).
+Reference instance methods externally through the instance name (<v>class_1<> in this case).
 @
 @ define, create
 
@@ -12125,6 +12363,8 @@ print("outer.inner.get_name() ", <v>outer<>.<v>inner<>.<v>get_name<>())
 \# outer.get_name()        Outer Class
 \# outer.inner.name        Inner Class
 \# outer.inner.get_name()  Inner Class<><>
+@
+@ summary
 
 
 
@@ -12428,7 +12668,7 @@ for <v>item<> in <v>ints_1<>:
 Defines an iterator class.
 
 
-\#1  <s>-<>  Implement c>__next__()<> to make this an iterator.
+\#1  <s>-<>  Implement <c>__next__()<> to make this an iterator.
 
 \#2  <s>-<>  Raise <c>StopIteration<> to indicate iterating is complete.
 
@@ -12496,29 +12736,6 @@ while <v>value<> := next(<v>values<>):
     print(<v>value<>)<>
 @
 @ Element, Item, Value, next()
-
-
-
-### Iterable vs Iterator vs Generator
-
-Iterable:
-
-<*>Think "contains iterable data"
-Implements <c>__iter__()<>
-Returns an Iterator<>
-
-
-Iterator:
-
-<*>Think "the data being iterated over"
-Implements <c>__next__()<>
-Returns Data One at a Time<>
-
-
-Generator:
-
-<*>A Type of Iterable
-Wraps an Iterator Function with an Iterable<>
 
 
 
@@ -13271,7 +13488,7 @@ Converts a json string into a python object made up of lists, dicts and strings.
 The s in loads stands for string.
 @
 @ parse, convert, from string, json.loads(), .loads()
-@ convert, conversion
+@ convert, conversion, dict, list
 
 
 
@@ -13288,6 +13505,37 @@ The s in dumps stands for string.
 @
 @ parse, from, to string, json.dumps(), .dumps()
 @ convert, conversion
+
+
+
+### Json String - To Formatted JSON String
+
+<cb>from json import dumps
+
+<v>json_string<> = dumps(<v>data_1<>, indent = 4)<>
+
+
+Converts data into a formatted json string.
+
+
+Example:
+
+<cb>from json import dumps
+
+<v>json<> = {"id": 0, "name": "Item Name"}
+<v>formatted<> = dumps(<v>json<>, indent = 4)
+
+print(<v>formatted<>)
+
+<#># Prints:
+\#
+\# {
+\#     "id": 0,
+\#     "name": "Item Name"
+\# }<><>
+@
+@ parse, from, to string, json.dumps(), .dumps()
+@ convert, conversion, indented
 
 
 
@@ -13648,10 +13896,40 @@ for <v>value<> in float_range(1.0, 3.0, 0.5):
 
 
 
-## Regular Expression Functions
-@
-@ regex, regexpression, string, strings, expressions, regex-only, regular-expressions-only, pattern, match
+## UUID
 
+<cb>import uuid 
+  
+<v>uuid_1<> = uuid.uuid1()<>
+
+Returns: <c>UUID<>
+
+
+Yes, there is a '1' in the function name '<c>.uuid1()<>'. Why? I've no idea.
+
+
+Example:
+
+<cb>import uuid 
+  
+<v>uuid_1<> = uuid.uuid1()
+
+<v>uuid_bytes<> = <v>uuid_1<>.bytes		<#># b'\x03\xeamdJ\xc2\x11\xeb\xa9\xdd\xac\xdeH\x00\x11"'<>
+<v>uuid_hex<> = <v>uuid_1<>.hex			<#># 03ea6d644ac211eba9ddacde48001122<>
+<v>uuid_int<> = <v>uuid_1<>.int			<#># 5204900180851453705537495610857361698<><>
+@
+@ new, create, uuid-only, bytes, binary, hex, hexadecimal, uuid.uuid1(), .uuid1()
+
+
+
+# Regular Expressions
+@
+@ regex, regexpression, expressions, regex-only, regular-expressions-only, patterns
+
+
+## Regular Expression - Functions
+@
+@ string, strings, text
 
 
 ### Regular Expressions - Find
@@ -13665,16 +13943,12 @@ Usage:
 <v>match<> = search(<v>match_pattern<>, <v>string_to_search<>)
 <v>match_text<> = <v>match<>.group()<>
 
-<c>search(<v>match_pattern<>, <v>string_to_search<>)<>:
-
-	Returns: <c>re.Match<> | <c>None<>
-
-<c><v>match<>.group()<><>
-
-	Returns: <c>str<>
+<c>.search()<>   Returns:   <c>re.Match<> | <c>None<>
+<c>.group() <>   Returns:   <c>str<>
 
 
-Returns the first match.
+Returns the first match in a string.
+
 Returns <c>None<> if no match found.
 
 
@@ -13685,8 +13959,11 @@ Example:
 <v>string_1<> = "<v>123 abc 789<>"
 <v>match<> = search(r"<v>[a-zA-Z]+<>", <v>string_1<>)		<#># Find the letters in the string.<>
 
-<v>letters_1<> = <v>match<>.group()							<#># Returns "abc"<>
-<v>letters_2<> = <v>string_1<>[<v>match<>.start():<v>match<>.end()]		<#># Returns "abc"<><>
+<v>letters_1<> = <v>match<>.group()
+<#># Returns "abc"<>
+
+<v>letters_2<> = <v>string_1<>[<v>match<>.start():<v>match<>.end()]
+<#># Returns "abc"<><>
 @
 @ get, match, exists, .search(), re.search(), first
 
@@ -13700,9 +13977,10 @@ Usage:
 
 <cb>from re import findall
 
-<v>match<> = findall(<v>match_pattern<>, <v>string_to_search<>)<>
+<v>matches<> = findall(<v>match_pattern<>, <v>string_to_search<>)<>
 
-Returrns: <c>list<> of <c>str<>
+Returrns: <c>list[str]<>
+
 
 Returns a list of all the matches.
 
@@ -13712,13 +13990,69 @@ Example:
 <cb>from re import findall
 
 <v>string_1<> = "<v>123 abc 456 def 789<>"
-<v>matches<> = findall(r"<v>[a-zA-Z]+<>", <v>string_1<>)		<#># Returns ["abc", "def"]<><>
+<v>matches<> = findall(r"<v>[a-zA-Z]+<>", <v>string_1<>)
+
+<#># Returns ["abc", "def"]<><>
 @
 @ get, match, find, re.findall(), .findall()
 
 
 
-### Regular Expressions - Matches / Starts With
+### Regular Expressions - Match All
+
+<cb>= fullmatch(<v>match_pattern<>, <v>string_1<>)<>
+
+Usage:
+
+<cb>from re import fullmatch
+
+= fullmatch(<v>match_pattern<>, <v>string_1<>)
+<v>match_text<> = <v>match<>.group()<>
+
+<c>.fullmatch()<>   Returns:   <c>re.Match<> | <c>None<>
+<c>.group()    <>   Returns:   <c>str<>
+
+
+Returns a match if the pattern matches the complete string.
+
+
+Otherwise returns None.
+
+
+Example:
+
+<cb>from re import fullmatch
+
+<v>string_1<> = "1234"
+
+match = fullmatch(r"\\d{4}", <v>string_1<>)
+
+if match:
+	print ("got a match")
+else:
+	print ("not a match")
+
+<#>Prints: got a match<><>
+
+<cb>from re import fullmatch
+
+<v>string_1<> = "1234"
+
+match = fullmatch(r"\\d{3}", <v>string_1<>)
+
+if match:
+	print ("got a match")
+else:
+	print ("not a match")
+
+<#>Prints: not a match<><>
+@
+@ Matches, full, complete, entire
+@ re.fullmatch(), .fullmatch(), .matchall(), re.matchall()
+
+
+
+### Regular Expressions - Match Start
 
 <cb>= match(<v>match_pattern<>, <v>string_1<>)<>
 
@@ -13726,14 +14060,37 @@ Usage:
 
 <cb>from re import match
 
-= match(<v>match_pattern<>, <v>string_1<>)<>
+= match(<v>match_pattern<>, <v>string_1<>)
+<v>match_text<> = <v>match<>.group()<>
 
-Returns: <c>re.Match | None<>
+<c>.match()<>   Returns:   <c>re.Match<> | <c>None<>
+<c>.group()<>   Returns:   <c>str<>
+
+
+Returns a match if the string starts with the given pattern.
+
 
 Returns <c>re.Match<> object if <c><v>string_1<><> starts with <c><v>match_pattern<><>.
 Otherwise returns None.
+
+
+Example:
+
+<cb>from re import match
+
+<v>string_1<> = "123abc"
+
+match = match(r"\\d{3}", <v>string_1<>)
+
+if match:
+	print ("got a match")
+else:
+	print ("not a match")
+
+<#>Prints: got a match<><>
 @
-@ Matches, re.match(), .match()
+@ starts with
+@ Matches, re.match(), .match(), re.matchstart(), .matchstart()
 
 
 
@@ -13748,6 +14105,8 @@ Usage:
 <v>string_2<> = sub(<v>match_pattern<>, <v>replacement<>, <v>string_to_update<>)
 <v>string_2<> = sub(<v>match_pattern<>, <v>replacement<>, <v>string_to_update<>, <v>split_count<>)<>
 
+Returns: <c>str<>
+
 
 Returns a new string with all matches replaced.
 
@@ -13759,7 +14118,9 @@ Example:
 <cb>from re import sub
 
 <v>original<> = "<v>ab 12 cd 345<>"
-<v>updated<> = sub(r"<v>\\d+<>", "(digits)", <v>original<>)			<#># Returns "ab (digits) cd (digits)"<><>
+<v>updated<> = sub(r"<v>\\d+<>", "(digits)", <v>original<>)
+
+<#># Returns "ab (digits) cd (digits)"<><>
 @
 @ Substitute, re.sub(), .sub()
 
@@ -13775,9 +14136,11 @@ or
 
 <cb><v>splits<> = split(<v>split_pattern<>, <v>string_to_split<>, <v>split_count<>)<>
 
-Returns: <c>list<> of <c>str<>
+Returns: <c>list[str]<>
+
 
 Returns a list of strings split on <c><v>split_expression<><>.
+
 <c><v>split_expression<><> is not returned in the results.
 Stops after splitting <c><v>split_count<><> times if given.
 
@@ -13787,17 +14150,73 @@ Example:
 <cb>from re import split
 
 <v>string_1<> = "<v>ab12cd34ef<>"
-<v>split_1<> = split(r"<v>\\d+<>", <v>string_1<>)		<#># Returns ['ab', 'cd', 'ef']<><>
+<v>split_1<> = split(r"<v>\\d+<>", <v>string_1<>)
+
+<#># Returns ['ab', 'cd', 'ef']<><>
 @
 @ .split(), re.split()
 
+
+
+### Regular Expressions - Match Type
+
+Returned by:
+
+<cb>=re.finditer()
+= re.fullmatch()
+= re.match()
+= re.search()<>
+@
+@ regex, regexpression, expressions, regex-only, regular-expressions-only, pattern, match
+@ match-only,
+@ re.fullmatch(), .fullmatch(), re.match(), .match(), re.search(), .search()
+
+
+### Regular Expressions - Match - To String
+
+<cb>= <v>match_1<>.group()<>
+
+
+Returns the matching text as a string.
+@
+@ string, string, convert, text, get
+@ .group()
+
+
+
+### Regular Expressions - Match - Start Position
+
+<cb>= <v>match_1<>.start()<>
+
+
+Returns the starting position of the matching text in the original string.
+@
+@ text beginning, first, index, get
+@ .start()
+
+
+### Regular Expressions - Match - End Position
+
+<cb>= <v>match_1<>.end()<>
+
+
+Returns the starting position of the matching text in the original string.
+@
+@ text, last, final, index, get
+@ .end()
+
+
+
+## Regular Expression Patterns
+@
+@ regex, regexpression, expressions, regex-only, regular-expressions-only, pattern
 
 
 ### Regular Expressions - Patterns
 
 Escape					<c>\\<>
 
-Escape These				<c>\ ^ $ . * + ? - & | {} [] () <><>
+Escape These				<c>\ ^ $ . * + ? - & | {} [] () <>
 
 Any Character			<c>.<>
 
@@ -13864,35 +14283,8 @@ Match Before				<c><v>match<>(?\=<v>before_this<>)<>
 <c>\\w<>		Word Character (a-z, A-Z, 0-9, _)
 <c>\\W<>		Non Word Character
 <c>\\Z<>		End of String
-
 @
 @ Codes
-
-
-
-## UUID
-
-<cb>import uuid 
-  
-<v>uuid_1<> = uuid.uuid1()<>
-
-Returns: <c>UUID<>
-
-
-Yes, there is a '1' in the function name '<c>.uuid1()<>'. Why? I've no idea.
-
-
-Example:
-
-<cb>import uuid 
-  
-<v>uuid_1<> = uuid.uuid1()
-
-<v>uuid_bytes<> = <v>uuid_1<>.bytes		<#># b'\x03\xeamdJ\xc2\x11\xeb\xa9\xdd\xac\xdeH\x00\x11"'<>
-<v>uuid_hex<> = <v>uuid_1<>.hex			<#># 03ea6d644ac211eba9ddacde48001122<>
-<v>uuid_int<> = <v>uuid_1<>.int			<#># 5204900180851453705537495610857361698<><>
-@
-@ new, create, uuid-only, bytes, binary, hex, hexadecimal, uuid.uuid1(), .uuid1()
 
 
 
@@ -14165,7 +14557,7 @@ Raises <c>OSError<> if the directory is not empty.
 
 ### Directory - Delete - Non Empty
 
-<cb>rmtree(<v>directory_name<>)<><>
+<cb>rmtree(<v>directory_name<>)<>
 
 With Import:
 
@@ -14593,7 +14985,7 @@ Returns the file modified time as a unix timestamp (epoch).
 
 ### File - Get Size
 
-<cb>= getsize(<v>file_path<>)<><>
+<cb>= getsize(<v>file_path<>)<>
 
 With Import:
 
@@ -14672,7 +15064,7 @@ With Import:
 
 <v>file_exists<> = exists(<v>file_path<>)<>
 
-Returns <c>bool<l>
+Returns: <c>bool<>
 
 
 Returns <c>True<> if a file exists.
@@ -14796,7 +15188,7 @@ This will create a file with 0 bytes.
 
 Returns: <c>bytes<>
 @
-@ 'rb', "rb", .read(), open(), with open, from
+@ 'rb', "rb", .read(), open(), with open, from, bytes
 
 
 
@@ -14808,7 +15200,7 @@ Returns: <c>bytes<>
 
 Reads the file one byte at a time.
 @
-@ 'rb', "rb", .read(), open(), with open, from
+@ 'rb', "rb", .read(), open(), with open, from, bytes
 
 
 
@@ -14819,7 +15211,7 @@ Reads the file one byte at a time.
 
 Deletes the file if it exists before writing to it.
 @
-@ 'wb', "wb", .write(), open(), with open
+@ 'wb', "wb", .write(), open(), with open, bytes
 @ create, new, save, to
 
 
@@ -14832,7 +15224,7 @@ Deletes the file if it exists before writing to it.
 Creates a new file or appends to an existing one.
 @
 @ 'ab', "ab", .write(), open()
-@ create, new, write, append to, with open
+@ create, new, write, append to, with open, bytes
 
 
 
@@ -15096,6 +15488,7 @@ Example:
 
 <v>current_directory<> = abspath('<v>.<>')<>
 @
+@ name
 @ os.path.abspath(), .path.abspath(), .abspath()
 
 
@@ -15127,6 +15520,7 @@ Example:
 
 <#># Returns '/root/parent'<><>
 @
+@ name
 @ os.path.dirname(), .path.dirname(), .dirname()
 
 
@@ -15219,7 +15613,7 @@ Example:
 
 <#># Returns: '.txt'<><>
 @
-@ part, end
+@ part, end, name
 @ os.path.splitext(), .path.splitext(), .splitext()
 @ os.path.splittext(), .path.splittext(), .splittext(), splittext
 
@@ -15254,7 +15648,7 @@ from os.path import splitext
 
 <#># Returns: 'file'<><>
 @
-@ part, base body and extension
+@ part, base body and extension, stem
 @ os.path.splitext(), .path.splitext(), .splitext()
 @ os.path.splittext(), .path.splittext(), .splittext(), splittext
 @ os.path.basename(), .path.basename(), .basename()
@@ -15278,6 +15672,7 @@ Returns the name and extension of a file.
 
 
 Example:
+
 <cb>from os.path import basename
 from os.path import splitext
 
@@ -15285,7 +15680,7 @@ from os.path import splitext
 
 <#># Returns: 'file', '.txt'<><>
 @
-@ part, and, base, body
+@ part, and, base, body, stem
 @ os.path.splitext(), .path.splitext(), .splitext()
 @ os.path.splittext(), .path.splittext(), .splittext(), splittext
 @ os.path.basename(), .path.basename(), .basename()
@@ -15343,7 +15738,7 @@ the <c>/<> or <c>\\<> in <c>/<v>dir_1<>/<v>file_1<><>.
 
 <cb>import os
 
-<v>separator<> = = os.pathsep<>
+<v>separator<> = os.pathsep<>
 
 Returns the OS specific form of the paths separator...
 the <c>;<> or <c>:<> in <c><v>dir_1<>;<v>dir_2<>;<v>dir_3<><>
@@ -16912,7 +17307,7 @@ class <v>TestMyStuff<>(TestCase):
 		<v>...<><>
 @
 @ unittest.testcase, testcase, setup(), teardown(), test_
-@ examples
+@ examples, summary
 
 
 
@@ -16946,15 +17341,47 @@ class <v>BasicTest<>(TestCase):
 
 ### Test - Define - Class
 
+<cb>class <v>TestClass1<>(TestCase):<>
+
+Usage:
+
 <cb>from unittest import TestCase
 
 class <v>TestClass1<>(TestCase):
 
-	def test<v>_function_1<>(self)			<#># Must Start With '<c>test<>'<>
+	def test<v>_function_1<>(self):
 		<v>...<><>
+
+
+Defines a test class.
+
+All test functions must start with <c>test_<>.
 @
 @ new, create, definition
 @ unittest.testcase, testcase, test_
+
+
+
+### Test - Define - Function
+
+<cb>def test<v>_function_1<>(self):<>
+
+Usage:
+
+<cb>from unittest import TestCase
+
+class <v>TestClass1<>(TestCase):
+
+	def test<v>_function_1<>(self):
+		<v>...<><>
+
+
+Defines a test function.
+
+Test functions must start with <c>test_<>.
+@
+@ new, create, definition, def
+@ unittest.testcase, testcase, test_, def
 
 
 
@@ -16965,9 +17392,12 @@ class <v>TestClass1<>(TestCase):
 	def setUp(self):
 		<v>...<><>
 
+Sets up the test environment before each test.
+
+Add whatever data is needed to the class instance.
 Runs before every test.
 @
-@ setup(), initialize, pre
+@ setup(), initialize, pre, fixtures
 
 
 
@@ -16978,10 +17408,13 @@ Runs before every test.
 	def tearDown(self):
 		<v>...<><>
 
+Tears down the test environment after each test is run.
+
 Runs after every test.
 Runs even if test fails.
 @
-@ deconstructor, post, teardown()
+@ tear down
+@ deconstructor, post, teardown(), fixtures
 
 
 
@@ -17007,7 +17440,8 @@ Method names must start with '<c>test<>'.
 <cb>self.assertEqual(<v>actual<>, <v>expected<>, <v>comment<>)<>
 
 
-Use <c>.assertEqual(). <!>.assertEquals()<> is deprecated.
+Use <c>.assertEqual().
+<!>.assertEquals()<> is deprecated.
 @
 @ is equal, assertequal(), self.assertequal(), , self.assertequals()
 
@@ -17106,9 +17540,45 @@ Fails test immediately.
 
 <cb>self.assertTrue(
 	hasattr(obj, intendedAttr),
-	msg=f'obj lacking an attribute. {obj=}, {intendedAttr=}')
+	msg=f'obj lacking an attribute. {obj=}, {intendedAttr=}')<>
 @
 @ assertTrue(), hasattr()
+
+
+
+## Test Setup
+
+
+### Test Setup - Define Source Folder
+
+Given:
+
+<cb><v>project_dir<>/
+├─ src/
+└─ tests/<>
+
+Create:
+
+<cb><v>tests<>/__init__.py<>
+
+Contents:
+
+<cb>from os import getcwd
+from os.path import join
+from sys import path
+
+PROJECT_PATH = getcwd()
+path.append (join (PROJECT_PATH, "<v>src<>"))<>
+
+
+Defines the project source directory for tests to use.
+
+Create __init__.py in tests folder and add the code.
+If the source folder is other than <v><c>src<><>, change <v><c>src<><> (above) to match.
+Run tests from the project root directory.
+@
+@ set
+@ __init__.py, src, tests, path, directory
 
 
 
@@ -17148,6 +17618,8 @@ Enable:
 Run:
 
 <cb>python3 <v>script<>.py<>
+@
+@ summary
 
 
 
@@ -17635,7 +18107,8 @@ Example:
 
 print (environ['PYTHONPATH'])<>
 @
-@ read, getenv, os.environ
+@ value, read
+@ getenv, os.environ
 
 
 
@@ -17655,7 +18128,8 @@ for <v>key<> in sorted(environ.keys(), key = str.lower):
 
 print(f'{"Count":\<24}  {len(environ.keys())}')<>
 @
-@ read all, getenv, os.environ, keys()
+@ read all, values
+@ getenv, os.environ, keys()
 
 
 
@@ -17668,6 +18142,7 @@ environ['<v>name<>'] = <v>value<><>
 
 <c><v>value<><> must be a string.
 @
+@ value
 @ os.environ
 
 
@@ -17725,7 +18200,8 @@ Thread Synchronization
 
 
 ### Thread - Basics
-
+@
+@ summary
 
 
 #### Thread - Basic Thread
@@ -17740,7 +18216,7 @@ Create:
 
 Start:
 
-<cb><v>thread_1<>.start()<><>
+<cb><v>thread_1<>.start()<>
 
 Wait for Completion:
 
@@ -17850,7 +18326,7 @@ Start:
 
 #### Thread - Start
 
-<cb><v>thread_1<>.start()<><>
+<cb><v>thread_1<>.start()<>
 
 
 Starts the execution of the thread.
@@ -17876,7 +18352,7 @@ Must be called before calling <c>.start()<>.
 
 #### Thread - Wait For Completion
 
-<cb><v>thread_1<>.join()<><>
+<cb><v>thread_1<>.join()<>
 
 Blocks the current thread until <c><v>thread_1<><> completes.
 @
@@ -17933,7 +18409,8 @@ Context switch between processes is expensive.
 
 
 ### Process - Basics
-
+@
+@ summary
 
 
 #### Process - Basic Process
@@ -17948,7 +18425,7 @@ Create:
 
 Start:
 
-<cb><v>process_1<>.start()<><>
+<cb><v>process_1<>.start()<>
 
 Wait for Completion:
 
@@ -18052,7 +18529,7 @@ Start:
 
 #### Process - Start
 
-<cb><v>process_1<>.start()<><>
+<cb><v>process_1<>.start()<>
 
 
 Starts the execution of the process.
@@ -18090,7 +18567,7 @@ Prefer something like a poison pill.
 
 #### Process - Wait For Completion
 
-<cb><v>process_1<>.join()<><>
+<cb><v>process_1<>.join()<>
 
 Blocks the current process until <c><v>process_1<><> completes.
 @
@@ -18175,6 +18652,8 @@ Close:
 Wait Until All Complete:
 
 <cb><v>pool_1<>.join()<>
+@
+@ summary
 
 
 
@@ -18856,7 +19335,6 @@ Listeners will go when the event is <c>True<>.
 ### Event - Basics
 
 
-
 #### Thread Event - Basics
 
 <cb>from threading import Event<>
@@ -19170,7 +19648,6 @@ Automatically acquires and releases the lock.
 
 
 ### Semaphore - Basics
-
 
 
 #### Thread Semaphore - Basics
@@ -19667,7 +20144,7 @@ Call:
 
 ### Coroutine - Basics
 @
-@ async functions
+@ async functions, summary
 
 
 
@@ -20724,6 +21201,8 @@ Create:
 Access:
 
 <cb>= <v>dataclass_1<>.<v>field_1<><>
+@
+@ summary
 
 
 
@@ -21595,6 +22074,8 @@ Access:
 <cb>= <v>named_tuple_1<>.<v>field_1<>
 
 = <v>named_tuple_1<>[0]<>
+@
+@ summary
 
 
 
@@ -22188,6 +22669,19 @@ Returns True when the program has command-line arguments.
 
 
 
+### Cached Compiled Files - Delete
+
+Bash:
+
+<cb>find . -type f -name '*.py[co]' -delete -o -type d -name __pycache__ -delete<>
+
+
+Deletes all __pycache__ directories in your project.
+@
+@ clear, __pycache__ directory, directories, remove
+
+
+
 ### Console Screen - Clear
 
 Use This Function:
@@ -22326,7 +22820,7 @@ Example:
 
 print("You entered", <v>name<>)<>
 @
-@ input(), user, input-only, enters
+@ input(), user, input-only, enters, get
 @ input-only, inputs-only
 
 
@@ -22349,6 +22843,60 @@ print("You entered", <v>number<>)<>
 @
 @ input(), int(), user, input-only, enters, to
 @ input-only, inputs-only
+
+
+
+### Input - Read Password
+
+<cb>= getpass()<>
+
+<cb>from getpass import getpass
+
+= getpass()
+= getpass("<v>Enter password: <>")
+= getpass("<v>Enter password:\\n<>")<>
+
+
+Read a line from the standard input but doesn't display it.
+
+
+Example:
+
+<cb>from getpass import getpass
+
+<v>password<> = getpass("<v>Enter your password:\\n<>")
+
+print("You entered", <v>password<>)<>
+@
+@ input(), user, input-only, enters, secret, hidden, get
+@ input-only, inputs-only
+
+
+
+### Is Palindrome?
+
+<cb>def is_palindrome(<v>word<>):
+    return <v>word<> == <v>word<>[::-1]<>
+
+
+Tests if a word is a palindrome.
+
+
+<#>Not sure why everyone is searching for this but here you go - Tim O'.<>
+
+
+Example:
+
+<cb>def is_palindrome(<v>word<>):
+    return <v>word<> == <v>word<>[::-1]
+
+print(is_palindrome("racecar"))
+print(is_palindrome("not a palindrome"))
+
+<#># Prints:
+\#
+\# True
+\# False<><>
 
 
 
@@ -22433,6 +22981,33 @@ There is no explicit XOR operator but <c>!=<> works just fine.
 
 
 
+#### Match - Match If in List
+
+<cb>match <v>item_1<>:
+    case <v>item_1<> if <v>item_1<> in <v>list_2<>:
+        <v>...<><>
+
+
+Will match the case only when <v>condition<> is met.
+
+
+<cb><v>item_1<> = 1
+
+even = [2, 4, 6, 8, 10]
+odd = [1, 3, 5, 7, 9]
+
+match <v>item_1<>:
+    case <v>item<> if <v>item<> in <v>even<>: print('Even')
+    case <v>item<> if <v>item<> in <v>odd<>: print('Odd')
+    case _: print("Didn't match value.")
+
+<#>Prints: 'Odd'<><>
+@
+@ with condition, contains
+@ match-only
+
+
+
 ### Module - File Path
 
 <cb>= __file__<>
@@ -22495,7 +23070,7 @@ Windows:
 
 \#1  -  Puts a space between items.
 
-\#2  -  Use when <c>print(<v>item_1<>)<> wouldn't work<>.
+\#2  -  Use when <c>print(<v>item_1<>)<> wouldn't work.
 
 
 Prints to the standard out.
@@ -22624,6 +23199,7 @@ Returns the name of the starting module file.
 ├─ README.md
 ├─ pyproject.toml
 ├─ setup.cfg
+├─ dist/
 ├─ docs/
 │  └─ ...
 ├─ src/
@@ -22658,7 +23234,7 @@ setup(
 )<>
 
 Note:
-'<c>src<>' is the standard directory for the project source code. On many projects the source folder has the same name as the root directory. Update this to match.
+'<c>src<>' is the standard directory for the project source code. On many projects the source folder has the same name as the root directory. In these cases, change <v><c>src<><> to the correct name.
 @
 @ file
 
@@ -22946,7 +23522,7 @@ Example:
 
 
 
-#### Format - Pad Left
+#### Format - Pad on Left
 
 With Spaces:
 
@@ -22962,7 +23538,7 @@ With Fill Character:
 <cb>= '{:<v>fill_character<>><v>length<>}'.format(<v>item_1<>)<>
 
 
-Text right, pad left.
+Pads on the left side of the value.
 
 
 Example:
@@ -22980,7 +23556,7 @@ Example:
 
 
 
-#### Format - Pad Right
+#### Format - Pad on Right
 
 With Spaces:
 
@@ -22996,7 +23572,7 @@ With Fill Character:
 <cb>= '{:<v>fill_character<>\<<v>length<>}'.format(<v>item_1<>)<>
 
 
-Text left, pad right.
+Pads on the right side of the value.
 
 
 Example:
@@ -24073,13 +24649,25 @@ dev = [
 [build-system]
 requires = [
     "setuptools >= 35.0.2",
-    "setuptools_scm >= 2.0.0, <3"
+    "setuptools_scm >= 2.0.0, \<3"
 ]
 build-backend = "setuptools.build_meta"<>
 
 
 
 # Reference - Coming From Other Languages
+
+
+### ++, -- Operators
+
+Not supported in Python.
+
+Use Instead:
+
+<cb><v>a<> += 1;
+<v>a<> -= 1;<>
+@
+@ increment, decrement
 
 
 ### Arrays
@@ -24097,6 +24685,14 @@ You can also use the Array library.
 ### Arrow Functions, ->, =>
 
 Use <c><l "?q=lambda-only">lambdas<><>.
+
+
+
+### Hash Maps, Tables
+
+Use <c><l "?q=dict-only">dicts<><>.
+@
+@ associative array, hashmap, hash, maps
 
 
 
@@ -24199,7 +24795,7 @@ See: <l "?q=exceptions-only">Exceptions<>.
 # Symbols
 @
 @ lookup
-@ symbol-only, symbols-only
+@ symbol-only, symbols-only, sym-only
 
 
 ## Symbols - Basics
@@ -24388,7 +24984,7 @@ See: <l "?q=destructur&select=2jr2">Destructuring<>
 ### Symbol *_
 An ignored sublist during destructuring of a sequence.
 
-<cb><cb><v>first<>, *_, <v>last<> = <v>sequence_1<><><>
+<cb><v>first<>, *_, <v>last<> = <v>sequence_1<><>
 
 See: <l "?q=destructur&select=2jr2">Destructuring<>
 @
@@ -24404,7 +25000,7 @@ Private Method or Variable (Name with Leading _)
 
 Number Literal (For Readability)
 
-<cb><v>12<v>_<>345.00<v>_<>00<><>
+<cb><v>12<>_<v>345.00<>_<v>00<><>
 
 Destructuring - Ignored Value
 
@@ -24423,7 +25019,7 @@ Default Match Clause
 
 A Dunder Method, A System Reserved Method
 
-<cb><v>instance_1<>.__name__<><>
+<cb><v>instance_1<>.__name__<>
 @
 @ double underscore, dunder, magic method
 
@@ -24736,6 +25332,91 @@ Returns text exactly as it is represented between the quotes.
 <cb>r"<v>text\\text\\text\\n<>"<>
 
 
+# What Is The Difference
+@
+@ whats, what's, between
+
+
+
+### Iterable vs Iterator vs Generator
+
+Iterable:
+
+<*>Think "contains iterable data"
+Implements <c>__iter__()<>
+Returns an Iterator<>
+
+
+Iterator:
+
+<*>Think "the data being iterated over"
+Implements <c>__next__()<>
+Returns Data One at a Time<>
+
+
+Generator:
+
+<*>A Type of Iterable
+Wraps an Iterator Function with an Iterable<>
+
+
+
+### List Comprehension vs Generator Expression
+
+List Comprehension:
+
+<*>Executes immediately
+Results are stored in memory.
+Syntax: <c>[<v>expression<> for <v>item<> in <v>items<>]<><>
+
+
+Generator Expression:
+
+<*>Similar to List Comprehension
+Evaluates Lazily
+Only uses memory for each item, never the entire result set.
+Syntax: <c>(<v>expression<> for <v>item<> in <v>items<>)<><>
+
+
+
+### List vs Tuple vs Sequence vs Array vs NumPy Array
+
+List:
+
+<*>Mutable List<>
+
+<*>Mutable Ordered List of Items
+Can Mix and Match Types<>
+
+Tuple:
+
+<*>Immutable List<>
+
+<*>Immutable Ordered List of Items
+Can Mix and Match Types<>
+
+Sequence:
+
+<*>General Type For All Lists<>
+
+<*>Any Type of Ordered List
+Includes Lists, Tuples<>
+
+Array:
+
+<*>High Performance Single Type List<>
+
+<*>A High Performance List of Items
+Data Must Single Type<>
+
+NumPy Array:
+
+<*>High Performance Multidimenisonal Array<>
+
+<*>Requires NumPy Library (External Library)
+Data Most Be Single Type<>
+
+
 
 # Reserved Words
 @
@@ -24788,7 +25469,7 @@ It can not be used as the name of an object, variable or function.
 
 # Acronyms
 @
-@ Glossary, glossary-only
+@ glossary, glossary-only
 @ acronyms-only, acronym-only
 
 
@@ -24884,7 +25565,7 @@ Virtual Environment
 
 # Terms
 @
-@ Glossary, glossary-only
+@ glossary, glossary-only
 @ terms-only, term-only
 
 
