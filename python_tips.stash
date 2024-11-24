@@ -1,0 +1,55 @@
+# <#>Python<> SpeedSheet Tips
+Tips for using the <go python>Python<> SpeedSheet
+
+<block light><image "python-overview-light.webp"><><block not-light><image "python-overview-dark.webp"><>
+
+#### Master Search / Find
+
+<b>Find<> is your best friend. Here’s why:
+
+<*>Finds it fast
+Shows only what you want
+1-2 words returns results
+Incomplete names match too<>
+
+
+#### Use the '-only' Shortcut
+
+Use '-only' or just '-' with the item name to focus on its section alone and drop the indirect uses from your results:
+
+<*>"<c><go "python?match-only>match-only<><>"
+"<c><go "python?match->match-<><>"<>
+
+
+#### Lookup Symbols
+
+Need to know what a symbol does? Just enter "symbol" and then the symbol you what:
+
+<*>"<c><go "python?symbol :=">symbol :=<><>"<><>
+
+
+#### Use ESC to Reset
+
+When you’re done searching, hit Escape to clear your search and bring everything back into view.
+
+<*>ESC clears your search<>
+
+
+#### Feedback
+
+We’re always looking to make this cheat sheet even better for you. If you’ve got ideas, run into any issues, or think something’s missing, we’d love to hear from you!
+
+<*>Got a suggestion?
+Spot an error?
+Confused about something?<>
+
+👉 <l /feedback>Click here to provide feedback!<>
+
+Your input helps us keep the cheat sheet sharp and useful for all you rustaceans. Thanks for helping us improve!
+
+
+
+
+
+
+

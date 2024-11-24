@@ -1,24 +1,15 @@
 <meta>index: tags<>
-# <#>Python<> Sheet
+# <#>Python<> SpeedSheet 🐍
 <meta>index: none<>
 <b>Find it faster.<>
 
-
 This is an interactive <b>Python<> cheat sheet. Covers the core Python programming language. Use the search to instantly get answers.
 
+<card><t><dodger-blue><html-block><svg fill="currentColor" width="2em" height="2em" viewBox="0 0 16 16">
+	<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+</svg><><><|><{}}><font-size 1.5em><><b>Speedsheet Help Tips<>
 
-<card><b>Most Common Searches<>
-
-<table><col><*><link "?q=for-loop#for_-_basics">for loop<>			
-<link "?q=if-else#if_else">if else<>
-<link "?q=comprehension#list_-_list_comprehension">list comprehension<>
-<link "?q=sort+list#list_-_sort">sort list<>
-<link "?q=start+async#coroutine_-_start_main_coroutine">start async<><><><col><*><link "?q=open+file">open file<>
-<link "?q=file+io+read">read file<>
-<link "?q=f-string#f-string_-_basics">f-string<>
-<link "?q=reverse+format#format_codes_-_reverse_lookup">reverse format<>
-<link "?q=convert+string+to+list#string_-_to_list">string to list<><><><><>
-
+Check out our <l "python_tips">tips page<> for pro-level tricks to get the most out of this cheat sheet.<><><>
 
 <table><col><b>Basics<>
 
@@ -324,6 +315,20 @@ Run From The Command-line:
 @ language-fundamentals-only, fundamentals-only
 
 
+### Created / 1st Release
+
+<t>Created<|>Late 1980s
+1st Release<|>February 1991<>
+
+
+
+### Created By
+
+Guido van Rossum
+@
+@ creator
+
+
 
 ### Comments
 
@@ -360,6 +365,9 @@ Examples:
 	<#>"""This docstring
 	documents the function of this function
 	"""<><>
+
+
+Python Docs: <l https://peps.python.org/pep-0257/>Docstring Conventions<> (PEP-0257): <l https://peps.python.org/pep-0257/#specification>Specifications<>
 @
 @ code, documentation, docstring-only, docstr-only, doc-string-only, doc-str-only, """, double quotes, __doc__
  
@@ -857,7 +865,7 @@ Python will call it to start the application.
 
 Directory Structure:
 
-<cb><v>src<>\
+<cb><v>src<>/
 	__main__.py
 	<v>...<><>
 
@@ -1275,18 +1283,20 @@ Ternary conditional operator.
 
 <cb><v>value_1<> := <v>value_2<><>
 
+Usage:
+
 <cb>if <v>value_1<> := <v>value_2<>:
 	<v>...<><>
 
 <cb>while (<v>item<> := <v>next_item<>()):
 	<v>...<><>
 
-Does 2 Things:
+Assigns the value to the variable, then returns the value to the outer expression
 
-	Assigns a Value
-	Returns That Value
+<*>Assign the value to the variable
+Returns the value to the expression<>
 
-This is usually used when the right side of the assignment is a function.
+This is usually used when the right hand side of the assignment is a function.
 
 
 Example:
@@ -1582,41 +1592,44 @@ print (1 \<= <v>value<> \< 2)<>
 From Highest To Lowest:
 
 
-<table><col><c>(<v>...<>)<>, <c>[<v>...<>]<>, <c>{<v>key<>: <v>value<>}<>, <c>{<v>...<>}<><><col><#># Parenthesis, List, Dictionary or Set<><>
-<col> <>
-<col><c><v>x<>[<v>index<>]<>, <c><v>func_1<>()<>, <c><v>x<>.<v>attrib<><><><col><#># Subscripts, Slicing, Calls, Attributes<><>
-<col> <>
-<col><c>await <v>x<><><><col><#># Await Expression<><>
-<col> <>
-<col><c>**<><><col><#># Exponent<><>
-<col> <>
-<col><c>+<v>x<><>, <c>-<v>x<><>, <c>~<v>x<><><><col><#># Positive, Negative, Bitwise NOT<><>
-<col> <>
-<col><c>*<>, <c>/<>, <c>//<>, <c>%<>, <c>@<><><col><#># Multiply, Divide, Floor Divide, Remainder (Modulo), Matrix Multiply<><>
-<col> <>
-<col><c>+<>, <c>-<><><col><#># Add, Subtract<><>
-<col> <>
-<col><c>\<\<<>, <c>>><><><col><#># Bitwise Shift<><>
-<col> <>
-<col><c>&<><><col><#># Bitwise AND<><>
-<col> <>
-<col><c>^<><><col><#># Bitwise XOR<><>
-<col> <>
-<col><c>|<><><col><#># Bitwise OR<><>
-<col> <>
-<col><c>in<>, <c>not in<>, <c>is<>, <c>is not<>, <c>\<<>, <c>\<=<>, <c>><>, <c>>=<>, <c>!=<>, <c>==<><><col><#># Comparators<><>
-<col> <>
-<col><c>not<><><col><#># Boolean NOT<><>
-<col> <>
-<col><c>and<><><col><#># Boolean AND<><>
-<col> <>
-<col><c>or <><><col><#># Boolean OR<><>
-<col> <>
-<col><c>if else<><><col><#># Conditional Operator<><>
-<col> <>
-<col><c>lambda<><><col><#># Lambda Expression<><>
-<col> <>
-<col><c>:=<><><col><#># Assignment Operator<><><>
+<t><c>(<v>...<>)<>, <c>[<v>...<>]<>, <c>{<v>key<>: <v>value<>}<>, <c>{<v>...<>}<><|>Parenthesis, List, Dictionary or Set
+
+<c><v>x<>[<v>index<>]<>, <c><v>func_1<>()<>, <c><v>x<>.<v>attrib<><><|>Subscripts, Slicing, Calls, Attributes
+
+<c>await <v>x<><><|>Await Expression
+
+<c>**<><|>Exponent
+
+<c>+<v>x<><>, <c>-<v>x<><>, <c>~<v>x<><><|>Positive, Negative, Bitwise NOT
+
+<c>*<>, <c>/<>, <c>//<>, <c>%<>, <c>@<><|>Multiply, Divide, Floor Divide, Remainder (Modulo), Matrix Multiply
+
+<c>+<>, <c>-<><|>Add, Subtract
+
+<c>\<\<<>, <c>>><><|>Bitwise Shift
+
+<c>&<><|>Bitwise AND
+
+<c>^<><|>Bitwise XOR
+
+<c>|<><|>Bitwise OR
+
+<c>in<>, <c>not in<>, <c>is<>, <c>is not<>, <c>\<<>, <c>\<=<>, <c>><>, <c>>=<>, <c>!=<>, <c>==<><|>Comparators
+
+<c>not<><|>Boolean NOT
+
+<c>and<><|>Boolean AND
+
+<c>or <><|>Boolean OR
+
+<c>if else<><|>Conditional Operator
+
+<c>lambda<><|>Lambda Expression
+
+<c>:=<><|>Assignment Operator<>
+
+
+Python Docs: <l https://docs.python.org/3/reference/expressions.html>Expressions<>: <l https://docs.python.org/3/reference/expressions.html#operator-precedence>Operator Precedence<>
 
 
 
@@ -1913,7 +1926,7 @@ Example:
 	<v>...<>
 	break
 	<v>...<>
-	continue
+	continue<>
 @
 @ next, skip, exit, iteration
 
@@ -1927,10 +1940,9 @@ Python Version: 3.10+
 @ switch, case, match-only
 
 
-
 #### Match - Basics
 
-<cb>match <v>variable_1<>:
+<cb>match <v>expression<>:
 
     case <v>value_1<>:
         <v>...<>
@@ -1966,7 +1978,7 @@ Python Version: 3.10+
 
 #### Match - Bind To Variable
 
-<cb>match <v>item_1<>:
+<cb>match <v>expression<>:
     case <v>variable_1<>:
         <v>...<>
     case (<v>value<>, <v>variable_1<>):
@@ -2000,7 +2012,7 @@ match <v>item_1<>:
 
 #### Match - Match Specific Values
 
-<cb>match <v>item_1<>:
+<cb>match <v>expression<>:
     case <v>value_1<>:
         <v>...<>
     case <v>value_2<> | <v>value_3<>:
@@ -2050,7 +2062,7 @@ match <v>int_1<>:
     <v>CONSTANT_1<> = <v>value_1<>
     <v>CONSTANT_2<> = <v>value_2<>
 
-match <v>item_1<>:
+match <v>value_1<>:
     case <v>Constants<>.<v>CONSTANT_1<>:
         <v>...<>
     case <v>Constants<>.<v>CONSTANT_2<>:
@@ -2143,7 +2155,7 @@ match <v>dict_1<>:
     <v>ENUM_1<> = <v>value_1<>
     <v>ENUM_2<> = <v>value_2<>
 
-match <v>item_1<>:
+match <v>value_1<>:
     case <v>Enum1<>.<v>ENUM_1<>:
         <v>...<>
     case <v>Enum1<>.<v>ENUM_2<>:
@@ -4279,7 +4291,7 @@ Returns <c>False<> for <c>+<> or <c>-<>
 <cb>from re import match
 
 def is_int(<v>value<>):
-	return match(r"^[+-]?\d+$", <v>value<>) is not None<>
+	return match(r"^[+-]?\\d+$", <v>value<>) is not None<>
 
 <cb>= is_int(<v>string_1<>)<>
 
@@ -11967,7 +11979,7 @@ Reference instance methods externally through the instance name (<v>class_1<> in
 Define:
 
 <cb>class <v>Class1<>:
-	<v>variable_1<> = <v>value<>					<#># Static Variable<><>
+	<v>variable_1<> = <v>value<><>
 
 Get:
 
@@ -11977,13 +11989,20 @@ Set:
 
 <cb><v>Class1<>.<v>variable_1<> = <v>new_value<><>
 
-Reference class or static variable through it class name.
+
+Defines a class or static variable.
+
+This variable is associated with the class and not an instance of the class.
+Refer to the variable through the class name only.
 @
 @ Static
 
 
 
 ### Class - Class Method
+
+<cb>@classmethod
+<v>method_1<>(<v>...<>)<>
 
 Define:
 
@@ -11994,13 +12013,17 @@ Define:
 		cls.<v>class_variable<> = <v>value<>
 		<v>...<><>
 
-Call:
+Calling:
 
 <cb><v>Class1<>.<v>method_1<>(<v>arg_1<>, <v>...<>)<>
 
 
+Defines a method that acts on the class and not an instance of the class.
+
+
 Define with <c>@classmethod<>.
 Reference the method using the class name (<c><v>Class1<><> in this case).
+
 
 This is useful if you need to know exactly what type of class was instantiated.
 
@@ -12015,17 +12038,23 @@ This is useful if you need to know exactly what type of class was instantiated.
 
 ### Class - Static Method
 
+<cb>@staticmethod
+<v>method_1<>(<v>...<>)<>
+
 Define:
 
 <cb>class <v>Class1<>:
 
-	@staticmethod						<#># Defines Static Method<>
+	@staticmethod
 	<v>method_1<>(<v>arg_1<>, <v>...<>):
 		<v>...<><>
 
-Call:
+Calling:
 
 <cb><v>Class1<>.<v>method_1<>(<v>arg_1<>, <v>...<>)<>
+
+
+Defines a static method, one that is called on the class and not on an instance of the class.
 
 Define with <c>@staticmethod<>.
 Reference through the class name.
@@ -12425,54 +12454,100 @@ print("outer.inner.get_name() ", <v>outer<>.<v>inner<>.<v>get_name<>())
 ## Class Extras
 
 
-
 ### Class - Monkey Patch
 
-<cb><v>Class1<>.<v>method_to_patch<> = <v>patch_1<><>
+<cb><v>Class1<>.<v>new_method_1<> = <v>patch_function_1<><>
 
-<cb><#># Class to Patch:<>
+Usage:
 
+<cb><#># Unaltered Class:<>
 class <v>Class1<>:
     def <v>method_to_patch<>(self):
         <v>...<>
 
-<v>class_1<> = <v>Class1<>()
-
-
-<#># Assign Patch:<>
-
+<#># Patch Function:<>
 def <v>patch_1<>(self):
     <v>...<>
 
+<v>item_1<> = <v>Class1<>()
+
+<#># Apply patch to the class:<>
 <v>Class1<>.<v>method_to_patch<> = <v>patch_1<>
 
-<v>class_1<>.<v>method_to_patch<>()<>
+<v>item_1<>.<v>method_to_patch<>()<>
 
 
 Changes the behaviour of a method at runtime.
+
 Applies the patch to the class, not the instance.
 This will affect all instances of the class, current and future.
 
 
 Example:
 
-<cb>class <v>Class1<>:
+<cb>class <v>Messanger<>:
     def <v>print_message<>(self):
-        print("Original Message")
+        print("Original message.")
 
-def <v>patch_1<>(self):
-    print("Patched Message")
+def <v>print_message_patch<>(self):
+    print("Patched message.")
 
-<v>class_1<> = <v>Class1<>()
-<v>class_1<>.print_message()
+<v>message_1<> = <v>Messanger<>()
+<v>message_1<>.print_message()
 
-<v>Class1<>.print_message = patch_1
-<v>class_1<>.print_message()
+<v>Messanger<>.print_message = <v>print_message_patch<>
+<v>message_1<>.print_message()
 
 <#># Prints:
-\#
-\# Original Message
-\# Patched Message<><>
+\# Original message.
+\# Patched message.<><>
+
+
+
+### Class Instance - Monkey Patch
+
+<cb><v>instance_1<>.<v>new_method<> = MethodType(<v>patch_1<>, <v>instance_1<>)<>
+
+Usage:
+
+<cb>from types import MethodType
+
+def <v>patch_1<>(self):
+    <v>...<>
+
+<v>instance_1<>.<v>method_to_patch<> = MethodType(<v>patch_1<>, <v>instance_1<>
+
+<v>instance_1<>.<v>method_to_patch<>()<>
+
+
+Changes the behaviour of an instance method at runtime.
+
+This only affects this instance. Neither the underlying class or other instances are affected.
+Using MethodType assures the function is bound correctly to the instance and the <c>self<> value is passed in correctly.
+
+
+Example:
+
+<cb>from types import MethodType
+
+class <v>Messanger<>:
+    def <v>print_message<>(self):
+        print("Original message.")
+
+def <v>patch_1<>(self):
+    print("Patched message.")
+
+<v>message_1<> = <v>Messanger<>()
+<v>message_1<>.print_message()
+
+<v>message_1<>.print_message = MethodType(<v>patch_1<>, <v>message_1<>)
+<v>message_1<>.print_message()
+
+<#># Prints:
+\# Original message.
+\# Patched message.<><>
+@
+@ methodtype()
 
 
 
@@ -17863,6 +17938,34 @@ Usage:
 
 
 
+### Type Hints - Union Type
+
+<cb><v>union_1<>: str | float<>
+
+
+Defines the type hint for a value that may be one of two or more types.
+@
+@ typing.union, or, |
+
+
+
+### Type Hints - Union Type (Alternative)
+
+<cb><v>union_1<>: Union[str, float]<>
+
+Usage:
+
+<cb>from typing import Union
+
+<v>tuple_1<>: Union[<v>type_1<>, <v>type_2<>, <v>...<>]<>
+
+
+Defines the type hint for a value that may be one of two or more types.
+@
+@ typing.union, or
+
+
+
 ### Type Hints - Variable Type
 
 <cb><v>name<>: <v>type<><>
@@ -22040,6 +22143,9 @@ Example:
 Named tuples allow you to access tuple values by name.
 
 Use the <c>namedtuple<> function to create a class for a given tuple type.
+
+
+Python Docs: <l https://docs.python.org/3/library/collections.html#collections.namedtuple>Named Tuples<>
 @
 @ collections.namedtuple, Named Tuples, nametuple, namedtuples, namedtuple()
 @ namedtuple-only, named-tuple-only, named-tuples-only
@@ -23489,24 +23595,14 @@ Python Format Page:
 @ strings, integers, floats, numbers
 
 
-
 #### Format - Pad Center Text
-
-With Spaces:
 
 <cb>= f'{<v>item_1<>:^<v>length<>}'<>
 
 <cb>= '{:^<v>length<>}'.format(<v>item_1<>)<>
 
 
-With Fill Character:
-
-<cb>= f'{<v>item_1<>:<v>fill_character<>^<v>length<>}'<>
-
-<cb>= '{:<v>fill_character<>^<v>length<>}'.format(<v>item_1<>)<>
-
-
-Text centered, pad both sides.
+Text centered, pad both sides with spaces.
 
 
 Example:
@@ -23514,6 +23610,22 @@ Example:
 <cb><v>formatted_1<> = "{:^15}".format(<v>"Center"<>)
 
 <#># Returns '<c>    Center     <>'<><>
+@
+@ Around
+
+
+
+#### Format - Pad Center Text - With Fill Character
+
+<cb>= f'{<v>item_1<>:<v>fill_character<>^<v>length<>}'<>
+
+<cb>= '{:<v>fill_character<>^<v>length<>}'.format(<v>item_1<>)<>
+
+
+Centers text and pad both sides with the fill character.
+
+
+Example:
 
 <cb><v>formatted_2<> = "{:*^15}".format(<v>"Center"<>)
 
@@ -23525,21 +23637,12 @@ Example:
 
 #### Format - Pad on Left
 
-With Spaces:
-
 <cb>= f'{<v>item_1<>:><v>length<>}'<>
 
 <cb>= '{:><v>length<>}'.format(<v>item_1<>)<>
 
 
-With Fill Character:
-
-<cb>= f'{<v>item_1<>:<v>fill_character<>><v>length<>}'<>
-
-<cb>= '{:<v>fill_character<>><v>length<>}'.format(<v>item_1<>)<>
-
-
-Pads on the left side of the value.
+Pads on the left side with spaces.
 
 
 Example:
@@ -23547,33 +23650,47 @@ Example:
 <cb><v>formatted_1<> = "{:>15}".format(<v>"Pad Left"<>)
 
 <#># Returns '<c>       Pad Left<>'<><>
+@
+@ Right Justify, start, withfill character
+@ pad-left, right-justify, align-right
+
+
+
+#### Format - Pad on Left - With Fill Character
+
+<cb>= f'{<v>item_1<>:<v>fill_character<>><v>length<>}'<>
+
+<cb>= '{:<v>fill_character<>><v>length<>}'.format(<v>item_1<>)<>
+
+
+Pads on the left side with the fill character.
+
+
+Example:
 
 <cb><v>formatted_2<> = "{:*>15}".format(<v>"Pad Left"<>)
 
 <#># Returns '<c>*******Pad Left<>'<><>
 @
-@ Right Justify, start
+@ Right Justify, start, withfill character
 @ pad-left, right-justify, align-right
 
 
 
 #### Format - Pad on Right
 
-With Spaces:
+<cb>= f'{<v>item_1<>:<v>length<>}'<>
 
 <cb>= f'{<v>item_1<>:\<<v>length<>}'<>
+
+<cb>= '{:<v>length<>}'.format(<v>item_1<>)<>
 
 <cb>= '{:\<<v>length<>}'.format(<v>item_1<>)<>
 
 
-With Fill Character:
+Pads on the right side with spaces.
 
-<cb>= '{<v>item_1<>:<v>fill_character<>\<<v>length<>}'<>
-
-<cb>= '{:<v>fill_character<>\<<v>length<>}'.format(<v>item_1<>)<>
-
-
-Pads on the right side of the value.
+'\<' is not required when you do not explicitly set the fill character.
 
 
 Example:
@@ -23581,6 +23698,23 @@ Example:
 <cb><v>formatted_1<> = "{:\<15}".format(<v>"Pad Right"<>)
 
 <#># Returns '<c>Pad Right      <>'<><>
+@
+@ Left Justify, End, spaces
+@ pad-right, left-justify, align-left
+
+
+
+#### Format - Pad on Right - With Fill Character
+
+<cb>= '{<v>item_1<>:<v>fill_character<>\<<v>length<>}'<>
+
+<cb>= '{:<v>fill_character<>\<<v>length<>}'.format(<v>item_1<>)<>
+
+
+Pads on the right side with the fill character.
+
+
+Example:
 
 <cb><v>formatted_2<> = "{:*\<15}".format(<v>"Pad Right"<>)
 
@@ -25020,7 +25154,7 @@ Default Match Clause
 
 A Dunder Method, A System Reserved Method
 
-<cb><v>instance_1<>.__name__<>
+<cb><v>instance_1<>.__<v>name<>__<>
 @
 @ double underscore, dunder, magic method
 
@@ -25239,7 +25373,7 @@ Walrus Operator / Assignment Expression
 
 <cb><v>variable<> := <v>expression<><>
 
-Evaluates an expression, assigns it to the variable and returns the result to the calling function.
+Evaluates an expression, assigns it to the variable, and returns the result same expression..
 @
 @ walrus operator
 
@@ -25263,6 +25397,17 @@ Bitwise AND (Bitwise Operator)
 Bitwise OR (Bitwise Operator)
 
 <cb><v>a<> | <v>b<><>
+
+
+### Symbol |
+
+Type Hint - Union Type
+
+<cb><v>str<> | <v>int<><>
+
+Function Parameter:
+
+<cb>def <v>function_1<>(<v>parameter<>: <v>str<> | <v>int<>):<>
 
 
 ### Symbol ^
