@@ -5091,6 +5091,7 @@ def print_cases(text):
 	print("Lower:      ", text.lower())
 	print("Folded:     ", text.casefold())<>
 
+
 <cb><#># German Letter SS/ß<>
 
 print_cases("<v>Hegelstraße<>")
@@ -5109,6 +5110,16 @@ print_cases("<v>Ὀδυσσεύς<>")
 \#  Upper:    ὈΔΥΣΣΕΎ<m>Σ<>
 \#  Lower:    ὀδυσσεύ<m>ς<>
 \#  Folded:   ὀδυσσεύ<m>σ<><><>
+
+
+<cb><#># English<>
+
+print_cases("<v>English<>")
+
+<#>\#  Original: English
+\#  Upper:    ENGLISH
+\#  Lower:    english
+\#  Folded:   english<><>
 @
 @ .casefold(), case folding, compare strings unicode, normalize, normalization
 
@@ -15803,7 +15814,7 @@ is_absolute = isabs('/Users/user-1')
 <v>separator<> = os.path.sep<>
 
 Returns the OS specific form of the internal path separator...
-the <c>/<> or <c>\\<> in <c>/<v>dir_1<>/<v>file_1<><>.
+the <c>/<> or <c>\\<> in <c><v>dir_1<>/<v>file_1<><>.
 @
 @ /, \
 @ os.path.sep, .path.sep, .sep
@@ -15821,6 +15832,7 @@ the <c>;<> or <c>:<> in <c><v>dir_1<>;<v>dir_2<>;<v>dir_3<><>
 @
 @ :, ;
 @ os.pathsep, .pathsep
+@ directories, list
 
 
 
