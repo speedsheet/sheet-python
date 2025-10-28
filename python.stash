@@ -1,13 +1,17 @@
 <meta>index: tags<>
 # <#>Python<> SpeedSheet 🐍
 <meta>index: none<>
-<b>Find it faster.<>
+<b>Comprehensive Python language reference. Cheatsheet speed!<>
 
-This is an interactive <b>Python<> cheat sheet. Covers the core Python programming language. Use the search to instantly get answers.
+This is an interactive <b>Python<> language reference. Covers the core Python programming language. Find answers instantly by using 'find'.
+
+
+Speedsheet Repo: <l>https://github.com/speedsheet/sheet-python<>
+
 
 <card><t><dodger-blue><html-block><svg fill="currentColor" width="2em" height="2em" viewBox="0 0 16 16">
 	<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
-</svg><><><|><{}}><font-size 1.5em><><b>Speedsheet Help Tips<>
+</svg><><><|><{}><font-size 1.5em><><b>Speedsheet Help Tips<>
 
 Check out our <l "python_tips">tips page<> for pro-level tricks to get the most out of this cheat sheet.<><><>
 
@@ -182,7 +186,7 @@ Check out our <l "python_tips">tips page<> for pro-level tricks to get the most 
 ##### Python Language Reference
 <l>https://docs.python.org/3/reference/index.html<>
 
-##### Python Libraries
+##### Python Standard Libraries
 <l>https://docs.python.org/3/library/index.html<>
 
 ##### Python PEPs
@@ -193,6 +197,11 @@ Check out our <l "python_tips">tips page<> for pro-level tricks to get the most 
 
 ##### Amazing Python Scripts (II)
 <l>https://github.com/avinashkranjan/Amazing-Python-Scripts<>
+
+##### Python 3rd Party Libraries
+<l https://pypi.org/>pypi.org<>
+@
+@ pypi.org
 
 
 
@@ -260,12 +269,18 @@ File Name:
 
 File Contents:
 
-<cb><v>name<> = input("Enter Name: ")
+<cb>def main():
 
-if not <v>name<>:
-	<v>name<> = "World"
+	<v>name<> = input("Enter Name: ")
 
-print("<v>hello <>" + <v>name<> + "<v>!<>")<>
+	if not <v>name<>:
+		<v>name<> = "World"
+
+	print("<v>hello <>" + <v>name<> + "<v>!<>")
+
+
+if __name__ == "__main__":
+	main()<>
 
 Run From The Command-line:
 
@@ -286,12 +301,18 @@ File Contents:
 
 <cb>from sys import argv		<#>#1<>
 
-if len(argv) > 1:			<#>#2<>
-	<v>name<> = argv[1]			<#>#3<>
-else:
-	<v>name<> = "World"			<#>#4<>
+def main():
 
-print("<v>hello <>" + <v>name<> + "<v>!<>")<>
+	if len(argv) > 1:			<#>#2<>
+		<v>name<> = argv[1]			<#>#3<>
+	else:
+		<v>name<> = "World"			<#>#4<>
+
+	print("<v>hello <>" + <v>name<> + "<v>!<>")
+
+
+if __name__ == "__main__":
+	main()<>
 
 Run From The Command-line:
 
@@ -1314,15 +1335,15 @@ while (<v>count<> := count + 1) < 5:
 
 ### Comparison Operators
 
-<in-2><table><col><c><v>a<> == <v>b<>	<><><col>Equal In Value<>
-<col><c><v>a<> != <v>b<><><>
-<col><c><v>a<> > <v>b<><><>
-<col><c><v>a<> \< <v>b<><><>
-<col><c><v>a<> >= <v>b<><><>
-<col><c><v>a<> \<= <v>b<><><>
-<col> <>
-<col><c><v>a<> is <v>b<><><><col>Identity / Same Item<>
-<col><c><v>a<> is not <v>b<><><><><>
+<in-2><t><c><v>a<> == <v>b<>	<><|>Equal In Value
+<c><v>a<> != <v>b<><>
+<c><v>a<> > <v>b<><>
+<c><v>a<> \< <v>b<><>
+<c><v>a<> >= <v>b<><>
+<c><v>a<> \<= <v>b<><>
+
+<c><v>a<> is <v>b<><><|>Identity / Same Item
+<c><v>a<> is not <v>b<><><><>
 @
 @ Boolean, ==, !=, \<>, \<, \<=, >, >=, is, not
 @ less than, greater than, less that or equal, greater than or equal
@@ -1352,14 +1373,14 @@ Versus <c>&&<>, <c>||<>, <c>!<> used in other languages.
 
 #### Bitwise Operators - Basics
 
-<in-2><table><col><c>~<v>a<><><><col>Complement / Inverse<>
-<col> <>
-<col><c><v>a<> & <v>b<><><><col>Bitwise AND<>
-<col><c><v>a<> | <v>b<><><><col>Bitwise OR<>
-<col><c><v>a<> ^ <v>b<><><><col>Bitwise XOR<>
-<col> <>
-<col><c><v>a<> \<\< <v>shift_count<><><><col>Bitwise Shift Left<>
-<col><c><v>a<> >> <v>shift_count<><><><col>Bitwise Shift Right<><>
+<in-2><t><c>~<v>a<><><|>Complement / Inverse
+
+<c><v>a<> & <v>b<><><|>Bitwise AND
+<c><v>a<> | <v>b<><><|>Bitwise OR
+<c><v>a<> ^ <v>b<><><|>Bitwise XOR
+
+<c><v>a<> \<\< <v>shift_count<><><|>Bitwise Shift Left
+<c><v>a<> >> <v>shift_count<><><|>Bitwise Shift Right<>
 @
 @ &, |, ^, \<\<, >>
 @ summary
@@ -3373,14 +3394,14 @@ print(<v>decimal_1<>)
 
 Supports:
 
-<cb><table><col>decimal<><col><v>operator<><><col>decimal<>
-<col>decimal<><col><v>operator<><><col>int<><><><>
+<cb><t>decimal<|><v>operator<><|>decimal
+decimal<|><v>operator<><|>int<><>
 
-<cb><table><col><v>operators <><><col><c>+ - * ** / // % \< \<= == != >= ><><><><>
+<cb><t><v>operators <><|><c>+ - * ** / // % \< \<= == != >= ><><><>
 
 Not Supported:
 
-<cb><table><col>decimal<><col><v>operator<><><col>float<><><>
+<cb><t>decimal<|><v>operator<><|>float<><>
 
 
 Examples:
@@ -5076,9 +5097,9 @@ Some languages have more than one case or special rules for when a particular fo
 
 Example:
 
-<cb><v>case_folded<> = '<v>Ὀδυσσεύ<m>ς<><>'.casefold()
+<cb><v>case_folded<> = '<v>Ὀδυσσεύ<hl>ς<><>'.casefold()
 
-<#># Returns 'ὀδυσσεύ<m>σ<>'<><>
+<#># Returns 'ὀδυσσεύ<hl>σ<>'<><>
 
 
 In Depth:
@@ -5096,20 +5117,20 @@ def print_cases(text):
 
 print_cases("<v>Hegelstraße<>")
 
-<#>\#  Original:   Hegelstra<m>ß<>e
-\#  Upper:      HEGELSTRA<m>SS<>E
-\#  Lower:      hegelstra<m>ß<>e
-\#  Folded:     hegelstra<m>ss<>e<><>
+<#>\#  Original:   Hegelstra<hl>ß<>e
+\#  Upper:      HEGELSTRA<hl>SS<>E
+\#  Lower:      hegelstra<hl>ß<>e
+\#  Folded:     hegelstra<hl>ss<>e<><>
 
 
 <cb><#># Greek Letter Σ/σ/ς<>
 
 print_cases("<v>Ὀδυσσεύς<>")
 
-<#>\#  Original: Ὀδυσσεύ<m>ς<>
-\#  Upper:    ὈΔΥΣΣΕΎ<m>Σ<>
-\#  Lower:    ὀδυσσεύ<m>ς<>
-\#  Folded:   ὀδυσσεύ<m>σ<><><>
+<#>\#  Original: Ὀδυσσεύ<hl>ς<>
+\#  Upper:    ὈΔΥΣΣΕΎ<hl>Σ<>
+\#  Lower:    ὀδυσσεύ<hl>ς<>
+\#  Folded:   ὀδυσσεύ<hl>σ<><><>
 
 
 <cb><#># English<>
@@ -5720,7 +5741,7 @@ Example:
 
 ### Datetime - Create UTC Time (Deprecated)
 
-<m>This is deprecated and will be removed from future Python releases<>
+<hl>This is deprecated and will be removed from future Python releases<>
 
 <cb>= datetime.utcnow()<>
 
@@ -10313,7 +10334,7 @@ Example:
 
 <#># Returns 42<><>
 
-<cb><v>bin_2<> = int("0x<v>00101010<>", 0)
+<cb><v>bin_2<> = int("0b<v>00101010<>", 0)
 
 <#># Returns 42<><>
 @
@@ -14248,7 +14269,7 @@ Example:
 
 Returned by:
 
-<cb>=re.finditer()
+<cb>= re.finditer()
 = re.fullmatch()
 = re.match()
 = re.search()<>
@@ -26426,3 +26447,34 @@ Or make contributions on Github:
 @
 @ delta, terminal, process
 @ Anacond, Arrowm, BeautifulSoup, Bokeh, Cirq, Conda, Databases, Delorean, Django, Eli5, Fire, FlashText, Flask, Gensim, HTTP, Image, Images, Imaging, Keras, LightGBM, Luminoth, Mahotas, Matplotlib, MoviePy, Networkx, NLTK, Pandas, Pendulum, Picture, Pixel, Poetry, PyGame, PyQt, PyPi, PyTorch, Requests, Scikit Learn, Scikit-Learn, SciPy, SqlAlchemy, TensorFlow, Theano, Tkinter, wxPython, ai, a.i., artifical intelligence
+
+
+
+# Legal
+
+
+## License
+
+© 2021-2025 ThinkGo, LLC. Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
+
+<b>Summary:<>
+
+<b>Allowed:<>
+<in><*>Personal use and link sharing
+Modifications and improvements
+Redistribution of modified versions<><>
+
+<b>Required:<>
+<in><*>Credit speedsheet.io as source
+License derivatives under CC BY-NC-SA 4.0<><>
+
+<b>Prohibited:<>
+<in><*>Commercial use without permission<><>
+
+Full license text: <l>https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode<>
+
+<b>Contributing improvements:<>
+PRs welcome at <l>https://github.com/speedsheet/sheet-bash<>
+
+<b>Commercial licensing inquiries:<>
+Contact via [feedback form](https://speedsheet.io/feedback) with subject "Commercial Licensing - Python SpeedSheet"
