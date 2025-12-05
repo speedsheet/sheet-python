@@ -24960,6 +24960,45 @@ See: <l "?q=exceptions-only">Exceptions<>.
 
 
 
+# Reference - Git
+
+
+### Git .gitignore
+
+Git .gitignore file for Python projects:
+
+<cb><#># Backup files<>
+**/*.rs.bk
+*.orig
+
+<#># Cargo<>
+<#># (include for binaries, exclude for libraries)<>
+Cargo.lock
+
+<#># Environment variables<>
+.env
+.env.local
+
+<#># IDEs<>
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swo
+*.swp
+*.iml
+
+<#># Build artifacts<>
+debug/
+target/
+*.pdb
+*.o
+
+<#># OS<>
+.DS_Store
+Thumbs.db<>
+
+
+
 # Symbols
 @
 @ lookup
@@ -26474,7 +26513,7 @@ License derivatives under CC BY-NC-SA 4.0<><>
 Full license text: <l>https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode<>
 
 <b>Contributing improvements:<>
-PRs welcome at <l>https://github.com/speedsheet/sheet-bash<>
+PRs welcome at <l>https://github.com/speedsheet/sheet-python<>
 
 <b>Commercial licensing inquiries:<>
 Contact via [feedback form](https://speedsheet.io/feedback) with subject "Commercial Licensing - Python SpeedSheet"
